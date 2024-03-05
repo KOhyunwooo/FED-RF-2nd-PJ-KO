@@ -12,25 +12,47 @@
 body * {
     outline: 2px dashed #ccc;
 }
-
-top-area
-
-ban-sect
-
-visual-sect
-
-pro-sect
-
-journey-sect
-
-special-sect
-
-movetext-sect
-
-partner-sect
-
-news-sect
-
-showroom-sect
-
-footer-sect
+/* 1.상단영역(메 */
+top-area{
+height: 100px;
+}
+/* 2.배너 섹션  */
+ban-sect{
+height: 100px;
+}
+/* 3.비쥬얼 섹션 */
+visual-sect{
+height: 100px;
+}
+/* 4.프로섹션 섹션 */
+pro-sect{
+height: 100px;
+}
+/* 5.저니 섹션  */
+journey-sect{
+height: 100px;
+}
+/* 6.스페셜섹션  */
+special-sect{
+height: 100px;
+}
+/* 7.무브텍스트섹션  */
+movetext-sect{
+height: 100px;
+}
+/* 8.파트너 섹션 */
+partner-sect{
+height: 100px;
+}
+/* 9.뉴스 섹션  */
+news-sect{
+height: 100px;
+}
+/* 10.쇼룸섹션  */
+showroom-sect{
+height: 100px;
+}
+/* 11.footer 섹션 */
+footer-sect{
+height: 100px;
+}
