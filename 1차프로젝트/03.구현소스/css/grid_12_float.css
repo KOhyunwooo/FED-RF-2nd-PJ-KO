@@ -24,7 +24,14 @@
     
 }
 
+/* 예외 높이값 설정 */
+.visual-sect,
+.special-sect,
+.partner-sect,
+.news-sect,
+.showroom-sect,
+.footer-sect,
 
-/* 컨텐트 박스 */
-/* .cont-box{
-} */
+ [class*='col-'] {
+    height: 50%;
+}
