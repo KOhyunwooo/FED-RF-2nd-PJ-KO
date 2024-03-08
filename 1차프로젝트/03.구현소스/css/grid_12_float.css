@@ -33,5 +33,5 @@
 .footer-sect,
 
  [class*='col-'] {
-    height: 50%;
+    height: 100%;
 }
