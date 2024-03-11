@@ -19,111 +19,46 @@
 */
 
 /********************* 공통 클래스 *********************/
-/* 임시표시 타이틀 */
-.temp-tit {
-    position: absolute;
-    font-size: 2vw;
-    color: #ff0000;
-}
-/* 중앙 속박스 */
-.inbox {
-    /* 최대 가로크기 */
-    max-width: 100%;
-    /* 블록박스 중앙정렬->마.영.오! */
-    margin: 0 auto;
-}
-.cont-box {
-    height: 100%;
-}
-html,
-body,
-h1 {
-    margin: 0;
-    padding: 0;
-}
-h1.tit {
-    text-align: center;
-    padding: 20px;
-}
 
-/* 전체 body */
-body {
-    color: #fff;
-    background: #040e49 url(../images/nav1bg.png) no-repeat fixed center
-        center/cover;
-}
 
-/* ul,ol 초기화:3無 */
-ul,
-ol {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-/* a요소 공통 */
-a {
-    color: #fff;
+a{
+    color: #ffffff;
     text-decoration: none;
 }
 
-/* 공통클래스: 클리어설정 */
-ul::after,
-ol::after,
-.clb::after {
-    content: "";
-    display: block;
-    clear: both;
+
+
+html{
+    /* 전체 글자크기 */
+    font-size: 10px;
+    /* rem단위 계산편의를 위함 */
+    
+    
 }
 
-/* 중앙속박스  */
-.inbox {
-    max-width: auto;
-    margin: 0 auto;
-    outline: 2px dashed lime;
-}
-/* navbar메뉴 */
-.navbar {
-    margin-left: 3px;
-}
-
-/* navbar메뉴 하위 a 요소  */
-.navbar a {
-    display: block;
-    /* 블록요소로 확장설정함! */
-}
-
-/* 상위메뉴만 적용하기 */
-.navbar ul > li {
-    position: relative;
-    /* 부모자격- .smenu의 left값 */
-    float: left;
-    line-height: 78px;
-    padding: 0 51px 0;
-    font-weight: bold;
-    /* 글자관련셋팅은 하위요소로 모두 상속됨! */
-}
-/* 우측메뉴(.smenu) 하위 a 요소 */
-.smenu a {
-    display: block;
-    /* 블록요소로 확장설정함! */
-}
-/* 상위메뉴만 적용하기 */
-.smenu ul > li {
-    position: relative;
-    /* 부모자격- .smenu의 left값 */
-    float: left;
-    line-height: 78px;
-    padding: 0 8px 0;
-    font-weight: bold;
+body{
+    /* 글자체 */
+    font-family: 'Nanum Gothic', sans-serif;
+   
+    
 }
 
 
 
-/* navbar상위메뉴 오버시 밑줄애니 */
-.navbar ul > li > a {
-    /* 가상요소 밑줄을 위한 부모자격 */
-    position: relative;
+
+/* 임시표시 타이틀 */
+/* .temp-tit{
+    position: absolute;
+    color: #535353;
+    font-size: 2vw;
+} */
+
+
+/* 중앙 속박스 */
+.inbox{
+    /* 최대 가로크기 */
+   max-width: auto;
+    /* 블록박스 중앙정렬->마.영.오! */
+   margin: 0 auto;
 }
 
-/**************************************  **************************************/

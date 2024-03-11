@@ -29,11 +29,6 @@ ul,ol{
     list-style: none;
 }
 
-/* a요소 리셋 */
-a{
-    color: #222;
-    text-decoration: none;
-}
 
 /* heading 요소 글자크기 */
 h1,h2,h3,h4,h5,h6{
