@@ -57,7 +57,7 @@ body{
 /* 중앙 속박스 */
 .inbox{
     /* 최대 가로크기 */
-   max-width: auto;
+   max-width: 1913px;
     /* 블록박스 중앙정렬->마.영.오! */
    margin: 0 auto;
 }
