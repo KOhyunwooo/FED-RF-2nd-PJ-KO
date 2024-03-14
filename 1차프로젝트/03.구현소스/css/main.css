@@ -32,8 +32,7 @@ body * {
 
 /* 탑 에어리어 높이값 */
 #top-area{
-    align-items: center;
-height: 100px;
+   /* height: 100px; */
 /* 트랜지션:속시이지 */
 transition: all .6s ease-in-out;
 }
@@ -51,36 +50,55 @@ h1.logo a{
     max-width: 100%;
    
 }
-/*********************************** 중앙 메인 네비 ***********************************/
+/*********************************** 중앙 메인 네비.gnb ***********************************/
 .gnb{
+    position: absolute;
+    margin-left: 58px;
     display: flex;
     justify-content: space-evenly;
-    height: 120px;
+    height: 64px;
     overflow: hidden;
     text-align: center;
-    word-spacing: nowrap;
+    
+    
+}
+
+/* 상위메뉴 패딩값 */
+.gnb >dl >dt{
+    padding: 20px 8px;
 }
 /* 상위메뉴 설정 */
 .gnb dl dt a{
-    font-size: 1.7em;
+    /* display: block; */
+    font-size: 1.53em;
     padding: 0 39.1px;
 }
 /* 하위메뉴 설정 */
 .gnb dl dd a{
-    font-size: 104rem;
-    padding: 7.225px 26.01px;
-}
+    font-size: 1.4rem;
+    padding: auto;
     
+}
+
 
 /* 상단영역 오버시 하위메뉴 보이기 */
-.gnb:hover .gnb{
-    height: 500px;
+.gnb:hover {
+      height: 200px;
+      
 }
 
 
 
 
+/****************************** 오른쪽 작은내비smenu ******************************/
 
+.smenu {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 24px;
+}
 
 
 
