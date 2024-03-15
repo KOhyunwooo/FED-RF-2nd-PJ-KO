@@ -53,19 +53,22 @@ h1.logo a{
 /*********************************** 중앙 메인 네비.gnb ***********************************/
 .gnb{
     position: absolute;
-    margin-left: 58px;
+    margin-left: 120px;
+    
     display: flex;
     justify-content: space-evenly;
     height: 64px;
     overflow: hidden;
     text-align: center;
-    
+    transition: .1s;
+    white-space: nowrap;
     
 }
 
 /* 상위메뉴 패딩값 */
 .gnb >dl >dt{
     padding: 20px 8px;
+    
 }
 /* 상위메뉴 설정 */
 .gnb dl dt a{
@@ -88,6 +91,22 @@ h1.logo a{
 }
 
 
+/************************* 메인메뉴 밑줄애니 .uline *************************/
+.uline dl> dt>a::after{
+    content: '';
+    display: block;
+    margin-left: 100%;
+    margin-top: 2px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s;
+}
+
+
+
+
+
 
 
 /****************************** 오른쪽 작은내비smenu ******************************/
@@ -98,6 +117,7 @@ h1.logo a{
     text-align: center;
     font-size: 1.4rem;
     margin-top: 24px;
+    white-space: nowrap;
 }
 
 
