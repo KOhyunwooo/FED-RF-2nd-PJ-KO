@@ -34,7 +34,7 @@ body * {
 #top-area{
    /* height: 100px; */
 /* 트랜지션:속시이지 */
-transition: all .6s ease-in-out;
+/* transition: all .6s ease-in-out; */
 }
 /****************************************로고 파트  ****************************************/
 /* 로고박스 */
@@ -56,6 +56,7 @@ h1.logo a{
     margin-left: 120px;
     
     display: flex;
+    gap: 0 20px;
     justify-content: space-evenly;
     height: 64px;
     overflow: hidden;
@@ -74,7 +75,7 @@ h1.logo a{
 .gnb dl dt a{
     /* display: block; */
     font-size: 1.53em;
-    padding: 0 39.1px;
+    /* padding: 0 39.1px; */
 }
 /* 하위메뉴 설정 */
 .gnb dl dd a{
@@ -100,7 +101,13 @@ h1.logo a{
     width: 0;
     height: 2px;
     background-color: #fff;
-    transition: .3s;
+    transition: margin-left .3s,width .3s;
+}
+.uline dl> dt:hover>a::after{
+    margin-left: 0%;
+    margin-top: 2px;
+    width: 100%;
+    transition: width .3s;
 }
 
 
