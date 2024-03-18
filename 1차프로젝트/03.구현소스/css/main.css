@@ -45,10 +45,10 @@ h1.logo a{
 /*********************************** 중앙 메인 네비.gnb ***********************************/
 .gnb{
     position: absolute;
-    margin-left: 8%;
+    margin-left: 7%;
     
     display: flex;
-    gap: 0 88px;
+    gap: 0 105px;
     justify-content: space-evenly;
     height: 64px;
     overflow: hidden;
@@ -79,7 +79,7 @@ h1.logo a{
 
 /* 상단영역 오버시 하위메뉴 보이기 */
 .gnb:hover {
-      height: 200px;
+      height: 220px;
       
 }
 
@@ -91,7 +91,7 @@ h1.logo a{
     margin-left: 100%;
     margin-top: 2px;
     width: 0;
-    height: 2px;
+    height: 1px;
     background-color: #fff;
     transition: margin-left .3s,width .3s;
 }
@@ -112,11 +112,11 @@ h1.logo a{
 
 .smenu {
     display: flex;
-    gap: 0 30px;
+    gap: 0 20px;
     text-align: center;
     font-size: 1.4rem;
-    margin-top: 24px;
-    margin-left: 1%;
+    margin-top: 9px;
+    margin-left: 3%;
     white-space: nowrap;
 
 }
@@ -124,6 +124,25 @@ h1.logo a{
     content: '';
 }
 
+
+/************************* .smenu밑줄 애니실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패 *************************/
+
+.smenu dl> dt>a::after{
+    content: '';
+    display: block;
+    margin-left: 50%;
+    margin-top: 2px;
+    width: 0%;
+    height: 1px;
+    background-color: #fff;
+    transition: .3s;
+}
+.smenu dl> dt:hover>a::after{
+    margin-left: 0%;
+    margin-top: 2px;
+    width: 100%;
+    
+}
 
 
 
