@@ -111,13 +111,17 @@ h1.logo a{
 /****************************** 오른쪽 작은내비smenu ******************************/
 
 .smenu {
+    position: absolute;
     display: flex;
     gap: 0 20px;
     text-align: center;
     font-size: 1.4rem;
     margin-top: 9px;
-    margin-left: 3%;
+    margin-left: 1%;
     white-space: nowrap;
+    height: 45px;
+    overflow: hidden;
+    transition: .1s;
 
 }
 .smenu:after{
@@ -125,7 +129,7 @@ h1.logo a{
 }
 
 
-/************************* .smenu밑줄 애니실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패실패 *************************/
+/************************* .smenu밑줄  *************************/
 
 .smenu dl> dt>a::after{
     content: '';
@@ -146,6 +150,16 @@ h1.logo a{
 
 
 
+
+.smenu dl dd{
+    margin-top: 20px;
+    
+}
+
+.smenu dt:hover{
+   height: 400px;
+
+}
 
 
 
