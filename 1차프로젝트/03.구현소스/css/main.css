@@ -12,12 +12,15 @@ body * {
     /* 공사중 표시 */
     outline: 1px dashed yellow;
     /* 임시 배경색, 배경색 전부 따로 줘야함 */
-    background-color: #000;
     
     line-height: 1.6;
     
     font-weight: 400;
-
+    
+}
+body{
+    
+    background-color: #333;
 }
 
 
@@ -41,6 +44,27 @@ h1.logo a{
     width: 220px;
     max-width: 100%;
    
+}
+#top-area{
+    position: relative;
+    z-index: 999;
+    background-color: #000;
+    padding-bottom: 20px;
+}
+#top-area::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    padding-bottom: 20px;
+    z-index: -1;
+    transition: .1s;
+}
+
+#top-area.on::after{
+    height: 200px;
 }
 /*********************************** 중앙 메인 네비.gnb ***********************************/
 .gnb{
@@ -78,7 +102,7 @@ h1.logo a{
 
 
 /* 상단영역 오버시 하위메뉴 보이기 */
-.gnb:hover {
+#top-area.on .gnb {
       height: 220px;
       
 }
@@ -123,19 +147,19 @@ h1.logo a{
     margin-left: 1%;
     white-space: nowrap;
     /* height: 45px; */
-    overflow: hidden;
-    transition: .1s;
 }
-.smenu dl{
+.smenu ul{
     height: 45px;
     
+    overflow: hidden;
+    transition: .1s;
 }
 
 
 
 /************************* .smenu밑줄  *************************/
 
-.smenu dl> dt>a::after{
+.smenu ul> li>a::after{
     content: '';
     display: block;
     margin-left: 50%;
@@ -145,7 +169,7 @@ h1.logo a{
     background-color: #fff;
     transition: .3s;
 }
-.smenu dl> dt:hover>a::after{
+.smenu ul> a:hover>ol>li>a::after{
     margin-left: 0%;
     margin-top: 2px;
     width: 100%;
@@ -155,13 +179,17 @@ h1.logo a{
 
 
 /* s메뉴 하위메뉴 사이 벌리기 */
-.smenu dl dd{
-    margin-top: 20px;
+.ssmenu{
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    transition: .1s;
+    /* margin-top: 20px; */
     
 }
 
-.smenu dl:hover:nth-child(3) {
-   height: 300px;
+.smenu>li:hover .ssmenu{
+   height: 100px;
 
 }
 
