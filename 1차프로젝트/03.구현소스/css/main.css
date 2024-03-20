@@ -84,6 +84,9 @@ h1.logo a{
 }
 
 
+
+
+
 /************************* 메인메뉴 밑줄애니 .uline *************************/
 .uline dl> dt>a::after{
     content: '';
@@ -119,14 +122,15 @@ h1.logo a{
     margin-top: 9px;
     margin-left: 1%;
     white-space: nowrap;
-    height: 45px;
+    /* height: 45px; */
     overflow: hidden;
     transition: .1s;
+}
+.smenu dl{
+    height: 45px;
+    
+}
 
-}
-.smenu:after{
-    content: '';
-}
 
 
 /************************* .smenu밑줄  *************************/
@@ -150,14 +154,14 @@ h1.logo a{
 
 
 
-
+/* s메뉴 하위메뉴 사이 벌리기 */
 .smenu dl dd{
     margin-top: 20px;
     
 }
 
-.smenu dt:hover{
-   height: 400px;
+.smenu dl:hover:nth-child(3) {
+   height: 300px;
 
 }
 
