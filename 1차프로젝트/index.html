@@ -16,7 +16,36 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
 
-    <script></script>
+    <script>
+      /***********************************************JS 함수 짧게 만들기****************************************************/
+      // querySelector 함수 짧게 만들기! ////
+      const qs = (x) => document.querySelector(x);
+      const qsa = (x) => document.querySelectorAll(x);
+      const qsEl = (ele, x) => ele.querySelector(x);
+      const qsaEl = (ele, x) => ele.querySelectorAll(x);
+      
+      // addEventListener 함수 짧게 만들기! ////
+      const addEvt = (ele, evt, fn) => ele.addEventListener(evt, fn);
+      /**********************************************************  **********************************************************/
+      
+      
+      addEvt(window, "load", loadFn);
+      function loadFn() {
+      const topArea = qs("#top-area");
+      const gnb = qs(".gnb");
+
+      gnb.onmouseenter =() =>{
+        topArea.classList.add("on");
+      };
+
+      topArea.onmouseleave = () =>{
+        topArea.classList.remove("on");
+      };
+    
+    }
+
+    
+    </script>
   </head>
   <body>
     <!-- 1.상단영역(메뉴) -->
@@ -266,17 +295,8 @@
         </div>
       </section>
     </div>
-    <script>
-      const topArea = document.querySelector("#top-area");
-      const gnb = document.querySelector(".gnb");
-
-      gnb.onmouseenter = function () {
-        topArea.classList.add("on");
-      };
-
-      topArea.onmouseleave = function () {
-        topArea.classList.remove("on");
-      };
-    </script>
+   
+   
+   
   </body>
 </html>
