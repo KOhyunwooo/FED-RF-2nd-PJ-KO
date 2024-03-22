@@ -1,302 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TAP KOREA</title>
-    <link rel="stylesheet" href="03.구현소스/css/main.css" />
-    <!-- 구글 아이콘 사용 -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <!-- 폰트 어썸 아이콘 사용 -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TAP KOREA</title>
+        <link rel="stylesheet" href="03.구현소스/css/main.css" />
+        <!-- 구글 아이콘 사용 -->
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <!-- 폰트 어썸 아이콘 사용 -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        />
 
-    <script>
-      /***********************************************JS 함수 짧게 만들기****************************************************/
-      // querySelector 함수 짧게 만들기! ////
-      const qs = (x) => document.querySelector(x);
-      const qsa = (x) => document.querySelectorAll(x);
-      const qsEl = (ele, x) => ele.querySelector(x);
-      const qsaEl = (ele, x) => ele.querySelectorAll(x);
-      
-      // addEventListener 함수 짧게 만들기! ////
-      const addEvt = (ele, evt, fn) => ele.addEventListener(evt, fn);
-      /**********************************************************  **********************************************************/
-      
-      
-      addEvt(window, "load", loadFn);
-      function loadFn() {
-      const topArea = qs("#top-area");
-      const gnb = qs(".gnb");
+        <script>
+            /***********************************************JS 함수 짧게 만들기****************************************************/
+            // querySelector 함수 짧게 만들기! ////
+            const qs = (x) => document.querySelector(x);
+            const qsa = (x) => document.querySelectorAll(x);
+            const qsEl = (ele, x) => ele.querySelector(x);
+            const qsaEl = (ele, x) => ele.querySelectorAll(x);
 
-      gnb.onmouseenter =() =>{
-        topArea.classList.add("on");
-      };
+            // addEventListener 함수 짧게 만들기! ////
+            const addEvt = (ele, evt, fn) => ele.addEventListener(evt, fn);
+            /**********************************************************  **********************************************************/
 
-      topArea.onmouseleave = () =>{
-        topArea.classList.remove("on");
-      };
-    
-    }
+            addEvt(window, "load", loadFn);
+            function loadFn() {
+                const topArea = qs("#top-area");
+                const gnb = qs(".gnb");
 
-    
-    </script>
-  </head>
-  <body>
-    <!-- 1.상단영역(메뉴) -->
-    <div id="top-area">
-      <header class="top-area inbox">
-        <h2 class="temp-tit">1.상단영역(메뉴)</h2>
-        <div class="cont-box">
-          <div class="col-2">
-            <!-- 로고 -->
-            <h1 class="logo">
-              <a href="#">
-                <img
-                  src="01.자료수집/이미지 파일/logo.svg"
-                  alt="메인 로고"
-                />
-              </a>
-            </h1>
-          </div>
-          <div class="col-8">
-            <nav class="gnb uline">
-              <!-- (1)product메뉴 dl -->
-              <dl>
-                <!-- 상위메뉴 dt -->
-                <dt>
-                  <a href="#">PRODUCT</a>
-                </dt>
-              </dl>
-              <!-- (2)tap special메뉴 dl -->
-              <dl>
-                <!-- 상위메뉴 dt -->
-                <dt>
-                  <a href="#">TAP SPECIAL</a>
-                </dt>
-              </dl>
-              <!-- (3)SUSTAINABILITY메뉴 dl -->
-              <dl>
-                <!-- 상위메뉴 dt -->
-                <dt>
-                  <a href="#">SUSTAINABILITY</a>
-                </dt>
-                <dd>
-                  <a href="#">특허 및 인증</a>
-                </dd>
-                <dd>
-                  <a href="#">원스톱 시스템</a>
-                </dd>
-                <dd>
-                  <a href="#">지속가능경영보고</a>
-                </dd>
-              </dl>
-              <!-- (4)COMPANY메뉴 dl -->
-              <dl>
-                <!-- 상위메뉴 dt -->
-                <dt>
-                  <a href="#">COMPANY</a>
-                </dt>
-                <dd>
-                  <a href="#">회사 소개</a>
-                </dd>
-                <dd>
-                  <a href="#">쇼룸</a>
-                </dd>
-                <dd>
-                  <a href="#">연혁</a>
-                </dd>
-                <dd>
-                  <a href="#">파트너사</a>
-                </dd>
-                <dd>
-                  <a href="#">인재채용</a>
-                </dd>
-              </dl>
-              <!-- (5)COMUNITY메뉴 dl -->
-              <dl>
-                <!-- 상위메뉴 dt -->
-                <dt>
-                  <a href="#">COMUNITY</a>
-                </dt>
-                <dd>
-                  <a href="#">새소식</a>
-                </dd>
-                <dd>
-                  <a href="#">카탈로그</a>
-                </dd>
-                <dd>
-                  <a href="#">샘플신청</a>
-                </dd>
-                <dd>
-                  <a href="#">1:1문의</a>
-                </dd>
-              </dl>
-            </nav>
-          </div>
-          <div class="col-2">
-            <ul class="smenu">
-              <li>
-                <a href="#">
-                  쇼룸
-                  <span class="material-symbols-outlined"> deployed_code </span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  샘플카트
-                  <span class="material-symbols-outlined"> shopping_cart </span>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  KOR
-                  <span class="material-symbols-outlined"> language </span>
-                </a>
-                <ol class="ssmenu">
-                  <li>
-                    <a href="#">ENG</a>
-                  </li>
-                  <li>
-                    <a href="#">JPN</a>
-                  </li>
-                </ol>
-              </li>
-              <!-- .smenu 언어버튼 하위메뉴(클릭시 KOR이 다른글자로 바뀌게)  -->
-              <li>
-                <a href="#">
-                  <span class="material-symbols-outlined"> share </span>
-                </a>
-                <ol class="ssmenu">
-                  <li>
-                    <a href="$"><i class="fa-brands fa-facebook-f"></i></a>
-                  </li>
-                  <li>
-                    <a href="$"><i class="fa-solid fa-comment"></i></a>
-                  </li>
-                  <li>
-                    <a href="$"><i class="fa-solid fa-message"></i></a>
-                  </li>
-                  <li>
-                    <a href="$"><i class="fa-brands fa-x-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="$"><i class="fa-solid fa-clone"></i></a>
-                  </li>
-                </ol>
-              </li>
-              <!-- .smenu 공유버튼 하위메뉴 -->
-            </ul>
-          </div>
+                gnb.onmouseenter = () => {
+                    topArea.classList.add("on");
+                };
+
+                topArea.onmouseleave = () => {
+                    topArea.classList.remove("on");
+                };
+            }
+        </script>
+    </head>
+    <body>
+        <!-- 1.상단영역(메뉴) -->
+        <div id="top-area">
+            <header class="top-area inbox">
+                <!-- <h2 class="temp-tit">1.상단영역(메뉴)</h2> -->
+                <div class="cont-box">
+                    <div class="col-2">
+                        <!-- 로고 -->
+                        <h1 class="logo">
+                            <a href="#">
+                                <img
+                                    src="01.자료수집/이미지 파일/logo.svg"
+                                    alt="메인 로고"
+                                />
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="col-8">
+                        <nav class="gnb uline">
+                            <!-- (1)product메뉴 dl -->
+                            <dl>
+                                <!-- 상위메뉴 dt -->
+                                <dt>
+                                    <a href="#">PRODUCT</a>
+                                </dt>
+                            </dl>
+                            <!-- (2)tap special메뉴 dl -->
+                            <dl>
+                                <!-- 상위메뉴 dt -->
+                                <dt>
+                                    <a href="#">TAP SPECIAL</a>
+                                </dt>
+                            </dl>
+                            <!-- (3)SUSTAINABILITY메뉴 dl -->
+                            <dl>
+                                <!-- 상위메뉴 dt -->
+                                <dt>
+                                    <a href="#">SUSTAINABILITY</a>
+                                </dt>
+                                <dd>
+                                    <a href="#">특허 및 인증</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">원스톱 시스템</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">지속가능경영보고</a>
+                                </dd>
+                            </dl>
+                            <!-- (4)COMPANY메뉴 dl -->
+                            <dl>
+                                <!-- 상위메뉴 dt -->
+                                <dt>
+                                    <a href="#">COMPANY</a>
+                                </dt>
+                                <dd>
+                                    <a href="#">회사 소개</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">쇼룸</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">연혁</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">파트너사</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">인재채용</a>
+                                </dd>
+                            </dl>
+                            <!-- (5)COMUNITY메뉴 dl -->
+                            <dl>
+                                <!-- 상위메뉴 dt -->
+                                <dt>
+                                    <a href="#">COMUNITY</a>
+                                </dt>
+                                <dd>
+                                    <a href="#">새소식</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">카탈로그</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">샘플신청</a>
+                                </dd>
+                                <dd>
+                                    <a href="#">1:1문의</a>
+                                </dd>
+                            </dl>
+                        </nav>
+                    </div>
+                    <div class="col-2">
+                        <ul class="smenu suline">
+                            <li>
+                                <a href="#">
+                                    쇼룸
+                                    <span class="material-symbols-outlined">
+                                        deployed_code
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    샘플카트
+                                    <span class="material-symbols-outlined">
+                                        shopping_cart
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    KOR
+                                    <span class="material-symbols-outlined">
+                                        language
+                                    </span>
+                                </a>
+                                <ol class="ssmenu">
+                                    <li>
+                                        <a href="#">ENG</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">JPN</a>
+                                    </li>
+                                </ol>
+                            </li>
+                            <!-- .smenu 언어버튼 하위메뉴(클릭시 KOR이 다른글자로 바뀌게)  -->
+                            <li>
+                                <a href="#">
+                                    <span class="material-symbols-outlined">
+                                        share
+                                    </span>
+                                </a>
+                                <ol class="ssmenu">
+                                    <li>
+                                        <a href="$"
+                                            ><i
+                                                class="fa-brands fa-facebook-f"
+                                            ></i
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a href="$"
+                                            ><i class="fa-solid fa-comment"></i
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a href="$"
+                                            ><i class="fa-solid fa-message"></i
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a href="$"
+                                            ><i
+                                                class="fa-brands fa-x-twitter"
+                                            ></i
+                                        ></a>
+                                    </li>
+                                    <li>
+                                        <a href="$"
+                                            ><i class="fa-solid fa-clone"></i
+                                        ></a>
+                                    </li>
+                                </ol>
+                            </li>
+                            <!-- .smenu 공유버튼 하위메뉴 -->
+                        </ul>
+                    </div>
+                </div>
+            </header>
         </div>
-      </header>
-    </div>
-    <!-- 2.배너 섹션 -->
-    <div id="ban-sect">
-      <section class="ban-sect inbox">
-        <h2 class="temp-tit">2.배너 섹션</h2>
-        <div class="cont-box">
-          <div class="col-12"></div>
+        <!-- 2.배너 섹션 -->
+        <div id="ban-sect">
+            <section class="ban-sect inbox">
+                <!-- <h2 class="temp-tit">2.배너 섹션</h2> -->
+                <div class="cont-box">
+                    <div class="col-12">
+                        <p class="mtxt">
+                            <span>SKIN CARE & MAKE UP<br />
+                                  PACKAGING</span>
+                        </p>
+                        <video muted autoplay loop>
+                            <source
+                                src="01.자료수집/동영상 파일/main_video04.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-    <!-- 3.비쥬얼 섹션 -->
-    <div id="visual-sect">
-      <section class="visual-sect inbox">
-        <h2 class="temp-tit">3.비쥬얼 섹션</h2>
-        <div class="cont-box">
-          <div class="col-5"></div>
-          <div class="col-7"></div>
-          <div class="col-12"></div>
+        <!-- 3.비쥬얼 섹션 -->
+        <div id="visual-sect">
+            <section class="visual-sect inbox">
+                <h2 class="temp-tit">3.비쥬얼 섹션</h2>
+                <div class="cont-box">
+                    <div class="col-5"></div>
+                    <div class="col-7"></div>
+                    <div class="col-12"></div>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-    <!-- 4.프로섹션 섹션 -->
-    <div id="pro-sect">
-      <section class="pro-sect inbox">
-        <h2 class="temp-tit">4.프로섹션 섹션</h2>
-        <div class="cont-box">
-          <div class="col-6"></div>
-          <div class="col-6"></div>
+        <!-- 4.프로섹션 섹션 -->
+        <div id="pro-sect">
+            <section class="pro-sect inbox">
+                <h2 class="temp-tit">4.프로섹션 섹션</h2>
+                <div class="cont-box">
+                    <div class="col-6"></div>
+                    <div class="col-6"></div>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-    <!-- 5.저니 섹션 -->
-    <div id="journey-sect">
-      <section class="journey-sect inbox">
-        <h2 class="temp-tit">5.저니 섹션</h2>
-        <div class="cont-box">
-          <div class="col-12"></div>
+        <!-- 5.저니 섹션 -->
+        <div id="journey-sect">
+            <section class="journey-sect inbox">
+                <h2 class="temp-tit">5.저니 섹션</h2>
+                <div class="cont-box">
+                    <div class="col-12"></div>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-    <!-- 6.스페셜섹션 섹션 -->
-    <div id="special-sect">
-      <section class="special-sect inbox">
-        <h2 class="temp-tit">6.스페셜섹션 섹션</h2>
-        <div class="cont-box">
-          <div class="col-12"></div>
-          <div class="col-12"></div>
+        <!-- 6.스페셜섹션 섹션 -->
+        <div id="special-sect">
+            <section class="special-sect inbox">
+                <h2 class="temp-tit">6.스페셜섹션 섹션</h2>
+                <div class="cont-box">
+                    <div class="col-12"></div>
+                    <div class="col-12"></div>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-    <!-- 7.무브텍스트 섹션 -->
-    <div id="bantext-sect">
-      <section class="bantext-sect inbox">
-        <h2 class="temp-tit">7.무브텍스트 섹션</h2>
-        <div class="cont-box">
-          <div class="col-12"></div>
+        <!-- 7.무브텍스트 섹션 -->
+        <div id="bantext-sect">
+            <section class="bantext-sect inbox">
+                <h2 class="temp-tit">7.무브텍스트 섹션</h2>
+                <div class="cont-box">
+                    <div class="col-12"></div>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-    <!-- 8.파트너 섹션 -->
-    <div id="partner-sect">
-      <section class="partner-sect inbox">
-        <h2 class="temp-tit">8.파트너 섹션</h2>
-        <div class="cont-box">
-          <div class="col-12"></div>
-          <div class="col-12"></div>
+        <!-- 8.파트너 섹션 -->
+        <div id="partner-sect">
+            <section class="partner-sect inbox">
+                <h2 class="temp-tit">8.파트너 섹션</h2>
+                <div class="cont-box">
+                    <div class="col-12"></div>
+                    <div class="col-12"></div>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-    <!-- 9.뉴스 섹션 -->
-    <div id="news-sect">
-      <section class="news-sect inbox">
-        <h2 class="temp-tit">9.뉴스 섹션</h2>
-        <div class="cont-box">
-          <div class="col-12"></div>
-          <div class="col-12"></div>
+        <!-- 9.뉴스 섹션 -->
+        <div id="news-sect">
+            <section class="news-sect inbox">
+                <h2 class="temp-tit">9.뉴스 섹션</h2>
+                <div class="cont-box">
+                    <div class="col-12"></div>
+                    <div class="col-12"></div>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-    <!-- 10.쇼룸섹션 -->
-    <div id="showroom-sect">
-      <section class="showroom-sect inbox">
-        <h2 class="temp-tit">10.쇼룸섹션</h2>
-        <div class="cont-box">
-          <div class="col-12"></div>
-          <div class="col-12"></div>
+        <!-- 10.쇼룸섹션 -->
+        <div id="showroom-sect">
+            <section class="showroom-sect inbox">
+                <h2 class="temp-tit">10.쇼룸섹션</h2>
+                <div class="cont-box">
+                    <div class="col-12"></div>
+                    <div class="col-12"></div>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-    <!-- 11.footer섹션 -->
-    <div id="footer-sect">
-      <section class="footer-sect inbox">
-        <h2 class="temp-tit">11.footer섹션</h2>
-        <div class="cont-box">
-          <div class="col-6"></div>
-          <div class="col-6"></div>
-          <div class="col-12"></div>
+        <!-- 11.footer섹션 -->
+        <div id="footer-sect">
+            <section class="footer-sect inbox">
+                <h2 class="temp-tit">11.footer섹션</h2>
+                <div class="cont-box">
+                    <div class="col-6"></div>
+                    <div class="col-6"></div>
+                    <div class="col-12"></div>
+                </div>
+            </section>
         </div>
-      </section>
-    </div>
-   
-   
-   
-  </body>
+    </body>
 </html>

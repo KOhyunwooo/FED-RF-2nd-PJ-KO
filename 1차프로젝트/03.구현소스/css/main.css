@@ -5,135 +5,112 @@
 @import url(./reset.css);
 @import url(./core.css);
 @import url(./common.css);
-@import url(./grid_12_flex.css);/* 그리드12 불러오기 */
-
+@import url(./grid_12_flex.css); /* 그리드12 불러오기 */
 
 body * {
     /* 공사중 표시 */
     outline: 1px dashed yellow;
     /* 임시 배경색, 배경색 전부 따로 줘야함 */
-    
+
     line-height: 1.6;
-    
+
     font-weight: 400;
-    
 }
-body{
-    
-    background-color: #333;
+body {
+    background-color: #000000;
 }
-
-
-
-
-
 
 /************************************************* 1.상단영역(메뉴) *************************************************/
 
-
 /****************************************로고 파트  ****************************************/
 /* 로고박스 */
-h1.logo a{
+h1.logo a {
     display: flex;
     height: 100%;
-
 }
 
 /* 로고이미지 */
-.logo img{
+.logo img {
     width: 220px;
     max-width: 100%;
-   
 }
-#top-area{
+#top-area {
     position: relative;
     z-index: 999;
-    background-color: #000;
-    padding-bottom: 20px;
+    background-color: #ff5959;
+    padding-bottom: 3vw;
 }
-#top-area::after{
-    content: '';
+#top-area::after {
+    content: "";
     position: absolute;
     left: 0;
     width: 100%;
     height: 0;
-    background-color: #000;
-    padding-bottom: 20px;
+    background-color: #91ff00;
+    /* padding-bottom: 0; */
     z-index: -1;
-    transition: .1s;
+    transition: 0.1s;
+    top: 2.2vw;
 }
 
-#top-area.on::after{
+#top-area.on::after {
     height: 200px;
 }
 /*********************************** 중앙 메인 네비.gnb ***********************************/
-.gnb{
+.gnb {
     position: absolute;
     margin-left: 7%;
-    
+
     display: flex;
     gap: 0 105px;
     justify-content: space-evenly;
     height: 64px;
     overflow: hidden;
     text-align: center;
-    transition: .1s;
+    transition: 0.1s;
     white-space: nowrap;
-    
 }
 
 /* 상위메뉴 패딩값 */
-.gnb >dl >dt{
+.gnb > dl > dt {
     padding: 20px 8px;
-    
 }
 /* 상위메뉴 설정 */
-.gnb dl dt a{
+.gnb dl dt a {
     /* display: block; */
     font-size: 1.53em;
     /* padding: 0 39.1px; */
 }
 /* 하위메뉴 설정 */
-.gnb dl dd a{
+.gnb dl dd a {
     font-size: 1.4rem;
     padding: auto;
-    
 }
-
 
 /* 상단영역 오버시 하위메뉴 보이기 */
 #top-area.on .gnb {
-      height: 220px;
-      
+    height: 220px;
 }
 
-
-
-
-
 /************************* 메인메뉴 밑줄애니 .uline *************************/
-.uline dl> dt>a::after{
-    content: '';
+.uline dl > dt > a::after {
+    content: "";
     display: block;
     margin-left: 100%;
     margin-top: 2px;
     width: 0;
     height: 1px;
     background-color: #fff;
-    transition: margin-left .3s,width .3s;
+    transition: margin-left 0.2s ease-in-out, width 0.2s ease-in-out;
 }
-.uline dl> dt:hover>a::after{
+.uline dl > dt:hover > a::after {
     margin-left: 0%;
     margin-top: 2px;
     width: 100%;
-    transition: width .3s;
+    transition: width 0.3s;
 }
 
 /***********************************  ***********************************/
-
-
-
-
 
 /****************************** 오른쪽 작은내비smenu ******************************/
 
@@ -148,18 +125,31 @@ h1.logo a{
     white-space: nowrap;
     /* height: 45px; */
 }
-.smenu ul{
+.smenu ul {
     height: 45px;
-    
+
     overflow: hidden;
-    transition: .1s;
+    transition: 0.1s;
 }
 
+/************************* .smenu밑줄애니  *************************/
+.suline li > a::after {
+    content: "";
+    display: block;
+    margin-left: 50%;
+    margin-top: 2px;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: 0.2s ease-in-out;
+}
+.suline li:hover > a::after {
+    margin-left: 0%;
+    margin-top: 2px;
+    width: 100%;
+}
 
-
-/************************* .smenu밑줄  *************************/
-
-.smenu ul> li>a::after{
+/* .smenu ul> li>a::after{
     content: '';
     display: block;
     margin-left: 50%;
@@ -174,77 +164,79 @@ h1.logo a{
     margin-top: 2px;
     width: 100%;
     
-}
-
-
+} */
 
 /* s메뉴 하위메뉴 사이 벌리기 */
-.ssmenu{
+.ssmenu {
     position: absolute;
     height: 0;
     overflow: hidden;
-    transition: .1s;
+    transition: 0.1s;
     /* margin-top: 20px; */
+}
+
+/**************************** s menu하위메뉴 표시 ****************************/
+.smenu > li:hover .ssmenu {
+    height: auto;
+}
+
+/************************************* 2.배너 섹션  *************************************/
+.ban-sect {
+    height: 858.89px;
+}
+/*메인 배너 영상 크기 설정 */
+video {
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
     
 }
-
-.smenu>li:hover .ssmenu{
-   height: 100px;
-
+.mtxt{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 10rem;
+    white-space: nowrap;
+    letter-spacing: 1px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 2.배너 섹션  */
-.ban-sect{
-height: 858.89px;
-}
 /* 3.비쥬얼 섹션 */
-.visual-sect{
-height: 1295.95px;
+.visual-sect {
+    height: 1295.95px;
 }
 /* 4.프로섹션 섹션 */
-.pro-sect{
-height: 1058.89px;
+.pro-sect {
+    height: 1058.89px;
 }
 /* 5.저니 섹션  */
-.journey-sect{
-height: 1306.82px;
+.journey-sect {
+    height: 1306.82px;
 }
 /* 6.스페셜섹션  */
-.special-sect{
-height: 2947.95px;
+.special-sect {
+    height: 2947.95px;
 }
 /* 7.배너텍스트섹션  */
-.bantext-sect{
-height: 80.75px;
+.bantext-sect {
+    height: 80.75px;
 }
 /* 8.파트너 섹션 */
-.partner-sect{
-height: 772.92px;
+.partner-sect {
+    height: 772.92px;
 }
 /* 9.뉴스 섹션  */
-.news-sect{
-height: 961.86px;
+.news-sect {
+    height: 961.86px;
 }
 /* 10.쇼룸섹션  */
-.showroom-sect{
-height: 1169.79px;
+.showroom-sect {
+    height: 1169.79px;
 }
 /* 11.footer 섹션 */
-.footer-sect{
-height: 881.19px;
+.footer-sect {
+    height: 881.19px;
 }
