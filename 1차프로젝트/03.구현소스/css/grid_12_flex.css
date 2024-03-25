@@ -17,6 +17,7 @@
 
 /* 파티션 비율박스 공통 */
 [class*='col-']{
+    
     overflow: hidden;
     /* padding: 10px; */
     box-sizing: border-box;
