@@ -171,6 +171,8 @@ video {
     margin: 0;
     padding: 0;
     
+       
+    
 }
 /* 메인 배너 글자 색깔 조정  */
 .mtxt{
@@ -188,12 +190,13 @@ video {
     position: absolute;
     left: 50%;
     bottom: 0;
-    width: 2px;
+    width: 1px;
     height: 150px;
     background-color: #fff;
 }
 .cont-box{
 position: relative;
+
 }
 
 
