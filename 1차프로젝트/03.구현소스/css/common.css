@@ -172,7 +172,7 @@ h1.logo a {
     display: block;
     margin: 0;
     padding: 0;
-    
+    margin-top:-5%;
        
     
 }
@@ -188,50 +188,114 @@ h1.logo a {
     white-space: nowrap;
     letter-spacing: 1px;
 }
+
+
+/*******************스크롤 애니매이션 **************************************/
 .scroll-ani{
     position: absolute;
     left: 50%;
-    bottom: 0;
+    top: 82%;
     width: 1px;
-    height: 150px;
+    height: 0px;
     background-color: #fff;
+    animation: scrollani infinite ease-out 2s normal;
+    
+    
+    
 }
+/* ?????????????????????????? */
+.scroll-back{
+    position: absolute;
+    left: 50%;
+    top: 82%;
+    width: 1px;
+    height: 0px;
+    background-color: #ff0000;
+   
+    
+    
+}
+
+@keyframes scrollani {
+    to{
+        
+        height: 150px;
+    }    
+}
+
+/**************** 스크롤 애니매이션 **************************************/
+
+
+
 .cont-box{
-position: relative;
+    position: relative;
 
 }
 
 
-/* Scroll 글씨색 조정 */
-.scroll-ani>span{
+/* Scroll 글자 조정 */
+.scroll-text>span{
     display: block;
     color: #fff;
     transform: rotate(90deg);
     position: absolute;
-    left: -18px;
-    top: -40px;
+    left: 49.2%;
+    top:  78%;
     font-size: 15px;
 }
 
 /************************************** 3.비쥬얼 섹션 **************************************/
-.visect-right img,.visect-right img{
-    position: absolute;
-    max-width: 50%;
-    top: 25%;
-    right: 0;
-    display: inline-block;
+/********************** 3-1.왼쪽박스 **********************/
+.visect-textbox{
+padding: 50% 0 0;
+margin: 0 20% 0 10%;
+
+}
+.visect-desc{
+    font-size: 2.5em;
+}
+.visect-tit{
+    font-size: 5.5em;
+
+}
+.visect-cont{
     
+    font-size: 1.8em;
+    word-break: break-all;
 }
 
 
 
-.visual-sect video{
+
+/********************** 3-1.오른쪽박스 **********************/
+.visect-right{
     position: relative;
-    top: 15%;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+.visect-right ul{
+    width: 100%;
+    position: relative;
+    top: 20%;
+}
+/* 오른쪽 이미지+비디오 설정 */
+.visect-right li img,.visual-sect video{
+    position: absolute;
+    width: 85%;
+    right: 10%;
     
 }
 
+
+
+
+/* 우측이미지+영상 사라졌다 나타나기 */
+.visect-right >ul>li:nth-child(5){
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+.visect-right >ul>li:nth-child(4)~{
+    
+}
 
 
 

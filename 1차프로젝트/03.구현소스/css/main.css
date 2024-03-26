@@ -12,7 +12,7 @@ body * {
     outline: 1px dashed yellow;
     /* 임시 배경색, 배경색 전부 따로 줘야함 */
 
-    line-height: 1.6;
+    /* line-height: 1.6; */
 
     font-weight: 400;
 }
