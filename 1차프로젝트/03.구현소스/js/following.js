@@ -1,4 +1,4 @@
-
+export default function following(){
 
 // 1-1. 움직일 대상 : .cpointer
 const cpointer = document.querySelector(".cpointer");
@@ -39,7 +39,7 @@ myjourney.onmouseleave = ()=>{
 
 
 
-
+}
 
 /* 
     ★[[ 이벤트발생시 위치값 ]]★
