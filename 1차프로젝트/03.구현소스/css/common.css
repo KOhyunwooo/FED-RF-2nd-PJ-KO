@@ -225,14 +225,14 @@ h1.logo a {
     
     
 }
-.scroll-back{
+.scroll-ani::after{
     position: absolute;
     left: 50%;
     top: 82%;
     width: 2px;
-    height: 160px;
-    background-color: #ffffff4f;
-    
+    height: 100%;
+    background-color: #ff0000;
+    z-index: 999;
 }
    
  
@@ -240,7 +240,7 @@ h1.logo a {
 @keyframes scrollani {
     to{
         
-        height: 160px;
+        height: 150px;
     }    
 }
 
@@ -267,7 +267,7 @@ h1.logo a {
 
 /*********************************************************** 3.비쥬얼 섹션 ***********************************************************/
 /********************** 3-1.왼쪽박스 **********************/
-/* .visect-textbox{
+.visect-textbox{
 padding: 50% 0 0;
 margin: 0 20% 0 10%;
 
@@ -283,24 +283,24 @@ margin: 0 20% 0 10%;
     
     font-size: 1.8em;
     word-break: break-all;
-} */
+}
 
 
 
 
 /********************** 3-1.오른쪽박스 **********************/
-.vibox{
+.visect-right{
     position: relative;
     width: 100%;
     height: 100%;
 }
-.vibox ul{
+.visect-right ul{
     width: 100%;
     position: relative;
     top: 20%;
 }
 /* 오른쪽 이미지+비디오 설정 */
-.vibox li img,.visual-sect video{
+.visect-right li img,.visual-sect video{
     position: absolute;
     width: 85%;
     right: 10%;
@@ -423,60 +423,10 @@ margin: 0 20% 0 10%;
 .partner-sect {
    
 }
-/************************************************** 9.뉴스 섹션  **************************************************/
+/* 9.뉴스 섹션  */
 .news-sect {
     
 }
-
-
-.newsbox{
-    margin-top: 20%;
-    width: 100%;
-    height: 70%;
-    background-color: #000000;
-}
-
-:root {
-    --cpointer2-size: 150px;
-  }
-/*******************************************  *******************************************/
-   
-  /* 따라다니는 원 */
-  .cpointer2 {
-    /* position: absolute; */
-    position: fixed; /* -> JS에서 clientY사용 */
-    top: 0;
-    left: 0;
-    width: var(--cpointer2-size);
-    height: var(--cpointer2-size);
-    border-radius: 50%;
-    background-color: rgb(185, 105, 0);
-  
-    /* 자기자신요소는 이벤트가 무시되게 셋팅해야
-      아래쪽 요소를 만질 수 있음 */
-    pointer-events: none;
-    
-  
-    
-    /* 
-          [mix-blend-mode 속성]
-          - 겹치는 색상처리 블랜딩 모드속성
-          - 겹치는 요소의 색상을 섞어서
-          디스플레이 처리함
-          - 밝은색섞기(screen계열)
-          - 어두운색섞기(darken계열)
-      */
-  
-    /* 트랜지션 : 이징은 ease-out */
-    transition: 0.1s ease-out;
-  
-    /* 트랜스폼 중앙이동 */
-    transform: translate(-50%,-50%);
-    
-    /* 처음에 안보임 */
-    opacity: 0;
-  }
-/******************************************  ******************************************/
 /* 10.쇼룸섹션  */
 .showroom-sect {
     
