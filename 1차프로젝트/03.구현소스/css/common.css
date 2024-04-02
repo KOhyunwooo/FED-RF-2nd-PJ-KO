@@ -267,7 +267,7 @@ h1.logo a {
 
 /*********************************************************** 3.비쥬얼 섹션 ***********************************************************/
 /********************** 3-1.왼쪽박스 **********************/
-.visect-textbox{
+/* .visect-textbox{
 padding: 50% 0 0;
 margin: 0 20% 0 10%;
 
@@ -283,24 +283,24 @@ margin: 0 20% 0 10%;
     
     font-size: 1.8em;
     word-break: break-all;
-}
+} */
 
 
 
 
 /********************** 3-1.오른쪽박스 **********************/
-.visect-right{
+.vibox{
     position: relative;
     width: 100%;
     height: 100%;
 }
-.visect-right ul{
+.vibox ul{
     width: 100%;
     position: relative;
     top: 20%;
 }
 /* 오른쪽 이미지+비디오 설정 */
-.visect-right li img,.visual-sect video{
+.vibox li img,.visual-sect video{
     position: absolute;
     width: 85%;
     right: 10%;
