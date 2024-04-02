@@ -8,4 +8,7 @@ following();
 import show_letter from "./show_letter.js";
 show_letter();
 
+// 페이드 슬라이드 함수
+import fadeFn from "./slide_fade.js";
+fadeFn();
 

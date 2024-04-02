@@ -299,12 +299,21 @@ margin: 0 20% 0 10%;
     position: relative;
     top: 20%;
 }
+.visect-right ul li{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    aspect-ratio: 1029/699;
+    transition: opacity .4s ease-in-out;
+}
+.visect-right ul li.on{
+    opacity: 1;
+    z-index: 1;
+}
 /* 오른쪽 이미지+비디오 설정 */
 .visect-right li img,.visual-sect video{
-    position: absolute;
-    width: 85%;
-    right: 10%;
-    
+    width: 100%;    
+    height: 100%;
 }
 
 
@@ -434,4 +443,38 @@ margin: 0 20% 0 10%;
 /* 11.footer 섹션 */
 .footer-sect {
     
+}
+
+
+
+/*블릿버튼*/
+.indic {
+    display: flex;
+    /* 플렉스박스 */
+    /* position: absolute; */
+    bottom: 50px;
+    left: 80px;
+}
+
+.indic li {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.indic li img {
+    position: absolute;
+    /*이미지 겹치게*/
+}
+
+.indic li img:last-child {
+    /*회색이미지만 투명하게*/
+    opacity: 0;
+}
+
+/*회색블릿이미지가 보이게하는 class*/
+.indic li.on img:last-child {
+    /*회색이미지만 투명하게*/
+    opacity: 1;
+    /*우선적용!*/
 }
