@@ -1,15 +1,15 @@
-
-
 // 나의 함수
 import myFn from './dom.js';
 
+
+
 // 스크롤 액션 JS
 
-export default function scrollFn(){
+export default function viScroll(){
 
-    // 대상:.jourcont
-    const jourcont = myFn.qs(".jourcont");
-    const journeySect = myFn.qs(".journey-sect");
+    // 대상:.visect-right
+    const viRight = myFn.qs(".visect-right");
+    
 
     // 기준값:
     const CRITERIA = window.innerHeight/3*2;
@@ -20,14 +20,14 @@ export default function scrollFn(){
     // 스크롤 이벤트 함수
     function showIt(){
         // 대상위치값
-        let tgPos = myFn.getBCR(jourcont);
+        let tgPos = myFn.getBCR(viRight);
         console.log(tgPos);
 
         if(tgPos < CRITERIA){
-            journeySect.classList.add('on');
+            viRight.classList.add('on');
         }
         else{
-            journeySect.classList.remove('on');
+            viRight.classList.remove('on');
         }
 
     } //////// showIt 함수 ////////////

@@ -12,8 +12,13 @@ show_letter();
 import fadeFn from "./slide_fade.js";
 fadeFn();
 
-// 스크롤 액션 JS
-import scrollFn from "./scroll_action.js";
+//비쥬얼섹션 스크롤 액션JS
+import viScroll from "./scroll_visual.js";
+viScroll();
+
+
+// 저니섹션 스크롤 액션 JS
+import scrollFn from "./scroll_jour.js";
 scrollFn();
 
 
