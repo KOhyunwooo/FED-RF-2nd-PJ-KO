@@ -1,396 +1,367 @@
 @charset "utf-8";
 
-
-
 /***************************************************************** 1.상단영역(메뉴) *****************************************************************/
 
 /****************************************로고 파트  ****************************************/
 /* 로고에 엡솔루트를 줘야 하나???? 선생님이 앱솔루트 막쓰지 말라고 했던거 같은데
 위치조정이 안됨..... */
-.topbox{
-    padding-top: 1vw;
+.topbox {
+  padding-top: 1vw;
 }
 /* 로고박스 */
 h1.logo a {
-    display: flex;
-    height: 100%;
-    padding-top: 13px;
-    padding-left: 33px;
+  display: flex;
+  height: 100%;
+  padding-top: 13px;
+  padding-left: 33px;
 }
 
 /* 로고이미지 */
 .logo img {
-    width: 220px;
-    max-width: 100%;
+  width: 220px;
+  max-width: 100%;
 }
 #top-area {
-    position: relative;
-    z-index: 999;
-    background-color: #000000;
-    padding-bottom: 3vw;
+  position: relative;
+  z-index: 999;
+  background-color: #000000;
+  padding-bottom: 3vw;
 }
 #top-area::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background-color: #000000;
-    /* padding-bottom: 0; */
-    z-index: -1;
-    transition: 0.1s;
-    top: 2.2vw;
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000000;
+  /* padding-bottom: 0; */
+  z-index: -1;
+  transition: 0.1s;
+  top: 2.2vw;
 }
 
 #top-area.on::after {
-    height: 300px;/* #top-area.on .gnb와 수치 같게 할것 */
+  height: 300px; /* #top-area.on .gnb와 수치 같게 할것 */
 }
 /*********************************** 중앙 메인 네비.gnb ***********************************/
 .gnb {
-    position: absolute;
-    margin-left: 7%;
+  position: absolute;
+  margin-left: 7%;
 
-    display: flex;
-    gap: 0 105px;
-    justify-content: space-evenly;
-    height: min(60px,100%);
-    overflow: hidden;
-    text-align: center;
-    transition: 0.2s;
-    white-space: nowrap;
+  display: flex;
+  gap: 0 105px;
+  justify-content: space-evenly;
+  height: min(60px, 100%);
+  overflow: hidden;
+  text-align: center;
+  transition: 0.2s;
+  white-space: nowrap;
 }
 
 /* 상위메뉴 패딩값 */
 .gnb > dl > dt {
-    padding: 20px 8px;
+  padding: 20px 8px;
 }
 /* 상위메뉴 설정 */
 .gnb dl dt a {
-    /* display: block; */
-    font-size: 1.53em;
-    /* padding: 0 39.1px; */
+  /* display: block; */
+  font-size: 1.53em;
+  /* padding: 0 39.1px; */
 }
 /* 하위메뉴 설정 */
 .gnb dl dd a {
-    font-size: 1.4rem;
-    padding: auto;
+  font-size: 1.4rem;
+  padding: auto;
 }
 
 /* 상단영역 오버시 하위메뉴 보이기 */
 #top-area.on .gnb {
-    height: 300px;
+  height: 300px;
 }
 
 /* 하위메뉴 오버시 색상바뀌게 */
-.gnb dl dd:hover a{
-    color: #a77554;
-    transition: color 0.3s ease-out;
+.gnb dl dd:hover a {
+  color: #a77554;
+  transition: color 0.3s ease-out;
 }
-.gnb dl dd{
-    line-height: 40px;
+.gnb dl dd {
+  line-height: 40px;
 }
 
 /************************* 메인메뉴 밑줄애니 .uline *************************/
 .uline dl > dt > a::after {
-    content: "";
-    display: block;
-    margin-left: 100%;
-    margin-top: 2px;
-    width: 0;
-    height: 1px;
-    background-color: #fff;
-    transition: margin-left 0.2s ease-in-out, width 0.2s ease-in-out;
+  content: "";
+  display: block;
+  margin-left: 100%;
+  margin-top: 2px;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: margin-left 0.2s ease-in-out, width 0.2s ease-in-out;
 }
 .uline dl > dt:hover > a::after {
-    margin-left: 0%;
-    margin-top: 2px;
-    width: 100%;
-    transition: width 0.3s;
+  margin-left: 0%;
+  margin-top: 2px;
+  width: 100%;
+  transition: width 0.3s;
 }
-
 
 /***********************************  ***********************************/
 
 /****************************** 오른쪽 작은내비smenu ******************************/
 
 .smenu {
-    position: absolute;
-    display: flex;
-    gap: 0 20px;
-    text-align: center;
-    font-size: 1.4rem;
-    margin-top: 9px;
-    margin-left: 1%;
-    white-space: nowrap;
-    /* height: 45px; */
-    /* transition: 0.2s; */
-
+  position: absolute;
+  display: flex;
+  gap: 0 20px;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 9px;
+  margin-left: 1%;
+  white-space: nowrap;
+  /* height: 45px; */
+  /* transition: 0.2s; */
 }
-
 
 /************************* .smenu밑줄애니  *************************/
-.suline> li > a::after {
-    content: "";
-    display: block;
-    margin-left: 50%;
-    margin-top: 2px;
-    width: 0;
-    height: 1px;
-    background-color: #fff;
-    transition: 0.2s ease-in-out;
+.suline > li > a::after {
+  content: "";
+  display: block;
+  margin-left: 50%;
+  margin-top: 2px;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.2s ease-in-out;
 }
-.suline >li:hover > a::after {
-    margin-left: 0%;
-    margin-top: 2px;
-    width: 100%;
+.suline > li:hover > a::after {
+  margin-left: 0%;
+  margin-top: 2px;
+  width: 100%;
 }
-
 
 /* ss메뉴 오른쪽메뉴*/
 .ssmenu {
-    position: absolute;
-    height: 0;
-    overflow: hidden;
-    /* transition: 1s; */
-    /* margin-top: 20px; */
+  position: absolute;
+  height: 0;
+  overflow: hidden;
+  /* transition: 1s; */
+  /* margin-top: 20px; */
 }
 
-
-
-.ssmenu li{
-    font-size: 20px;
-    /* line-height: 30px; */
-    padding-top:10px ;
+.ssmenu li {
+  font-size: 20px;
+  /* line-height: 30px; */
+  padding-top: 10px;
 }
 
 /* 언어설정(지구본),공유에 호버시 색상변경 */
-.ssmenu li a:hover, .ssmenu li a:hover i{
-    color:#a77554;
-    transition: color 0.3s ease-out;
+.ssmenu li a:hover,
+.ssmenu li a:hover i {
+  color: #a77554;
+  transition: color 0.3s ease-out;
 }
-
-
 
 /**************************** s menu하위메뉴 표시 ****************************/
 
 .smenu > li:hover .ssmenu {
-    height: auto;
+  height: auto;
 }
 
 /* smenu 하위메뉴 오버시 색깔변경 */
-.smenu > li:hover a::after{
-    color: red;
+.smenu > li:hover a::after {
+  color: red;
 }
 /* smenu 하위메뉴 크기설정 */
-.smenu > li >a> i{
-    font-size: 10em;
+.smenu > li > a > i {
+  font-size: 10em;
 }
 
 /**************************************************************** 2.배너 섹션  ****************************************************************/
 
 /*메인 배너 영상 크기 설정 */
 #ban-sect video {
-    max-width: 100%;
-    display: block;
-    margin: 0;
-    padding: 0;
-    margin-top:-5%;
-       
-    
+  max-width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  margin-top: -5%;
 }
 /* 메인 배너 글자 색깔 조정  */
-.mtxt{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    font-size: 10rem;
-    white-space: nowrap;
-    letter-spacing: 1px;
+.mtxt {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 10rem;
+  white-space: nowrap;
+  letter-spacing: 1px;
 }
-
 
 /*******************스크롤 애니매이션 **************************************/
-.scroll-ani{
-    position: absolute;
-    left: 50%;
-    top: 82%;
-    width: 2px;
-    height: 0px;
-    background-color: #fff;
-    animation: scrollani infinite ease-out 2s normal;
-    
-    
-    
+.scroll-ani {
+  position: absolute;
+  left: 50%;
+  top: 82%;
+  width: 2px;
+  height: 0px;
+  background-color: #fff;
+  animation: scrollani infinite ease-out 2s normal;
 }
-.scroll-ani2{
-    position: absolute;
-    left: 50%;
-    top: 82%;
-    width: 2px;
-    height: 160px;
-    background-color: #ffffff;
-    opacity: .5;
-    
+.scroll-ani2 {
+  position: absolute;
+  left: 50%;
+  top: 82%;
+  width: 2px;
+  height: 160px;
+  background-color: #ffffff;
+  opacity: 0.5;
 }
-   
- 
 
 @keyframes scrollani {
-    to{
-        
-        height: 160px;
-    }    
+  to {
+    height: 160px;
+  }
 }
 
 /**************** /스크롤 애니매이션 **************************************/
 
-
-
-.cont-box{
-    position: relative;
-
+.cont-box {
+  position: relative;
 }
 
-
 /* Scroll 글자 조정 */
-.scroll-text>span{
-    display: block;
-    color: #fff;
-    transform: rotate(90deg);
-    position: absolute;
-    left: 49.2%;
-    top:  78%;
-    font-size: 15px;
+.scroll-text > span {
+  display: block;
+  color: #fff;
+  transform: rotate(90deg);
+  position: absolute;
+  left: 49.2%;
+  top: 78%;
+  font-size: 15px;
 }
 
 /*********************************************************** 3.비쥬얼 섹션 ***********************************************************/
 /********************** 3-1.왼쪽박스 **********************/
-.visect-textbox{
-padding: 50% 0 0;
-margin: 0 20% 0 10%;
-
+.ban-tit {
+  position: relative;
+  aspect-ratio: 4/1;
 }
-.visect-desc{
-    font-size: 2.5em;
-}
-.visect-tit{
-    font-size: 5.5em;
-
-}
-.visect-cont{
+.visect-textbox {
+    position: absolute;
+    top: 0;
+    opacity: 0;
     
-    font-size: 1.8em;
-    word-break: break-all;
+    transition: opacity 0.4s ease-in-out;
 }
-
-
-
+.visect-textbox.on {
+    opacity: 1;
+}
+.visect-desc {
+  font-size: 2.5em;
+}
+.visect-tit {
+  font-size: 5.5em;
+}
+.visect-cont {
+  font-size: 1.8em;
+  word-break: break-all;
+}
 
 /********************** 3-1.오른쪽박스 **********************/
-.visect-right{
-    position: relative;
-    width: 100%;
-    height: 100%;
+.visect-right {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-.visect-right ul{
-    width: 100%;
-    position: relative;
-    top: 20%;
+.visect-right ul {
+  width: 100%;
+  position: relative;
+  top: 20%;
 }
-.visect-right ul li{
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    aspect-ratio: 1029/699;
-    transition: opacity .4s ease-in-out;
+.visect-right ul li {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  aspect-ratio: 1029/699;
+  transition: opacity 0.4s ease-in-out;
 }
-.visect-right ul li.on{
-    opacity: 1;
-    z-index: 1;
+.visect-right ul li.on {
+  opacity: 1;
+  z-index: 1;
 }
 /* 오른쪽 이미지+비디오 설정 */
-.visect-right li img,.visual-sect video{
-    width: 100%;    
-    height: 100%;
+.visect-right li img,
+.visual-sect video {
+  width: 100%;
+  height: 100%;
 }
-
-
-
 
 /* 우측이미지+영상 사라졌다 나타나기 */
-.visect-right >ul>li:nth-child(5){
-    animation: name duration timing-function delay iteration-count direction fill-mode;
+.visect-right > ul > li:nth-child(5) {
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
 }
-.visect-right >ul>li:nth-child(4)~{
-    
+.visect-right > ul > li:nth-child(4) ~ {
 }
-
-
-
-
-
-
-
-
-
-
 
 /* 4.프로섹션 섹션 */
 .pro-sect {
-    
 }
 /********************************************************** 5.저니 섹션  **********************************************************/
-.journey-sect {
-    
+.journey-sect {    
+    padding-top: 38%;
+    margin-top: -38%;
+    transition: .5s;
 }
-.jourcont{
-    width: 100%;
-    height: 100%;
+.journey-sect.on {
     background-color: #000000;
 }
-.journeymain{
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    top: 20%;
-    width: 80%;
-    height: 50%;
-    margin: 0 auto;
-    background:url(../../01.자료수집/PJ1_images/journey01.jpg )no-repeat center/cover;
-    mask: linear-gradient(to bottom, #000, transparent);
-    cursor: none;
-    /* mask: top 50% black transparent; */
-    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.2) 14%, rgba(0, 0, 0, 0.4) 23%, rgba(0, 0, 0, 0.6) 32%, rgba(0, 0, 0, 1) 39%, rgba(0, 0, 0, 1) 100%); */
+.jourcont {
+    width: 100%;
+    height: 100%;
 }
-    
+
+.journeymain {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  top: 20%;
+  width: 80%;
+  height: 50%;
+  margin: 0 auto;
+  background: url(../../01.자료수집/PJ1_images/journey01.jpg) no-repeat
+    center/cover;
+  mask: linear-gradient(to bottom, #000, transparent);
+  cursor: none;
+  /* mask: top 50% black transparent; */
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.2) 14%, rgba(0, 0, 0, 0.4) 23%, rgba(0, 0, 0, 0.6) 32%, rgba(0, 0, 0, 1) 39%, rgba(0, 0, 0, 1) 100%); */
+}
 
 /******************* 마우스 포인터 따라다니는 원 이미지 *******************/
 /* 변수셋팅 */
 :root {
-    --cpointer-size: 150px;
-  }
-  
-  /* 따라다니는 원 */
-  .cpointer {
-    /* position: absolute; */
-    position: fixed; /* -> JS에서 clientY사용 */
-    top: 0;
-    left: 0;
-    width: var(--cpointer-size);
-    height: var(--cpointer-size);
-    border-radius: 50%;
-    background-color: rgb(185, 105, 0);
-  
-    /* 자기자신요소는 이벤트가 무시되게 셋팅해야
+  --cpointer-size: 150px;
+}
+
+/* 따라다니는 원 */
+.cpointer {
+  /* position: absolute; */
+  position: fixed; /* -> JS에서 clientY사용 */
+  top: 0;
+  left: 0;
+  width: var(--cpointer-size);
+  height: var(--cpointer-size);
+  border-radius: 50%;
+  background-color: rgb(185, 105, 0);
+
+  /* 자기자신요소는 이벤트가 무시되게 셋팅해야
       아래쪽 요소를 만질 수 있음 */
-    pointer-events: none;
-    
-  
-    
-    /* 
+  pointer-events: none;
+
+  /* 
           [mix-blend-mode 속성]
           - 겹치는 색상처리 블랜딩 모드속성
           - 겹치는 요소의 색상을 섞어서
@@ -398,84 +369,75 @@ margin: 0 20% 0 10%;
           - 밝은색섞기(screen계열)
           - 어두운색섞기(darken계열)
       */
-  
-    /* 트랜지션 : 이징은 ease-out */
-    transition: 0.1s ease-out;
-  
-    /* 트랜스폼 중앙이동 */
-    transform: translate(-50%,-50%);
-    
-    /* 처음에 안보임 */
-    opacity: 0;
-  }
+
+  /* 트랜지션 : 이징은 ease-out */
+  transition: 0.1s ease-out;
+
+  /* 트랜스폼 중앙이동 */
+  transform: translate(-50%, -50%);
+
+  /* 처음에 안보임 */
+  opacity: 0;
+}
 /* ********************************************************* */
 
 /* 포인터 위에 글자 위치조정 */
-.cpointer p{
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 25%;
-    line-height: 40px;
-    font-weight: 100;
-    color: #fff;
-    
+.cpointer p {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 25%;
+  line-height: 40px;
+  font-weight: 100;
+  color: #fff;
 }
 
 /* 6.스페셜섹션  */
 .special-sect {
-   
 }
 /* 7.배너텍스트섹션  */
 .bantext-sect {
-    
 }
 /* 8.파트너 섹션 */
 .partner-sect {
-   
 }
 /* 9.뉴스 섹션  */
 .news-sect {
-    
 }
 /* 10.쇼룸섹션  */
 .showroom-sect {
-    
 }
 /* 11.footer 섹션 */
 .footer-sect {
-    
 }
-
-
 
 /*블릿버튼*/
 .indic {
-    display: flex;
-    /* 플렉스박스 */
-    /* position: absolute; */
-    bottom: 50px;
-    left: 80px;
+  display: flex;
+  /* 플렉스박스 */
+  /* position: absolute; */
+  bottom: 50px;
+  left: 80px;
 }
 
 .indic li {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }
 
 .indic li img {
-    position: absolute;
-    /*이미지 겹치게*/
+  position: absolute;
+  /*이미지 겹치게*/
 }
 
 .indic li img:last-child {
-    /*회색이미지만 투명하게*/
-    opacity: 0;
+  /*회색이미지만 투명하게*/
+  opacity: 0;
 }
 
 /*회색블릿이미지가 보이게하는 class*/
 .indic li.on img:last-child {
-    /*회색이미지만 투명하게*/
-    opacity: 1;
-    /*우선적용!*/
+  /*회색이미지만 투명하게*/
+  opacity: 1;
+  /*우선적용!*/
 }

@@ -1,18 +1,20 @@
 export default function fadeFn() {
   // 쇼핑몰 배너 JS - 03.페이드효과 //
-  
+
   // DOM 선택함수
   const qs = (x) => document.querySelector(x);
   const qsa = (x) => document.querySelectorAll(x);
-  
+
   // addEvent 함수
   // ele - 요소, evt - 이벤트, fn - 함수
   const addEvt = (ele, evt, fn) => ele.addEventListener(evt, fn);
-  
-    // a요소 안튀게 하기
-    qsa('a').forEach(ele=>{
-        addEvt(ele,'click',(e)=>{e.preventDefault();});
-    })
+
+  // a요소 안튀게 하기
+  qsa("a").forEach((ele) => {
+    addEvt(ele, "click", (e) => {
+      e.preventDefault();
+    });
+  });
 
   // 이동버튼 대상:  .abtn
   const abtn = qsa(".abtn");
@@ -20,7 +22,9 @@ export default function fadeFn() {
   let slide = qsa(".visect-right ul li");
   // 블릿버튼 : .indic
   let indic = qs(".indic");
-  console.log(abtn,slide);
+  // 배너 타이틀
+  const banTit = qsa(".visect-textbox");
+  console.log(abtn, slide);
 
   // 슬라이드(블릿)개수 상수로 셋팅하기!
   // 상수는 대문자로 쓰고 단어구분은 언더바로함!
@@ -41,10 +45,10 @@ export default function fadeFn() {
     // 슬라이드 넣기
     // slide.innerHTML += `
     // <li ${i === 0 ? 'class="on"' : ""}>
-    //     <img 
-    //     src="images/slide0${i + 1}.jpg"         
+    //     <img
+    //     src="images/slide0${i + 1}.jpg"
     //     alt="slide">
-    // </li>    
+    // </li>
     // `;
 
     // 블릿 넣기
@@ -58,7 +62,7 @@ export default function fadeFn() {
 
   // [ li를 생성한 후 그 li다시 수집한다! ]
   // (1) 슬라이드의 li까지 수집! slide 변수
-//   slide = qsa("#slide li");
+  //   slide = qsa("#slide li");
   // (2) 블릿의 li까지 수집! indic 변수
   indic = qsa(".indic li");
 
@@ -126,9 +130,15 @@ export default function fadeFn() {
     // 1. 타겟은 HTML 컬렉션이므로 forEach메서드로 순회함!
     target.forEach((ele, idx) => {
       // 1-1. seq와 idx가 일치할 경우 클래스넣기
-      if (seq === idx) ele.classList.add(className);
+      if (seq === idx) {
+        ele.classList.add(className);
+        banTit[idx].classList.add(className);
+      }
       // 1-2. 기타의 경우 클래스 제거하기
-      else ele.classList.remove(className);
+      else {
+        ele.classList.remove(className);
+        banTit[idx].classList.remove(className);
+      }
     }); /////// forEach /////////////////
   } /////////// setClass 함수 //////////////
 
@@ -161,7 +171,7 @@ export default function fadeFn() {
   // 타임아웃용 변수(지울목적)
   let autoT;
   // 자동넘김호출함수 최초호출하기
-//   autoSlide();
+  autoSlide();
 
   // [ 자동넘김호출함수 ] /////
   function autoSlide() {

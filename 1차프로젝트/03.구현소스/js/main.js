@@ -12,3 +12,8 @@ show_letter();
 import fadeFn from "./slide_fade.js";
 fadeFn();
 
+// 스크롤 액션 JS
+import scrollFn from "./scroll_action.js";
+scrollFn();
+
+
