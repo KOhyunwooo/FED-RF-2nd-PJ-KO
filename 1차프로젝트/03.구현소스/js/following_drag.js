@@ -1,16 +1,16 @@
-export default function following(){
+export default function following_drag(){
 
-// 1-1. 움직일 대상 : .cpointer
-const cpointer = document.querySelector(".cpointer");
-const myjourney = document.querySelector(".journeymain");
+// 1-1. 움직일 대상 : .dPointer
+const dPointer = document.querySelector(".dragpointer");
+const newsB = document.querySelector(".newsbox");
 // 1-2. 이벤트 대상 : journeymain
 
 
-// console.log('대상:', cpointer, journeymain);
+// console.log('대상:', dPointer, journeymain);
 
 // 2. 이벤트 대상에 마우스무브 이벤트가 발생할때
 // 무버가 마우스 포인터 따라다니기 기능구현
-myjourney.onmousemove = (e) => {
+newsB.onmousemove = (e) => {
 //   console.log("마우스무브!!!");
 
   // 1. 마우스 포인터 위치값 알아오기
@@ -20,21 +20,21 @@ myjourney.onmousemove = (e) => {
 
   // 2. 무버에 위치값 적용하기
   // -> 무버에는 트랜지션이 적용되어 있음!
-//   cpointer.style.top = e.pageY + 'px';
-// cpointer가 fixed이면 Y축은 보이는 화면 기준해야함!
+//   dPointer.style.top = e.pageY + 'px';
+// dPointer가 fixed이면 Y축은 보이는 화면 기준해야함!
 // -> 그래서 clientY를 사용함!
-  cpointer.style.top = e.clientY + 'px';
-  cpointer.style.left = e.pageX + 'px';
+  dPointer.style.top = e.clientY + 'px';
+  dPointer.style.left = e.pageX + 'px';
 
 
 }; /////////// mousemove //////////////
 
 // 3. 이벤트 대상 구역에 들어올때만 보이기 / 나가면 숨기기
-myjourney.onmouseenter = ()=>{
-    cpointer.style.opacity = 0.8;
+newsB.onmouseenter = ()=>{
+    dPointer.style.opacity = 1;
 }; // mouseenter //////////
-myjourney.onmouseleave = ()=>{
-    cpointer.style.opacity = 0;
+newsB.onmouseleave = ()=>{
+    dPointer.style.opacity = 0;
 }; // mouseleave //////////
 
 

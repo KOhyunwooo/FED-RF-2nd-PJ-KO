@@ -381,7 +381,7 @@ h1.logo a {
       */
 
   /* 트랜지션 : 이징은 ease-out */
-  transition: 0.1s ease-out;
+  transition: .1s ease-out;
 
   /* 트랜스폼 중앙이동 */
   transform: translate(-50%, -50%);
@@ -389,7 +389,6 @@ h1.logo a {
   /* 처음에 안보임 */
   opacity: 0;
 }
-/* ********************************************************* */
 
 /* 포인터 위에 글자 위치조정 */
 .cpointer p {
@@ -400,6 +399,7 @@ h1.logo a {
   font-weight: 100;
   color: #fff;
 }
+/* ********************************************************* */
 
 /* 6.스페셜섹션  */
 .special-sect {
@@ -410,9 +410,71 @@ h1.logo a {
 /* 8.파트너 섹션 */
 .partner-sect {
 }
-/* 9.뉴스 섹션  */
+/************************************************************* 9.뉴스 섹션  *************************************************************/
 .news-sect {
 }
+.newsbox{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(137, 164, 255);
+  cursor: pointer;
+}
+
+/******************* 마우스 포인터 따라다니는 드래그 이미지 *******************/
+/* 변수셋팅 */
+:root {
+  --dragpointer-size: 150px;
+}
+
+/* 따라다니는 원 */
+.dragpointer{
+  /* position: absolute; */
+  position: fixed; /* -> JS에서 clientY사용 */
+  top: 0;
+  left: 0;
+  width: var(--dragpointer-size);
+  height: var(--dragpointer-size);
+  
+ 
+
+  /* 자기자신요소는 이벤트가 무시되게 셋팅해야
+      아래쪽 요소를 만질 수 있음 */
+  pointer-events: none;
+
+  /* 
+          [mix-blend-mode 속성]
+          - 겹치는 색상처리 블랜딩 모드속성
+          - 겹치는 요소의 색상을 섞어서
+          디스플레이 처리함
+          - 밝은색섞기(screen계열)
+          - 어두운색섞기(darken계열)
+      */
+
+  /* 트랜지션 : 이징은 ease-out */
+  transition: 0.1s ease-out;
+
+  /* 트랜스폼 중앙이동 */
+  transform: translate(-50%, -50%);
+
+  /* 처음에 안보임 */
+  opacity: 0;
+  
+}
+
+/* 포인터 위에 글자 위치조정 */
+.dragpointer p {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 25%;
+  line-height: 40px;
+  font-weight: 100;
+  color: #000000;
+}
+/* ********************************************************* */
+
+
+
+
 /* 10.쇼룸섹션  */
 .showroom-sect {
 }
