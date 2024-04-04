@@ -12,7 +12,7 @@ export default function viScroll(){
     
 
     // 기준값:
-    const CRITERIA = window.innerHeight/3*2;
+    const CRITERIA = window.innerHeight/2;
 
     // 이벤트 설정하기
     myFn.addEvt(window,'scroll',showIt);

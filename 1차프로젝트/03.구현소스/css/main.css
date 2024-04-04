@@ -9,7 +9,7 @@
 @import url(./show_letter.css); /* 메인타이포그라피 불러오기 */
 body * {
     /* 공사중 표시 */
-    /* outline: 1px dashed rgb(255, 0, 0); */
+    outline: 1px dashed rgb(255, 0, 0);
     /* 임시 배경색, 배경색 전부 따로 줘야함 */
 
     /* line-height: 1.6; */

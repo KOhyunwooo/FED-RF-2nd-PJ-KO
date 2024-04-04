@@ -244,6 +244,10 @@ h1.logo a {
 }
 
 /*********************************************************** 3.비쥬얼 섹션 ***********************************************************/
+
+
+
+
 /********************** 3-1.왼쪽박스 **********************/
 .ban-tit {
   position: relative;
@@ -302,8 +306,10 @@ h1.logo a {
 /* 오른쪽 이미지+비디오 설정 */
 .visect-right li img,
 .visual-sect video {
-  width: 100%;
-  height: 100%;
+  margin-top: 10vw;
+  width: 90%;
+  height: 90%;
+  mask: linear-gradient(to bottom, #000 , transparent 80%);
 }
 
 /* 우측이미지+영상 사라졌다 나타나기 */
@@ -317,7 +323,10 @@ h1.logo a {
 /* 4.프로섹션 섹션 */
 .pro-sect {
 }
+
+
 /********************************************************** 5.저니 섹션  **********************************************************/
+
 .journey-sect {    
     padding-top: 100%;
     margin-top: -100%;
@@ -421,51 +430,25 @@ h1.logo a {
 }
 
 /******************* 마우스 포인터 따라다니는 드래그 이미지 *******************/
-/* 변수셋팅 */
-:root {
-  --dragpointer-size: 150px;
-}
-
 /* 따라다니는 원 */
 .dragpointer{
   /* position: absolute; */
   position: fixed; /* -> JS에서 clientY사용 */
-  top: 0;
-  left: 0;
-  width: var(--dragpointer-size);
-  height: var(--dragpointer-size);
-  
- 
-
-  /* 자기자신요소는 이벤트가 무시되게 셋팅해야
+      /* 자기자신요소는 이벤트가 무시되게 셋팅해야
       아래쪽 요소를 만질 수 있음 */
   pointer-events: none;
-
-  /* 
-          [mix-blend-mode 속성]
-          - 겹치는 색상처리 블랜딩 모드속성
-          - 겹치는 요소의 색상을 섞어서
-          디스플레이 처리함
-          - 밝은색섞기(screen계열)
-          - 어두운색섞기(darken계열)
-      */
-
   /* 트랜지션 : 이징은 ease-out */
-  transition: 0.1s ease-out;
-
+  transition: 0.15s ease-out;
   /* 트랜스폼 중앙이동 */
-  transform: translate(-50%, -50%);
-
+  transform: translate(-50%, -100%);
   /* 처음에 안보임 */
   opacity: 0;
-  
-}
+  }
 
 /* 포인터 위에 글자 위치조정 */
 .dragpointer p {
   text-align: center;
   font-size: 2.5rem;
-  margin-top: 25%;
   line-height: 40px;
   font-weight: 100;
   color: #000000;
