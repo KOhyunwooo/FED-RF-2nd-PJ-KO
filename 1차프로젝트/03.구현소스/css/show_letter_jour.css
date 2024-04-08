@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* body {
+    background-color: rgb(255, 255, 255);
+} */
+/* 글자스테이지 */
+.jourtxt {
+    /* position: fixed; */
+    position: absolute;
+    width: 1010px;
+    height: 110px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+
+    /* 글자설정 */
+    font-size: 5vw;
+    color: #ff0000;
+    white-space: nowrap;
+}
+
+/* 글자개별박스 셋팅 */
+.jourtxt span {
+    /* 트랜스폼 적용위해 */
+    display: block;
+}
+/* 글자등장 스타일1 */
+.jourtxt-style span{
+    /* 현재위치로 부터 이동 */
+    transform: translate(500%, -300%);
+    /* 투명도 0 */
+    opacity: 1;    
+    /* 트랜지션: 속시이지 */
+    transition: 0.3s ease-in;
+}
+/* 등장클래스 .on */
+.jourtxt-style.on span{
+    /* 현재위치로 부터 이동 */
+    transform: translate(0, 0);
+    /* 투명도 0 */
+    opacity: 1;    
+}

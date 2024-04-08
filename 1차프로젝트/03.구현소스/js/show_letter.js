@@ -19,7 +19,7 @@ const domFn = {
 
   // 2. 대상선정 : .stage-letters
   const stage = domFn.qs('.mtxt');
-  console.log('대상:',stage);
+  // console.log('대상:',stage);
 
 
   // 3. 글자 데이터 변수 할당
