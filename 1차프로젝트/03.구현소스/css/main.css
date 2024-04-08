@@ -39,9 +39,9 @@ body * {
 
 
 /* 3.비쥬얼 섹션 */
-/* .visual-sect {
-    height: 1295.95px;
-} */
+.visual-sect {
+    height: 777px;
+}
 /* 4.프로섹션 섹션 */
 .pro-sect {
     height: 1058.89px;
