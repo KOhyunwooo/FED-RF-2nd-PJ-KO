@@ -285,7 +285,7 @@ h1.logo a {
   margin-top: 10%;
   margin-left: 10%;
   opacity: 0;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .visect-right.on {
   margin-top: 0%;
