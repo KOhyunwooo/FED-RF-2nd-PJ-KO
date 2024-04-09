@@ -24,7 +24,7 @@ export default function fadeFn() {
   let indic = qs(".indic");
   // 배너 타이틀
   const banTit = qsa(".visect-textbox");
-  console.log(abtn, slide);
+  // console.log(abtn, slide);
 
   // 슬라이드(블릿)개수 상수로 셋팅하기!
   // 상수는 대문자로 쓰고 단어구분은 언더바로함!

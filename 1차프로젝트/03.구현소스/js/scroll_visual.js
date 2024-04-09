@@ -21,7 +21,7 @@ export default function viScroll(){
     function showIt(){
         // 대상위치값
         let tgPos = myFn.getBCR(viRight);
-        console.log(tgPos);
+        // console.log(tgPos);
 
         if(tgPos < CRITERIA){
             viRight.classList.add('on');

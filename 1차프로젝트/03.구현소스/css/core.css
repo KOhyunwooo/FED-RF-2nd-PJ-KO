@@ -19,6 +19,20 @@
 */
 
 /********************* 공통 클래스 *********************/
+.desc {
+    font-size: 2.5em;
+  }
+  .tit {
+    font-size: 5.5em;
+  }
+  .cont {
+    font-size: 1.8em;
+    word-break: break-all;
+  }
+  .txt{
+    font-size: 1.8em;
+  }
+
 
 /* 임시 글자색 */
 a{

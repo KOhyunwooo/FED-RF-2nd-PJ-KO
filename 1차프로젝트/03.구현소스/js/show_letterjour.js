@@ -40,9 +40,30 @@ export default function show_letterjour(){
   // 5. 스테이지에 코드 출력하기 /////
   stage.innerHTML = hcode;
 
-  // 6. 일정 시간 뒤 등장클래스 .on넣기
-  setTimeout(() => {
-    stage.classList.add('on');
-  }, 1000);
+
+
+
+  //6.윈도우이너헤이트2/3위치일때 이벤트 실행
+
+  const CRITERIA = window.innerHeight/3*2;
+
+  // 이벤트 설정하기
+  myFn.addEvt(window,'scroll',showIt);
+  
+  // 스크롤 이벤트 함수
+  function showIt(){
+      // 대상위치값
+      let tgPos = myFn.getBCR(stage);
+      // console.log(tgPos);
+  
+      if(tgPos < CRITERIA){
+        stage.classList.add('on');
+      }
+      else{
+        stage.classList.remove('on');
+      }
+    }
+
 
 }
+

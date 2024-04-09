@@ -8,14 +8,15 @@
 .jtxt {
     display: flex;
     position: absolute;
-    top: 40%;
+    top: 18%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
-    font-size: 10rem;
+    font-size: 12em;
     white-space: nowrap;
     letter-spacing: 1px;
+    z-index: 1;
   }
 
 /* 글자개별박스 셋팅 */
@@ -25,13 +26,8 @@
 }
 
 
-/* 글자등장 스타일3 */
-.jtxt-style{
-    /* 원근설정 */
-    perspective: 100vh;
-}
 .jtxt-style span{
-    transform: rotateX(90deg);
+    /* transform: rotateX(90deg); */
     transform-origin: bottom;
     /* 투명도 0 */
     opacity: 0;    
