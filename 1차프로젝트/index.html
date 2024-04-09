@@ -35,6 +35,18 @@
         const topArea = qs("#top-area");
         const gnb = qs(".gnb");
 
+        addEvt(window,'scroll',()=>{
+          let scTop = window.scrollY;
+          console.log(scTop);
+          if(scTop>50){
+            topArea.classList.add('slim');
+          }
+          else{
+            topArea.classList.remove('slim');
+
+          }
+        });
+
         gnb.onmouseenter = () => {
           topArea.classList.add("on");
         };

@@ -21,11 +21,15 @@ h1.logo a {
   width: 220px;
   max-width: 100%;
 }
-#top-area {
-  position: relative;
+#top-area {  
+  position: fixed;
+  width: 100%;
   z-index: 999;
   background-color: #000000;
   padding-bottom: 3vw;
+}
+#top-area.slim {  
+  height: 20px;
 }
 #top-area::after {
   content: "";

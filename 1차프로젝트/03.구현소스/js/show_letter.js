@@ -23,7 +23,7 @@ const domFn = {
 
 
   // 3. 글자 데이터 변수 할당
-  const myText = 'SKIN CARE&MAKE UP';
+  const myText = 'SKIN CARE&MAKE UP^packaging';
   // const myText = 'packaging';
 
   // 4. 데이터 글자 한 글자씩 태그로 싸기
@@ -39,6 +39,9 @@ const domFn = {
     if(x===' '){ // 스페이스 공백처리
         hcode += '&nbsp;&nbsp;';
     } /// if ///
+    else if(x==='^'){
+      hcode += '<span style="width:100%"></span>';
+    }
     else{ // 글자일 경우 span태그 랩핑처리
         hcode += `
         <span

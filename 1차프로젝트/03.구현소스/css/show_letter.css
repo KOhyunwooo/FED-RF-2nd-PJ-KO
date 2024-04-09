@@ -8,10 +8,14 @@ body {
 .mtxt {
     /* position: fixed; */
     display: flex;
+    /* 랩핑박스 */
+    flex-wrap: wrap;
+    /* 가로크기 제한 */
+    width: 55.5vw;
+
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    
+    transform: translate(-50%, -50%);    
 
     /* 글자설정 */
     font-size: 5vw;

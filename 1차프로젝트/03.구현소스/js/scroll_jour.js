@@ -23,7 +23,7 @@ export default function scrollFn(){
         let tgPos = myFn.getBCR(jourcont);
         // console.log(tgPos);
 
-        if(tgPos < CRITERIA){
+        if(tgPos < CRITERIA && tgPos > -CRITERIA){
             journeySect.classList.add('on');
         }
         else{
