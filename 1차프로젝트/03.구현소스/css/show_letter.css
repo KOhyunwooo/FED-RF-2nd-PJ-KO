@@ -10,6 +10,7 @@ body {
     display: flex;
     /* 랩핑박스 */
     flex-wrap: wrap;
+    justify-content: center;
     /* 가로크기 제한 */
     width: 55.5vw;
 

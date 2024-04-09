@@ -23,7 +23,7 @@ const domFn = {
 
 
   // 3. 글자 데이터 변수 할당
-  const myText = 'SKIN CARE&MAKE UP^packaging';
+  const myText = 'SKIN CARE&MAKE UP^PACKAGING';
   // const myText = 'packaging';
 
   // 4. 데이터 글자 한 글자씩 태그로 싸기
