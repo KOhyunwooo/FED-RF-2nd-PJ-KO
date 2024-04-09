@@ -4,40 +4,43 @@
     background-color: rgb(255, 255, 255);
 } */
 /* 글자스테이지 */
-.jourtxt {
-    /* position: fixed; */
+
+.jtxt {
+    display: flex;
     position: absolute;
-    width: 1010px;
-    height: 110px;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 9;
-
-    /* 글자설정 */
-    font-size: 5vw;
-    color: #ff0000;
+    text-align: center;
+    color: #fff;
+    font-size: 10rem;
     white-space: nowrap;
-}
+    letter-spacing: 1px;
+  }
 
 /* 글자개별박스 셋팅 */
-.jourtxt span {
+.jtxt span {
     /* 트랜스폼 적용위해 */
     display: block;
 }
-/* 글자등장 스타일1 */
-.jourtxt-style span{
-    /* 현재위치로 부터 이동 */
-    transform: translate(500%, -300%);
+
+
+/* 글자등장 스타일3 */
+.jtxt-style{
+    /* 원근설정 */
+    perspective: 100vh;
+}
+.jtxt-style span{
+    transform: rotateX(90deg);
+    transform-origin: bottom;
     /* 투명도 0 */
-    opacity: 1;    
+    opacity: 0;    
     /* 트랜지션: 속시이지 */
     transition: 0.3s ease-in;
 }
 /* 등장클래스 .on */
-.jourtxt-style.on span{
-    /* 현재위치로 부터 이동 */
-    transform: translate(0, 0);
+.jtxt-style.on span{
+    transform: rotateX(0deg);
     /* 투명도 0 */
     opacity: 1;    
 }

@@ -1,29 +1,15 @@
-// 글자등장1 JS - show_letter.js
-export default function show_letter(){
+
+import myFn from './dom.js';
+
+export default function show_letterjour(){
   
-
-// DOM 함수 객체 //////////////
-const domFn = {
-    // 요소선택함수 ////////
-    qs: (x) => document.querySelector(x),
-    qsEl: (el, x) => el.querySelector(x),
-    qsa: (x) => document.querySelectorAll(x),
-    qsaEl: (el, x) => el.querySelectorAll(x),
-  
-    // 이벤트셋팅함수
-    addEvt: (ele, evt, fn) => ele.addEventListener(evt, fn),
-  }; /////// domFn 객체 /////////////
-
-  // 1. 구현 요구사항 :
-  // - 글자를 박스에 넣고 하나씩 일어나면서 등장(.style3)
-
   // 2. 대상선정 : .stage-letters
-  const stage = domFn.qs('.mtxt');
+  const stage = myFn.qs('.jtxt');
   // console.log('대상:',stage);
 
 
   // 3. 글자 데이터 변수 할당
-  const myText = 'SKIN CARE&MAKE UP';
+  const myText = 'Our Journey Towwards';
   // const myText = 'packaging';
 
   // 4. 데이터 글자 한 글자씩 태그로 싸기

@@ -31,5 +31,5 @@ import scrollFn from "./scroll_jour.js";
 scrollFn();
 
 //저니섹션 스크롤 액션+텍스트
-// import jourtxt from "./ jourtxt.js";
-// jourtxt();
+import jourtxt from "./show_letterjour.js";
+jourtxt();
