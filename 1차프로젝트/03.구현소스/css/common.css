@@ -326,6 +326,18 @@ h1.logo a {
 
 /********************************************************** 5.저니 섹션  **********************************************************/
 
+.jourdesc{
+  padding-left: 10%;
+  padding-top:3%;
+  opacity: 0;
+  transition: 1s ease-in-out 1.5s;
+}
+.jourdesc.on{
+  padding-left: 12.5%;
+  padding-top:3%;
+  opacity: 1;
+}
+
 .journey-sect {    
     padding-top: 100%;
     margin-top: -100%;
@@ -347,24 +359,29 @@ h1.logo a {
   display: flex;
   flex-wrap: wrap;
   top: 20%;
-  width: 80%;
-  height: 50%;
+  width: 75%;
+  height: 70%;
   margin: 0 auto;
   background: url(../../01.자료수집/PJ1_images/journey01.jpg) no-repeat
-  center/cover;
-  mask: linear-gradient(to bottom, #000, transparent 80%);
+  bottom/cover;
+  mask-image: linear-gradient(to bottom, #000 , transparent 80%);
   cursor: none;
-  /* mask: top 50% black transparent; */
+  transition: 1s ease-in-out;
+  opacity: 0;
+  /* clip-path:  polygon(0%,0%,100%,0%); */
+  /* mask: top 100% black transparent; */
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, rgba(0, 0, 0, 0.2) 14%, rgba(0, 0, 0, 0.4) 23%, rgba(0, 0, 0, 0.6) 32%, rgba(0, 0, 0, 1) 39%, rgba(0, 0, 0, 1) 100%); */
 }
+.journeymain.on{
+  /* clip-path:  polygon(100%,100%,100%,100%); */
+  opacity: 1;
 
-/* 저니섹션 아랫쪽 텍스트 색깔*/
-.journeymain-txt> p.tit{
-  padding-top: 10%;
 }
+/* 저니섹션 아랫쪽 텍스트 색깔*/
+
 .journeymain-txt> p.tit,.journeymain-txt> p.desc{
   color: #fff;
-  padding-left: 10%;
+
   
 }
 /******************* 마우스 포인터 따라다니는 원 이미지 *******************/

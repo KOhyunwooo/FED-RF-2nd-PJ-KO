@@ -1,15 +1,17 @@
 
 import myFn from './dom.js';
 
-export default function show_letterjour(){
+export default function show_letterjour2(){
   
   // 2. 대상선정 : .stage-letters
-  const stage = myFn.qs('.jtxt');
-  // console.log('대상:',stage);
+  const stage = myFn.qs('.jourtit');/* 위에글자 'SUSTAINABILITY */
+  const jourDesc = myFn.qs('.jourdesc');/* 아래글자 지속가능한 미래를 위한 준비, 그리고 도전<br>
+  지금까지의 탭코리아를 성장시켜온 원동력이자 더 나은 미래로 나아가는 경쟁력입니다. */
+  
 
 
   // 3. 글자 데이터 변수 할당
-  const myText = 'Our Journey Towwards';
+  const myText = 'SUSTAINABILITY';
   // const myText = 'packaging';
 
   // 4. 데이터 글자 한 글자씩 태그로 싸기
@@ -43,9 +45,9 @@ export default function show_letterjour(){
 
 
 
-  //6.윈도우이너헤이트2/3위치일때 이벤트 실행
-
-  const CRITERIA = window.innerHeight/3*2;
+  //6.윈도우이너헤이트1/2위치일때 이벤트 실행
+  
+  const CRITERIA = window.innerHeight*9/10;
 
   // 이벤트 설정하기
   myFn.addEvt(window,'scroll',showIt);
@@ -58,9 +60,11 @@ export default function show_letterjour(){
   
       if(tgPos < CRITERIA){
         stage.classList.add('on');
+        jourDesc.classList.add('on');
       }
       else{
         stage.classList.remove('on');
+        jourDesc.classList.remove('on');
       }
     }
 

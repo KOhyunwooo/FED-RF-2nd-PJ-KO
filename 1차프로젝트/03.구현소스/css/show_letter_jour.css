@@ -40,3 +40,42 @@
     /* 투명도 0 */
     opacity: 1;    
 }
+
+
+
+/*************************************  *************************************/
+.jourtit {
+    display: flex;
+    position: absolute;
+    top: 56%;
+    left: 24.5%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+   
+    white-space: nowrap;
+    letter-spacing: 1px;
+    z-index: 1;
+  }
+
+/* 글자개별박스 셋팅 */
+.jourtit span {
+    /* 트랜스폼 적용위해 */
+    display: block;
+}
+
+
+.jourtitstyle span{
+    /* transform: rotateX(90deg); */
+    transform-origin: bottom;
+    /* 투명도 0 */
+    opacity: 0;    
+    /* 트랜지션: 속시이지 */
+    transition: 0.3s ease-in;
+}
+/* 등장클래스 .on */
+.jourtitstyle.on span{
+    transform: rotateX(0deg);
+    /* 투명도 0 */
+    opacity: 1;    
+}

@@ -10,7 +10,7 @@ export default function scrollFn(){
     // 대상:.jourcont
     const jourcont = myFn.qs(".jourcont");
     const journeySect = myFn.qs(".journey-sect");
-
+    const jourMain= myFn.qs(".journeymain");
     // 기준값:
     const CRITERIA = window.innerHeight/3*2;
 
@@ -25,9 +25,11 @@ export default function scrollFn(){
 
         if(tgPos < CRITERIA && tgPos > -CRITERIA){
             journeySect.classList.add('on');
+            jourMain.classList.add('on');
         }
         else{
             journeySect.classList.remove('on');
+            jourMain.classList.remove('on');
         }
 
     } //////// showIt 함수 ////////////
