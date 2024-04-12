@@ -28,9 +28,6 @@ h1.logo a {
   background-color: #000000;
   padding-bottom: 3vw;
 }
-#top-area.slim {  
-  height: 20px;
-}
 #top-area::after {
   content: "";
   position: absolute;
@@ -47,6 +44,16 @@ h1.logo a {
 #top-area.on::after {
   height: 300px; /* #top-area.on .gnb와 수치 같게 할것 */
 }
+
+
+/**************************** 스크롤해서 마우스 내려갈 시 nav바 디자인 바뀌게 ****************************/
+#top-area.slim {  
+  height: 15px;
+    top: -2.5%;
+    background-color: rgba(0, 0, 0);
+    z-index: 1000;
+}
+
 /*********************************** 중앙 메인 네비.gnb ***********************************/
 .gnb {
   position: absolute;
@@ -191,18 +198,7 @@ h1.logo a {
   padding: 0;
   margin-top: -5%;
 }
-/* 메인 배너 글자 색깔 조정  */
-.mtxt {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-  font-size: 10rem;
-  white-space: nowrap;
-  letter-spacing: 1px;
-}
+
 
 /*******************스크롤 애니매이션 **************************************/
 .scroll-ani {
@@ -249,12 +245,47 @@ h1.logo a {
 
 /*********************************************************** 3.비쥬얼 섹션 ***********************************************************/
 
+/******************블릿버튼●●●●●●버튼******************/
+.indic {
+  display: flex;
+  /* 플렉스박스 */
+  /* position: absolute; */
+  padding-top: 33%;
+}
 
+.indic li {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.indic li img {
+  position: absolute;
+  /*이미지 겹치게*/
+}
+
+.indic li img:last-child {
+  /*회색이미지만 투명하게*/
+  opacity: 0;
+}
+
+/*회색블릿이미지가 보이게하는 class*/
+.indic li.on img:last-child {
+  /*회색이미지만 투명하게*/
+  opacity: 1;
+  /*우선적용!*/
+}
+
+/************************* 화살표버튼 숨기기 *************************/
+.btngrp{
+  display: none;
+}
 
 
 /********************** 3-1.왼쪽박스 **********************/
 .visect-left{
-  margin-top: 10%;
+  padding-top: 10%;
+  padding-left: 5%;
 }
 .ban-tit {
   position: relative;
@@ -277,13 +308,12 @@ h1.logo a {
   position: relative;
   width: 100%;
   height: 100%;
-  margin-top: 10%;
-  margin-left: 10%;
+  padding: 5%;
   opacity: 0;
-  transition: 0.5s ease-in-out;
+  transition: 1s ease-in-out;
 }
 .visect-right.on {
-  margin-top: 0%;
+  
   opacity: 1;
 }
 .visect-right ul {
@@ -305,9 +335,9 @@ h1.logo a {
 /* 오른쪽 이미지+비디오 설정 */
 .visect-right li img,
 .visual-sect video {
-  margin-top: 10%;
-  width: 90%;
-  height: 90%;
+  
+  width: 100%;
+  height: 100%;
   mask: linear-gradient(to bottom, #000 , transparent 80%);
 }
 
@@ -326,17 +356,6 @@ h1.logo a {
 
 /********************************************************** 5.저니 섹션  **********************************************************/
 
-.jourdesc{
-  padding-left: 10%;
-  padding-top:3%;
-  opacity: 0;
-  transition: 1s ease-in-out 1.5s;
-}
-.jourdesc.on{
-  padding-left: 12.5%;
-  padding-top:3%;
-  opacity: 1;
-}
 
 .journey-sect {    
     padding-top: 100%;
@@ -500,34 +519,4 @@ h1.logo a {
 .footer-sect {
 }
 
-/*블릿버튼*/
-.indic {
-  display: flex;
-  /* 플렉스박스 */
-  /* position: absolute; */
-  bottom: 50px;
-  left: 80px;
-}
 
-.indic li {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-}
-
-.indic li img {
-  position: absolute;
-  /*이미지 겹치게*/
-}
-
-.indic li img:last-child {
-  /*회색이미지만 투명하게*/
-  opacity: 0;
-}
-
-/*회색블릿이미지가 보이게하는 class*/
-.indic li.on img:last-child {
-  /*회색이미지만 투명하게*/
-  opacity: 1;
-  /*우선적용!*/
-}

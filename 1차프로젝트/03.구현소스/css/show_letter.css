@@ -6,7 +6,7 @@ body {
 }
 /* 글자스테이지 */
 .mtxt {
-    /* position: fixed; */
+    position: absolute;
     display: flex;
     /* 랩핑박스 */
     flex-wrap: wrap;
@@ -22,6 +22,8 @@ body {
     font-size: 5vw;
     color: #fff;
     white-space: nowrap;
+    letter-spacing: 1px;
+    
 }
 
 /* 글자개별박스 셋팅 */
@@ -30,18 +32,14 @@ body {
     display: block;
 }
 /* 글자등장 스타일1 */
-.style1 span{
-    /* 현재위치로 부터 이동 */
-    transform: translate(500%, -300%);
+.style3 span{
+    
     /* 투명도 0 */
     opacity: 0;    
-    /* 트랜지션: 속시이지 */
     transition: 0.3s ease-in;
 }
-/* 등장클래스 .on */
-.style1.on span{
+.style3.on span{
     /* 현재위치로 부터 이동 */
-    transform: translate(0, 0);
     /* 투명도 0 */
     opacity: 1;    
 }
@@ -52,32 +50,26 @@ body {
     transform: translate(0, 50%);
     /* 투명도 0 */
     opacity: 0;    
-    /* 트랜지션: 속시이지 */
     transition: 0.3s ease-in;
 }
-/* 등장클래스 .on */
 .style2.on span{
     /* 현재위치로 부터 이동 */
-    transform: translate(0, 0);
     /* 투명도 0 */
     opacity: 1;    
 }
+
+
 /* 글자등장 스타일3 */
-.style3{
-    /* 원근설정 */
+/* .style3{
     perspective: 100vh;
 }
 .style3 span{
     transform: rotateX(90deg);
     transform-origin: bottom;
-    /* 투명도 0 */
     opacity: 0;    
-    /* 트랜지션: 속시이지 */
     transition: 0.3s ease-in;
 }
-/* 등장클래스 .on */
 .style3.on span{
     transform: rotateX(0deg);
-    /* 투명도 0 */
     opacity: 1;    
-}
+} */

@@ -43,13 +43,14 @@
 
 
 
-/*************************************  *************************************/
+/**************************아래쪽 SUSTAINABILITY 부분 스타일****************************/
 .jourtit {
     display: flex;
     position: absolute;
-    top: 56%;
-    left: 24.5%;
-    transform: translate(-50%, -50%);
+    margin-left: 12.5%;
+    /* top: 70%; */
+    /* left: 24.5%; */
+    /* transform: translate(-50%, -50%); */
     text-align: center;
     color: #fff;
    
@@ -67,7 +68,7 @@
 
 .jourtitstyle span{
     /* transform: rotateX(90deg); */
-    transform-origin: bottom;
+    /* transform-origin: bottom; */
     /* 투명도 0 */
     opacity: 0;    
     /* 트랜지션: 속시이지 */
@@ -75,7 +76,24 @@
 }
 /* 등장클래스 .on */
 .jourtitstyle.on span{
-    transform: rotateX(0deg);
+    /* transform: rotateX(0deg); */
     /* 투명도 0 */
     opacity: 1;    
 }
+
+
+
+
+/* 아랫쪽 지속가능한 미래를 위한 준비, 그리고 도전 부분 스타일 */
+.jourdesc{
+    padding-left: 10%;
+    padding-top:3%;
+    opacity: 0;
+    transition: 1s ease-in-out 1s;
+  }
+  .jourdesc.on{
+    padding-left: 12.5%;
+    padding-top:3%;
+    opacity: 1;
+  }
+  

@@ -47,7 +47,7 @@ export default function show_letterjour2(){
 
   //6.윈도우이너헤이트1/2위치일때 이벤트 실행
   
-  const CRITERIA = window.innerHeight*9/10;
+  const CRITERIA = window.innerHeight*19/20;
 
   // 이벤트 설정하기
   myFn.addEvt(window,'scroll',showIt);
