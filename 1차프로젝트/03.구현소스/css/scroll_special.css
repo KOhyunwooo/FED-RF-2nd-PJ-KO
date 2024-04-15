@@ -1,12 +1,16 @@
 @charset "utf-8";
+/* 스페셜섹션 위치조정 */
+
+
+
 
 
 /* 스크롤액션박스 */
 .scrollspebox {
   position: absolute;
-  top: 5%;
-  right: 7vw;
-  width: 20vw;
+  /* top: 20vh; */
+  /* right: 100px; */
+  width: 23vw;
   /* border: 1px solid #000; */
   /* background-color: lightblue; */
   background-repeat: no-repeat;
@@ -20,45 +24,51 @@
 
 /* 스크롤등장박스1 */
 .speimg1 {
-  background-image: url(../../01.자료수집/PJ1_images/special01.jpg);
+  top: 20vh;
+  right: 12vw;
 }
 
 /* 스크롤등장박스2 */
 .speimg2 {
-  top: 13%;
-  right: 50vw;
-  background-image: url(../../01.자료수집/PJ1_images/special02.jpg);
+  top: 35vh;
+  right: 44vw;
 }
 /* 스크롤등장박스3 */
 .speimg3 {
-  top: 23%;
-  background-image: url(../../01.자료수집/PJ1_images/special03.jpg);}
-
+  top: 91vh;
+  right: 16vw;
+}
 .speimg4 {
-  top: 31%;
-  background-image: url(../../01.자료수집/PJ1_images/special04.jpg);}
+  top: 103vh;
+  right: 48vw;
+
+}
 .speimg5 {
-  top: 38%;
-  background-image: url(../../01.자료수집/PJ1_images/special05.jpg);}
+  top: 143vh;
+    right: 12vw;
+}
 .speimg6 {
-  top: 43%;
-  background-image: url(../../01.자료수집/PJ1_images/special06.jpg);}
+  top: 176vh;
+    right: 43vw;
+}
 .speimg7 {
-  top: 55%;
-  background-image: url(../../01.자료수집/PJ1_images/special07.jpg);}
+  top: 227vh;
+  right: 15vw;
+}
 
 /* 스크롤 등장 초기화 클래스1 */
 .spestyle{
   transform: translateY(20%);
   opacity: 0;
-  transition: 1.2s ease-in-out;
-  border-radius: 15%;
+  transition: 1.5s ease-in-out;
+  border-radius: 50%;
 }
 /* 스크롤 등장 클래스 .on */
 .spestyle.on{
   transform: translateY(0);
   opacity: 1;
-  border-radius: 0;
+  border-radius: 0%;
+  
 }
 
 /* 스크롤 등장 초기화 클래스2 */
@@ -82,6 +92,19 @@
 /* .set-it3.on{
   transform: translate(0,0) scale(1);
 } */
+
+
+
+
+/**********************************  **********************************/
+
+.spertxt{
+  position: absolute;
+  writing-mode: vertical-lr;
+  white-space: nowrap;
+  top: 0;
+  right: -1em;
+}
 
 
 

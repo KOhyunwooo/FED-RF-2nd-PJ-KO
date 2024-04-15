@@ -13,7 +13,7 @@ export default function speScroll(){
 
     // 기준값:
     const CRITERIA = window.innerHeight/3*2;
-    console.log(scrSpebox);
+    // console.log(scrSpebox);
 
     // 이벤트 설정하기
     myFn.addEvt(window,'scroll',showIt);

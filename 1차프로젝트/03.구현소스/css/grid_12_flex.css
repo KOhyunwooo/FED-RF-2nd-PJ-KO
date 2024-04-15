@@ -27,6 +27,10 @@
    
 }
 
+/* .col-12nohidden{
+    flex-basis: 100%;
+    box-sizing: border-box;
+} */
 
 /* 컨텐트 박스 
 ->플렉스 박스는 싸고있는 부모를 설정함!

@@ -51,22 +51,13 @@ body * {
 .journey-sect {
     height: 1306.82px;
 }
-/* 6.스페셜섹션  */
-.special-sect {
-    height: 2947.95px;
-}
-/* 7.배너텍스트섹션  */
-.bantext-sect {
-    height: 80.75px;
-}
+
+
 /* 8.파트너 섹션 */
 .partner-sect {
     height: 772.92px;
 }
-/* 9.뉴스 섹션  */
-.news-sect {
-    height: 961.86px;
-}
+
 /* 10.쇼룸섹션  */
 .showroom-sect {
     height: 1169.79px;
