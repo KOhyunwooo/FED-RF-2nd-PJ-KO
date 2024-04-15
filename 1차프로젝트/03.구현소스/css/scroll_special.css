@@ -7,12 +7,15 @@
   top: 5%;
   right: 7vw;
   width: 20vw;
-  height: 30vw;
   /* border: 1px solid #000; */
   /* background-color: lightblue; */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.scrollspebox img{
+  width: 100%;
 }
 
 /* 스크롤등장박스1 */

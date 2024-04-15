@@ -373,7 +373,8 @@ h1.logo a {
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-gap: min(1.5vw, 15px) min(1vw, 10px);
-  margin:0 auto;
+  /* margin:0 auto; */
+  width: 525px;
 
 }
 .proleft a{
@@ -534,6 +535,31 @@ h1.logo a {
 
 /* 7.배너텍스트섹션  */
 .bantext-sect {
+}
+
+.move_text_box{
+
+}
+.move_text_box .text{
+  display: flex;
+  
+}
+.move_text_box .text p{
+  position: relative;
+  left: 0;
+  width: 100vw;
+  font-size: 5.5vw;
+  font-weight: bold;
+  color: #efefef;
+  white-space: nowrap;
+  text-align: center;
+  animation: text-ani 5s linear infinite;
+}
+
+@keyframes text-ani {
+  to{
+    left: -50%;
+  }
 }
 /* 8.파트너 섹션 */
 .partner-sect {
