@@ -27,6 +27,12 @@ h1.logo a {
   z-index: 999;
   background-color: #000000;
   padding-bottom: 3vw;
+  
+}
+/* 탑에이러어 글자색 */
+.top-area a{
+  color: #ffffff;
+  text-decoration: none;
 }
 #top-area::after {
   content: "";
@@ -245,6 +251,7 @@ h1.logo a {
 
 /*********************************************************** 3.비쥬얼 섹션 ***********************************************************/
 
+
 /******************블릿버튼●●●●●●버튼******************/
 .indic {
   display: flex;
@@ -351,7 +358,62 @@ h1.logo a {
 
 /******************************************************** 4.프로섹션 섹션 ********************************************************/
 .pro-sect {
+  
 }
+
+
+
+
+.pleft-box{
+  margin:auto;
+  padding:10% 5% 10% 5%;
+}
+
+.proleft{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: min(1.5vw, 15px) min(1vw, 10px);
+  margin:0 auto;
+
+}
+.proleft a{
+  display:block;
+  width: 120px;
+  height: 80px;
+  border: 2px solid #222;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  text-align: justify;
+  text-decoration: none;
+  font-weight: bold;
+  color: #222;
+  
+}
+.proleft a:hover{
+  background-color: #7e3d00;
+  color: white;
+  transition: .5s ease-out;
+
+}
+
+.proright{
+  padding:5% 5% 5% 5%;
+}
+.proright img{
+  object-fit : contain;
+  width: 100%;
+  height: 100%;
+  
+  
+  
+  
+  
+  
+}
+
+
+
+
 
 
 /********************************************************** 5.저니 섹션  **********************************************************/
@@ -456,9 +518,20 @@ h1.logo a {
 
 /* ********************************************************* */
 
-/* 6.스페셜섹션  */
+/*************************************************** 6.스페셜섹션  ***************************************************/
 .special-sect {
 }
+.txtspecial{
+  position: sticky;
+  top: 50px;
+  z-index: 999;
+  padding-left: 10%;
+}
+
+
+
+
+
 /* 7.배너텍스트섹션  */
 .bantext-sect {
 }
@@ -468,19 +541,36 @@ h1.logo a {
 /************************************************************* 9.뉴스 섹션  *************************************************************/
 .news-sect {
 }
+
 .newstit{
   display: flex;
   flex-direction: column;
   
-  }
+}
 
 
 .newsbox{
+  display: flex;
+  gap: 5% ;
   margin-top: 10%;
-  width: 100%;
-  height: 50%;
-  background-color: rgb(137, 164, 255);
+  width:100%;
+  height: 400px;
+  background-color: rgb(255, 0, 0);
   cursor: pointer;
+  
+}
+.newsbox a{
+  height: 100%;
+}
+.newsbox a img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+ 
+  
+  
+ 
+  
 }
 
 /******************* 마우스 포인터 따라다니는 드래그 이미지 *******************/

@@ -36,3 +36,7 @@ jourtxt();
 
 import jourtxt2 from "./show_letterjour2.js";
 jourtxt2();
+
+//스페셜스크롤 액션
+import speScroll from "./scroll_special.js";
+speScroll();

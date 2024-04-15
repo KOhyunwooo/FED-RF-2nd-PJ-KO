@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+
+/* 스크롤액션박스 */
+.scrollspebox {
+  position: absolute;
+  top: 5%;
+  right: 7vw;
+  width: 20vw;
+  height: 30vw;
+  /* border: 1px solid #000; */
+  /* background-color: lightblue; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 스크롤등장박스1 */
+.speimg1 {
+  background-image: url(../../01.자료수집/PJ1_images/special01.jpg);
+}
+
+/* 스크롤등장박스2 */
+.speimg2 {
+  top: 13%;
+  right: 50vw;
+  background-image: url(../../01.자료수집/PJ1_images/special02.jpg);
+}
+/* 스크롤등장박스3 */
+.speimg3 {
+  top: 23%;
+  background-image: url(../../01.자료수집/PJ1_images/special03.jpg);}
+
+.speimg4 {
+  top: 31%;
+  background-image: url(../../01.자료수집/PJ1_images/special04.jpg);}
+.speimg5 {
+  top: 38%;
+  background-image: url(../../01.자료수집/PJ1_images/special05.jpg);}
+.speimg6 {
+  top: 43%;
+  background-image: url(../../01.자료수집/PJ1_images/special06.jpg);}
+.speimg7 {
+  top: 55%;
+  background-image: url(../../01.자료수집/PJ1_images/special07.jpg);}
+
+/* 스크롤 등장 초기화 클래스1 */
+.spestyle{
+  transform: translateY(20%);
+  opacity: 0;
+  transition: 1.2s ease-in-out;
+  border-radius: 15%;
+}
+/* 스크롤 등장 클래스 .on */
+.spestyle.on{
+  transform: translateY(0);
+  opacity: 1;
+  border-radius: 0;
+}
+
+/* 스크롤 등장 초기화 클래스2 */
+/* .set-it2{
+  transform: rotate(360deg);
+  opacity: 0;
+  transition: 1.2s ease-in-out;
+} */
+/* 스크롤 등장 클래스2 .on */
+/* .set-it2.on{
+  transform: rotate(0deg);
+  opacity: 1;
+} */
+
+/* 스크롤 등장 초기화 클래스3 */
+/* .set-it3{
+  transform: translate(-100%,-100%) scale(0);
+  transition: 1.2s ease-in-out;
+} */
+/* 스크롤 등장 클래스2 .on */
+/* .set-it3.on{
+  transform: translate(0,0) scale(1);
+} */
+
+
+
+
+
+

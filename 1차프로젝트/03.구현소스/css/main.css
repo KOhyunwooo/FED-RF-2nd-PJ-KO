@@ -8,6 +8,7 @@
 @import url(./grid_12_flex.css); /* 그리드12 불러오기 */
 @import url(./show_letter.css); /* 메인타이포그라피 불러오기 */
 @import url(./show_letter_jour.css);/* 저니섹션 타이포그라피 불러오기 */
+@import url(./scroll_special.css);/* 스페셜섹션 css불러오기 */
 body * {
     /* 공사중 표시 */
     outline: 1px dashed rgb(255, 0, 0);
