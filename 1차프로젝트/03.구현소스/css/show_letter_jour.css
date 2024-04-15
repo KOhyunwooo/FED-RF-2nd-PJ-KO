@@ -17,6 +17,8 @@
     white-space: nowrap;
     letter-spacing: 1px;
     z-index: 1;
+    font-family: "Nanum Myeongjo", serif;
+    text-shadow: 3px 3px 6px #222;
   }
 
 /* 글자개별박스 셋팅 */
@@ -57,6 +59,8 @@
     white-space: nowrap;
     letter-spacing: 1px;
     z-index: 1;
+    font-family: "Nanum Myeongjo", serif;
+    text-shadow: 3px 3px 6px #222;
   }
 
 /* 글자개별박스 셋팅 */
@@ -90,6 +94,8 @@
     padding-top:3%;
     opacity: 0;
     transition: 1s ease-in-out 1s;
+    font-family: 'Noto Sans KR', sans-serif;
+    
   }
   .jourdesc.on{
     padding-left: 12.5%;

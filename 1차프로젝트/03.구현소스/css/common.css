@@ -575,6 +575,7 @@ h1.logo a {
   white-space: nowrap;
   text-align: center;
   animation: text-ani 20s linear infinite;
+  font-family: "Noto Serif KR", serif;
 }
 
 @keyframes text-ani {
@@ -594,6 +595,7 @@ h1.logo a {
 .newstit{
   display: flex;
   flex-direction: column;
+  padding-left: 5%;
   
 }
 

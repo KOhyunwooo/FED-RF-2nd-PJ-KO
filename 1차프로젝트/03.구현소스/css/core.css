@@ -4,7 +4,7 @@
 /* 공통 셋팅을 위한 클래스 + 웹폰트 */
 
 /* 웹폰트 CDN */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Gugi&family=Nanum+Gothic&family=Single+Day&family=ZCOOL+KuaiLe&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap=Noto+Serif+KR&display=swap=Hahmlet:wght@100..900&display=swap=Song+Myung&display=swap=Noto+Sans+KR:wght@500&family=Gugi&family=Nanum+Gothic&family=Single+Day&family=ZCOOL+KuaiLe&display=swap');
 /* 
     0. 메뉴 등 일반체
     font-family: 'Noto Sans KR', sans-serif;
@@ -16,23 +16,46 @@
     font-family: 'ZCOOL KuaiLe', cursive;
     4. 전체 공통체(메뉴 등)
     font-family: 'Nanum Gothic', sans-serif;
+    송명체
+    5.font-family: "Song Myung", serif;
+
+    6Hahmlet체( 메인에 쓰기
+     font-family: "Hahmlet", serif;
+
+     6.노토쉐리프
+     font-family: "Noto Serif KR", serif;
+     7.나눔명조
+     font-family: "Nanum Myeongjo", serif;
+     
 */
 
 /********************* 공통 클래스 *********************/
 .desc {
     font-size: 2.5em;
-    
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
   }
   .tit {
     font-size: 5.5em;
     text-decoration: none;
+    font-family: "Noto Serif KR", serif;
+    font-weight: bold;
+    /* text-shadow: 2px 2px 4px #dbdbdb; */
   }
   .cont {
     font-size: 1.8em;
     word-break: break-all;
+    font-family: 'Noto Sans KR', sans-serif;
+
   }
   .txt{
     font-size: 1.8em;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: bold;
+  }
+  .cate{
+    font-size: 1.7em;
+    font-family: 'Noto Sans KR', sans-serif;
   }
   
 
