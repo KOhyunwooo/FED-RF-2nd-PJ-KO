@@ -40,7 +40,7 @@ h1.logo a {
   left: 0;
   width: 100%;
   height: 0;
-  background-color: #000000;
+  background-color: #000000e6;
   /* padding-bottom: 0; */
   z-index: -1;
   transition: 0.1s;
@@ -138,6 +138,7 @@ h1.logo a {
   white-space: nowrap;
   /* height: 45px; */
   /* transition: 0.2s; */
+  z-index: 999999999;
 }
 
 /************************* .smenu밑줄애니  *************************/
@@ -164,6 +165,7 @@ h1.logo a {
   overflow: hidden;
   /* transition: 1s; */
   /* margin-top: 20px; */
+  padding: 3%;
 }
 
 .ssmenu li {
@@ -183,6 +185,8 @@ h1.logo a {
 
 .smenu > li:hover .ssmenu {
   height: auto;
+  z-index: 99999999;
+  background-color: #000000e6;
 }
 
 /* smenu 하위메뉴 오버시 색깔변경 */
@@ -205,6 +209,10 @@ h1.logo a {
 .topbox{
   font-weight: 600;
 }
+
+
+
+
 
 /**************************************************************** 2.배너 섹션  ****************************************************************/
 
@@ -656,10 +664,10 @@ h1.logo a {
   
 }
 .newsback .cate{
-  padding-left: 1%;
   color: #7a4100;
   font-size: 1.3em;
   font-weight: bold;
+  padding-left: 1%;
 }
 .ntxtpadding{
   padding: 3%;
