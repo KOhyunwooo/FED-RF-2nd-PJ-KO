@@ -5,7 +5,7 @@
 
 //부드러운 스크롤 작동함수 호출!
 import{startSS, setScrollPos} from "./smoothScroll23.js";
-// startSS();
+startSS();
 
 import following from "./following_circle.js";
 // slideFn 슬라이드 기능함수 호출!

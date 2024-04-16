@@ -11,12 +11,12 @@
 @import url(./scroll_special.css);/* 스페셜섹션 css불러오기 */
 body * {
     /* 공사중 표시 */
-    outline: 1px dashed rgb(255, 0, 0);
+    /* outline: 1px dashed rgb(255, 0, 0); */
     /* 임시 배경색, 배경색 전부 따로 줘야함 */
 
     /* line-height: 1.6; */
 
-    font-weight: 400;
+    /* font-weight: 400; */
 }
 
 .temp-tit{
@@ -49,7 +49,7 @@ body * {
 }
 /* 5.저니 섹션  */
 .journey-sect {
-    height: 1006.82px;
+    height: 1106.82px;
 }
 
 
@@ -64,5 +64,5 @@ body * {
 }
 /* 11.footer 섹션 */
 .footer-sect {
-    height: 881.19px;
+    /* height: 881.19px; */
 }

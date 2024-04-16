@@ -61,6 +61,9 @@
   transform: translateY(20%);
   opacity: 0;
   transition: 1.2s ease-in-out;
+}
+.spestyle img{
+  transition: 1.2s ease-in-out;
   border-radius: 50%;
 }
 /* 스크롤 등장 클래스 .on */
@@ -70,6 +73,9 @@
   border-radius: 0%;
   
 }
+.spestyle.on img{
+  border-radius: 0%;  
+}
 
 
 
@@ -78,9 +84,20 @@
 
 /* ???????????마우스 오버시 색깔 바뀌게 하는거 실패??????????????????????????????? */
 .scrollspebox{
-  transition: 1s ease-in-out;
+  /* overflow: hi dden; */
+
 }
-.scrollspebox:hover::before{
+/* .scrollspebox img{
+  overflow: hidden;
+} */
+
+.scrollspebox:hover::before, .scrollspebox:hover::after{
+  
+  cursor: pointer;
+}
+
+.scrollspebox::before{
+
   content: ' ';
   width: 100%;
   height: 100%;
@@ -88,22 +105,32 @@
   left: 0;
   top: 0;
   z-index: 1;
-  background-color: #c45f00a9;
-  transition: 1s ease-in-out;
+  background-color: #c45f004f;
+  transition: .3s ease-in-out;
+  mask-image: linear-gradient(to bottom, #000000 80%, transparent 99%);
+  opacity: 0;
 }
-.scrollspebox:hover::after{
-  content: 'Airless pouch';
+.scrollspebox:hover::before{
+  opacity: 1;
+}
+.scrollspebox::after{
+  content: 'Click more';
   color: #fff;
   font-size: 50px;
   width: 100%;
   height: 100%;
   position: absolute;
-  left: 15%;
+  left: 20%;
   top: 40%;
   z-index: 1;
   /* background-color: #c45f00a9; */
-  transition: 1s ease-in-out;
-
+  
+  transition: .3s ease-in-out;
+  opacity: 0;
+}
+.scrollspebox:hover::after{
+  
+  opacity: 1;
 }
   
  /* ??????????????????????????????????? */ 
