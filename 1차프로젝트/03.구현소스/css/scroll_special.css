@@ -56,22 +56,24 @@
   right: 15vw;
 }
 
-/* 스크롤 등장 초기화 클래스1 */
+/* 스크롤 등장 초기화 클래스 */
 .spestyle{
   transform: translateY(20%);
   opacity: 0;
   transition: 1.2s ease-in-out;
 }
-.spestyle img{
-  transition: 1.2s ease-in-out;
-  border-radius: 50%;
-}
 /* 스크롤 등장 클래스 .on */
 .spestyle.on{
   transform: translateY(0);
   opacity: 1;
-  border-radius: 0%;
   
+}
+
+/* 이미지에도 등장 클래스 주기
+js에서 .spestyle적용하면 하위도 적용됨! */
+.spestyle img{
+  transition: 1.2s ease-in-out;
+  border-radius: 50%;
 }
 .spestyle.on img{
   border-radius: 0%;  
