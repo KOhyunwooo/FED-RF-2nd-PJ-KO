@@ -91,38 +91,66 @@
 
     <div class="swiper mySwiper swiper-h">
       <div class="swiper-wrapper">
+        <!-- 00 WOMAN -->
         <div class="swiper-slide">
           <div class="swiper mySwiper2 swiper-v">
             <div class="swiper-wrapper">
-              <div class="swiper-slide s1">Vertical Slide 1</div>
-              <div class="swiper-slide s2">Vertical Slide 2</div>
-              <div class="swiper-slide s3">Vertical Slide 3</div>
+              <div class="swiper-slide s1">00</div>
+              <div class="swiper-slide s2">01</div>
+              <div class="swiper-slide s3">02</div>
             </div>
-            <div class="swiper-pagination"></div>
+            <!-- (우측)세로 블릿 -->
+            <!-- <div class="swiper-pagination"></div> -->            
           </div>
         </div>
+
+        <!-- 01 MAN -->
         <div class="swiper-slide">
           <div class="swiper mySwiper2 swiper-v">
             <div class="swiper-wrapper">
-              <div class="swiper-slide s4">Vertical Slide 1</div>
-              <div class="swiper-slide s5">Vertical Slide 2</div>
-              <div class="swiper-slide s6">Vertical Slide 3</div>
+              <div class="swiper-slide s4">10</div>
+              <div class="swiper-slide s5">11</div>
+              <div class="swiper-slide s6">12</div>
             </div>
-            <div class="swiper-pagination"></div>
+            <!-- (우측)세로 블릿 -->
+            <!-- <div class="swiper-pagination"></div> -->
           </div>
         </div>
+
+        <!-- 02 KIDS -->
         <div class="swiper-slide">
           <div class="swiper mySwiper2 swiper-v">
             <div class="swiper-wrapper">
-              <div class="swiper-slide s7">Vertical Slide 1</div>
-              <div class="swiper-slide s8">Vertical Slide 2</div>
-              <div class="swiper-slide s9">Vertical Slide 3</div>
+              <div class="swiper-slide s7">20</div>
+              <div class="swiper-slide s8">21</div>
+              <div class="swiper-slide s9">22</div>
             </div>
-            <div class="swiper-pagination"></div>
+            <!-- (좌측) 세로 블릿 -->
+            <!-- <div class="swiper-pagination"></div> -->
           </div>
         </div>
+
+        <!-- 03 HOME -->
+        <div class="swiper-slide">
+          <div class="swiper mySwiper2 swiper-v">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide s10">30</div>
+              <div class="swiper-slide s11">31</div>
+              <div class="swiper-slide s12">32</div>
+              <div class="swiper-slide s13">33</div>
+            </div>
+            <!-- (좌측) 세로 블릿 -->
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+        </div>
+
+
+
       </div>
-      <div class="swiper-pagination"></div>
+      
+      <!-- 하단-가로 블릿 -->
+      <!-- <div class="swiper-pagination"></div> -->
+      
     </div>
 
     <!-- Swiper JS -->
@@ -130,22 +158,43 @@
 
     <!-- Initialize Swiper -->
     <script>
+      /* 가로 슬라이드 */
       var swiper = new Swiper(".mySwiper", {
         spaceBetween: 0,
+        
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
+        /* 무한반복 설정 */
         loop: true,
       });
+      /* 세로 슬라이드 */
       var swiper2 = new Swiper(".mySwiper2", {
         direction: "vertical",
         spaceBetween: 0,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        loop: true,
+        /* 마우스 휠 가능하게 하는 설정 */
+        mousewheel: true,
+        /* (아마도)블릿 */
+        // pagination: {
+        //   el: ".swiper-pagination",
+        //   clickable: true,
+        // },
+
+        /* 화살표 버튼 실행 */
+      //   navigation: {
+      //   nextEl: ".swiper-button-next",
+      //   prevEl: ".swiper-button-prev",
+      // },
+        /* 무한반복 설정 */
+        // loop: true,
+        /* 자동으로 페이지 넘기기 */
+        autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        /* 마지막페이지에 도달하면 멈추기 */
+        stopOnLastSlide: true,
+      },
       });
     </script>
   </body>
