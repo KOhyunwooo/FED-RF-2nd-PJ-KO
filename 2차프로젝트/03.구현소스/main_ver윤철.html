@@ -17,6 +17,9 @@
     <style>
       html,
       body {
+        /* 스와이프 할때 배경색(가로 배경색) */
+        background: #ffffff;
+        overflow: hidden;
         position: relative;
         height: 100%;
         margin: 0;
@@ -37,7 +40,8 @@
       .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #fff;
+        /* 스와이프 할떄 배경색(세로 배경색) */
+        background: #ffffff;
         display: flex;
         gap: 0;
         justify-content: center;
@@ -158,7 +162,7 @@
 
     <!-- Initialize Swiper -->
     <script>
-      /* 가로 슬라이드 */
+      /************************************************ 가로 슬라이드 ************************************************/
       var swiper = new Swiper(".mySwiper", {
         spaceBetween: 0,
         
@@ -168,8 +172,19 @@
         },
         /* 무한반복 설정 */
         loop: true,
+
+        /* 슬라이드를 큐브로 만들기 ***********************************/
+        effect: "cube",
+        cubeEffect: {
+          shadow: false,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,     
+        },
+        /* 슬라이드를 큐브로 만들기 ***********************************/
+      
       });
-      /* 세로 슬라이드 */
+      /************************************************ 세로 슬라이드 ************************************************/
       var swiper2 = new Swiper(".mySwiper2", {
         direction: "vertical",
         spaceBetween: 0,
@@ -194,7 +209,18 @@
         disableOnInteraction: false,
         /* 마지막페이지에 도달하면 멈추기 */
         stopOnLastSlide: true,
+       
       },
+      
+       /* 슬라이드를 큐브로 만들기 ***********************************/
+       effect: "cube",
+        cubeEffect: {
+          shadow: false,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,     
+        },
+        /* 슬라이드를 큐브로 만들기 ***********************************/
       });
     </script>
   </body>
