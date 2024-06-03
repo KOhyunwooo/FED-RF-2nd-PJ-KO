@@ -1,6 +1,6 @@
 1. ctrl+` 로 터미널창 열기
 2. 'cd 구현소스' 로 이동
-3. 'npx_create-react-app 내가사용할이름' 엔터
+3. 'npx create-react-app 내가사용할이름' 엔터
 
 4. public폴더 -> index.html 제외한 모든 파일 삭제
 5. public폴더에 images폴더 생성
