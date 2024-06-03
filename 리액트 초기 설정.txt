@@ -1,0 +1,22 @@
+1. ctrl+` 로 터미널창 열기
+2. 'cd 구현소스' 로 이동
+3. 'npx_create-react-app 내가사용할이름' 엔터
+
+4. public폴더 -> index.html 제외한 모든 파일 삭제
+5. public폴더에 images폴더 생성
+6. src폴더에 index.js를 제외한 모든 파일 삭제
+
+7. packgage.jason 파일 열어놓고 팩키지 모듈 설치
+    설치위치: cd 구현소스 내가사용한이름
+            예)d:\프론트엔드과정\FED-RF-2nd-PJ-KO\2차프로젝트\02.구현소스\2nd-pj-ko>
+    (1) npm i react-router-dom@latest
+    (2) npm i jquery
+    (3) npm i jquery-ui-dist
+    (4) npm i jquery-ui-touch-punch
+    (5) npm i swiper
+    (6) npm i sass
+
+8. 폴더 설정
+        src > components, css, static 폴더생성
+        components > data, func, layout, modules, pages, plugin 폴더생성
+        

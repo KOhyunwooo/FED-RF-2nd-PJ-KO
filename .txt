@@ -1,0 +1,1 @@
+노트북에서 cd 2nd-pj-ko 경로로 간 다음에: npm ci 로 node_modules 설치할것
