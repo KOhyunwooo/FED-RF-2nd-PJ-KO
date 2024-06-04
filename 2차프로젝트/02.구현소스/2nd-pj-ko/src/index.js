@@ -7,6 +7,7 @@ import Man from "./components/pages/Man";
 import Main from "./components/pages/Main";
 import Kids from "./components/pages/Kids";
 import Home from "./components/pages/Home";
+import AboutZara from "./components/pages/Aboutzara";
 
 export default function MainComponent() {
   return (
@@ -19,6 +20,7 @@ export default function MainComponent() {
           <Route path="man" element={<Man />} />
           <Route path="kids" element={<Kids />} />
           <Route path="home" element={<Home />} />
+          <Route path="aboutzara" element={<AboutZara/>} />
         </Route>
       </Routes>
     </BrowserRouter>
