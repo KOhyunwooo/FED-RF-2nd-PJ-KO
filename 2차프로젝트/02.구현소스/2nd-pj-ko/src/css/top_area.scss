@@ -1,0 +1,16 @@
+//탑에어리어 scss
+
+.top-area {
+  .gnb {
+    ul {
+      display: flex;
+      li {
+        .swrap {
+            width: 60vw;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+      }
+    }
+  }
+}
