@@ -329,7 +329,7 @@ export const menu = [
         ],
     },
     {
-        txt: "aboutZARA",
+        txt: "about ZARA",
         link: "/aboutzara",
     },
 ];

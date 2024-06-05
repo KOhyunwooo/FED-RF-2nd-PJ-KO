@@ -20,3 +20,6 @@
         src > components, css, static 폴더생성
         components > data, func, layout, modules, pages, plugin 폴더생성
         
+
+//다른 컴퓨터에서 불러올때/////////////////////////////////////////////////////
+ctrl+`으로 cmd터미널 창을 열고, 해당경로(예 cd 2nd-pj-ko)로 들어가서 npm ci 실행

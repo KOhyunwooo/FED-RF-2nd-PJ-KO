@@ -1,5 +1,7 @@
-//상단영역 컴포넌트//////
+// 상단영역 css 불러오기///
+import "../../css/top_area.scss";
 
+//상단영역 컴포넌트//////
 import { Link } from "react-router-dom";
 import { menu } from "../data/gnb";
 import Logo from "../modules/Logo";
