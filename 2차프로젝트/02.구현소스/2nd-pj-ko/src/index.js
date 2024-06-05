@@ -1,3 +1,6 @@
+//index.scss 불러오기
+import "../src/css/index.scss";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
