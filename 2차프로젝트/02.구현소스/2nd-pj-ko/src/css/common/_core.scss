@@ -1,17 +1,8 @@
-/* DC.com 핵심공통 CSS - core.scss */
-/* Ubuntu체 */
-// @font-face {
-//     font-family: 'Ubuntu';
-//     src: url(../../static/fonts/Ubuntu-Regular.woff2) format("woff2");
-// }
+/* 공통 CSS - core.scss */
 
-/* Ubuntu Condensed체 */
-// @font-face {
-//     font-family: 'Ubuntu Condensed';
-//     src: url(../../static/fonts/UbuntuCondensed-Regular.woff2) format("woff2");
-// }
+@font-face {
+    src: url(../../static/fonts/HelveticaNeueLTPro-Bd.otf);
+    font-family: "HelveticaBd";
+}
 
-/* 
-font-family: 'Ubuntu', sans-serif;
-font-family: 'Ubuntu Condensed', sans-serif;
-*/
+

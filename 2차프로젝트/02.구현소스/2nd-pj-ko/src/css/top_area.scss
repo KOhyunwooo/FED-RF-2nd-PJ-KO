@@ -1,12 +1,13 @@
 //탑에어리어 scss
 
 .top-area {
+  font-family: "HelveticaBd";
   .gnb {
     ul {
       display: flex;
       li {
         .swrap {
-            width: 60vw;
+            // width: 60vw;
             margin: 0 auto;
             padding: 2rem;
         }
