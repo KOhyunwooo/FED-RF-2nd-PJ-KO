@@ -1,26 +1,27 @@
 //탑에어리어 scss
 
 .top-area {
-    position: relative;
     font-family: "HelveticaBd";
     .gnb {
-      padding: 20px 0 10px 50px;
+        padding: 20px 0 10px 50px;
         /* gnb메뉴들 */
         ul {
-          
+            /* smenu는 젠틀하기때문에 부모에 걸리게 하기 위해서 relative를 줬음. */
+            position: relative;
+
             gap: 0 5vw;
             display: flex;
             /* 로고랑 높이값 맞추기 */
-            align-items: flex-start;
+            align-items: center;
             li {
                 
                 /* gnb리스트 중에 자라 로고박스 */
                 .lgbx {
-                  height: max(5vw, 50px);
-                  img {
-                      position: relative;
-                     z-index: 999;
-                    
+                    height: max(5vw, 50px);
+                    img {
+                        position: relative;
+                        z-index: 999;
+
                         height: 100%;
                     }
                 }
@@ -33,31 +34,31 @@
                     // display: flex;
                     margin: 0 auto;
                     padding: 2rem;
+                    height: 0;
+                    
                 }
+                .smenu {
+                    display: none;
+                    height: 0;
+                    transition: .3s;
 
-                &:hover .smenu{
+                    position: absolute;
+                    left: 0;
+
+                    ol {
+                        display: flex;
+                        // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;
+                        flex-wrap: wrap;
+                        // 진행방향을 세로방향으로 바꿈: flex-direction: column;
+                        flex-direction: column;
+                        height: 200px;
+                    }
+                }
+                /* li에 오버시 .smenu 보이기 */
+                &:hover .smenu {
                     display: block;
                 }
             }
-
-
         }
-
-        .smenu{
-            display: none;
-            position: absolute;
-            left: 0;
-
-            ol{
-                display: flex;
-                // 진행방향으로 박스크기의 한계에 닿으면
-                // 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정
-                flex-wrap: wrap;
-                flex-direction: column;
-                height: 200px;
-            }
-        }
-
     }
 }
-
