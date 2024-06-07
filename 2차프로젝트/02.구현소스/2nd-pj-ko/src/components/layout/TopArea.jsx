@@ -5,6 +5,7 @@ import "../../css/top_area.scss";
 import { Link } from "react-router-dom";
 import { menu } from "../data/gnb";
 import Logo from "../modules/Logo";
+import { Fragment } from "react";
 
 export default function TopArea() {
   return (
@@ -19,8 +20,7 @@ export default function TopArea() {
             {/* 1. 로고 컴포넌트 */}
             <li>
               <Link to="/">
-              <Logo logoStyle="top" />
-
+                <Logo logoStyle="top" />
               </Link>
             </li>
             {/* 2. GNB메뉴 데이터 배열로 만들기 */}
@@ -41,13 +41,13 @@ export default function TopArea() {
                     <div className="smenu">
                       <aside className="smbx">
                         <div className="swrap">
-                            <ol>
-                              {v.sub.map((v, i) => (
-                                <li key={i}>
-                                  <Link to={v.link}>{v.txt}</Link>
-                                </li>
-                              ))}
-                            </ol>
+                          <ol>
+                            {v.sub.map((v, i) => (
+                              <li key={i}>
+                                <Link to={v.link}>{v.txt}</Link>
+                              </li>
+                            ))}
+                          </ol>
                         </div>
                         <h2>가나다라</h2>
                       </aside>

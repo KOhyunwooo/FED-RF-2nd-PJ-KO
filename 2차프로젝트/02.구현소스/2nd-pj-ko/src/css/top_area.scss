@@ -1,6 +1,7 @@
 //탑에어리어 scss
 
 .top-area {
+    position: relative;
     font-family: "HelveticaBd";
     .gnb {
       padding: 20px 0 10px 50px;
@@ -33,8 +34,30 @@
                     margin: 0 auto;
                     padding: 2rem;
                 }
+
+                &:hover .smenu{
+                    display: block;
+                }
+            }
+
+
+        }
+
+        .smenu{
+            display: none;
+            position: absolute;
+            left: 0;
+
+            ol{
+                display: flex;
+                // 진행방향으로 박스크기의 한계에 닿으면
+                // 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정
+                flex-wrap: wrap;
+                flex-direction: column;
+                height: 200px;
             }
         }
+
     }
 }
 
