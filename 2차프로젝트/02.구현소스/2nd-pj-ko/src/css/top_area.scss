@@ -1,17 +1,40 @@
 //탑에어리어 scss
 
 .top-area {
-  font-family: "HelveticaBd";
-  .gnb {
-    ul {
-      display: flex;
-      li {
-        .swrap {
-            // width: 60vw;
-            margin: 0 auto;
-            padding: 2rem;
+    font-family: "HelveticaBd";
+    .gnb {
+      padding: 20px 0 10px 50px;
+        /* gnb메뉴들 */
+        ul {
+          
+            gap: 0 5vw;
+            display: flex;
+            /* 로고랑 높이값 맞추기 */
+            align-items: flex-start;
+            li {
+                
+                /* gnb리스트 중에 자라 로고박스 */
+                .lgbx {
+                  height: max(5vw, 50px);
+                  img {
+                      position: relative;
+                     z-index: 999;
+                    
+                        height: 100%;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: #333;
+                }
+                .swrap {
+                    // width: 60vw;
+                    // display: flex;
+                    margin: 0 auto;
+                    padding: 2rem;
+                }
+            }
         }
-      }
     }
-  }
 }
+
