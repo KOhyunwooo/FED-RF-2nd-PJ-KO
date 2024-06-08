@@ -3,6 +3,7 @@ export const menu = [
     {
         txt: "WOMAN",
         link: "/woman",
+        src: "images/nav_side_img/woman01.jpg",
         sub: [
             {
                 txt: "베스트셀러",
@@ -129,6 +130,7 @@ export const menu = [
     {
         txt: "MAN",
         link: "/man",
+        src: "images/nav_side_img/man01.jpg",
         sub: [
             {
                 txt: "베스트셀러",
@@ -231,6 +233,7 @@ export const menu = [
     {
         txt: "KIDS",
         link: "/kids",
+        src: "images/nav_side_img/kids01.jpg",
         sub: [
             {
                 txt: "여아",
@@ -277,6 +280,7 @@ export const menu = [
     {
         txt: "HOME",
         link: "/home",
+        src: "images/nav_side_img/home01.jpg",
         sub: [
             {
                 txt: "비치 | 아웃도어",

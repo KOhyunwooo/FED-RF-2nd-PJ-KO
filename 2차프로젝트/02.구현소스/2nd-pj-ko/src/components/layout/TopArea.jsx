@@ -47,9 +47,13 @@ export default function TopArea() {
                                 <Link to={v.link}>{v.txt}</Link>
                               </li>
                             ))}
+                            <li>
+                              <Link to={v.link}>
+                                <img src={v.src} alt={v.txt} />
+                              </Link>
+                            </li>
                           </ol>
                         </div>
-                        <h2>가나다라</h2>
                       </aside>
                     </div>
                   )
