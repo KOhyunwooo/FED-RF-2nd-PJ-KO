@@ -1,86 +1,92 @@
 //탑에어리어 scss
 
 .top-area {
-    font-family: "HelveticaBd";
-    .gnb {
-        
-
-        padding: 20px 0 10px 50px;
-        /* gnb메뉴들 */
-        ul {
-            gap: 0 5vw;
-            display: flex;
-            /* 로고랑 높이값 맞추기 */
-            align-items: center;
-            li {
-                /* gnb리스트 중에 자라 로고박스 */
-                .lgbx {
-                    height: max(5vw, 50px);
-                    img {
-                        position: relative;
-                        z-index: 999;
-
-                        height: 100%;
-                    }
-                }
-                a {
-                    text-decoration: none;
-                    color: #333;
-                }
-                .swrap {
-                    // width: 60vw;
-                    // display: flex;
-                    margin: 0 auto;
-                    padding: 2rem 0 0 0;
-                }
-                .smenu {
-                    display: none;
-                    
-                    
-                    
-                    position: absolute;
-                    left: 0;
-                    
-
-                    ol {
-                       
-
-                        background-color: rgba(210, 210, 210, 0.997);
-                        width: 100vw - 8vw;
-                        display: inline-flex;
-                        // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;
-                        flex-wrap: wrap;
-                        // 진행방향을 세로방향으로 바꿈: flex-direction: column;
-                        flex-direction: column;
-                        /* 하위메뉴 높이값 */
-                        height: 17vw;
-                        padding: 4vw 4vw 3vw 5vw;
-                        gap: 1vw 4vw;
-                        align-content: flex-start;
-
-                        position: relative;
-                        
-                        
-                        
-
-                        /* 하위메뉴 오른쪽 이미지 */
-                        li:last-child{
-                            margin-bottom: auto;
-                           position: absolute;
-                           right: 3vw;
-                            
-                            img {
-                                width: min(15vw, 300px);
-                                
-                            }
-                        }
-                    }
-                }
-                /* li에 오버시 .smenu 보이기 */
-                &:hover .smenu {
-                    display: block;
-                }
+  font-family: "HelveticaBd";
+  .gnb {
+    padding: 20px 0 10px 50px;
+    /* gnb메뉴들 */
+    ul {
+      gap: 0 5vw;
+      display: flex;
+      /* 로고랑 높이값 맞추기 */
+      align-items: center;
+      /* gnb 자라 로고박스 */
+      span {
+        .lgbx {
+          height: 10vw;
+          animation: intrologo 1s 0.8s ease-out forwards;
+          @keyframes intrologo {
+            to {
+              height: max(5vw, 50px);
             }
+          }
+          img {
+            position: relative;
+            z-index: 999;
+
+            height: 100%;
+          }
         }
+      }
+
+      li {
+        a {
+          text-decoration: none;
+          color: #333;
+        }
+        .swrap {
+          // width: 60vw;
+          // display: flex;
+          margin: 0 auto;
+          padding: 2rem 0 0 0;
+        }
+        .smenu {
+          display: none;
+
+          position: absolute;
+          left: 0;
+
+          ol {
+            background-color: rgba(210, 210, 210, 0.997);
+            width: 100vw - 8vw;
+            display: inline-flex;
+            // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;
+            flex-wrap: wrap;
+            // 진행방향을 세로방향으로 바꿈: flex-direction: column;
+            flex-direction: column;
+            /* 하위메뉴 높이값 */
+            height: 17vw;
+            padding: 4vw 4vw 3vw 5vw;
+            gap: 1vw 4vw;
+            align-content: flex-start;
+
+            position: relative;
+
+            /* 하위메뉴 오른쪽 이미지 */
+            li:last-child {
+              margin-bottom: auto;
+              position: absolute;
+              right: 3vw;
+
+              img {
+                width: min(15vw, 300px);
+              }
+            }
+          }
+        }
+        /* li에 오버시 .smenu 보이기 */
+        &:hover .smenu {
+          display: block;
+        }
+      }
     }
+  }
+
+  /* toparea 모든 li직계하위a요소 오버시 색상 .6만큼 투명하게 */
+  li > a {
+    opacity: 1;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
 }

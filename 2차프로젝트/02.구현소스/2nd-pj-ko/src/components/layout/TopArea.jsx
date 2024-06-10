@@ -18,11 +18,11 @@ export default function TopArea() {
         <nav className="gnb">
           <ul>
             {/* 1. 로고 컴포넌트 */}
-            <li>
+            <span>
               <Link to="">
                 <Logo logoStyle="top" />
               </Link>
-            </li>
+            </span>
             {/* 2. GNB메뉴 데이터 배열로 만들기///////////////////////////// */}
             {menu.map((v, i) => (
               <li key={i}>
