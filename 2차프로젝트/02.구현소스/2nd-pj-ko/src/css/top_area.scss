@@ -3,8 +3,7 @@
 .top-area {
     font-family: "HelveticaBd";
     .gnb {
-        /* smenu는 젠틀하기때문에 부모에 걸리게 하기 위해서 relative를 줬음. */
-        position: relative;
+        
 
         padding: 20px 0 10px 50px;
         /* gnb메뉴들 */
@@ -36,15 +35,17 @@
                 }
                 .smenu {
                     display: none;
-                    height: 0;
-                    transition: 0.3s;
-
+                    
+                    
+                    
                     position: absolute;
                     left: 0;
                     
 
                     ol {
-                        background-color: red;
+                       
+
+                        background-color: rgba(210, 210, 210, 0.997);
                         width: 100vw - 8vw;
                         display: inline-flex;
                         // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;

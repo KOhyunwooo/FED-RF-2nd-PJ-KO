@@ -19,11 +19,11 @@ export default function TopArea() {
           <ul>
             {/* 1. 로고 컴포넌트 */}
             <li>
-              <Link to="/">
+              <Link to="">
                 <Logo logoStyle="top" />
               </Link>
             </li>
-            {/* 2. GNB메뉴 데이터 배열로 만들기 */}
+            {/* 2. GNB메뉴 데이터 배열로 만들기///////////////////////////// */}
             {menu.map((v, i) => (
               <li key={i}>
                 {
@@ -36,15 +36,20 @@ export default function TopArea() {
                   )
                 }
                 {
-                  // 서브 메뉴 데이터가 있으면 하위 그리기
+                  // 서브 메뉴 데이터가 있으면 하위 그리기/////////////////////
                   v.sub && (
                     <div className="smenu">
                       <aside className="smbx">
                         <div className="swrap">
                           <ol>
                             {v.sub.map((v, i) => (
-                              <li key={i} >
-                                <Link to={v.link}>{v.txt}</Link>
+                              <li key={i}>
+                                 
+                                 {/* v.txt가 특가상품일때 글자색 빨강으로 */} 
+                                <Link to={v.link} style={{color: v.txt === "특가 상품" ? "red" : ""}}>
+                                  {v.txt}
+                                </Link>
+
                               </li>
                             ))}
                             <li>
