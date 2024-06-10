@@ -43,15 +43,15 @@ export default function TopArea() {
                         <div className="swrap">
                           <ol>
                             {v.sub.map((v, i) => (
-                              <li key={i}>
+                              <li key={i} >
                                 <Link to={v.link}>{v.txt}</Link>
                               </li>
                             ))}
-                            <li>
+                            <span>
                               <Link to={v.link}>
                                 <img src={v.src} alt={v.txt} />
                               </Link>
-                            </li>
+                            </span>
                           </ol>
                         </div>
                       </aside>
