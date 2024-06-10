@@ -51,21 +51,22 @@
                         flex-wrap: wrap;
                         // 진행방향을 세로방향으로 바꿈: flex-direction: column;
                         flex-direction: column;
-                        height: 15vw;
-                        padding: 4vw;
+                        /* 하위메뉴 높이값 */
+                        height: 17vw;
+                        padding: 4vw 4vw 3vw 5vw;
                         gap: 1vw 4vw;
                         align-content: flex-start;
 
                         position: relative;
                         
                         
-                        li {
+                        
 
-                        }
+                        /* 하위메뉴 오른쪽 이미지 */
                         li:last-child{
+                            margin-bottom: auto;
                            position: absolute;
-                           right: 0;
-                        //    translate: -100%;
+                           right: 3vw;
                             
                             img {
                                 width: min(15vw, 300px);

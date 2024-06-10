@@ -77,10 +77,7 @@ export const menu = [
                 txt: "HOLIDAY EDIT",
                 link: "/woman",
             },
-            {
-                txt: "NEW",
-                link: "/woman",
-            },
+            
             {
                 txt: "액세서리 | 주얼리",
                 link: "/woman",
@@ -109,18 +106,7 @@ export const menu = [
                 txt: "LINEN",
                 link: "/woman",
             },
-            {
-                txt: "HOME-OUTDOORS",
-                link: "/woman",
-            },
-            {
-                txt: "NEW",
-                link: "/woman",
-            },
-            {
-                txt: "HOME",
-                link: "/woman",
-            },
+           
             {
                 txt: "특가 상품",
                 link: "/woman",
