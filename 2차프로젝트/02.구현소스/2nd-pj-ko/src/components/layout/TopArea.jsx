@@ -47,11 +47,11 @@ export default function TopArea() {
                                 <Link to={v.link}>{v.txt}</Link>
                               </li>
                             ))}
-                            <span>
+                            <li>
                               <Link to={v.link}>
                                 <img src={v.src} alt={v.txt} />
                               </Link>
-                            </span>
+                            </li>
                           </ol>
                         </div>
                       </aside>

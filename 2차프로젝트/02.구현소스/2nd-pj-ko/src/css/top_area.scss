@@ -41,11 +41,12 @@
 
                     position: absolute;
                     left: 0;
+                    
 
                     ol {
                         background-color: red;
-                        width: 100vw;
-                        display: flex;
+                        width: 100vw - 8vw;
+                        display: inline-flex;
                         // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;
                         flex-wrap: wrap;
                         // 진행방향을 세로방향으로 바꿈: flex-direction: column;
@@ -53,16 +54,22 @@
                         height: 15vw;
                         padding: 4vw;
                         gap: 1vw 4vw;
+                        align-content: flex-start;
+
+                        position: relative;
+                        
                         
                         li {
-                            display: flex;
-                            align-content: flex-start;
 
                         }
-                        span {
+                        li:last-child{
+                           position: absolute;
+                           right: 0;
+                        //    translate: -100%;
+                            
                             img {
                                 width: min(15vw, 300px);
-                                // right: 10vw;
+                                
                             }
                         }
                     }
