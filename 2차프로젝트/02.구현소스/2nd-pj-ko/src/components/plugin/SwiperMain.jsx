@@ -15,11 +15,10 @@ import { Pagination, Navigation, Autoplay, Mousewheel } from "swiper/modules";
 export default function SwiperMain() {
   return (
     <>
-    {/* 가로방향 스와이프 설정///////////////////// */}
+      {/* 가로방향 스와이프 설정///////////////////// */}
       <Swiper
         className="mySwiper swiper-h"
         spaceBetween={0}
-        
         pagination={{
           clickable: true,
         }}
@@ -27,7 +26,7 @@ export default function SwiperMain() {
         modules={[Autoplay, Pagination, Navigation, Mousewheel]}
       >
         <SwiperSlide>
-            {/* 세로방향 스와이프 설정///////////////////// */}
+          {/* 세로방향 스와이프 설정///////////////////// */}
           <Swiper
             className="mySwiper2 swiper-v"
             direction={"vertical"}
