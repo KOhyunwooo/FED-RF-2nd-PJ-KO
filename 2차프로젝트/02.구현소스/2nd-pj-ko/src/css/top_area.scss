@@ -1,8 +1,10 @@
 //탑에어리어 scss
 
-.top-area {
+.top-area  {
   font-family: "HelveticaBd";
+  
   .gnb {
+    
     padding: 20px 0 10px 50px;
     /* gnb메뉴들 */
     ul {
@@ -47,7 +49,7 @@
           left: 0;
 
           ol {
-            background-color: rgba(210, 210, 210, 0.997);
+            background-color: rgb(168, 168, 168);
             width: 100vw - 8vw;
             display: inline-flex;
             // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;

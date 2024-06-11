@@ -46,7 +46,7 @@ export default function TopArea() {
                               <li key={i}>
                                  
                                  {/* v.txt가 특가상품일때 글자색 빨강으로 */} 
-                                <Link to={v.link} style={{color: v.txt === "특가 상품" ? "red" : ""}}>
+                                <Link to={v.link} style={{color: v.txt == "특가 상품" ? "red" : ""}}>
                                   {v.txt}
                                 </Link>
 
