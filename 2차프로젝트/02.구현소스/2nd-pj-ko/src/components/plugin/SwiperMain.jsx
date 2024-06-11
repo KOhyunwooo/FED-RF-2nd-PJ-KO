@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "../plugin/css/swiper_main.scss";
 
 // import required modules
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { Pagination, Navigation, Autoplay, Mousewheel } from "swiper/modules";
 
 export default function SwiperMain() {
   return (
@@ -19,12 +19,12 @@ export default function SwiperMain() {
       <Swiper
         className="mySwiper swiper-h"
         spaceBetween={0}
-        mousewheel={true}
+        
         pagination={{
           clickable: true,
         }}
         navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation, Mousewheel]}
       >
         <SwiperSlide>
             {/* 세로방향 스와이프 설정///////////////////// */}
@@ -43,7 +43,7 @@ export default function SwiperMain() {
               clickable: true,
             }}
             // navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
+            modules={[Autoplay, Pagination, Navigation, Mousewheel]}
           >
             <SwiperSlide>woman1</SwiperSlide>
             <SwiperSlide>woman2</SwiperSlide>
@@ -68,7 +68,7 @@ export default function SwiperMain() {
               clickable: true,
             }}
             // navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
+            modules={[Autoplay, Pagination, Navigation, Mousewheel]}
           >
             <SwiperSlide>man1</SwiperSlide>
             <SwiperSlide>man2</SwiperSlide>
@@ -93,7 +93,7 @@ export default function SwiperMain() {
               clickable: true,
             }}
             // navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
+            modules={[Autoplay, Pagination, Navigation, Mousewheel]}
           >
             <SwiperSlide>kids1</SwiperSlide>
             <SwiperSlide>kids2</SwiperSlide>
@@ -118,12 +118,14 @@ export default function SwiperMain() {
               clickable: true,
             }}
             // navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
+            modules={[Autoplay, Pagination, Navigation, Mousewheel]}
           >
             <SwiperSlide>home1</SwiperSlide>
             <SwiperSlide>home2</SwiperSlide>
             <SwiperSlide>home3</SwiperSlide>
             <SwiperSlide>home4</SwiperSlide>
+            <SwiperSlide>home5</SwiperSlide>
+            <SwiperSlide>home5</SwiperSlide>
             <SwiperSlide>home5</SwiperSlide>
           </Swiper>
         </SwiperSlide>
