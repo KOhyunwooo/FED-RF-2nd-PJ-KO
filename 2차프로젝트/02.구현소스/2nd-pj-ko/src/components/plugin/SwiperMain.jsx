@@ -23,6 +23,8 @@ export default function SwiperMain() {
           clickable: true,
         }}
         navigation={true}
+        //맨페이지부터 시작하게 하기
+        initialSlide={1}
         modules={[Autoplay, Pagination, Navigation, Mousewheel]}
       >
         <SwiperSlide>
