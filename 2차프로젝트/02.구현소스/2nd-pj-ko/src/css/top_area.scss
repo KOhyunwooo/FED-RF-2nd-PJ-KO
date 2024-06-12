@@ -7,17 +7,17 @@
     filter: invert(1); //최대값 1임
     mix-blend-mode: difference;
 
-    color: #000;
     position: fixed;
     z-index: 9999;
     padding: 20px 0 10px 50px;
     width: 100%;
     ///////////////////////
     // background: #69696979;
-
-    
+    /* gnb오버시 */
     &:hover {
-      // background-color: #ffffff;
+      /* gnb 배경색 */
+      background-color: rgba(255, 255, 255, 0.3);
+      //gnb메뉴 글자 반전되게하기 초기화
       filter: none; //최대값 1임
       mix-blend-mode: normal;
     }
@@ -34,7 +34,7 @@
           animation: intrologo 1s 0.8s ease-out forwards;
           @keyframes intrologo {
             to {
-              height: max(5vw, 50px);
+              height: min(63.3px);
             }
           }
           img {
@@ -49,7 +49,7 @@
       li {
         a {
           text-decoration: none;
-          color: #222;
+          color: black;
         }
         .swrap {
           // width: 60vw;
@@ -63,10 +63,18 @@
           position: absolute;
           left: 0;
 
+          /* gnb 하위메뉴 */
           ol {
-            //
-            background: #ffffff49;
+            /* 상단에서 하단으로 빨간색에서 50% 지점에서 투명해지고 다시 빨간색으로 그라데이션 */
+            // background: linear-gradient(
+            //   to top,
+            //   rgba(0, 0, 0, 0) 10%,
+            //   rgba(0, 0, 0, 0.8)
+            // );
+
             
+            background: rgba(255, 255, 255, 0.3);
+
             width: 100vw - 8vw;
             display: inline-flex;
             // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;
@@ -106,7 +114,7 @@
     opacity: 1;
 
     &:hover {
-      filter: blur(0.5px);
+      filter: blur(0.7px);
     }
   }
 }
