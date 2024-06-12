@@ -1,19 +1,25 @@
 //탑에어리어 scss
 
-.top-area  {
+.top-area {
   font-family: "HelveticaBd";
   .gnb {
+    //gnb메뉴 글자 반전되게하기
+    filter: invert(1); //최대값 1임
+    mix-blend-mode: difference;
+
+    color: #000;
     position: fixed;
-    mix-blend-mode: exclusion;
     z-index: 9999;
     padding: 20px 0 10px 50px;
     width: 100%;
     ///////////////////////
-    background: #69696979;
+    // background: #69696979;
 
-    &:hover{
+    
+    &:hover {
       // background-color: #ffffff;
-      
+      filter: none; //최대값 1임
+      mix-blend-mode: normal;
     }
     /* gnb메뉴들 */
     ul {
@@ -44,7 +50,6 @@
         a {
           text-decoration: none;
           color: #222;
-          
         }
         .swrap {
           // width: 60vw;
@@ -60,7 +65,8 @@
 
           ol {
             //
-            background: #69696979;
+            background: #ffffff49;
+            
             width: 100vw - 8vw;
             display: inline-flex;
             // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;
@@ -98,14 +104,9 @@
   /* toparea 모든 li직계하위a요소 오버시 색상 .6만큼 투명하게 */
   li > a {
     opacity: 1;
-    
 
     &:hover {
-      opacity: 0.6;
+      filter: blur(0.5px);
     }
   }
 }
-
-
-
-
