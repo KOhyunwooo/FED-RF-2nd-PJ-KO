@@ -2,9 +2,9 @@
 
 .top-area  {
   font-family: "HelveticaBd";
-  
   .gnb {
     position: fixed;
+    mix-blend-mode: exclusion;
     z-index: 9999;
     padding: 20px 0 10px 50px;
     width: 100%;
