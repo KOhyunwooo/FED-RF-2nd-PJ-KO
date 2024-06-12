@@ -4,8 +4,17 @@
   font-family: "HelveticaBd";
   
   .gnb {
-    
+    position: fixed;
+    z-index: 9999;
     padding: 20px 0 10px 50px;
+    width: 100%;
+    ///////////////////////
+    background: #69696979;
+
+    &:hover{
+      // background-color: #ffffff;
+      
+    }
     /* gnb메뉴들 */
     ul {
       gap: 0 5vw;
@@ -24,7 +33,7 @@
           }
           img {
             position: relative;
-            z-index: 999;
+            z-index: 9999;
 
             height: 100%;
           }
@@ -34,7 +43,8 @@
       li {
         a {
           text-decoration: none;
-          color: #333;
+          color: #222;
+          
         }
         .swrap {
           // width: 60vw;
@@ -49,7 +59,8 @@
           left: 0;
 
           ol {
-            background-color: rgb(168, 168, 168);
+            //
+            background: #69696979;
             width: 100vw - 8vw;
             display: inline-flex;
             // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;
@@ -87,8 +98,14 @@
   /* toparea 모든 li직계하위a요소 오버시 색상 .6만큼 투명하게 */
   li > a {
     opacity: 1;
+    
+
     &:hover {
       opacity: 0.6;
     }
   }
 }
+
+
+
+
