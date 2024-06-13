@@ -1,14 +1,14 @@
 //탑에어리어 scss
 
 .top-area {
-  font-family: "HelveticaBd";
+  font-family: "HelveticaRoman";
   .gnb {
     //gnb메뉴 글자 반전되게하기
     filter: invert(1); //최대값 1임
     mix-blend-mode: difference;
 
     position: fixed;
-    z-index: 9999;
+    z-index: 9;
     padding: 20px 0 10px 50px;
     width: 100%;
     ///////////////////////
@@ -17,9 +17,16 @@
     &:hover {
       /* gnb 배경색 */
       background-color: rgba(255, 255, 255, 0.3);
+      
+      //gnb배경 블러??????????????????????????????????
+      // backdrop-filter: blur(6px);
+      
+      position: absolute;
       //gnb메뉴 글자 반전되게하기 초기화
       filter: none; //최대값 1임
       mix-blend-mode: normal;
+      
+    
     }
     /* gnb메뉴들 */
     ul {
@@ -32,6 +39,11 @@
         .lgbx {
           height: 15vw;
           animation: intrologo 1s 0.8s ease-out forwards;
+          
+          ////////////?????????????????????????
+          pointer-events: none;
+          /////////////////////////////
+
           @keyframes intrologo {
             to {
               height: min(63.3px);
@@ -39,7 +51,7 @@
           }
           img {
             position: relative;
-            z-index: 9999;
+            z-index: 9;
 
             height: 100%;
           }
@@ -59,22 +71,26 @@
         }
         .smenu {
           display: none;
-
+          
+          
           position: absolute;
           left: 0;
 
           /* gnb 하위메뉴 */
           ol {
-            /* 상단에서 하단으로 빨간색에서 50% 지점에서 투명해지고 다시 빨간색으로 그라데이션 */
-            // background: linear-gradient(
-            //   to top,
-            //   rgba(0, 0, 0, 0) 10%,
-            //   rgba(0, 0, 0, 0.8)
-            // );
-
             
-            background: rgba(255, 255, 255, 0.3);
-
+            background: linear-gradient(
+              to top,
+              rgba(255, 255, 255, 0) 10%,
+              rgba(255, 255, 255, 0.3)
+            );
+                      
+            // background: rgba(255, 255, 255, 0.3);
+            
+            /////////?????????????응애 왜 여기에 백드롭필터 넣으면 gnb에 백드롭필터가 안들어가....
+            backdrop-filter: blur(6px);
+                    
+      
             width: 100vw - 8vw;
             display: inline-flex;
             // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;
@@ -104,6 +120,10 @@
         /* li에 오버시 .smenu 보이기 */
         &:hover .smenu {
           display: block;
+            
+            
+
+          
         }
       }
     }
@@ -114,7 +134,8 @@
     opacity: 1;
 
     &:hover {
-      filter: blur(0.7px);
+     opacity: .6;
+      
     }
   }
 }

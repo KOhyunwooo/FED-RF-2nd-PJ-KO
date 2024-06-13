@@ -1,6 +1,5 @@
 //스와이퍼 커스텀 scss
 
-
 // .cont {
 //     height: 100%;
 // }
@@ -9,8 +8,6 @@
 //     position: relative;
 //     height: 100%;
 // }
-
-
 
 .swiper {
     width: 100%;
@@ -41,3 +38,32 @@
     background: #ffffff;
 }
 
+//오른쪽 화살표
+.swiper-button-prev,
+.swiper-button-next {
+    color: black;
+    //화살표 위치
+    width: calc(var(--swiper-navigation-size) / 44 * 70);
+    //화살표 크기
+    --swiper-navigation-size: max(1.5vw,27px);
+    
+    //화살표 색상 반전되게 하기
+    filter: invert(1); //최대값 1임
+    mix-blend-mode: difference;
+    
+    
+    animation: arrowmove 1.5s ease-out infinite;
+    @keyframes arrowmove {
+        0% {opacity: 1;
+            width: calc(var(--swiper-navigation-size) / 44 * 70);
+        }
+        50% {
+            opacity: .6;
+            width: calc(var(--swiper-navigation-size) / 44 * 60);
+        }
+        100% {
+            opacity: 1;
+            width: calc(var(--swiper-navigation-size) / 44 * 70);
+        }
+    }
+}

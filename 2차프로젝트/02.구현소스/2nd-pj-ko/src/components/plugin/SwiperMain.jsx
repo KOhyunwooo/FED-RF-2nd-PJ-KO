@@ -47,6 +47,7 @@ export default function SwiperMain() {
                         // navigation={true}
                         modules={[Autoplay, Pagination, Navigation, Mousewheel]}
                     >
+                                                          
                         {main_img.main_woman.map((v, i) => (
                             <SwiperSlide key={i}>
                                 <img src={v.isrc} alt={v.tit} />

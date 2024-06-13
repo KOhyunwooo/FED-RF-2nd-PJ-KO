@@ -1,4 +1,4 @@
-import FooterArea from "./FooterArea";
+
 import MainArea from "./MainArea";
 import TopArea from "./TopArea";
 
@@ -12,7 +12,7 @@ export default function Layout(){
         {/* 메인영역 */}
         <MainArea/>
         {/* 하단영역 */}
-        <FooterArea/>
+      
         </>
     );
     

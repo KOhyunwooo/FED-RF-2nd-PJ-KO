@@ -1,6 +1,7 @@
 //메인페이지 src
 export const main_img = {
     main_woman: [
+        //images/main_banner_pg/main_pg_0y/ZARA WOMAN SS23 STUDIO COLLECTION.mp4
         { isrc: "images/main_banner_pg/main_pg_0y/main_pg_00.jpg", tit: "" },
         { isrc: "images/main_banner_pg/main_pg_0y/main_pg_01.jpg", tit: "" },
         { isrc: "images/main_banner_pg/main_pg_0y/main_pg_02.jpg", tit: "" },
