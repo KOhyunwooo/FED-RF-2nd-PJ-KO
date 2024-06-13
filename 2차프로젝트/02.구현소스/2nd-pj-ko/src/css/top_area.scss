@@ -30,7 +30,7 @@
       /* gnb 자라 로고박스 */
       span {
         .lgbx {
-          height: 10vw;
+          height: 15vw;
           animation: intrologo 1s 0.8s ease-out forwards;
           @keyframes intrologo {
             to {
@@ -93,7 +93,7 @@
             li:last-child {
               margin-bottom: auto;
               position: absolute;
-              right: 3vw;
+              right: 6vw;
 
               img {
                 width: min(15vw, 300px);
