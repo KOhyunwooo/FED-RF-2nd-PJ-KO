@@ -39,8 +39,8 @@
         .lgbx {
           height: 15vw;
           animation: intrologo 1s 0.8s ease-out forwards;
-          
           ////////////?????????????????????????
+          user-select: none;
           pointer-events: none;
           /////////////////////////////
 
