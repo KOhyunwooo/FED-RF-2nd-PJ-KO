@@ -1,5 +1,5 @@
 // ZARA GNB메뉴 데이터
-export const menu = [
+export const gnbData = [
     {
         txt: "WOMAN",
         link: "/woman",
@@ -7,11 +7,11 @@ export const menu = [
         sub: [
             {
                 txt: "베스트셀러",
-                link: "/woman",
+                link: "/bestseller",
             },
             {
                 txt: "블레이저",
-                link: "/woman",
+                link: "/blazer",
             },
             {
                 txt: "원피스",

@@ -2,9 +2,15 @@ import React from 'react';
 
 const FooterArea = () => {
     return (
-        <div>
-            
-        </div>
+      <>
+      <h1>
+        FOOTER에어리어 
+        </h1>
+       <h2>
+        어드레스,인스타그램 등등 들어올것
+       </h2>
+      
+      </>
     );
 };
 
