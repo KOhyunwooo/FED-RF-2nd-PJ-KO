@@ -1,9 +1,14 @@
 //맨 페이지 컴포넌트//////
 
+import Banner from "../modules/Banner";
+import FooterArea from "../modules/FooterArea";
+
 export default function Man(){
     return(
         <>
-        <h1>멘</h1>
+        <Banner category="manData"/>
+        {/* 푸터에어리어 들어올 것 */}
+        <FooterArea/>
         </>
     );
 

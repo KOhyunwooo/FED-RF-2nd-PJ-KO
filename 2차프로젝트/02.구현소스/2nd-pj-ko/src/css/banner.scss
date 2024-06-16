@@ -1,0 +1,44 @@
+//배너용 css
+.banner{
+    padding-top: calc(30px + min(15vw,63.3px));
+    
+    // 빈 div가 안생기게 하는법 물어보기
+    // img{
+    //     width: 10vw;
+    // }
+    >div{
+        
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        
+        //이미지 싸고 있는 박스
+        >div{
+            
+            flex:1;
+            padding: 1vw;
+            
+            
+           
+            img{
+                height: 100%;
+                width: 100%;
+            
+            }
+        }
+
+        /* 상품설명 p태그 */
+        p{
+            font-size: 1.3rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+    .first-div{//위에 div박스
+        width: 70vw;
+    }
+    .second-div{//아래 div박스
+        width: 90vw;
+    }
+
+}

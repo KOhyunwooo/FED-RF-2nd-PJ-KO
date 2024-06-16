@@ -6,12 +6,16 @@ export const gnbData = [
         src: "images/nav_side_img/woman01.jpg",
         sub: [
             {
+                txt: "///NEW",
+                link: "/woman",
+            },
+            {
                 txt: "베스트셀러",
-                link: "/bestseller",
+                link: "/woman",
             },
             {
                 txt: "블레이저",
-                link: "/blazer",
+                link: "/woman",
             },
             {
                 txt: "원피스",
@@ -118,6 +122,10 @@ export const gnbData = [
         link: "/man",
         src: "images/nav_side_img/man01.jpg",
         sub: [
+            {
+                txt: "///NEW",
+                link: "/man",
+            },
             {
                 txt: "베스트셀러",
                 link: "/man",
@@ -268,6 +276,10 @@ export const gnbData = [
         link: "/home",
         src: "images/nav_side_img/home01.jpg",
         sub: [
+            {
+                txt: "///NEW",
+                link: "/home",
+            },
             {
                 txt: "비치 | 아웃도어",
                 link: "/home",

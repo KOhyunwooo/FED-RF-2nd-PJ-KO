@@ -8,7 +8,7 @@ export default function Woman(){
         <>
               
         {/* 배너들어올것 */}
-        <Banner/>
+        <Banner category="womanData"/>
         {/* 푸터에어리어 들어올 것 */}
         <FooterArea/>
         </>

@@ -5,3 +5,7 @@
 3. 탑에어리어 css -animation: intrologo 할때 마우스 오버 안되게 하는법
 
 4. gnb오버시 배경이 블러가 안됨
+
+5. gnb 오버시 gnb무한 깜빡임(overflow:hidden?????)
+
+5. banner.jsx에서 빈div 박스가 왜 생기는지....그거떄문에 flex가 제대로 안됨

@@ -1,17 +1,12 @@
-import React from 'react';
+import React from "react";
 
 const FooterArea = () => {
-    return (
-      <>
-      <h1>
-        FOOTER에어리어 
-        </h1>
-       <h2>
-        어드레스,인스타그램 등등 들어올것
-       </h2>
+  return (
+    <>
+      <h1 style={{lineHeight:"100vh",textAlign:"center",fontSize:"50px"}}>I am FOOTER에어리어~</h1>
       
-      </>
-    );
+    </>
+  );
 };
 
 export default FooterArea;

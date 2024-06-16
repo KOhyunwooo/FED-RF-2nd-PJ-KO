@@ -1,12 +1,13 @@
 //탑에어리어 scss
 
 .top-area {
-  font-family: "HelveticaRoman";
   .gnb {
+    
+    
     //gnb메뉴 글자 반전되게하기
     filter: invert(1); //최대값 1임
     mix-blend-mode: difference;
-
+    top:0;
     position: fixed;
     z-index: 9;
     padding: 20px 0 10px 50px;
@@ -16,20 +17,24 @@
     /* gnb오버시 */
     &:hover {
       /* gnb 배경색 */
-      background-color: rgba(255, 255, 255, 0.3);
+      background-color: #fdfdfd4d;
       
       //gnb배경 블러??????????????????????????????????
       // backdrop-filter: blur(6px);
-      
+      z-index: 9;
       position: absolute;
       //gnb메뉴 글자 반전되게하기 초기화
       filter: none; //최대값 1임
       mix-blend-mode: normal;
       
-    
+      
+      
     }
     /* gnb메뉴들 */
     ul {
+      font-size: 1.5rem;
+      font-family: "HelveticaRoman";
+      
       gap: 0 5vw;
       display: flex;
       /* 로고랑 높이값 맞추기 */
@@ -61,7 +66,7 @@
       li {
         a {
           text-decoration: none;
-          color: black;
+          color: #010101;
         }
         .swrap {
           // width: 60vw;
@@ -78,14 +83,15 @@
 
           /* gnb 하위메뉴 */
           ol {
-            
-            background: linear-gradient(
-              to top,
-              rgba(255, 255, 255, 0) 10%,
-              rgba(255, 255, 255, 0.3)
-            );
+            font-family: "HelveticaLt";
+            font-size: 1.4rem;
+            // background: linear-gradient(
+            //   to top,
+            //   #fdfdfd00 10%,
+            //   #fdfdfd4d
+            // );
                       
-            // background: rgba(255, 255, 255, 0.3);
+            background: #fdfdfd4d;
             
             /////////?????????????응애 왜 여기에 백드롭필터 넣으면 gnb에 백드롭필터가 안들어가....
             backdrop-filter: blur(6px);
@@ -120,6 +126,7 @@
         /* li에 오버시 .smenu 보이기 */
         &:hover .smenu {
           display: block;
+          
             
             
 
@@ -135,7 +142,7 @@
 
     &:hover {
      opacity: .6;
-      
+     font-weight: bold;
     }
   }
 }
