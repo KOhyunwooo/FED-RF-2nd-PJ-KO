@@ -11,7 +11,7 @@ export default function Layout(){
         <TopArea/>
         {/* 메인영역 */}
         <MainArea/>
-        {/* 하단영역 */}
+        {/* 하단영역? */}
       
         </>
     );
