@@ -1,26 +1,35 @@
 .banner {
     display: flex;
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
-    height: 100vh; /* 화면 전체 높이 */
-    background-color: #f0f0f0; /* 배경색 */
-  
+    flex-direction: column; /* 플렉스 방향: 세로방향  */
+    justify-content: center; 
+    align-items: center; /* 세로정렬:중앙 */
+    padding: 5vw;
+    
+    
     .top-images, .bottom-images {
       display: flex;
-      justify-content: center; /* 가로 중앙 정렬 */
-      gap: 20px; /* 이미지 사이 간격 */
+      justify-content: center; 
+      gap: 2vw; /* 이미지 사이 간격 */
+      
   
       div {
-        text-align: center; /* 내부 텍스트 가운데 정렬 */
-  
-        img {
-          max-width: 100%; /* 이미지 최대 너비 */
-          height: auto; /* 이미지 높이 자동 설정 */
+          
+          flex:1;/* 이미지 너비 같게 */
+          
+          img {
+          width: 100%;
+          height: 100%;
+          
         }
   
         p {
-          margin-top: 10px; /* 텍스트 위 여백 */
+        
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 1.2rem;
         }
       }
+    }
+    .bottom-images{
+        padding-top: 7vh;
     }
   }

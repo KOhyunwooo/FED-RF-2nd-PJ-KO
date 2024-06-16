@@ -35,7 +35,7 @@
       font-size: 1.5rem;
       font-family: "HelveticaRoman";
       
-      gap: 0 5vw;
+      
       display: flex;
       /* 로고랑 높이값 맞추기 */
       align-items: center;
@@ -63,7 +63,11 @@
         }
       }
 
-      li {
+      >li {
+        text-align: center;
+        width: 11vw;
+
+        
         a {
           text-decoration: none;
           color: #010101;
@@ -83,6 +87,7 @@
 
           /* gnb 하위메뉴 */
           ol {
+
             font-family: "HelveticaLt";
             font-size: 1.4rem;
             // background: linear-gradient(
@@ -110,7 +115,9 @@
             align-content: flex-start;
 
             position: relative;
-
+            li{
+              text-align: left;
+            }
             /* 하위메뉴 오른쪽 이미지 */
             li:last-child {
               margin-bottom: auto;
