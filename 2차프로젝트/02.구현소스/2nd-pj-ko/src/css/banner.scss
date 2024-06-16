@@ -1,44 +1,26 @@
-//배너용 css
-.banner{
-    padding-top: calc(30px + min(15vw,63.3px));
-    
-    // 빈 div가 안생기게 하는법 물어보기
-    // img{
-    //     width: 10vw;
-    // }
-    >div{
-        
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        
-        //이미지 싸고 있는 박스
-        >div{
-            
-            flex:1;
-            padding: 1vw;
-            
-            
-           
-            img{
-                height: 100%;
-                width: 100%;
-            
-            }
+.banner {
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    height: 100vh; /* 화면 전체 높이 */
+    background-color: #f0f0f0; /* 배경색 */
+  
+    .top-images, .bottom-images {
+      display: flex;
+      justify-content: center; /* 가로 중앙 정렬 */
+      gap: 20px; /* 이미지 사이 간격 */
+  
+      div {
+        text-align: center; /* 내부 텍스트 가운데 정렬 */
+  
+        img {
+          max-width: 100%; /* 이미지 최대 너비 */
+          height: auto; /* 이미지 높이 자동 설정 */
         }
-
-        /* 상품설명 p태그 */
-        p{
-            font-size: 1.3rem;
-            font-family: Arial, Helvetica, sans-serif;
+  
+        p {
+          margin-top: 10px; /* 텍스트 위 여백 */
         }
+      }
     }
-
-    .first-div{//위에 div박스
-        width: 70vw;
-    }
-    .second-div{//아래 div박스
-        width: 90vw;
-    }
-
-}
+  }
