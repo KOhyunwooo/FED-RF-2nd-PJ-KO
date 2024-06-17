@@ -10,7 +10,7 @@
 
 5. gnb 오버시 gnb무한 깜빡임(overflow:hidden?????)
 
-
+6. 어린이 gnb잘못함
 
 5. banner.jsx에서 빈div 박스가 왜 생기는지....그거떄문에 flex가 제대로 안됨
 /////해결
