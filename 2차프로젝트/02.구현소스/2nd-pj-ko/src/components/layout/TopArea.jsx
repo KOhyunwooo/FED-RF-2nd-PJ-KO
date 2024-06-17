@@ -1,5 +1,7 @@
 // 상단영역 css 불러오기///
 import "../../css/top_area.scss";
+// 상단영역 미디어쿼리scss 불러오기
+import "../../css/media.scss";
 
 //상단영역 컴포넌트//////
 import { Link } from "react-router-dom";
@@ -8,7 +10,6 @@ import { gnbData } from "../data/gnb_data";
 import Logo from "../modules/Logo";
 
 export default function TopArea() {
-  
     return (
         <>
             {/* 1.상단영역 */}
@@ -26,9 +27,8 @@ export default function TopArea() {
                         </div>
                         {/* 2. GNB메뉴 데이터 배열로 만들기///////////////////////////// */}
                         {gnbData.map((v, i) => (
-                          
                             <li key={i}>
-                              {/* gnb상위메뉴 링크 */}
+                                {/* gnb상위메뉴 링크 */}
                                 {<Link to={v.link}>{v.txt}</Link>}
                                 {
                                     // 서브 메뉴 데이터가 있으면 하위 그리기/////////////////////
@@ -70,6 +70,37 @@ export default function TopArea() {
                                 }
                             </li>
                         ))}
+
+                        {/* gnb오른쪽 끝에 검색창 */}
+                        <li
+                            style={{ marginLeft: "auto", marginRight: "347px" }}
+                        >
+                            <div className="searchGnb">
+                                <input
+                                    type="text"
+                                    name="schinGnb" /* name은 백엔드 개발자를 위한 약속, 보통id랑 같은이름으로 함 */
+                                    id="schinGnb"
+                                    placeholder="Filter by keyword"
+                                />
+
+                                <span
+                                    style={{
+                                        whiteSpace: "nowrap",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    로그인
+                                </span>
+                                <span
+                                    style={{
+                                        whiteSpace: "nowrap",
+                                        marginLeft: "10px",
+                                    }}
+                                >
+                                    바스켓백(0)
+                                </span>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
             </header>
