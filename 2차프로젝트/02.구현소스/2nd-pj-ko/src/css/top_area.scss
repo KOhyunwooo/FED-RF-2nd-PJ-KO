@@ -73,8 +73,11 @@
                     padding: 26px 0 0 0;
                 }
                 .smenu {
-                    display: none;
-
+                    height: 0;
+                    overflow: hidden;
+                    opacity: 0;
+                    transition: 0.2s ease-in-out;
+                    
                     position: absolute;
                     left: 0;
 
@@ -100,8 +103,8 @@
                         // 진행방향을 세로방향으로 바꿈: flex-direction: column;
                         flex-direction: column;
                         /* 하위메뉴 높이값 */
-                        height: 13vw;
-                        padding: 2vw 4vw 2vw 10vw;
+                        height: 250px;
+                        padding: 2vw 4vw 4vw 10vw;
                         gap: 0.6vw 5vw;
                         align-content: flex-start;
 
@@ -116,14 +119,15 @@
                             right: 15vw;
 
                             img {
-                                width: 13vw;
+                                width: 250px;
                             }
                         }
                     }
                 }
                 /* li에 오버시 .smenu 보이기 */
                 &:hover .smenu {
-                    display: block;
+                    height: 320px;//ol 높이값+gnb높이값?
+                    opacity: 1;
                 }
             }
         }
@@ -148,5 +152,6 @@
     /* 오른쪽 글자태그 */
     span {
         font-size: 1.2rem;
+        font-weight: bold;
     }
 }

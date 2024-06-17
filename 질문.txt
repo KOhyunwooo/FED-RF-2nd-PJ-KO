@@ -4,15 +4,17 @@
 
 3. 메인페이지 드래그시 sticky로 한장씩 덮어지게 
 
-3. 탑에어리어 css -animation: intrologo 할때 마우스 오버 안되게 하는법
+4. 탑에어리어 css -animation: intrologo 할때 마우스 오버 안되게 하는법
 
-4. gnb오버시 배경이 블러가 안됨
+5. gnb오버시 배경이 블러가 안됨
 
-5. gnb 오버시 gnb무한 깜빡임(overflow:hidden?????)
+6. gnb 오버시 gnb무한 깜빡임(overflow:hidden?????)
 
-6. 어린이 gnb잘못함
+7. gnb에서 gnb메뉴로 넘어갈때 배경 블러 잠깐 꺼지는거
 
-7. 콘솔창 오류 왜 나는것?
+8. 어린이 gnb잘못함
+
+9. 콘솔창 오류 왜 나는것?
 
 
 

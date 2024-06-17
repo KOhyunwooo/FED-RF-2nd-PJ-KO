@@ -35,12 +35,12 @@ export default function SwiperMain() {
             direction={"vertical"}
             spaceBetween={0}
             mousewheel={true}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-              //마지막 페이지에 도달하면 멈추기
-              stopOnLastSlide: true,
-            }}
+            // autoplay={{
+            //   delay: 2000,
+            //   disableOnInteraction: false,
+            //   //마지막 페이지에 도달하면 멈추기
+            //   stopOnLastSlide: true,
+            // }}
             pagination={{
               clickable: true,
             }}
@@ -60,12 +60,12 @@ export default function SwiperMain() {
             direction={"vertical"}
             spaceBetween={0}
             mousewheel={true}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-              //마지막 페이지에 도달하면 멈추기
-              stopOnLastSlide: true,
-            }}
+            // autoplay={{
+            //   delay: 2000,
+            //   disableOnInteraction: false,
+            //   //마지막 페이지에 도달하면 멈추기
+            //   stopOnLastSlide: true,
+            // }}
             pagination={{
               clickable: true,
             }}
@@ -85,12 +85,12 @@ export default function SwiperMain() {
             direction={"vertical"}
             spaceBetween={0}
             mousewheel={true}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-              //마지막 페이지에 도달하면 멈추기
-              stopOnLastSlide: true,
-            }}
+            // autoplay={{
+            //   delay: 2000,
+            //   disableOnInteraction: false,
+            //   //마지막 페이지에 도달하면 멈추기
+            //   stopOnLastSlide: true,
+            // }}
             pagination={{
               clickable: true,
             }}
@@ -110,12 +110,12 @@ export default function SwiperMain() {
             direction={"vertical"}
             spaceBetween={0}
             mousewheel={true}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-              //마지막 페이지에 도달하면 멈추기
-              stopOnLastSlide: true,
-            }}
+            // autoplay={{
+            //   delay: 2000,
+            //   disableOnInteraction: false,
+            //   //마지막 페이지에 도달하면 멈추기
+            //   stopOnLastSlide: true,
+            // }}
             pagination={{
               clickable: true,
             }}
