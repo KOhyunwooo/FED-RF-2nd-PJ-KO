@@ -14,7 +14,7 @@ export default function TopArea() {
 
     useEffect(()=>{
         let tArea = document.querySelector(".gnb");
-        let gnb = document.querySelectorAll(".gnb li");
+        let gnb = document.querySelectorAll(".gnb li:first-child~li");
         gnb.forEach(ele=>ele.onmouseover=()=>{tArea.classList.add("on")});
         tArea.onmouseout=()=>{tArea.classList.remove("on")};
     },[]);

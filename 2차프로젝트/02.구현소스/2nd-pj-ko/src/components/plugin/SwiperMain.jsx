@@ -5,15 +5,22 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import 'swiper/css/effect-creative';
 //내가 커스텀하는 css 불러오기
 import "../plugin/css/swiper_main.scss";
 
 // import required modules
-import { Pagination, Navigation, Autoplay, Mousewheel } from "swiper/modules";
+import { Pagination, Navigation, Autoplay, Mousewheel,EffectCreative } from "swiper/modules";
 // 이미지 데이터 불러오기
 import { main_img } from "../data/main_img";
+import { useRef } from "react";
 
 export default function SwiperMain() {
+
+  // 리액트에서 컴포넌트가 리랜더링 되어도 값을 유지하는 변수
+  // 생성되는 하위 스와이퍼 객체
+  const xx = useRef([]);
+
   return (
     <>
       {/* 가로방향 스와이프 설정///////////////////// */}
@@ -27,6 +34,16 @@ export default function SwiperMain() {
         //맨페이지부터 시작하게 하기
         initialSlide={1}
         modules={[Autoplay, Pagination, Navigation, Mousewheel]}
+        onSlideChange={(iam)=>{
+          let idx = iam.activeIndex;
+          let tg = xx.current;
+          console.log(idx);
+          tg.forEach((v,i)=>{
+            if(i == idx) tg[i].autoplay.start();
+            else tg[i].autoplay.stop();
+          });
+          // tg[1].autoplay.start();
+        }}
       >
         <SwiperSlide>
           {/* 세로방향 스와이프 설정///////////////////// */}
@@ -35,6 +52,8 @@ export default function SwiperMain() {
             direction={"vertical"}
             spaceBetween={0}
             mousewheel={true}
+            // onInit() 메서드는 스와퍼 처음 셋팅완료시 실행구역
+            onInit={(iam)=>xx.current.push(iam)}
             // autoplay={{
             //   delay: 2000,
             //   disableOnInteraction: false,
@@ -60,6 +79,20 @@ export default function SwiperMain() {
             direction={"vertical"}
             spaceBetween={0}
             mousewheel={true}
+            onInit={(iam)=>xx.current.push(iam)}
+
+            grabCursor={true}
+            effect={"creative"}
+            creativeEffect={{              
+              prev: {
+                shadow: true,
+                translate: [0, '-20%', -1],
+              },
+              next: {
+                translate: [0, '100%', 0],
+              },
+            }}
+
             // autoplay={{
             //   delay: 2000,
             //   disableOnInteraction: false,
@@ -70,7 +103,7 @@ export default function SwiperMain() {
               clickable: true,
             }}
             // navigation={true}
-            modules={[Autoplay, Pagination, Navigation, Mousewheel]}
+            modules={[Autoplay, Pagination, Navigation, Mousewheel,EffectCreative]}
           >
             {main_img.main_man.map((v, i) => (
               <SwiperSlide key={i}>
@@ -85,6 +118,7 @@ export default function SwiperMain() {
             direction={"vertical"}
             spaceBetween={0}
             mousewheel={true}
+            onInit={(iam)=>xx.current.push(iam)}
             // autoplay={{
             //   delay: 2000,
             //   disableOnInteraction: false,
@@ -110,6 +144,7 @@ export default function SwiperMain() {
             direction={"vertical"}
             spaceBetween={0}
             mousewheel={true}
+            onInit={(iam)=>xx.current.push(iam)}
             // autoplay={{
             //   delay: 2000,
             //   disableOnInteraction: false,

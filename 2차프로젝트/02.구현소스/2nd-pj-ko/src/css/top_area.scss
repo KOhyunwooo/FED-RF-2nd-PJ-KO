@@ -1,5 +1,20 @@
 //탑에어리어 scss
-
+body::after{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    // background-color: rgba(255, 0, 0, 0.323);
+    animation: cover .001s 2s forwards;
+}
+@keyframes cover {
+    to{
+        height: 0;
+    }
+}
 .top-area {
   .gnb {
     //gnb메뉴 글자 반전되게하기
@@ -14,28 +29,33 @@
     &::before {
       content: "";
       position: absolute;
-      top: 80px;
+      top: 0;
       left: 0;
       width: 100%;
       height: 0;
+      z-index: -1;
 
       background: #fdfdfd4d;
       /////////?????????????응애 왜 여기에 백드롭필터 넣으면 gnb에 백드롭필터가 안들어가....
       backdrop-filter: blur(6px);
       transition: 0.2s ease-in-out;
     }
-    &.on::before {
-      height: 400px;
+    &:hover::before{
+        height: 80px;
     }
+    &.on::before {
+      height: 480px;
+    }
+
     ///////////////////////
     // background: #69696979;
     /* gnb오버시 */
     &:hover {
       /* gnb 배경색 */
-      background-color: #fdfdfd4d;
+    //   background-color: #fdfdfd4d;
 
       //gnb배경 블러??????????????????????????????????
-      // backdrop-filter: blur(6px);
+        // backdrop-filter: blur(6px);
       z-index: 9;
       //gnb메뉴 글자 반전되게하기 초기화
       filter: none; //최대값 1임
@@ -51,6 +71,7 @@
       align-items: center;
       /* gnb 자라 로고박스 */
       li:first-child {
+        width: auto;
         .lgbx {
           height: 15vw;
           animation: intrologo 1s 0.8s ease-out forwards;
@@ -145,8 +166,7 @@
   }
 
   /* toparea 모든 li직계하위a요소 오버시 색상 .6만큼 투명하게 */
-  li > a {
-    opacity: 1;
+  li:first-child~li > a {
 
     &:hover {
       opacity: 0.6;
