@@ -43,21 +43,21 @@ body::after {
             /* gnb::before 배경색+배경블러 */
             background: #fdfdfd4d;
             backdrop-filter: blur(6px);
-            transition : 0.2s ease-out;
+            transition: 0.2s ease-out;
         }
         /* gnb오버시 ::before 설정 */
         &:hover::before {
             height: 80px;
-          }
-          /* gnb.on시 ::before 설정*/
-          &.on::before {
-            height: 400px;
-          }
-          
-          /* gnb오버시 */
-          &:hover {
-          filter: none; //최대값 1임
-          mix-blend-mode: normal;
+        }
+        /* gnb.on시 ::before 설정: 상위메뉴 오버시 슬라이드 되는 흰색+블러배경*/
+        &.on::before {
+            height: 400px;/* gnb 높이 80px 제외하면 320px */
+        }
+
+        /* gnb오버시 */
+        &:hover {
+            filter: none; //최대값 1임
+            mix-blend-mode: normal;
         }
 
         /* gnb메뉴들 */
@@ -99,25 +99,20 @@ body::after {
                     text-decoration: none;
                     color: #010101;
                 }
-                //하위메뉴 박스
-                .swrap {
-                    // width: 60vw;
-                    // display: flex;
-                    margin: 0 auto;
-                    padding: 26px 0 0 0;
-                }
+
                 .smenu {
                     height: 0;
                     overflow: hidden;
                     opacity: 0;
                     transition: 0.2s ease-out;
-                    top: 80px;
+                    top: 80px; /* gnb 높이값 부터 시작 */
                     position: absolute;
                     left: 0;
 
                     /* gnb 하위메뉴 */
                     ol {
-                      //gnb메뉴 글자 반전되게하기
+                        
+                        //gnb메뉴 글자 반전되게하기
                         font-family: "HelveticaLt";
                         font-size: 1.4rem;
                         // background: linear-gradient(
@@ -132,11 +127,11 @@ body::after {
                         flex-wrap: wrap;
                         // 진행방향을 세로방향으로 바꿈: flex-direction: column;
                         flex-direction: column;
-                        justify-content: space-between;
+                        
                         align-content: flex-start;
                         /* 하위메뉴 높이값 */
                         height: 250px;
-                        padding: 2vw 4vw 4vw 10vw;
+                        padding: 1vw 2vw 3vw 10vw ;
                         gap: 0.6vw 5vw;
                         position: relative;
                         li {
@@ -147,14 +142,14 @@ body::after {
                             position: absolute;
                             right: 15vw;
                             img {
-                                width: 250px;
+                                width: 250px;//ol 높이랑 맞추기
                             }
                         }
                     }
                 }
                 /* .gnb ul li에 오버시 .smenu 보이기 */
                 &:hover .smenu {
-                    height: 320px; //ol 높이값+gnb높이값?
+                    height: 320px; // gnb.on시 ::before 높이랑 맞춰야함
                     opacity: 1;
                 }
             }
