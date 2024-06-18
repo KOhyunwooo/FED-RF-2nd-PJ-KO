@@ -41,9 +41,9 @@ body::after {
             height: 0;
             z-index: -1;
             /* gnb::before 배경색+배경블러 */
-            background: #fdfdfd4d;
+            background-color: #fdfdfd4d;
             backdrop-filter: blur(6px);
-            transition: 0.2s ease-out;
+            transition: .1s ease-out;/* 자라 로고에 아웃라인 생김!!!!!!!!!!!!!!!! */
         }
         /* gnb오버시 ::before 설정 */
         &:hover::before {
