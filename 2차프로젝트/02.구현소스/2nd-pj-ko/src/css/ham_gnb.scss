@@ -7,11 +7,21 @@
     height: 700px;
     border: 2px dashed rgb(255, 0, 0);
     .box1{
+      display: flex;
+      align-items: flex-end;
       img{
         margin: 0 auto;
       }
+      .loginbox{
+        margin-left: auto;
+      }
+    
     }
     .box2{
+      ul{
+        display: flex;
+        justify-content: space-evenly;
+      }
 
     }
     .box3{

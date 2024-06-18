@@ -1,4 +1,4 @@
-//index.scss 불러오기
+//인덱스 index.scss 불러오기
 import "../src/css/index.scss";
 
 import React from "react";
