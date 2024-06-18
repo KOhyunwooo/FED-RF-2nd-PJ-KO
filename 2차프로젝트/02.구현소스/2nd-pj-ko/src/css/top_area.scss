@@ -159,7 +159,7 @@ body::after {
     /* toparea 모든 li직계하위a요소 오버시 색상 .6만큼 투명하게 */
     li:first-child ~ li > a {
         &:hover {
-            opacity: 0.6;
+            opacity: 0.45;
             font-weight: bold;
         }
     }
