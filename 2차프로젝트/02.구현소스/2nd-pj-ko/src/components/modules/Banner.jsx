@@ -31,7 +31,7 @@ const Banner = ({ category }) => {
       {/* 아래 사진 3개 부분 */}
       <div className="bottom-images">
         {selData.map((v, i) => (
-         i>=2&&( <div key={i>=3}>
+         i>=2&&( <div key={i}>
             <Link to={v.link}>
               <img src={v.imgsrc} alt={v.txt} />
               <p>{v.txt}</p>

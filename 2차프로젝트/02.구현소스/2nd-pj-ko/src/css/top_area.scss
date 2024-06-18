@@ -1,157 +1,168 @@
 //탑에어리어 scss
 
 .top-area {
-    .gnb {
-        //gnb메뉴 글자 반전되게하기
-        filter: invert(1); //최대값 1임
-        mix-blend-mode: difference;
-        top: 0;
-        position: fixed;
-        z-index: 9;
-        padding: 20px 0 10px 8vw;
-        width: 100%;
-        ///////////////////////
-        // background: #69696979;
-        /* gnb오버시 */
-        &:hover {
-            /* gnb 배경색 */
-            background-color: #fdfdfd4d;
+  .gnb {
+    //gnb메뉴 글자 반전되게하기
+    filter: invert(1); //최대값 1임
+    mix-blend-mode: difference;
+    top: 0;
+    position: fixed;
+    z-index: 999;
+    padding: 20px 0 10px 8vw;
+    width: 100%;
 
-            //gnb배경 블러??????????????????????????????????
-            // backdrop-filter: blur(6px);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      height: 0;
+
+      background: #fdfdfd4d;
+      /////////?????????????응애 왜 여기에 백드롭필터 넣으면 gnb에 백드롭필터가 안들어가....
+      backdrop-filter: blur(6px);
+      transition: 0.2s ease-in-out;
+    }
+    &.on::before {
+      height: 400px;
+    }
+    ///////////////////////
+    // background: #69696979;
+    /* gnb오버시 */
+    &:hover {
+      /* gnb 배경색 */
+      background-color: #fdfdfd4d;
+
+      //gnb배경 블러??????????????????????????????????
+      // backdrop-filter: blur(6px);
+      z-index: 9;
+      //gnb메뉴 글자 반전되게하기 초기화
+      filter: none; //최대값 1임
+      mix-blend-mode: normal;
+    }
+    /* gnb메뉴들 */
+    ul {
+      font-size: 1.5rem;
+      font-family: "HelveticaRoman";
+
+      display: flex;
+      /* 로고랑 높이값 맞추기 */
+      align-items: center;
+      /* gnb 자라 로고박스 */
+      li:first-child {
+        .lgbx {
+          height: 15vw;
+          animation: intrologo 1s 0.8s ease-out forwards;
+          ////////////?????????????????????????
+          user-select: none;
+          pointer-events: none;
+          /////////////////////////////
+
+          @keyframes intrologo {
+            to {
+              height: 50px;
+            }
+          }
+          img {
+            position: relative;
             z-index: 9;
-            position: absolute;
-            //gnb메뉴 글자 반전되게하기 초기화
-            filter: none; //최대값 1임
-            mix-blend-mode: normal;
+
+            height: 100%;
+          }
         }
-        /* gnb메뉴들 */
-        ul {
-            font-size: 1.5rem;
-            font-family: "HelveticaRoman";
+      }
 
-            display: flex;
-            /* 로고랑 높이값 맞추기 */
-            align-items: center;
-            /* gnb 자라 로고박스 */
-            div {
-                .lgbx {
-                    height: 15vw;
-                    animation: intrologo 1s 0.8s ease-out forwards;
-                    ////////////?????????????????????????
-                    user-select: none;
-                    pointer-events: none;
-                    /////////////////////////////
+      > li {
+        text-align: center;
+        width: 10vw;
 
-                    @keyframes intrologo {
-                        to {
-                            height: 50px;
-                        }
-                    }
-                    img {
-                        position: relative;
-                        z-index: 9;
+        a {
+          text-decoration: none;
+          color: #010101;
+        }
+        //하위메뉴 박스
+        .swrap {
+          // width: 60vw;
+          // display: flex;
+          margin: 0 auto;
+          padding: 26px 0 0 0;
+        }
+        .smenu {
+          height: 0;
+          overflow: hidden;
+          opacity: 0;
+          transition: 0.2s ease-in-out;
 
-                        height: 100%;
-                    }
-                }
+          position: absolute;
+          left: 0;
+
+          /* gnb 하위메뉴 */
+          ol {
+            font-family: "HelveticaLt";
+            font-size: 1.4rem;
+            // background: linear-gradient(
+            //   to top,
+            //   #fdfdfd00 10%,
+            //   #fdfdfd4d
+            // );
+
+            width: 100vw - 8vw;
+            display: inline-flex;
+            // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;
+            flex-wrap: wrap;
+            // 진행방향을 세로방향으로 바꿈: flex-direction: column;
+            flex-direction: column;
+            /* 하위메뉴 높이값 */
+            height: 250px;
+            padding: 2vw 4vw 4vw 10vw;
+            gap: 0.6vw 5vw;
+            align-content: flex-start;
+
+            position: relative;
+            li {
+              text-align: left;
             }
+            /* 하위메뉴 오른쪽 이미지 */
+            li:last-child {
+              margin-bottom: auto;
+              position: absolute;
+              right: 15vw;
 
-            > li {
-                text-align: center;
-                width: 10vw;
-
-                a {
-                    text-decoration: none;
-                    color: #010101;
-                }
-                //하위메뉴 박스
-                .swrap {
-                    // width: 60vw;
-                    // display: flex;
-                    margin: 0 auto;
-                    padding: 26px 0 0 0;
-                }
-                .smenu {
-                    height: 0;
-                    overflow: hidden;
-                    opacity: 0;
-                    transition: 0.2s ease-in-out;
-                    
-                    position: absolute;
-                    left: 0;
-
-                    /* gnb 하위메뉴 */
-                    ol {
-                        font-family: "HelveticaLt";
-                        font-size: 1.4rem;
-                        // background: linear-gradient(
-                        //   to top,
-                        //   #fdfdfd00 10%,
-                        //   #fdfdfd4d
-                        // );
-
-                        background: #fdfdfd4d;
-
-                        /////////?????????????응애 왜 여기에 백드롭필터 넣으면 gnb에 백드롭필터가 안들어가....
-                        backdrop-filter: blur(6px);
-
-                        width: 100vw - 8vw;
-                        display: inline-flex;
-                        // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;
-                        flex-wrap: wrap;
-                        // 진행방향을 세로방향으로 바꿈: flex-direction: column;
-                        flex-direction: column;
-                        /* 하위메뉴 높이값 */
-                        height: 250px;
-                        padding: 2vw 4vw 4vw 10vw;
-                        gap: 0.6vw 5vw;
-                        align-content: flex-start;
-
-                        position: relative;
-                        li {
-                            text-align: left;
-                        }
-                        /* 하위메뉴 오른쪽 이미지 */
-                        li:last-child {
-                            margin-bottom: auto;
-                            position: absolute;
-                            right: 15vw;
-
-                            img {
-                                width: 250px;
-                            }
-                        }
-                    }
-                }
-                /* li에 오버시 .smenu 보이기 */
-                &:hover .smenu {
-                    height: 320px;//ol 높이값+gnb높이값?
-                    opacity: 1;
-                }
+              img {
+                width: 250px;
+              }
             }
+          }
         }
-    }
-
-    /* toparea 모든 li직계하위a요소 오버시 색상 .6만큼 투명하게 */
-    li > a {
-        opacity: 1;
-
-        &:hover {
-            opacity: 0.6;
-            font-weight: bold;
+        /* li에 오버시 .smenu 보이기 */
+        &:hover .smenu {
+          height: 320px; //ol 높이값+gnb높이값?
+          opacity: 1;
         }
+      }
     }
+  }
+
+  /* toparea 모든 li직계하위a요소 오버시 색상 .6만큼 투명하게 */
+  li > a {
+    opacity: 1;
+
+    &:hover {
+      opacity: 0.6;
+      font-weight: bold;
+    }
+  }
 }
 
 /* gnb 우측 서치메뉴 */
 .searchGnb {
-    display: flex;
-    flex-wrap: nowrap; //플렉스들이 줄바꿈 안되게~
-    align-items: center; // 세로줄맞춤
-    /* 오른쪽 글자태그 */
-    span {
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
+  display: flex;
+  flex-wrap: nowrap; //플렉스들이 줄바꿈 안되게~
+  align-items: center; // 세로줄맞춤
+  /* 오른쪽 글자태그 */
+  span {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
 }

@@ -8,8 +8,18 @@ import { Link } from "react-router-dom";
 /* gnb데이터 불러오기 */
 import { gnbData } from "../data/gnb_data";
 import Logo from "../modules/Logo";
+import { useEffect } from "react";
 
 export default function TopArea() {
+
+    useEffect(()=>{
+        let tArea = document.querySelector(".gnb");
+        let gnb = document.querySelectorAll(".gnb li");
+        gnb.forEach(ele=>ele.onmouseover=()=>{tArea.classList.add("on")});
+        tArea.onmouseout=()=>{tArea.classList.remove("on")};
+    },[]);
+
+    // 코드 리턴구역 /////////////
     return (
         <>
             {/* 1.상단영역 */}
@@ -20,11 +30,11 @@ export default function TopArea() {
                 <nav className="gnb">
                     <ul>
                         {/* 1. 로고 컴포넌트 */}
-                        <div>
+                        <li>
                             <Link to="/">
                                 <Logo logoStyle="top" />
                             </Link>
-                        </div>
+                        </li>
                         {/* 2. GNB메뉴 데이터 배열로 만들기///////////////////////////// */}
                         {gnbData.map((v, i) => (
                             <li key={i}>
