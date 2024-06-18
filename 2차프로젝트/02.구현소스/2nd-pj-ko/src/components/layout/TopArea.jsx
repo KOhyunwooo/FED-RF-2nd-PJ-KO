@@ -80,7 +80,8 @@ export default function TopArea() {
                                     type="text"
                                     name="schinGnb" /* name은 백엔드 개발자를 위한 약속, 보통id랑 같은이름으로 함 */
                                     id="schinGnb"
-                                    placeholder="Filter by keyword"
+                                    placeholder="검색"
+                                    
                                 />
 
                                 <span
