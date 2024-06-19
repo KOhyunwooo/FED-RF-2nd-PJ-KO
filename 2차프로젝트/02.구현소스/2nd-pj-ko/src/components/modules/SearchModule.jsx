@@ -6,11 +6,11 @@ import "../../css/search_module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 //캐릭터 리스트 결과 컴포넌트 불러오기
-import SearchingCat from "./SearchingCat";
+// import SearchingCat from "./SearchingCat";
 
-import { catListData } from "../data/swiper_cat";
+// import { catListData } from "../data/swiper_cat";
 
-function Searching({ kword }) {
+function SearchModule({ kword }) {
     //()안에 받는 키워드 해야함.
     // kword- 전달받은 키워드
     console.log("kword:", kword);
@@ -18,18 +18,18 @@ function Searching({ kword }) {
     //검색어가 있는 데이터 필터하기
 
     ////////////////filter///////////////////////////
-    const newList = catListData.filter((v) => {
-        // 속성중 캐릭터 이름 중 검색(v.cname)
-        // 검색어는 모두 영어일 경우 소문자 처리함
-        let newVal = v.cname.toLocaleLowerCase();
-        let key = kword.toLocaleLowerCase();
-        if (newVal.indexOf(key) !== -1) return true;
-        // 문자열.indexOf(문자) 문자열 위치번호 리턴함
-        // 그런데 결과가 없으면 -1을 리턴함
-        // 그래서 -1이 아닐경우 true를 리턴하면
-        // filter에서 변수에 저장할 배열로 수집된다!
-    }); ////////////////filter////////////////////////
-    console.log("newList는?", newList);
+    // const newList = catListData.filter((v) => {
+    //     // 속성중 캐릭터 이름 중 검색(v.cname)
+    //     // 검색어는 모두 영어일 경우 소문자 처리함
+    //     let newVal = v.cname.toLocaleLowerCase();
+    //     let key = kword.toLocaleLowerCase();
+    //     if (newVal.indexOf(key) !== -1) return true;
+    //     // 문자열.indexOf(문자) 문자열 위치번호 리턴함
+    //     // 그런데 결과가 없으면 -1을 리턴함
+    //     // 그래서 -1이 아닐경우 true를 리턴하면
+    //     // filter에서 변수에 저장할 배열로 수집된다!
+    // }); ////////////////filter////////////////////////
+    // console.log("newList는?", newList);
     /*     
         배열.filter(v=>{
             if(v.속성명.indexOf(검색어)!=-1) retrun true   // indexOf로 검사 해서 있냐? 그럼 리턴
@@ -131,11 +131,11 @@ function Searching({ kword }) {
                         </select>
                     </aside>
                     {/* 2-3. 캐릭터 리스트 컴포넌트 : 데이터 상태변수 중 첫번째값만 보냄 SearchingCat.jsx불러야함*/}
-                    <SearchingCat dt={newList} />
+                    {/* <SearchingCat dt={newList} /> */}
                 </div>
             </section>
         </>
     );
 }
 
-export default Searching;
+export default SearchModule;

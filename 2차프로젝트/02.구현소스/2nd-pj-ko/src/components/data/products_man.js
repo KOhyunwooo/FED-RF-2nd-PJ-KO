@@ -1,5 +1,7 @@
-//맨>베스트셀러 카테고리///////////////////////////
-const mbestSeller = [
+//맨>new뉴 카테고리////////////////////////////////////
+
+//맨>베스트셀러 카테고리////////////////////////////////
+const bestSeller = [
   { isrc:"/images/man_bestseller/bestseller00.jpg",
     상품명: "스트럭처 니트 셔츠",
     가격: "79900",
@@ -62,4 +64,11 @@ const mbestSeller = [
   },
 ];
 //내보내기
-export default mbestSeller;
+export default bestSeller;
+
+
+const linen=[
+  {
+    상품명:"",
+},
+]

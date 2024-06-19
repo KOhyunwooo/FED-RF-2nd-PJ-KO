@@ -16,10 +16,20 @@
     (5) npm i swiper
     (6) npm i sass
 
+++폰트어썸 설치
+1. Font Awesome의 SVG 기반 아이콘을 활성화 시키기 위한 기본 패키지
+npm i @fortawesome/fontawesome-svg-core
+2. 무료로 제공되는 Solid, Regular Brands 3개의 카테고리에 대한 패키지만 설치
+npm i @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/free-brands-svg-icons
+3. Font Awesome을 React 컴포넌트 형태로 사용할 수 있도록 해주는 패키지 설치
+npm i @fortawesome/react-fontawesome
+
 8. 폴더 설정
         src > components, css, static 폴더생성
         components > data, func, layout, modules, pages, plugin 폴더생성
         
+
+
 
 //다른 컴퓨터에서 불러올때/////////////////////////////////////////////////////
 ctrl+`으로 cmd터미널 창을 열고, 해당경로(예 cd 2nd-pj-ko)로 들어가서 npm ci 실행

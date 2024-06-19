@@ -25,7 +25,7 @@ export default function MainComponent() {
                     <Route path="kids" element={<Kids />} />
                     <Route path="home" element={<Home />} />
                     <Route path="aboutzara" element={<AboutZara />} />
-                    <Route path="Search" element={<SearchPg />} />
+                    <Route path="search" element={<SearchPg />} />
                 </Route>
             </Routes>
         </BrowserRouter>

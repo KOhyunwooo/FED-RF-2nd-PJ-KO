@@ -38,6 +38,7 @@ export default function SwiperMain() {
           let idx = iam.activeIndex;
           let tg = xx.current;
           console.log(idx);
+         /* 각 세로방향슬라이드(4개)의 순번을 찾아서 autoplay설정 */
           tg.forEach((v,i)=>{
             if(i == idx) tg[i].autoplay.start();
             else tg[i].autoplay.stop();
