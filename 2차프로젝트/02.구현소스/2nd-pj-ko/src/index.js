@@ -11,6 +11,7 @@ import Main from "./components/pages/Main";
 import Kids from "./components/pages/Kids";
 import Home from "./components/pages/Home";
 import AboutZara from "./components/pages/Aboutzara";
+import SearchPage from "./components/pages/SearchPage";
 
 export default function MainComponent() {
     return (
@@ -24,6 +25,7 @@ export default function MainComponent() {
                     <Route path="kids" element={<Kids />} />
                     <Route path="home" element={<Home />} />
                     <Route path="aboutzara" element={<AboutZara />} />
+                    <Route path="Search" element={<SearchPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>

@@ -1,11 +1,9 @@
 import React from 'react';
-import SearchModule from '../modules/SearchModule';
 
 function SearchPage(props) {
     return (
         <div>
-            <h1>난 서치 페이지</h1>
-            <SearchModule/>
+            <h1>하이</h1>
         </div>
     );
 }

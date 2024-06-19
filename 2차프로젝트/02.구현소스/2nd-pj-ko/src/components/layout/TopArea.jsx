@@ -11,8 +11,12 @@ import Logo from "../modules/Logo";
 import { useEffect } from "react";
 
 export default function TopArea() {
+    /* 우측상단 검색창: 이동함수 만들기 */
+
+
 
     useEffect(()=>{
+        /* gnb 슬라이드 관련 useEffect */
         let tArea = document.querySelector(".gnb");
         let gnb = document.querySelectorAll(".gnb li:first-child ~ li:not(:last-child)");
         gnb.forEach(ele=>ele.onmouseover=()=>{tArea.classList.add("on")});
