@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SearchPage(props) {
+function SearchPg(props) {
     return (
         <div>
             <h1>하이</h1>
@@ -8,4 +8,4 @@ function SearchPage(props) {
     );
 }
 
-export default SearchPage;
+export default SearchPg;
