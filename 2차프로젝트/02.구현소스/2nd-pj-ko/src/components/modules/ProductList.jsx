@@ -9,8 +9,10 @@ function ProductList(props) {
             {wNew.map((v, i) => (
                 <div key={i} className="product-item">
                     <img src={v.isrc} alt={v.name} className="product-image" />
-                    <h2 className="product-name">{v.name}</h2>
-                    <p className="product-price">{v.price}</p>
+                    <div className="txt-box">
+                        <p>{v.name}</p>
+                        <p>{v.price}</p>
+                    </div>
                   
                 </div>
             ))}
