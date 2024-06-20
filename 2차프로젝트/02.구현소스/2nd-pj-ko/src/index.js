@@ -12,6 +12,8 @@ import Kids from "./components/pages/Kids";
 import Home from "./components/pages/Home";
 import AboutZara from "./components/pages/Aboutzara";
 import SearchPg from "./components/pages/SearchPg";
+import ProductPg from "./components/pages/ProductPg";
+
 
 export default function MainComponent() {
     return (
@@ -26,6 +28,8 @@ export default function MainComponent() {
                     <Route path="home" element={<Home />} />
                     <Route path="aboutzara" element={<AboutZara />} />
                     <Route path="search" element={<SearchPg />} />
+                    <Route path="product" element={<ProductPg />} />
+                    
                 </Route>
             </Routes>
         </BrowserRouter>

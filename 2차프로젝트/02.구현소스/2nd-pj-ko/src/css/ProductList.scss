@@ -1,0 +1,35 @@
+
+/* ProductList 컴포넌트 스타일 */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+   
+    justify-content: center;
+}
+
+.product-item {
+    flex: 1 calc(16.66%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+    max-width: calc(16.66%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+    box-sizing: border-box; /* 박스 모델 설정 */
+   outline: 1px solid #000000;
+
+   
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    // border-bottom: 1px solid #ddd;
+    // padding-bottom: 16px;
+}
+
+.product-name {
+    font-size: 1.2em;
+    // margin: 16px 0;
+}
+
+.product-price {
+    color: #000000;
+    
+}

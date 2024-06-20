@@ -7,113 +7,113 @@ export const gnbData = [
         sub: [
             {
                 txt: "///NEW",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "베스트셀러",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "블레이저",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "원피스",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "탑 | 바디수트",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "셔츠",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "베스트",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "스커트",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "쇼츠 | 버뮤다팬츠",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "티셔츠",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "진 | 데님팬츠",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "팬츠",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "니트",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "슈즈",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "백",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "TOTAL LOOK",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "TREND",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "자켓 | 트렌치",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "HOLIDAY EDIT",
-                link: "/woman",
+                link: "/product",
             },
             
             {
                 txt: "액세서리 | 주얼리",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "란제리 | SHAPEWEAR",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "향수",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "ZARA HAIR",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "메이크업",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "BASICS",
-                link: "/woman",
+                link: "/product",
             },
             {
                 txt: "LINEN",
-                link: "/woman",
+                link: "/product",
             },
            
             {
                 txt: "특가 상품",
-                link: "/woman",
+                link: "/product",
             },
         ],
     },

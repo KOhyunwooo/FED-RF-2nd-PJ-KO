@@ -1,7 +1,6 @@
 // 상단영역 css 불러오기///
 import "../../css/top_area.scss";
-// 상단영역 미디어쿼리scss 불러오기
-import "../../css/media.scss";
+
 
 //제이쿼리 불러오기
 import $ from "jquery";
