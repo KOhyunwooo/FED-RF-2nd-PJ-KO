@@ -1,12 +1,12 @@
 import React from "react";
 
-import { wNew, wSale } from "../data/products_woman"; // 데이터 불러오기
+
 import "../../css/ProductList.scss";
-function ProductList(props) {
+function ProductList({제품리스트}) {
   
    return (
         <div className="product-list">
-            {wNew.map((v, i) => (
+            {제품리스트.map((v, i) => (
                 <div key={i} className="product-item">
                     <img src={v.isrc} alt={v.name} className="product-image" />
                     <div className="txt-box">
