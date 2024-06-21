@@ -185,7 +185,9 @@ body::after {
         
     // }
     input{
-
+        &:focus{
+            outline: none;
+        }
     }
 
 

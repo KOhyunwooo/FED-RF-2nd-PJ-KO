@@ -10,6 +10,9 @@
         height: 70px;
         padding-left: 50px;
         font-size: 1.5rem;
+        &:focus{
+            outline: none;
+        }
     }
 
     /* 솔트 박스: 신상품순, 낮은가격순 ... */
