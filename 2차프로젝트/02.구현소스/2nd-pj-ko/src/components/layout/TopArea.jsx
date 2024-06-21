@@ -50,7 +50,7 @@ export default function TopArea() {
         /* gnb 슬라이드 관련 useEffect **************************************************/
         let tArea = document.querySelector(".gnb");
         let gnb = document.querySelectorAll(
-            ".gnb li:first-child ~ li:not(:last-child)"
+            ".gnb li:nth-child(n+2):nth-child(-n+5)"//li요소중에 2번쨰부터 5번째 까지 선택, gnb메뉴 woman,man,kids,home선택
         );
         gnb.forEach(
             (ele) =>
@@ -142,6 +142,7 @@ export default function TopArea() {
                                     placeholder=""
                                     onKeyUp={enterKey}
                                     onClick={enterKey}
+                                    
 
                                 />
 
