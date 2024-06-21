@@ -2,6 +2,8 @@
 
 // 페이지 커버 만들어서 클릭 안되게 만들기/////////////
 body::after {
+     /* 드래그 해서 파란블록 안생기게 하는 설정 */
+     user-select: none;
     content: "";
     position: fixed;
     top: 0;
