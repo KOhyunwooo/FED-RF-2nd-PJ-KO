@@ -96,6 +96,7 @@ export default function TopArea() {
                                                                 {/* v.txt가 특가상품일때 글자색 빨강으로 */}
                                                                 <Link
                                                                     to={v.link}
+                                                                    state={{data:v.data}}
                                                                     style={{
                                                                         color:
                                                                             v.txt ==

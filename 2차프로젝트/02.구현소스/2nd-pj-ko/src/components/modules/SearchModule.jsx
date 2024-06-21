@@ -10,6 +10,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 // 우먼 데이터 불러오기
 import { wNew, wSale } from "../data/products_woman";
+import { mBestSeller } from "../data/products_man";
 import SearchModuleList from "./SearchModuleList";
 
 // import { wNew } from "../data/swiper_cat";
@@ -20,9 +21,13 @@ function SearchModule({ kword }) {
     console.log("(내가 타이핑한)키워드:", kword);
     const [searchword,setSearchword] = useState(kword);
 
+    // 데이터 모으기
+    const selData = [...wNew,...wSale,...mBestSeller];
+    console.log(selData);
+
     //검색어가 있는 데이터 필터하기
     ////////////filter///////////////////////////
-    const newList = wNew.filter((v) => {
+    const newList = selData.filter((v) => {
         // name이 undefined가 아닌지 확인
         const itemName = v.name || "";
 

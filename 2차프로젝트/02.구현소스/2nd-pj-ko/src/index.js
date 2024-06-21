@@ -13,27 +13,30 @@ import Home from "./components/pages/Home";
 import AboutZara from "./components/pages/Aboutzara";
 import SearchPg from "./components/pages/SearchPg";
 import ProductPg from "./components/pages/ProductPg";
-
+import { Fragment } from "react";
 
 export default function MainComponent() {
-    return (
-        //라우터 루트로 브라우저 라우트 시작
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Main />} />
-                    <Route path="woman" element={<Woman />} />
-                    <Route path="man" element={<Man />} />
-                    <Route path="kids" element={<Kids />} />
-                    <Route path="home" element={<Home />} />
-                    <Route path="aboutzara" element={<AboutZara />} />
-                    <Route path="search" element={<SearchPg />} />
-                    <Route path="product" element={<ProductPg />} />
-                    
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    );
+  const newName = ["man", "woman", "kids"];
+  return (
+    //라우터 루트로 브라우저 라우트 시작
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Main />} />
+          <Route path="woman" element={<Woman />} />
+          <Route path="man" element={<Man />} />
+          <Route path="kids" element={<Kids />} />
+          <Route path="home" element={<Home />} />
+          <Route path="aboutzara" element={<AboutZara />} />
+          <Route path="search" element={<SearchPg />} />
+          {newName.map((ele, i) => (
+              <Route key={i} path={ele+"/product"} element={<ProductPg />} />
+          ))}
+          <Route path="product" element={<ProductPg />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 const root = ReactDOM.createRoot(document.querySelector("#root"));

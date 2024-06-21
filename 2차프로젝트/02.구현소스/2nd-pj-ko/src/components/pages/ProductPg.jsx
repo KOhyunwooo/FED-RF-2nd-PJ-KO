@@ -4,14 +4,19 @@ import Footer from '../modules/Footer';
 //프로덕트리스트 모듈 불러오기
 import ProductList from '../modules/ProductList';
 
-import { wNew, wSale } from "../data/products_woman"; // 데이터 불러오기
+import { useLocation } from 'react-router-dom';
 
-function ProductPg(props) {
- let 제품 = wNew;
+function ProductPg() {
+    const loc = useLocation();
+
+    let data = loc.state.data;
+    console.log("전달값:",data);
+
+
     return (
         <>
         <h1 style={{fontSize:"50px",lineHeight:"40vh",textAlign:"center"}}>각 항목에 맞는 제품들을 출력</h1>
-        <ProductList 제품리스트={제품}/>
+        <ProductList dbName={data}/>
         <Footer/>
         
         </>
