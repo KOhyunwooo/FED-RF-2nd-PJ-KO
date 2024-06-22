@@ -1,0 +1,210 @@
+.hamgnb{
+  box-sizing: border-box;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed rgb(255, 0, 0);
+    .box1{
+      display: flex;
+      align-items: flex-end;
+      img{
+        margin: 0 auto;
+      }
+      .loginbox{
+        margin-left: auto;
+      }
+    
+    }
+    .box2{
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 2vw;
+     
+
+    }
+    .box3{
+
+    }
+    .box4{
+
+    }
+
+}
+
+
+
+/* 햄버거버튼 ************************************************************8888*/
+.ham {
+  position: absolute;
+  
+  transform: translateY(-50%);
+  right: 3%;
+  /* 부모는? .top-area */
+  width: 40px;
+  height: 25px;
+  /* outline: 1px solid red; */
+  cursor: pointer;
+  /* 손가락모양 */
+  z-index: 99999; /* .gbx보다위! */
+}
+
+/* 햄버거 막대 span공통 */
+.ham span {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #000000;
+  box-shadow: 0 0 4px #777; /* 박스그림자 */
+  /* 트랜지션 */
+  transition: all 0.2s ease-out;
+}
+
+/* 햄버거 막대 개별위치이동 */
+/* 1번막대 */
+.ham span:nth-child(1) {
+  top: 0;
+  transform: rotate(5deg);
+}
+.ham:hover span:nth-child(1) {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+/* 2번막대 */
+.ham span:nth-child(2) {
+  top: 12px;
+  left: 13%;
+  /* 트랜지션 때문에 초기값필요!(기본값이 auto라서!) */
+  transform: rotate(-3deg);
+}
+/* 오버시 2번막대 이동! */
+.ham:hover span:nth-child(2) {
+  top: 10px;
+  left: 0;
+  transform: rotate(0deg);
+}
+
+/* 3번막대 */
+.ham span:nth-child(3) {
+  top: 25px;
+  transform: rotate(5deg);
+}
+
+/* 오버시 3번막대 이동 */
+.ham:hover span:nth-child(3) {
+  top: 20px;
+  transform: rotate(0deg);
+}
+
+/* .ham에 class="on"을 주면 span막대 변경하기 */
+
+/* 1번막대 : 중앙이동+시계방향45도회전 */
+.ham.on span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+  box-shadow: none;
+}
+
+/* 2번막대 : left위치 중앙이동+width는0 */
+.ham.on span:nth-child(2) {
+  width: 0;
+  left: 50%;
+}
+
+/* 3번막대 : 중앙이동+반시계방향45도회전 */
+.ham.on span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-45deg);
+  box-shadow: none;
+}
+/* ********************************************************************* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* GnbMenu.css */
+.gnb-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gnb-item {
+  position: relative;
+}
+
+.gnb-link {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  background: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.smenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.smenu.open {
+  max-height: 500px; /* 적절한 최대 높이를 설정 */
+}
+
+.smbx {
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.swrap {
+  padding: 10px;
+}
+
+.smenu ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.smenu li {
+  padding: 5px 0;
+}
+
+.smenu li a {
+  text-decoration: none;
+  color: black;
+}
+
+.smenu li a:hover {
+  color: red; /* 호버 시 빨강 */
+}
