@@ -4,8 +4,7 @@ import React from "react";
 import "../../css/ham_gnb.scss";
 
 
-//로고 모듈 불러오기
-import Logo from "./Logo";
+
 //gnb데이터 불ㄹ러오기
 import { gnbData } from "../data/gnb_data";
 import { Link } from "react-router-dom";
