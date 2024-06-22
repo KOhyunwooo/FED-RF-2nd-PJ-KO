@@ -4,7 +4,7 @@ export const banner_data = {
     {
       imgsrc: "images/banner_img/woman_sale.jpg",
       txt: "세일 상품이 추가되었습니다",
-      link: "/man",
+      link: "/woman/product",
     },
     {
       imgsrc: "images/banner_img/woman_new.jpg",

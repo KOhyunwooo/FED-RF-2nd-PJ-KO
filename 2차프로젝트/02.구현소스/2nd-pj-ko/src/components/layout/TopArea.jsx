@@ -128,7 +128,7 @@ export default function TopArea() {
 
                         {/* gnb오른쪽 끝에 검색창 */}
                         <li
-                            style={{ marginLeft: "auto", marginRight: "347px" }}
+                            
                         >
                             <div className="searchGnb">
                                 {/* <FontAwesomeIcon

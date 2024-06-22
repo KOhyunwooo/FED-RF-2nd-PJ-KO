@@ -13,10 +13,14 @@ import Home from "./components/pages/Home";
 import AboutZara from "./components/pages/Aboutzara";
 import SearchPg from "./components/pages/SearchPg";
 import ProductPg from "./components/pages/ProductPg";
-import { Fragment } from "react";
+import Sorry from "./components/pages/Sorry";
+
+
+
+
 
 export default function MainComponent() {
-  const newName = ["man", "woman", "kids"];
+  const reName = ["man", "woman", "kids", "home"];
   return (
     //라우터 루트로 브라우저 라우트 시작
     <BrowserRouter>
@@ -29,10 +33,13 @@ export default function MainComponent() {
           <Route path="home" element={<Home />} />
           <Route path="aboutzara" element={<AboutZara />} />
           <Route path="search" element={<SearchPg />} />
-          {newName.map((ele, i) => (
-              <Route key={i} path={ele+"/product"} element={<ProductPg />} />
+          <Route path="sorry" element={<Sorry />} />
+          
+          {reName.map((e, i) => (
+            <Route key={i} path={e + "/product"} element={<ProductPg />} />
           ))}
-          <Route path="product" element={<ProductPg />} />
+          {/* <Route path="product" element={<ProductPg />} /> */}
+          
         </Route>
       </Routes>
     </BrowserRouter>

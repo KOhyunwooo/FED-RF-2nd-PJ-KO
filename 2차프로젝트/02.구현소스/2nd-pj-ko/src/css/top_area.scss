@@ -49,11 +49,11 @@ body::after {
         }
         /* gnb오버시 ::before 설정 */
         &:hover::before {
-            height: 80px;
+            height: 80px;//탑에이리어 높이값이랑 맞추기
         }
         /* gnb.on시 ::before 설정: 상위메뉴 오버시 슬라이드 되는 흰색+블러배경*/
         &.on::before {
-            height: 400px;/* gnb 높이 80px 제외하면 320px */
+            height: 390px;/* gnb마우스오버시li 높이값(50px)+gnb 패딩탑값(20px) 제외하면 390px */
         }
 
         /* gnb오버시 */
@@ -73,11 +73,13 @@ body::after {
             /* gnb 자라 로고박스 */
             li:first-child {
                 width: auto;
+                height: auto;
                 //gnb 자라 로고 애니매이션////////////////////
                 .lgbx {
+                    position: relative;
                     height: 15vw;
                     animation: intrologo 1s 0.8s ease-out forwards;
-
+                    display: block;
                     @keyframes intrologo {
                         to {
                             height: 50px;
@@ -94,9 +96,26 @@ body::after {
             }
 
             > li {
-                text-align: center;
+                height: 50px;
+                display: flex;
                 width: 10vw;
+                justify-content: center;
+                align-items: center;
 
+                /* 마지막 li 검색창 부분 */
+                &:last-child{
+                    margin-right:300px;
+                    margin-left: auto;
+                    animation: introsearch .5s 1.5s ease-out forwards;
+                    opacity: 0;
+                    @keyframes introsearch {
+                        to{
+                            opacity: 1;
+                        }
+                        
+                    }
+
+                }
                 a {
                     text-decoration: none;
                     color: #010101;
@@ -107,7 +126,7 @@ body::after {
                     overflow: hidden;
                     opacity: 0;
                     transition: 0.2s ease-out;
-                    top: 80px; /* gnb 높이값 부터 시작 */
+                    top: 70px; /* gnb 마우스오버시li높이값(50px)+top-area패딩탑 값(20px) */
                     position: absolute;
                     left: 0;
 
@@ -133,7 +152,7 @@ body::after {
                         align-content: flex-start;
                         /* 하위메뉴 높이값 */
                         height: 250px;
-                        padding: 1vw 2vw 3vw 10vw ;
+                        padding: 20px 2vw 3vw 10vw ;
                         gap: 0.6vw 5vw;
                         position: relative;
                         li {
@@ -159,7 +178,7 @@ body::after {
     }
 
     /* toparea 모든 li직계하위a요소 오버시 색상 .6만큼 투명하게 */
-    li:first-child ~ li > a {
+    li:first-child ~ li:not(:last-child) > a {
         &:hover {
             opacity: 0.45;
             font-weight: bold;
@@ -198,12 +217,18 @@ body::after {
 
 
 /********************************************************** 미디어쿼리 **********************************************************/
-/* 1000이하 일떄 */
-@media screen and (max-width: 1000px) {
-    .gnb{
-        /* 1100px일때 gnb날리기 */
-            // display: none;
-
-       
+/* 1300이하 일떄 */
+@media screen and (max-width: 1300px) {
+    /* gnb 메뉴들 */
+    .top-area .gnb ul > li {
+        width: 8vw;
     }
+}
+/* 1100이하 일떄 */
+@media screen and (max-width: 1100px) {
+    /* gnb 메뉴들 */
+    .top-area .gnb {
+        padding: 20px 0 10px 4vw;}
+        /* 우측검색창 마지막li부분 */
+        .top-area .gnb ul > li:last-child {margin-right: 200px;}
 }

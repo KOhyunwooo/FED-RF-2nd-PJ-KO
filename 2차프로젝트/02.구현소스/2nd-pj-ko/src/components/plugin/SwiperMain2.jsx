@@ -18,7 +18,7 @@ import {
     EffectCube,
 } from "swiper/modules";
 // 이미지 데이터 불러오기
-import { main_img } from "../data/main_img";
+import { main_img,main_img_midea } from "../data/main_img";
 import { useRef } from "react";
 
 export default function SwiperMain() {
@@ -101,7 +101,7 @@ export default function SwiperMain() {
                             EffectCube,
                         ]}
                     >
-                        {main_img.main_woman.map((v, i) => (
+                        {main_img_midea.main_woman.map((v, i) => (
                             <SwiperSlide key={i}>
                                 <img src={v.isrc} alt={v.tit} />
                             </SwiperSlide>
@@ -144,7 +144,7 @@ export default function SwiperMain() {
                             EffectCube,
                         ]}
                     >
-                        {main_img.main_man.map((v, i) => (
+                        {main_img_midea.main_man.map((v, i) => (
                             <SwiperSlide key={i}>
                                 <img src={v.isrc} alt={v.tit} />
                             </SwiperSlide>
@@ -186,7 +186,7 @@ export default function SwiperMain() {
                             EffectCube,
                         ]}
                     >
-                        {main_img.main_kids.map((v, i) => (
+                        {main_img_midea.main_kids.map((v, i) => (
                             <SwiperSlide key={i}>
                                 <img src={v.isrc} alt={v.tit} />
                             </SwiperSlide>
@@ -228,7 +228,7 @@ export default function SwiperMain() {
                             EffectCube,
                         ]}
                     >
-                        {main_img.main_home.map((v, i) => (
+                        {main_img_midea.main_home.map((v, i) => (
                             <SwiperSlide key={i}>
                                 <img src={v.isrc} alt={v.tit} />
                             </SwiperSlide>

@@ -38,3 +38,43 @@ export const main_img = {
         { isrc: "/images/main_banner_pg/main_pg_3y/main_pg_34.jpg", tit: "" },
     ],
 };
+
+export const main_img_midea = {
+    main_woman: [
+        //images/main_banner_pg/main_pg_0y/ZARA WOMAN SS23 STUDIO COLLECTION.mp4
+        { isrc: "images/main_banner_pg/main_pg_0y/main_pg_media00.jpg", tit: "" },
+        { isrc: "images/main_banner_pg/main_pg_0y/main_pg_media01.jpg", tit: "" },
+        { isrc: "images/main_banner_pg/main_pg_0y/main_pg_media02.jpg", tit: "" },
+        { isrc: "images/main_banner_pg/main_pg_0y/main_pg_media03.jpg", tit: "" },
+        { isrc: "images/main_banner_pg/main_pg_0y/main_pg_media04.jpg", tit: "" },
+        { isrc: "images/main_banner_pg/main_pg_0y/main_pg_media05.jpg", tit: "" },
+        { isrc: "images/main_banner_pg/main_pg_0y/main_pg_media06.jpg", tit: "" },
+    ],
+    main_man: [
+        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_media10.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_media11.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_media12.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_media13.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_media14.jpg", tit: "" },
+    ],
+
+    main_kids: [
+        { isrc: "/images/main_banner_pg/main_pg_2y/main_pg_media20.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_2y/main_pg_media21.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_2y/main_pg_media22.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_2y/main_pg_media23.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_2y/main_pg_media24.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_2y/main_pg_media25.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_2y/main_pg_media26.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_2y/main_pg_media27.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_2y/main_pg_media28.jpg", tit: "" },
+    ],
+
+    main_home: [
+        { isrc: "/images/main_banner_pg/main_pg_3y/main_pg_media30.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_3y/main_pg_media31.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_3y/main_pg_media32.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_3y/main_pg_media33.jpg", tit: "" },
+        { isrc: "/images/main_banner_pg/main_pg_3y/main_pg_media34.jpg", tit: "" },
+    ],
+};

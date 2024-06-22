@@ -147,8 +147,8 @@ export const gnbData = [
     },
     {
         txt: "MAN",
-        link: "/product",
-        data:"wNew",
+        link: "/man",
+        
         src: "images/nav_side_img/man01.jpg",
         sub: [
             {
@@ -280,7 +280,7 @@ export const gnbData = [
     },
     {
         txt: "KIDS",
-        link: "/product",
+        link: "/kids",
         data:"wNew",
         src: "images/nav_side_img/kids01.jpg",
         sub: [
