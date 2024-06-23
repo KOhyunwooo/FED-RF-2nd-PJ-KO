@@ -1,45 +1,53 @@
-.hamgnb{
+.hamgnb {
+  overflow: hidden;
   box-sizing: border-box;
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px dashed rgb(255, 0, 0);
-    .box1{
-      display: flex;
-      align-items: flex-end;
-      img{
-        margin: 0 auto;
-      }
-      .loginbox{
-        margin-left: auto;
-      }
-    
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed rgb(255, 0, 0);
+  .box1 {
+    display: flex;
+    align-items: flex-end;
+    img {
+      margin: 0 auto;
     }
-    .box2{
+    .loginbox {
+      margin-left: auto;
+    }
+  }
+  .box2 {
+    .mbox{
+      top: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(175, 255, 175, 0.238);
+
       display: flex;
       justify-content: space-evenly;
       font-size: 2vw;
-     
-
     }
-    .box3{
-
+  }
+  .box3 {
+  }
+  .box4 {
+    position: absolute;
+    width: 80%;
+    bottom: 5vh;
+    left: 5vw;
+    input {
+      width: 100%;
     }
-    .box4{
-
-    }
-
+  }
 }
-
-
 
 /* 햄버거버튼 ************************************************************8888*/
 .ham {
   position: absolute;
-  
+
   transform: translateY(-50%);
   right: 3%;
   /* 부모는? .top-area */
@@ -57,7 +65,7 @@
   width: 100%;
   height: 5px;
   background-color: #000000;
-  box-shadow: 0 0 4px #777; /* 박스그림자 */
+  // box-shadow: 0 0 4px #777; /* 박스그림자 */
   /* 트랜지션 */
   transition: all 0.2s ease-out;
 }
@@ -127,84 +135,70 @@
 
 
 
+.menu-container {
+  position: relative;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* GnbMenu.css */
 .gnb-list {
+  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .gnb-item {
-  position: relative;
+  padding: 10px;
+  
 }
 
 .gnb-link {
-  text-decoration: none;
-  color: black;
-  display: block;
-  padding: 10px;
+  background: none;
+  border: none;
+  font-size: 16px;
   cursor: pointer;
-  background: #f8f8f8;
-  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
 }
 
-.smenu {
-  max-height: 0;
+.gnb-link.on {
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.sub-menu-container {
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  position: relative;
+ 
 }
 
-.smenu.open {
-  max-height: 500px; /* 적절한 최대 높이를 설정 */
+.sub-menu-wrapper {
+  display: flex;
+  width: 400vw; /* 4개의 하위 메뉴를 수평으로 배치하기 위해 400vw */
+  transition: transform 0.3s ease; /* 애니메이션 */
 }
 
-.smbx {
-  background: #f1f1f1;
-  border: 1px solid #ddd;
-  padding: 10px;
+.sub-menu {
+  min-width: 100vw; /* 각 하위 메뉴가 100vw 너비 */
+  box-sizing: border-box;
+  padding: 20px;
+  
+  border-top: 1px solid #000000; /* 상단 경계선 */
+  height: 100%;
 }
 
-.swrap {
-  padding: 10px;
-}
-
-.smenu ol {
+.smbx ol {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.smenu li {
-  padding: 5px 0;
+.smbx li {
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
 
-.smenu li a {
+.smbx a {
   text-decoration: none;
-  color: black;
-}
-
-.smenu li a:hover {
-  color: red; /* 호버 시 빨강 */
+  color: #333;
 }

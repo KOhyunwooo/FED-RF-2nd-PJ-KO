@@ -11,12 +11,12 @@ import { gnbData } from "../data/gnb_data";
 import { Link } from "react-router-dom";
 
 function TopAreaMedia() {
+  const [openIndex, setOpenIndex] = useState(null); // 열린 메뉴의 인덱스를 관리
 
-  const [selectedIndex, setSelectedIndex] = useState(0);// 선택된 상위 메뉴 인덱스 상태 관리
-
-  const 클릭된순번 = (index) => {
-    setSelectedIndex(index);// 메뉴 클릭 시 선택된 인덱스 업데이트
+  const toggleMenu = (index) => {
+    setOpenIndex(openIndex === index ? null : index); // 동일한 메뉴 클릭 시 닫힘
   };
+
   // 메뉴 여닫이 함수/////////////////////////////////////////////////////////////////////////////////
   const showHideMenu = (e) => {
     console.log("나는 showHideMenu", e.currentTarget); //<- 나 자신을 콘솔찍기
@@ -68,49 +68,37 @@ function TopAreaMedia() {
         <div className="box2">
           <div className="mbox">
           {/* ------------------------------------------------------------------- */}
-          <div className="menu-container">
-      <ul className="gnb-list">
-        {gnbData.map((v, i) => (
-          <li key={i} className="gnb-item">
-            <button
-              //selectedIndex 가 i 와 같으면 클래스네임gnblink에 on클래스 추가
-              className={`gnb-link ${selectedIndex === i ? "on" : ""}`}
-              onClick={() => 클릭된순번(i)}//button 온클릭시 클릭된순번(i)실행
-            >
-              {v.txt}
-            </button>
-          </li>
-        ))}
-      </ul>
-      <div className="sub-menu-container">
-        <div
-          className="sub-menu-wrapper"//순번 가로로 400vw 만듬
-          style={{ transform: `translateX(-${selectedIndex * 100}vw)` }}//선택된순번*100 해서 vw값 변환
-        >
-          {gnbData.map((v, i) => (
-            <div key={i} className="sub-menu">
-              {v.sub && (
-                <aside className="smbx">
-                  <ol>
-                    {v.sub.map((v, i) => (
-                      <li key={i}>
-                        <Link
-                          to={v.link}
-                          state={{ data: v.data }}
-                          style={{ color: v.txt === "특가 상품" ? "red" : "" }}
-                        >
-                          {v.txt}
-                        </Link>
-                      </li>
-                    ))}
-                  </ol>
-                </aside>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+            {gnbData.map((v, i) => (
+              <li className="mmenu" key={i}>
+                {/* gnb상위메뉴 링크 */}
+                {<button to={v.link}>{v.txt}</button>}
+                {
+                  // 서브 메뉴 데이터가 있으면 하위 그리기/////////////////////
+                  v.sub && (
+                    <div className="smenu">
+                      <aside className="smbx">
+                        <ol>
+                          {v.sub.map((v, i) => (
+                            <li key={i}>
+                              {/* v.txt가 특가상품일때 글자색 빨강으로 */}
+                              <Link
+                                to={v.link}
+                                state={{ data: v.data }}
+                                style={{
+                                  color: v.txt == "특가 상품" ? "red" : "",
+                                }}
+                              >
+                                {v.txt}
+                              </Link>
+                            </li>
+                          ))}
+                        </ol>
+                      </aside>
+                    </div>
+                  )
+                }
+              </li>
+            ))}
           </div>
           {/* ------------------------------------------------------------- */}
         </div>

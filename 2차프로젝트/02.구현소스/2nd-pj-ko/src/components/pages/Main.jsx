@@ -5,12 +5,12 @@ import SwiperMain from "../plugin/SwiperMain";
 import SwiperMain2 from "../plugin/SwiperMain2";
 
 export default function Main() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1050);//초기값1050보다 작거나 같냐?
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 777);//초기값770보다 작거나 같냐?
 
     useLayoutEffect(() => {
-        const media1050 = () => setIsMobile(window.innerWidth <= 1050);
-        window.addEventListener("resize", media1050);
-        return () => window.removeEventListener("resize", media1050);
+        const media770 = () => setIsMobile(window.innerWidth <= 777);
+        window.addEventListener("resize", media770);
+        return () => window.removeEventListener("resize", media770);
     }, []);//한번만 실행
 
     return (
