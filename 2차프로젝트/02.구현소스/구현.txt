@@ -1,1 +1,17 @@
 메인페이지: 스와이퍼-네스티드 사용
+
+디자인적요소: 모든 박스 황금비로 할것: 1:1618
+    .image-container {
+            width: 100%;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1.1618;
+        }
+
+폰트: helvetica,arial
+색상: 검은색,흰색, #fdfdfd, #010101
+
+이유: 사용자가 웹사이트에서 빠져나가지 않게 하기 위해
