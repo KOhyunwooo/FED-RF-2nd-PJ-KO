@@ -28,9 +28,9 @@ export default function SwiperMain() {
       <Swiper
         className="mySwiper swiper-h"
         spaceBetween={0}
-        pagination={{
-          clickable: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
         navigation={true}
         //맨페이지부터 시작하게 하기
         initialSlide={1}
@@ -76,9 +76,9 @@ export default function SwiperMain() {
             //   //마지막 페이지에 도달하면 멈추기
             //   stopOnLastSlide: true,
             // }}
-            pagination={{
-              clickable: true,
-            }}
+            // pagination={{
+            //   clickable: true,
+            // }}
             // navigation={true}
             modules={[Autoplay, Pagination, Navigation, Mousewheel,EffectCreative]}
             >
@@ -117,9 +117,9 @@ export default function SwiperMain() {
             //   //마지막 페이지에 도달하면 멈추기
             //   stopOnLastSlide: true,
             // }}
-            pagination={{
-              clickable: true,
-            }}
+            // pagination={{
+            //   clickable: true,
+            // }}
             // navigation={true}
             modules={[Autoplay, Pagination, Navigation, Mousewheel, EffectCreative]}
             >
@@ -193,9 +193,9 @@ export default function SwiperMain() {
             //   //마지막 페이지에 도달하면 멈추기
             //   stopOnLastSlide: true,
             // }}
-            pagination={{
-              clickable: true,
-            }}
+            // pagination={{
+            //   clickable: true,
+            // }}
             // navigation={true}
             modules={[Autoplay, Pagination, Navigation, Mousewheel, EffectCreative]}
           >
