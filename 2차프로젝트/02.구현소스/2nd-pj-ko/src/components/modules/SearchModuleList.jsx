@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+//css불러오기
+import "../../css/ProductList.scss";
 function SearchModuleList({ data }) {
     const total = data.length;
     console.log("데이터수가 왜이래", total);
@@ -18,8 +19,15 @@ function SearchModuleList({ data }) {
                                 className="product-image"
                             />
                             <div className="txt-box">
-                                <p>{v.name}</p>
-                                <p>{v.price}</p>
+                            <span>{v.name}</span>
+            <span className="price">
+              {v.price[0] && <p>{v.price[0]}</p>}
+              {v.price[1] && (
+                <p>
+                  {v.price[1]}&nbsp;{v.price[2]}
+                </p>
+              )}
+            </span>
                             </div>
                         </div>
                     ))}

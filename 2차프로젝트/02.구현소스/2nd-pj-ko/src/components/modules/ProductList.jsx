@@ -3,7 +3,7 @@ import React from "react";
 //데이터들 불러오기////////////////////////////////
 import { wNew, wSale } from "../data/products_woman";
 import { mBestSeller } from "../data/products_man";
-
+//css불러오기
 import "../../css/ProductList.scss";
 function ProductList({ dbName }) {
   const selData = { wNew: wNew, wSale: wSale, mBestSeller: mBestSeller };
