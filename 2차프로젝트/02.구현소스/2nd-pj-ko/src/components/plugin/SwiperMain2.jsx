@@ -18,7 +18,7 @@ import {
     EffectCube,
 } from "swiper/modules";
 // 이미지 데이터 불러오기
-import { main_img,main_img_midea } from "../data/main_img";
+import { main_img, main_img_midea } from "../data/main_img";
 import { useRef } from "react";
 
 export default function SwiperMain() {
@@ -31,6 +31,7 @@ export default function SwiperMain() {
             {/* 가로방향 스와이프 설정///////////////////////////////////////////////////////////// */}
             <Swiper
                 className="mySwiper swiper-h"
+                mousewheel={false}
                 spaceBetween={0}
                 // pagination={{
                 //     clickable: true,
@@ -38,8 +39,8 @@ export default function SwiperMain() {
                 navigation={true}
                 //맨페이지부터 시작하게 하기
                 initialSlide={1}
-                  /* 큐브 이펙트**************** */
-                  cubeEffect={{
+                /* 큐브 이펙트**************** */
+                cubeEffect={{
                     shadow: true,
                     slideShadows: true,
                     shadowOffset: 20,
@@ -69,9 +70,9 @@ export default function SwiperMain() {
                     {/* 세로방향 스와이프 설정///////////////////////////////////////////////////////////// */}
                     <Swiper
                         className="mySwiper2 swiper-v"
+                        mousewheel={false}
                         direction={"vertical"}
                         spaceBetween={0}
-                        mousewheel={true}
                         // onInit() 메서드는 스와퍼 처음 셋팅완료시 실행구역
                         onInit={(iam) => xx.current.push(iam)}
                         // autoplay={{
@@ -93,6 +94,7 @@ export default function SwiperMain() {
                             shadowScale: 0.94,
                         }}
                         // navigation={true}
+
                         modules={[
                             Autoplay,
                             Pagination,
@@ -113,9 +115,9 @@ export default function SwiperMain() {
                 <SwiperSlide>
                     <Swiper
                         className="mySwiper2 swiper-v"
+                        mousewheel={false}
                         direction={"vertical"}
                         spaceBetween={0}
-                        mousewheel={true}
                         onInit={(iam) => xx.current.push(iam)}
                         grabCursor={true}
                         effect={"cube"}
@@ -136,6 +138,7 @@ export default function SwiperMain() {
                         //     clickable: true,
                         // }}
                         // navigation={true}
+
                         modules={[
                             Autoplay,
                             Pagination,
@@ -155,9 +158,9 @@ export default function SwiperMain() {
                 <SwiperSlide>
                     <Swiper
                         className="mySwiper2 swiper-v"
+                        mousewheel={false}
                         direction={"vertical"}
                         spaceBetween={0}
-                        mousewheel={true}
                         onInit={(iam) => xx.current.push(iam)}
                         // autoplay={{
                         //   delay: 2000,
@@ -178,6 +181,7 @@ export default function SwiperMain() {
                             shadowScale: 0.94,
                         }}
                         // navigation={true}
+
                         modules={[
                             Autoplay,
                             Pagination,
@@ -197,9 +201,9 @@ export default function SwiperMain() {
                 <SwiperSlide>
                     <Swiper
                         className="mySwiper2 swiper-v"
+                        mousewheel={false}
                         direction={"vertical"}
                         spaceBetween={0}
-                        mousewheel={true}
                         onInit={(iam) => xx.current.push(iam)}
                         // autoplay={{
                         //   delay: 2000,
@@ -220,6 +224,7 @@ export default function SwiperMain() {
                             shadowScale: 0.94,
                         }}
                         // navigation={true}
+
                         modules={[
                             Autoplay,
                             Pagination,

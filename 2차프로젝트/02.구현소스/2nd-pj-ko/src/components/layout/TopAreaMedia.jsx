@@ -18,14 +18,13 @@ function TopAreaMedia() {
         $(".mbox").removeClass("on");
         $(".ham").removeClass("on");
     };
-   
+
     const 클릭된순번 = (index) => {
         setSelectedIndex(index); // 메뉴 클릭 시 선택된 인덱스 업데이트,
-        
-        if(gnbData[index].txt==="about ZARA"){
-          clickX();
+
+        if (gnbData[index].txt === "about ZARA") {
+            clickX();
         }
-        
     };
     // 메뉴 여닫이 함수/////////////////////////////////////////////////////////////////////////////////
     const showHideMenu = (e) => {
@@ -95,7 +94,6 @@ function TopAreaMedia() {
                             <ul className="gnb-list">
                                 {gnbData.map((v, i) => (
                                     <li key={i} className="gnb-item">
-                                        
                                         <button
                                             //selectedIndex 가 i 와 같으면 클래스네임gnblink에 on클래스 추가
                                             className={`gnb-link ${
@@ -144,7 +142,7 @@ function TopAreaMedia() {
                                                                 </Link>
                                                             </li>
                                                         ))}
-                                                          <li className="hideimg">
+                                                        <li className="hideimg">
                                                             <Link to={v.link}>
                                                                 <img
                                                                     src={v.src}
@@ -158,6 +156,14 @@ function TopAreaMedia() {
                                         </div>
                                     ))}
                                 </div>
+                            </div>
+                            <div className="input-box">
+                                <input
+                                    type="text"
+                                    name="schinGnb" /* name은 백엔드 개발자를 위한 약속, 보통id랑 같은이름으로 함 */
+                                    id="schinGnb"
+                                />
+                          
                             </div>
                         </div>
                     </div>
