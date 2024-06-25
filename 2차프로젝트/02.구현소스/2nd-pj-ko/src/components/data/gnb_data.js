@@ -12,7 +12,7 @@ export const gnbData = [
             },
             {
                 txt: "베스트셀러",
-                link: "/woman/product",
+                link: "/sorry",
                 data:"wBestSeller",
             },
             {
@@ -410,7 +410,7 @@ export const gnbData = [
     },
     {
         txt: "about ZARA",
-        link: "/aboutzara",
+        link: "/sorry",
         data:"wNew",
     },
 ];
