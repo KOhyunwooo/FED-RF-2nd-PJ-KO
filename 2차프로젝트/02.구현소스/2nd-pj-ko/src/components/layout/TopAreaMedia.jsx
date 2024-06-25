@@ -52,12 +52,14 @@ function TopAreaMedia() {
         {/* 박스1: 자라로고, 로그인, 바스켓백, 햄버거버튼///////////////////////////////////////////// */}
         <div className="box1">
           <Link to="/">
-            <img
-              src="/images/zara_logo.png"
-              alt="자라로고"
-              style={{ width: "100px" }}
-              onClick={clickX}
-            />
+            <div className="imgbox">
+              <img
+                src="/images/zara_logo.png"
+                alt="자라로고"
+                style={{ width: "100px" }}
+                onClick={clickX}
+              />
+            </div>
           </Link>
           <div className="loginbox">
             <Link to="#">

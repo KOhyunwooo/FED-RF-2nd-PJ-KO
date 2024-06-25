@@ -1,5 +1,7 @@
 .box1 {
   /* box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1 */
+  filter: invert(1);
+    mix-blend-mode: difference;
 
   box-sizing: border-box;
   position: fixed;
@@ -11,8 +13,12 @@
 
   display: flex;
   align-items: flex-end;
-  img {
-    margin: 0 auto;
+  .imgbox {
+    width: 100px;
+    img{
+      max-width: 100%; /* 최대 너비 설정 */
+        height: auto; /* 높이 자동 조정 */
+    }
   }
   .loginbox {
     margin-left: auto;
@@ -58,7 +64,7 @@
 
   /* 3번막대 */
   .ham span:nth-child(3) {
-    top: 25px;
+    top: 24px;
     transform: rotate(0deg);
   }
 
