@@ -5,13 +5,13 @@ export const banner_data = {
       imgsrc: "images/banner_img/woman_sale.jpg",
       txt: "세일 상품이 추가되었습니다",
       link: "/woman/product",
-      data: "wsale",
+      data: "wSale",
     },
     {
       imgsrc: "images/banner_img/woman_new.jpg",
       txt: "New arrivals",
       link: "/home",
-      data: "wnew",
+      data: "wNew",
     },
     {
       imgsrc: "images/banner_img/woman_first.jpg",

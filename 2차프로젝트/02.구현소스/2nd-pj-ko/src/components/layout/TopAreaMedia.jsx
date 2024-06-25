@@ -41,6 +41,7 @@ function TopAreaMedia() {
     // addClass() 클래스 넣기
     // removeClass() 클래스 뺴기
     // toggleClass() 클래스 넣기/ 뺴기
+    $("html").toggleClass("on");
 
     // console.log($(e.currentTarget).is(".on")); //<-e.currentTarget에 .on 이 있냐?
   };

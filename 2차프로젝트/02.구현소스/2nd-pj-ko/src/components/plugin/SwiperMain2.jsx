@@ -7,7 +7,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-cube";
 //내가 커스텀하는 css 불러오기
-import "../plugin/css/swiper_main.scss";
+import "./css/swiper_main.scss";
+import "./css/swiper_main2.scss";
 
 // import required modules
 import {
@@ -39,6 +40,7 @@ export default function SwiperMain() {
                 navigation={true}
                 //맨페이지부터 시작하게 하기
                 initialSlide={1}
+                effect={"cube"}
                 /* 큐브 이펙트**************** */
                 cubeEffect={{
                     shadow: true,

@@ -113,7 +113,7 @@
   .mbox {
     top: 0;
     right: -100vw;
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
 
@@ -228,8 +228,15 @@
 
 /* 1050이하 일떄 */
 @media screen and (max-width: 1050px) {
-  body {
+  html.on, html.on body{
     overflow: hidden;
+  }
+  html,body
+  {
+    // 자식요소중에  absolete 인 요소가 오버플로우히든을 적용하기위해
+    // 최상위에 부모자격을 주고 오버플로우 히든을 줌.
+    position: relative;
+    overflow-x: hidden;
   }
   .hideimg {
     display: none;
