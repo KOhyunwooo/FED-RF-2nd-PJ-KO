@@ -8,9 +8,42 @@ import $ from "jquery";
 
 //gnb데이터 불ㄹ러오기
 import { gnbData } from "../data/gnb_data";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function TopAreaMedia() {
+    /* 우측상단 검색창: 이동함수 만들기 ************************************************* */
+    const goNav = useNavigate(); //useNavigate를 사용하는 이동함수:goNav
+
+    //1. 검색창에 엔터키 누르면 검색함수 생성
+    const enterKey = (e) => {
+      //e.keyCode는 숫자, e.key 문자로 리턴함.
+      // console.log(e.key, e.keyCode);
+      if (e.key == "Enter") {
+        let txt = $(e.target).val().trim(); //입력창의 입력값 읽어오기:val()사용,trim() 은 앞뒤 공백지우기
+        console.log("txt", txt);
+        // 빈값이 아니면 검색함수 호출(검색어 전달)
+        if (txt != "") {
+          // txt가 빈값이 아니면
+          goSearch(txt);
+          $(e.target).val("").blur();
+          $("#schin").focus();
+          clickX();
+        }
+      }
+    };
+    //1. 검색페이지로 검색어와 함께 이동하기 함수
+    const goSearch = (txt) => {
+      console.log("검색할래 응애");
+      
+      goNav("search", { state: { keyword: txt } });
+    };
+    /* ********************************************************************************* */
+    
+
+
+
+
+
   const [selectedIndex, setSelectedIndex] = useState(0); // 선택된 상위 메뉴 인덱스 상태 관리,상태를 통해 현재 선택된 메뉴의 인덱스를 저장.
 
   /* 클래스들 제거함수 */
@@ -170,6 +203,7 @@ function TopAreaMedia() {
                   type="text"
                   name="schinGnb" /* name은 백엔드 개발자를 위한 약속, 보통id랑 같은이름으로 함 */
                   id="schinGnb"
+                  onKeyUp={enterKey}
                 />
               </div>
             </div>

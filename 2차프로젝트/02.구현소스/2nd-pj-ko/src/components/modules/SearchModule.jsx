@@ -141,10 +141,10 @@ function SearchModule({ kword }) {
   // 코드 리턴구역 ////////////////////////
   return (
     <>
-      <p>결과 {newList.length}개</p>
       <h2 className="restit">
         여기가 서치 모듈 .search-module↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
       </h2>
+      <p style={{float:"right",fontSize:"1.2rem"}}>검색 결과 {newList.length}개</p>
       <div className="search-module">
         <input
           id="schin"

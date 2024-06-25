@@ -91,6 +91,7 @@
   /* 2번막대 : left위치 중앙이동+width는0 */
   .ham.on span:nth-child(2) {
     width: 0%;
+    opacity: 0;
   }
 
   /* 3번막대 : 중앙이동+반시계방향45도회전 */
@@ -212,9 +213,11 @@
   position: relative;
   width: 100vw;
   display: flex;
+  height: 100vh;
+  background-color: #0000004d;
   input {
     position: absolute;
-    bottom: -30px;
+    top: 20px;
     left: 50%;
 
     transform: translate(-50%, 0);
