@@ -1,7 +1,7 @@
 .box1 {
   /* box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1 */
+  mix-blend-mode: difference;
   filter: invert(1);
-    mix-blend-mode: difference;
 
   box-sizing: border-box;
   position: fixed;
@@ -12,13 +12,24 @@
   width: 100vw;
 
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   .imgbox {
-    width: 100px;
-    img{
-      max-width: 100%; /* 최대 너비 설정 */
-        height: auto; /* 높이 자동 조정 */
+    position: relative;
+    width: 85vw;
+    height: auto;
+    animation: intrologo2 1s 0.8s ease-out forwards;
+    display: block;
+    @keyframes intrologo2 {
+      to {
+        width: min(30vw,180px);
+        
+      }
     }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    
   }
   .loginbox {
     margin-left: auto;
@@ -26,7 +37,7 @@
 
   /* 햄버거버튼 ************************************************************8888*/
   .ham {
-    transform: translateY(-50%);
+    transform: translateY(0%);
 
     width: 33px;
     height: 25px;

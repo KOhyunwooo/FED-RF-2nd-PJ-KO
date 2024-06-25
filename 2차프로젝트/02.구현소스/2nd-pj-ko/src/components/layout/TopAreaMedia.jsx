@@ -56,7 +56,7 @@ function TopAreaMedia() {
               <img
                 src="/images/zara_logo.png"
                 alt="자라로고"
-                style={{ width: "100px" }}
+                
                 onClick={clickX}
               />
             </div>

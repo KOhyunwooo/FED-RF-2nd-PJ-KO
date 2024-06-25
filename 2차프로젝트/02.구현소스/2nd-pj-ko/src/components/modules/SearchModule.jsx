@@ -123,14 +123,15 @@ function SearchModule({ kword }) {
     // 코드 리턴구역 ////////////////////////
     return (
         <>
+            <p>결과 {newList.length}개</p>
             <h2 className="restit">
-                여기가 서치 모듈↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+                여기가 서치 모듈 .search-module↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
             </h2>
             <div className="search-module">
                 <input
                     id="schin"
                     type="text"
-                    placeholder="검색"
+                    placeholder="상품, 색상, 컬렉션 등을 입력하세요"
                     defaultValue={kword}
                     //엔터키를 눌렀을때 검색실행!
                     // 검색어 상태변수만 업데이트 하면 끝!

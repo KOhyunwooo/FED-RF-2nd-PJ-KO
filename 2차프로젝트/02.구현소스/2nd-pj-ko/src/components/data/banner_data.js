@@ -17,7 +17,7 @@ export const banner_data = {
       imgsrc: "images/banner_img/woman_first.jpg",
       txt: "원피스",
       link: "/#",
-      data: "",
+      data: "wsale",
     },
     {
       imgsrc: "images/banner_img/woman_second.jpg",

@@ -65,3 +65,12 @@
     outline: 1px solid #000000;
   }
 }
+/* 333이하 일떄 */
+@media screen and (max-width: 333px) {
+  .product-item {
+    flex: 1; /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+    max-width: 100%; /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+    box-sizing: border-box; /* 박스 모델 설정 */
+    outline: 1px solid #000000;
+  }
+}
