@@ -11,38 +11,33 @@ import { gnbData } from "../data/gnb_data";
 import { Link, useNavigate } from "react-router-dom";
 
 function TopAreaMedia() {
-    /* 우측상단 검색창: 이동함수 만들기 ************************************************* */
-    const goNav = useNavigate(); //useNavigate를 사용하는 이동함수:goNav
+  /* 우측상단 검색창: 이동함수 만들기 ************************************************* */
+  const goNav = useNavigate(); //useNavigate를 사용하는 이동함수:goNav
 
-    //1. 검색창에 엔터키 누르면 검색함수 생성
-    const enterKey = (e) => {
-      //e.keyCode는 숫자, e.key 문자로 리턴함.
-      // console.log(e.key, e.keyCode);
-      if (e.key == "Enter") {
-        let txt = $(e.target).val().trim(); //입력창의 입력값 읽어오기:val()사용,trim() 은 앞뒤 공백지우기
-        console.log("txt", txt);
-        // 빈값이 아니면 검색함수 호출(검색어 전달)
-        if (txt != "") {
-          // txt가 빈값이 아니면
-          goSearch(txt);
-          $(e.target).val("").blur();
-          $("#schin").focus();
-          clickX();
-        }
+  //1. 검색창에 엔터키 누르면 검색함수 생성
+  const enterKey = (e) => {
+    //e.keyCode는 숫자, e.key 문자로 리턴함.
+    // console.log(e.key, e.keyCode);
+    if (e.key == "Enter") {
+      let txt = $(e.target).val().trim(); //입력창의 입력값 읽어오기:val()사용,trim() 은 앞뒤 공백지우기
+      console.log("txt", txt);
+      // 빈값이 아니면 검색함수 호출(검색어 전달)
+      if (txt != "") {
+        // txt가 빈값이 아니면
+        goSearch(txt);
+        $(e.target).val("").blur();
+        $("#schin").focus();
+        clickX();
       }
-    };
-    //1. 검색페이지로 검색어와 함께 이동하기 함수
-    const goSearch = (txt) => {
-      console.log("검색할래 응애");
-      
-      goNav("search", { state: { keyword: txt } });
-    };
-    /* ********************************************************************************* */
-    
+    }
+  };
+  //1. 검색페이지로 검색어와 함께 이동하기 함수
+  const goSearch = (txt) => {
+    console.log("검색할래 응애");
 
-
-
-
+    goNav("search", { state: { keyword: txt } });
+  };
+  /* ********************************************************************************* */
 
   const [selectedIndex, setSelectedIndex] = useState(0); // 선택된 상위 메뉴 인덱스 상태 관리,상태를 통해 현재 선택된 메뉴의 인덱스를 저장.
 
@@ -91,7 +86,6 @@ function TopAreaMedia() {
               <img
                 src="/images/zara_logo.png"
                 alt="자라로고"
-                
                 onClick={clickX}
               />
             </div>
@@ -181,16 +175,18 @@ function TopAreaMedia() {
                         </aside>
                       )}
 
-                      {v.txt === "about ZARA" &&  (
+                      {v.txt === "about ZARA" && (
                         <div className="about-zara">
-                          <p style={{fontSize:"1.1rem",padding:"20px"}}>
+                          <p style={{ fontSize: "1.1rem", padding: "20px" }}>
                             ZARA는 세계 최대 규모의 패션 그룹인 Inditex의 대표
                             브랜드로 전세계에서 가장 큰 패션 브랜드 중
                             하나입니다. 고객은 디자인, 생산, 유통 및 판매를 모두
                             총괄하는 Zara의 비지니스 모델의 핵심입니다. 더 많은
                             정보를 원하시면 Inditex 그룹의 홈페이지를 참고하시기
                             바랍니다.
-                            <a href="https://www.inditex.com" target="_blank">www.inditex.com</a>                                                       
+                            <a href="https://www.inditex.com" target="_blank">
+                              www.inditex.com
+                            </a>
                           </p>
                         </div>
                       )}
@@ -205,6 +201,20 @@ function TopAreaMedia() {
                   id="schinGnb"
                   onKeyUp={enterKey}
                 />
+                <div
+                  className="sgum"
+                  
+                  onClick={(e) => {
+                    let inp = e.target.previousElementSibling;
+                    if (inp.value.trim() != "") {
+                      goSearch(inp.value);
+                      inp.value = "";
+                    } else {
+                      alert("검색어를 넣으세요!");
+                      inp.focus();
+                    }
+                  }}
+                >검색</div>
               </div>
             </div>
           </div>
