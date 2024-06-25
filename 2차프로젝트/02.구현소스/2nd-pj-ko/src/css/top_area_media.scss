@@ -12,12 +12,14 @@
   width: 100vw;
 
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+
   .imgbox {
     position: relative;
     width: 85vw;
     height: auto;
-    animation: intrologo2 1s 0.8s ease-out forwards;
+    animation: intrologo2 .8s 0.6s ease-out forwards;
     display: block;
     @keyframes intrologo2 {
       to {
@@ -32,7 +34,19 @@
     
   }
   .loginbox {
-    margin-left: auto;
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    opacity: 0;
+    animation: introloginbag .5s 1.3s ease-out forwards ;
+    @keyframes introloginbag {
+      to{
+        right: 30px;
+    bottom: 0;
+    opacity: 1;
+      }
+      
+    }
   }
 
   /* 햄버거버튼 ************************************************************8888*/
@@ -131,9 +145,9 @@
       ////상위메뉴//////////////////////////
       .gnb-list {
         display: flex;
-        padding-bottom: 16px;
+        padding-bottom: 3x;
         list-style: none;
-        padding-top: 90px;
+        padding-top: 100px;
         width: 100vw;
         justify-content: center;
         align-items: center;
@@ -173,9 +187,10 @@
   border-top: 1px solid #000000; /* 상단 경계선 */
   height: 100%;
   .sm-box {
+    z-index: 10;
     height: 70vh;
     overflow: auto;
-    padding: 25px;
+    padding: 25px 25px 25px 28px;
     /* 스크롤바의 폭 너비 */
     &::-webkit-scrollbar {
       width: 4px;
@@ -210,19 +225,20 @@
 }
 
 .input-box {
-  position: relative;
-  width: 100vw;
+ 
+  top: 90vh;
+  position: absolute;
   display: flex;
-  height: 100vh;
-  background-color: #0000004d;
+  width: 100vw;
+  // height: 8vh;
+  // background-color: #fdfdfd9d;
   input {
     position: absolute;
-    top: 20px;
+    top: 50%;
     left: 50%;
-
-    transform: translate(-50%, 0);
-    width: 80vw;
-    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    width: min(350px, 70vw);
+    height: 22px;
     &:focus {
       outline: none;
     }
