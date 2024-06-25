@@ -43,7 +43,7 @@ export default function SwiperMain() {
                 effect={"cube"}
                 /* 큐브 이펙트**************** */
                 cubeEffect={{
-                    shadow: true,
+                    shadow: false,
                     slideShadows: true,
                     shadowOffset: 20,
                     shadowScale: 0.94,
@@ -90,7 +90,7 @@ export default function SwiperMain() {
                         grabCursor={true}
                         /* 큐브 이펙트**************** */
                         cubeEffect={{
-                            shadow: true,
+                            shadow: false,
                             slideShadows: true,
                             shadowOffset: 20,
                             shadowScale: 0.94,
@@ -125,7 +125,7 @@ export default function SwiperMain() {
                         effect={"cube"}
                         /* 큐브 이펙트**************** */
                         cubeEffect={{
-                            shadow: true,
+                            shadow: false,
                             slideShadows: true,
                             shadowOffset: 20,
                             shadowScale: 0.94,
@@ -177,7 +177,7 @@ export default function SwiperMain() {
                         grabCursor={true}
                         /* 큐브 이펙트**************** */
                         cubeEffect={{
-                            shadow: true,
+                            shadow: false,
                             slideShadows: true,
                             shadowOffset: 20,
                             shadowScale: 0.94,
@@ -220,7 +220,7 @@ export default function SwiperMain() {
                         grabCursor={true}
                         /* 큐브 이펙트**************** */
                         cubeEffect={{
-                            shadow: true,
+                            shadow: false,
                             slideShadows: true,
                             shadowOffset: 20,
                             shadowScale: 0.94,

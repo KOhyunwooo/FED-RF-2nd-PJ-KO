@@ -17,6 +17,7 @@ function TopAreaMedia() {
   const clickX = () => {
     $(".mbox").removeClass("on");
     $(".ham").removeClass("on");
+    $("html").removeClass("on");
   };
 
   const 클릭된순번 = (index) => {

@@ -1,5 +1,11 @@
-//스와이퍼 커스텀 scss
-.swiper-cube .swiper-slide{
+
+
+//이거 없으면 가로큐브 적용안됨.
+.swiper-cube{
     width: 100vw;
     height: 100vh;
+}
+//이거 없으면 세로로 스와이프시 양쪽 배경에 이상한 배경생김
+.swiper-3d .swiper-slide, .swiper-3d .swiper-cube-shadow {
+    transform-style: unset;
 }
