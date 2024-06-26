@@ -209,9 +209,14 @@ function TopAreaMedia() {
                     if (inp.value.trim() != "") {
                       goSearch(inp.value);
                       inp.value = "";
+                      clickX();
                     } else {
-                      alert("검색어를 넣으세요!");
-                      inp.focus();
+                      /* alert창 띄우고 포커스넣기 */
+                      // alert("검색어를 넣으세요!");
+                      // inp.focus();
+                      goSearch("");
+                      clickX();
+
                     }
                   }}
                 >검색</div>

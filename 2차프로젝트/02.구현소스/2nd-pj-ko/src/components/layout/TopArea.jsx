@@ -33,8 +33,6 @@ export default function TopArea() {
         goSearch(txt);
         $(e.target).val("").blur();
         $("#schin").focus();
-
-
       }
     }
   };
@@ -44,6 +42,7 @@ export default function TopArea() {
     console.log("검색할래 응애");
 
     goNav("search", { state: { keyword: txt } });
+    $("#schin").focus();
   };
 
   useEffect(() => {
@@ -108,6 +107,9 @@ export default function TopArea() {
                             <li>
                               <Link to={v.link}>
                                 <img src={v.src} alt={v.txt} />
+                                <div className="smenu-right-last-pbox">
+                                  <p>{v.imagetxt}</p>
+                                </div>
                               </Link>
                             </li>
                           </ol>
@@ -133,7 +135,7 @@ export default function TopArea() {
                   id="schinGnb"
                   placeholder=""
                   onKeyUp={enterKey}
-                  onClick={enterKey}
+                  
                 />
 
                 <span
@@ -142,19 +144,19 @@ export default function TopArea() {
                     whiteSpace: "nowrap",
                     marginLeft: "3px",
                   }}
-                  onClick={(e)=>
-                    {
-                        let inp = e.target.previousElementSibling;
-                        if(inp.value.trim()!=""){
-                            goSearch(inp.value);
-                            inp.value = "";
-                        }
-                        else{
-                            alert("검색어를 넣으세요!");
-                            inp.focus();
-                        }
+                  onClick={(e) => {
+                    let inp = e.target.previousElementSibling;
+                    if (inp.value.trim() != "") {
+                      goSearch(inp.value);
+                      inp.value = "";
+                    } else {
+                      // alert("검색어를 넣으세요!");
+                      // inp.focus();
+                      goSearch("");
+                     
 
-                    }}
+                    }
+                  }}
                 >
                   검색
                 </span>

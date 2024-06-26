@@ -53,7 +53,7 @@ body::after {
     }
     /* gnb.on시 ::before 설정: 상위메뉴 오버시 슬라이드 되는 흰색+블러배경*/
     &.on::before {
-      height: 390px; /* gnb마우스오버시li 높이값(50px)+gnb 패딩탑값(20px) 제외하면 390px */
+      height: 370px; /* gnb마우스오버시li 높이값(50px)+gnb 패딩탑값(20px) 제외하면 390px */
     }
 
     /* gnb오버시 */
@@ -132,7 +132,7 @@ body::after {
           ol {
             //gnb메뉴 글자 반전되게하기
             font-family: "HelveticaLt";
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             // background: linear-gradient(
             //   to top,
             //   #fdfdfd00 10%,
@@ -162,20 +162,43 @@ body::after {
               img {
                 width: 250px; //ol 높이랑 맞추기
               }
+              .smenu-right-last-pbox{
+                position: absolute;
+                  bottom: 10px;
+                  left: 10px;
+                width: 80px;
+    height: 15px;
+                background-color: rgba(255, 255, 255, 0.441);
+                
+                p {
+                  position: absolute;
+                  left: 2px;
+                  
+                 
+                  
+                }
+              }
             }
           }
         }
         /* .gnb ul li에 오버시 .smenu 보이기 */
         &:hover .smenu {
-          height: 320px; // gnb.on시 ::before 높이랑 맞춰야함
+          height: 300px; // gnb.on시 ::before 높이랑 맞춰야함
           opacity: 1;
         }
       }
     }
   }
 
-  /* toparea 모든 li직계하위a요소 오버시 색상 .6만큼 투명하게 */
-  li:first-child ~ li:not(:last-child) > a {
+  /* toparea-상위메뉴 li직계하위(마지막li제외) a요소 오버시 색상 .6만큼 투명하게 */
+  & > .gnb > ul > li ~ li:not(:last-child) > a {
+    &:hover {
+      opacity: 0.45;
+      font-weight: bold;
+    }
+  }
+  /* toparea-하위메뉴 smenu 밑에 li직계하위(마지막li제외) a요소 오버시 색상 .6만큼 투명하게 */
+  .smenu li:not(:last-child) > a {
     &:hover {
       opacity: 0.45;
       font-weight: bold;
@@ -191,7 +214,7 @@ body::after {
   /* 오른쪽 글자태그 */
   span {
     font-size: 1.2rem;
-    font-weight: bold;
+    // font-weight: bold;
   }
   .gum {
     cursor: pointer;
@@ -201,6 +224,8 @@ body::after {
 
   // }
   input {
+    border-radius: 0;
+    border:1px solid;
     &:focus {
       outline: none;
     }
@@ -208,7 +233,6 @@ body::after {
 }
 
 /********************************************************** 미디어쿼리 **********************************************************/
-
 
 /* 1100이하 일떄 */
 @media screen and (max-width: 1280px) {
