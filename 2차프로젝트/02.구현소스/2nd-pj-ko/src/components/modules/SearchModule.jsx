@@ -10,12 +10,16 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 // 우먼 데이터 불러오기
 import { wNew, wSale } from "../data/products_woman";
-import { mBestSeller } from "../data/products_man";
+import { mBestSeller, mNew, mOrigins, mSale } from "../data/products_man";
 import SearchModuleList from "./SearchModuleList";
 
 // import { wNew } from "../data/swiper_cat";
 
 function SearchModule({ kword }) {
+  // 데이터 모으기
+  const selData = [...wNew, ...wSale, ...mBestSeller,...mNew,...mSale,];//mOrigins부르지 않았음.
+  console.log(selData);
+
   // 정렬 상태관리 변수
   const [sort, setSort] = useState("newpd");
   // console.log(sortState);
@@ -42,10 +46,6 @@ function SearchModule({ kword }) {
     document.querySelector("#schinGnb").value = "";
     document.querySelector("#schinGnb").blur();
   }
-
-  // 데이터 모으기
-  const selData = [...wNew, ...wSale, ...mBestSeller];
-  console.log(selData);
 
   //검색어가 있는 데이터 필터하기
   ////////////filter///////////////////////////
@@ -144,7 +144,9 @@ function SearchModule({ kword }) {
       <h2 className="restit">
         여기가 서치 모듈 .search-module↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
       </h2>
-      <p style={{float:"right",fontSize:"1.2rem"}}>검색 결과 {newList.length}개</p>
+      <p style={{ float: "right", fontSize: "1.2rem" }}>
+        검색 결과 {newList.length}개
+      </p>
       <div className="search-module">
         <input
           id="schin"
