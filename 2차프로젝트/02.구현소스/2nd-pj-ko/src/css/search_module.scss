@@ -1,34 +1,48 @@
+.catebox {
+    display: flex;
+    margin: 10px;
+    margin-left: 85px;
+    button {
+        outline: none; /* 포커스 시 외곽선 제거 */
+        /* 원하는 추가 스타일 설정 */
+        /* 예시: 배경색과 텍스트 색상 설정 */
+        background: none;
+        border: none;
+        color: #010101;
+        /* 예시: 패딩과 마진 설정 */
+        padding: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+
+        &.on {
+            font-weight: bold;
+        }
+    }
+}
 /* Search 모듈용 CSS - searching.css  */
-.search-module{
-    
-    input{
+.search-module {
+    input {
         width: 100%;
         box-sizing: border-box;
         border: 1px solid black;
-        border-left:none;
-        border-right: none ;
+        border-left: none;
+        border-right: none;
         height: 70px;
-        padding-left: 50px;
+        padding-left: 100px;
         font-size: 1.5rem;
-        &:focus{
+        &:focus {
             outline: none;
         }
     }
 
     /* 솔트 박스: 신상품순, 낮은가격순 ... */
-    .sortbx{
+    .sortbx {
         padding-bottom: 15px;
         overflow: hidden;
         // float: right;
-        select{
+        select {
             float: right;
             border: none;
         }
     }
-
 }
-
-
-
-
-

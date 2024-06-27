@@ -28,12 +28,7 @@ function SearchModule({ kword }) {
         ...mSale,
         ...mOrigins,
     ];
-    // console.log("데이터가 selData에 잘 모아졌나?",selData);
-
-    //버튼 배열로 만들기
-    const mybutton = ["여성", "남성", "어린이", "HOME"];
-    //버튼에 클래스 넣기
-    const [onbutton, setOnbutton] = useState(""); //초깃값 빈문자열
+    console.log(selData);
 
     // 정렬 상태관리 변수
     const [sort, setSort] = useState("newpd");
@@ -170,26 +165,74 @@ function SearchModule({ kword }) {
     return (
         <>
             <div className="catebox">
-                {mybutton.map((v, i) => (
-                    <button
-                        key={i}
-                        onClick={() => {
-                          setOnbutton(v)
-                          setCheck([
-                            true,
+                <button
+                    onClick={(e) => {
+                        console.log(
+                            "나는woman, 체크박스 체크됐으면 true임",
+                            e.target.clicked
+                        );
+                        //훅값 업데이트
+                        setCheck([
+                            e.target.checked,
                             check[1],
                             check[2],
                             check[3],
                         ]);
-                        
-                        }
-                        }
-                        className={onbutton == v ? "on" : ""}
-                        
-                    >
-                        {v}
-                    </button>
-                ))}
+                    }}
+                >
+                    여성
+                </button>
+                <button
+                    onFocus={(e) => {
+                        console.log(
+                            "나는man, 체크박스 체크됐으면 true임",
+                            e.target.checked
+                        );
+                        //훅값 업데이트
+                        setCheck([
+                            check[0],
+                            e.target.checked,
+                            check[1],
+                            check[2],
+                        ]);
+                    }}
+                >
+                    남성
+                </button>
+                <button
+                    onFocus={(e) => {
+                        console.log(
+                            "나는kids, 체크박스 체크됐으면 true임",
+                            e.target.checked
+                        );
+                        //훅값 업데이트
+                        setCheck([
+                            check[0],
+                            check[1],
+                            e.target.checked,
+                            check[2],
+                        ]);
+                    }}
+                >
+                    어린이
+                </button>
+                <button
+                    onFocus={(e) => {
+                        console.log(
+                            "나는home, 체크박스 체크됐으면 true임",
+                            e.target.checked
+                        );
+                        //훅값 업데이트
+                        setCheck([
+                            check[0],
+                            check[1],
+                            check[2],
+                            e.target.checked,
+                        ]);
+                    }}
+                >
+                    HOME
+                </button>
             </div>
 
             <p style={{ float: "right", fontSize: "1.2rem" }}>

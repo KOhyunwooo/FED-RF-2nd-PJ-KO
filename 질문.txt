@@ -3,9 +3,9 @@
 productPg 에서 <Origins/> 컴포넌트를 만나면 .cont색상이 바뀌게
 그리고 man페이지일떄만 <Origins/>가 실행되어야 함.
 
-
-
-
+searchModule.jsx에서    "나는woman, 체크박스 체크됐으면 true임", 콘솔 true가 반환안됨...
+button을 토글형으로 바꿔야 하는데...
+맵으로는 어떻게하지...
 
 
 
