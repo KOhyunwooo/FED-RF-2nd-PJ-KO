@@ -18,3 +18,8 @@ search페이지 만들기 6/18일 영상임
 
 자라 소개 페이지
 https://www.zara.com/kr/ko/z-join-life-mkt1399.html?v1=1471214
+
+
+
+scrolltop 컴포넌트 만들기
+https://youtu.be/zQ53vbOVz18?t=1626
