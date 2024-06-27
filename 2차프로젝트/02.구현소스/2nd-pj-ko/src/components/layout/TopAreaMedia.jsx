@@ -84,7 +84,7 @@ function TopAreaMedia() {
           <Link to="/">
             <div className="imgbox">
               <img
-                src="/images/zara_logo.png"
+                src={process.env.PUBLIC_URL+"/images/zara_logo.png"}
                 alt="자라로고"
                 onClick={clickX}
               />
@@ -168,7 +168,7 @@ function TopAreaMedia() {
                             ))}
                             <li className="hideimg">
                               <Link to={v.link}>
-                                <img src={v.src} alt={v.txt} />
+                                <img src={process.env.PUBLIC_URL+v.src} alt={v.txt} />
                               </Link>
                             </li>
                           </ol>
@@ -188,7 +188,7 @@ function TopAreaMedia() {
                               www.inditex.com
                             </a>
                           </p>
-                          <img src="/images/about_zara_img/maboutzara001.jpg" alt="자라이미지" />
+                          <img src={process.env.PUBLIC_URL+"/images/about_zara_img/maboutzara001.jpg"} alt="자라이미지" />
                           <p>
                           ZARA에게 JOIN LIFE는 가장 지속 가능한 모델을 향해 나아가기 위해 무엇을 해야 하는지 끊임없이 스스로에게 질문하고 개선하는 과정을 의미합니다. 우리는 그 길이 쉽지 않다는 것을 알고 있지만, 업계의 변화를 이끄는 힘을 믿습니다. 이러한 이유로 ZARA의 사회적, 환경적 목표는 지속적인 개선을 위해 더욱 까다로워졌습니다.
                           </p>

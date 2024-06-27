@@ -23,7 +23,7 @@ export default function MainComponent() {
   const reName = ["man", "woman", "kids", "home"];
   return (
     //라우터 루트로 브라우저 라우트 시작
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />

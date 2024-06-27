@@ -1,3 +1,4 @@
+0)<BrowserRouter>를 <BrowserRouter basename={process.env.PUBLIC_URL}> 이걸로 바꿔준다.
 1).gitignore 파일에 가서 /build를 주석처리
 2)npm run build 해주기
 3) 내 깃주소 https://kohyunwooo.github.io/FED-RF-2nd-PJ-KO/ 찾기
@@ -5,4 +6,5 @@
 5) 깃주소+빌드 주소하기 https://kohyunwooo.github.io/FED-RF-2nd-PJ-KO/2차프로젝트/02.구현소스/2nd-pj-ko/build
 6) package.json에가서 맨위에 "homepage":"", 를 만들어준다.
 7)내 깃주소를 ""사이에 붙혀넣는다. ex)"homepage":"https://kohyunwooo.github.io/FED-RF-2nd-PJ-KO/2차프로젝트/02.구현소스/2nd-pj-ko/build",
+8)내 파일들의 img src를 찾아서 주소 앞에 process.env.PUBLIC_URL+ 해준다.
 

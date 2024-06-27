@@ -57,7 +57,7 @@ function ProductList({ dbName }) {
     <div className="product-list">
       {reversedData.map((v, i) => (
         <div key={i} className="product-item chgop">
-          <img src={v.isrc} alt={v.name} className="product-image" />
+          <img src={process.env.PUBLIC_URL+v.isrc} alt={v.name} className="product-image" />
           <div className="txt-box">
             <span>{v.name}</span>
             <span className="price">

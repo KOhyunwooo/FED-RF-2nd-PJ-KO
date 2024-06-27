@@ -11,12 +11,12 @@ import "../../css/top_area.scss"
 export default function Logo({ logoStyle }) {
     // logoStyle: 상단, 하단 로고 구분코드
     // 코드 값 : top(상단), bottom(하단)
-    console.log("로고 경로:", isrc.logo, logoStyle);
+    console.log("로고 경로:", process.env.PUBLIC_URL+isrc.logo, logoStyle);
 
     //코드 리턴구역//////////////////////////////////
     return (
         <div className="lgbx">
-            <img src={isrc.logo} alt="ZARAlogo" />
+            <img src={process.env.PUBLIC_URL+isrc.logo} alt="ZARAlogo" />
         </div>
     );
 } //////////////Logo컴포넌트+내보내기//////////////////////////

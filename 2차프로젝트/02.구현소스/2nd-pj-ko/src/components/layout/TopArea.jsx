@@ -106,7 +106,7 @@ export default function TopArea() {
                             ))}
                             <li>
                               <Link to={v.link}>
-                                <img src={v.src} alt={v.txt} />
+                                <img src={process.env.PUBLIC_URL+v.src} alt={v.txt} />
                                 <div className="smenu-right-last-pbox">
                                   <p>{v.imagetxt}</p>
                                 </div>

@@ -14,7 +14,7 @@ function SearchModuleList({ data }) {
                             {/* 링크를 왜 보내야하지?: 디테일 페이지로 갈 링크임 */}
                             {/* <Link to="/product" state={{ name: v.name }}></Link> */}
                             <img
-                                src={v.isrc}
+                                src={process.env.PUBLIC_URL+v.isrc}
                                 alt={v.name}
                                 className="product-image"
                             />

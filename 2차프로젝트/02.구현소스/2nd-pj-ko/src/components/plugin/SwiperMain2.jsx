@@ -107,7 +107,7 @@ export default function SwiperMain() {
                     >
                         {main_img_midea.main_woman.map((v, i) => (
                             <SwiperSlide key={i}>
-                                <img src={v.isrc} alt={v.tit} />
+                                <img src={process.env.PUBLIC_URL+v.isrc} alt={v.tit} />
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -151,7 +151,7 @@ export default function SwiperMain() {
                     >
                         {main_img_midea.main_man.map((v, i) => (
                             <SwiperSlide key={i}>
-                                <img src={v.isrc} alt={v.tit} />
+                                <img src={process.env.PUBLIC_URL+v.isrc} alt={v.tit} />
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -194,7 +194,7 @@ export default function SwiperMain() {
                     >
                         {main_img_midea.main_kids.map((v, i) => (
                             <SwiperSlide key={i}>
-                                <img src={v.isrc} alt={v.tit} />
+                                <img src={process.env.PUBLIC_URL+v.isrc} alt={v.tit} />
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -237,7 +237,7 @@ export default function SwiperMain() {
                     >
                         {main_img_midea.main_home.map((v, i) => (
                             <SwiperSlide key={i}>
-                                <img src={v.isrc} alt={v.tit} />
+                                <img src={process.env.PUBLIC_URL+v.isrc} alt={v.tit} />
                             </SwiperSlide>
                         ))}
                     </Swiper>

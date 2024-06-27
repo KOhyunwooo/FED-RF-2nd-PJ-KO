@@ -15,7 +15,7 @@ function Origins() {
         <div className="origins-list">
             {selData.map((v, i) => (
                 <div key={i} className="origins-item">
-                    <img src={v.isrc} alt={v.name} className="product-image" />
+                    <img src={process.env.PUBLIC_URL+v.isrc} alt={v.name} className="product-image" />
                     <div className="origin-txt-box">
                         <span>{v.name}</span>
                         <span className="price">
