@@ -288,7 +288,7 @@ export const gnbData = [
     sub: [
       {
         txt: "여아",
-        link: "kids/product",
+        link: "/sorry",
         data: "wNew",
       },
       {
