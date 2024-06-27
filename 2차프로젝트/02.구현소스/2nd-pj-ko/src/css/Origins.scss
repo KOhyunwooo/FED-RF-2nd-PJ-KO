@@ -1,0 +1,105 @@
+
+/* 배경색 바뀌기 */
+.cont {
+    background-color: #fdfdfd; /* 기본 배경색 설정 */
+    transition: background-color 0.3s ease-out; /* 배경색 변화에 대한 전환 효과 설정 */
+}
+
+.cont .change {
+    background-color: #010101; /* 검은 배경색 설정 */
+}
+
+
+
+
+.origins-title{
+    font-family: "TTOctosquarescondensedlight", "Helvetica Neue", Helvetica, Arial;
+    padding: 20vw;
+    
+    text-align: center;
+    color: #010101;
+    mix-blend-mode: difference;
+    filter: invert(1);
+}
+
+
+
+.origins-list {
+    display: flex;
+    flex-wrap: wrap;
+  
+    justify-content: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .origins-item {
+    flex: 1 calc(25%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+    max-width: calc(25%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+    box-sizing: border-box; /* 박스 모델 설정 */
+    // outline: 1px solid #000000;
+    padding: 20px;
+  
+    .origin-txt-box {
+        font-family: "TTOctosquarescondensedlight", "Helvetica Neue", Helvetica, Arial;
+      padding: 3px 6px 32px;
+      font-size: 1.3rem;
+      color: #010101;
+    mix-blend-mode: difference;
+    filter: invert(1);
+      
+      //글자 넘치면 ...으로 바꾸기
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+  
+      .price {
+        display: flex;
+        gap: 5px;
+        p {
+          padding-top: 3px;
+        }
+        p:nth-child(2) {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  
+    .product-image {
+      width: 100%;
+      height: auto;
+      // border-bottom: 1px solid #ddd;
+      // padding-bottom: 16px;
+    //   outline: 1px solid #000000;
+    }
+  }
+  
+  ///////////////////////////미디어 쿼리/////////////////////////////////////////////////////////////
+  
+  /* 1100이하 일떄 */
+  @media screen and (max-width: 1100px) {
+    .price {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  /* 777이하 일떄 */
+  @media screen and (max-width: 777px) {
+    .origins-item {
+      flex: 1 calc(50%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+      max-width: calc(50%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+      box-sizing: border-box; /* 박스 모델 설정 */
+      padding:10px
+    }
+  }
+  /* 333이하 일떄 */
+  @media screen and (max-width: 333px) {
+    .origins-item {
+        flex: 1 calc(100%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+        flex-direction: column;
+        max-width: calc(100%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+        box-sizing: border-box; /* 박스 모델 설정 */
+    }
+  }

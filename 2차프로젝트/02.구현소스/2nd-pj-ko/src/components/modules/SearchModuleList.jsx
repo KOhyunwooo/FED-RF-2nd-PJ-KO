@@ -11,7 +11,7 @@ function SearchModuleList({ data }) {
                 <div className="product-list">
                     {data.map((v, i) => (
                         <div key={i} className="product-item">
-                            {/* 링크를 왜 보내야하지?:  */}
+                            {/* 링크를 왜 보내야하지?: 디테일 페이지로 갈 링크임 */}
                             {/* <Link to="/product" state={{ name: v.name }}></Link> */}
                             <img
                                 src={v.isrc}

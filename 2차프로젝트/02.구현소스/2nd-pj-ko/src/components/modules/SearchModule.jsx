@@ -17,7 +17,7 @@ import SearchModuleList from "./SearchModuleList";
 
 function SearchModule({ kword }) {
   // 데이터 모으기
-  const selData = [...wNew, ...wSale, ...mBestSeller,...mNew,...mSale,];//mOrigins부르지 않았음.
+  const selData = [...wNew, ...wSale, ...mBestSeller,...mNew,...mSale,...mOrigins];
   console.log(selData);
 
   // 정렬 상태관리 변수

@@ -4,6 +4,7 @@ import SearchModule from '../modules/SearchModule';
 //라우터 전달변수값을 받기위해 useLocation을 불러오기
 import { useLocation } from 'react-router-dom';
 import Footer from '../modules/Footer';
+import Origins from '../modules/Origins';
 
 
 function SearchPg(props) {
@@ -14,9 +15,10 @@ function SearchPg(props) {
 
     return (
         <div>
-            <h1 style={{fontSize:"50px",textAlign:"center",marginTop:"20vh"}}>내가 바로 서치페이지</h1>
+            <div style={{height:"200px"}}></div>
             <SearchModule kword={keyword}/>
             <Footer/>
+            <Origins/>
         </div>
     );
 }
