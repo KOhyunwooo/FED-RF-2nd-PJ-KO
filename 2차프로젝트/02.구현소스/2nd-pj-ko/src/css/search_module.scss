@@ -1,7 +1,16 @@
+
+.sticky-search-box{
+    position: sticky;
+    top: 80px;
+    color: #010101;
+    filter: invert(1);
+    mix-blend-mode: difference;
+    margin-top: 130px;
+    margin-bottom: 30px;
 .catebox {
     display: flex;
-    margin: 10px;
-    margin-left: 85px;
+    
+    margin-left: 25px;
     button {
         outline: none; /* 포커스 시 외곽선 제거 */
         /* 원하는 추가 스타일 설정 */
@@ -13,10 +22,33 @@
         padding: 5px;
         margin-left: 10px;
         cursor: pointer;
+        font-size: 1.1rem;
 
         &.on {
             font-weight: bold;
         }
+    }
+}
+.resultandsort{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 2px;
+    
+/* 솔트 박스: 신상품순, 낮은가격순 ... */
+    .sortbx {
+        
+        overflow: hidden;
+        // float: right;
+        select {
+            font-size: 1rem;
+            border: none;
+            outline: none;
+        }
+    }
+    >p{font-size: 1rem;
+       
     }
 }
 /* Search 모듈용 CSS - searching.css  */
@@ -27,22 +59,33 @@
         border: 1px solid black;
         border-left: none;
         border-right: none;
-        height: 70px;
-        padding-left: 100px;
-        font-size: 1.5rem;
+        height: 60px;
+        padding-left: 35px;
+        font-size: 1.1rem;
+      
+        background-color: #ffffff9c;
+    backdrop-filter: blur(2px);
         &:focus {
             outline: none;
         }
     }
 
-    /* 솔트 박스: 신상품순, 낮은가격순 ... */
-    .sortbx {
-        padding-bottom: 15px;
-        overflow: hidden;
-        // float: right;
-        select {
-            float: right;
-            border: none;
-        }
-    }
+    
+}
+}
+
+
+//미디어쿼리777////////////////////////////////////////////////
+@media screen and (max-width: 777px) {
+    .sticky-search-box{
+        margin-top: 25vw;
+    
+    .resultandsort{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0px;}
+
+    
+}
 }

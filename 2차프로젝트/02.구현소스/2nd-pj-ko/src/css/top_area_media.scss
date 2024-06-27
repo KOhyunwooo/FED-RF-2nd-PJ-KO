@@ -47,6 +47,11 @@
       }
       
     }
+
+    >a{
+      text-decoration: none;
+      color: #000;
+    }
   }
 
   /* 햄버거버튼 ************************************************************8888*/
@@ -142,6 +147,7 @@
     .minbox {
       position: relative;
       background-color: #fdfdfdc9;
+      backdrop-filter: blur(2px);
       ////상위메뉴//////////////////////////
       .gnb-list {
         display: flex;
@@ -187,7 +193,8 @@
   border-top: 1px solid #000000; /* 상단 경계선 */
   height: 100%;
   .sm-box {
-    z-index: 10;
+    position: relative;
+    z-index: 10;//input박스 위로 올라오게 하기 위해
     height: 70vh;
     overflow: auto;
     padding: 25px 25px 25px 28px;
@@ -211,6 +218,7 @@
 .sm-box ol {
   list-style: none;
   padding: 0;
+  padding-bottom: 60px;
   margin: 0;
 }
 .sm-box li {
@@ -231,6 +239,7 @@
   justify-content: center;
     align-items: center;
   width: 100vw;
+ 
   // height: 8vh;
   // background-color: #fdfdfd9d;
   input {
@@ -250,6 +259,57 @@
     left: -33px;
   }
 }
+
+
+
+.mabout-zara{
+  padding:20px 40px 20px 40px;
+  overflow: auto;
+  height: 70vh;
+    overflow: auto;
+  :nth-child(1){
+    font-size: 12px;
+    padding-bottom: 20px;
+    
+  }
+  img{
+    width: 70vw;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 10px;
+
+  }
+  :nth-child(3){
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+  :nth-child(4){
+    font-size: 11px;
+    padding-bottom: 40px;
+  }
+  
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgb(109, 109, 109); /* 스크롤바 색상 */
+      border-radius: 10px; /* 스크롤바 둥근 테두리 */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #fdfdfd;
+      border-radius: 50%;
+    }
+  
+}
+
+
+
+
+
+
 
 /* 1050이하 일떄 */
 @media screen and (max-width: 1050px) {

@@ -3,7 +3,7 @@ export const gnbData = [
   {
     txt: "WOMAN",
     link: "/woman",
-    src: "images/nav_side_img/woman01.jpg",
+    src: "/images/nav_side_img/woman01.jpg",
     imagetxt: "///New arrivals",
     sub: [
       {
@@ -149,7 +149,7 @@ export const gnbData = [
     txt: "MAN",
     link: "/man",
 
-    src: "images/nav_side_img/man01.jpg",
+    src: "/images/nav_side_img/man01.jpg",
     imagetxt: "///New arrivals",
     sub: [
       {
@@ -283,7 +283,7 @@ export const gnbData = [
     txt: "KIDS",
     link: "/kids",
     data: "wNew",
-    src: "images/nav_side_img/kids01.jpg",
+    src: "/images/nav_side_img/kids01.jpg",
     imagetxt: "///New arrivals",
     sub: [
       {
@@ -342,7 +342,7 @@ export const gnbData = [
     txt: "HOME",
     link: "/home",
     data: "wNew",
-    src: "images/nav_side_img/home01.jpg",
+    src: "/images/nav_side_img/home01.jpg",
     imagetxt: "///New arrivals",
     sub: [
       {

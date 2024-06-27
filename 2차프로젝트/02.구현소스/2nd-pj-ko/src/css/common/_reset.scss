@@ -8,6 +8,8 @@ html,body,ul,ol,dl,dt,dd,p,figure,figcaption,h1,h2,h3,h4 {
 /* REM단위를 위한 폰트사이즈 10PX */
   html{
     font-size: 10px;
+    
+    scroll-behavior: smooth;//부드러운 스크롤
   }
   /* ul,ol,li 리스트스타일:none*/
   ul,ol,li{

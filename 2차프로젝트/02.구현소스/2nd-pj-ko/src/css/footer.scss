@@ -3,6 +3,9 @@
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
 
+  mix-blend-mode: difference;
+    filter: invert(1);
+
   .footer-box1 {
     //뉴스레터가입하세요, input박스, sns박스////
     padding:  30px 0 30px 0;

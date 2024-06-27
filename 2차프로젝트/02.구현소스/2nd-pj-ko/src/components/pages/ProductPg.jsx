@@ -15,16 +15,16 @@ function ProductPg({ cat }) {
   const chgBgFn = () => {
     let olist = document.querySelector(".origins-list");
     let bgTg = document.querySelector(".cont");
-    let winH = window.innerHeight / 2;
+    let winH = window.innerHeight*1; 
 
     let pos = olist.getBoundingClientRect().top;
     console.log(pos);
     if (pos < winH) {
-      // bgTg.classList.add("change");
-      bgTg.style.backgroundColor = "black";
+      bgTg.classList.add("change");
+      // bgTg.style.backgroundColor = "black"; //이렇게 해도 됨
     } else {
-      // bgTg.classList.remove("change");
-      bgTg.style.backgroundColor = "transparent";
+      bgTg.classList.remove("change");
+      // bgTg.style.backgroundColor = "transparent"; //이렇게 해도 됨
     }
   };
 
@@ -40,15 +40,15 @@ function ProductPg({ cat }) {
     else{
 
         window.removeEventListener("scroll", chgBgFn);
-        // document.querySelector(".cont").classList.remove("change");
-        document.querySelector(".cont").style.backgroundColor = "transparent";
+        document.querySelector(".cont").classList.remove("change");
+        // document.style.backgroundColor = "transparent";
     }
 
     return () => {
         console.log("소멸실행!");
         window.removeEventListener("scroll", chgBgFn);
-        // document.querySelector(".cont").classList.remove("change");
-        document.querySelector(".cont").style.backgroundColor = "transparent";
+        document.querySelector(".cont").classList.remove("change");
+        // document.style.backgroundColor = "transparent";
     };
   });
 
@@ -56,7 +56,7 @@ function ProductPg({ cat }) {
 
   return (
     <>
-      <div style={{ height: "200px" }}></div>
+      <div style={{ height: "140px" }}></div>
       <ProductList dbName={data} />
       {cat == "man" && <Origins />}
       <Footer />

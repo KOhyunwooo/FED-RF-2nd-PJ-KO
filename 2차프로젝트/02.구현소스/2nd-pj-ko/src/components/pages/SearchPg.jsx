@@ -15,10 +15,10 @@ function SearchPg(props) {
 
     return (
         <div>
-            <div style={{height:"200px"}}></div>
+            
             <SearchModule kword={keyword}/>
             <Footer/>
-            <Origins/>
+            
         </div>
     );
 }

@@ -3,7 +3,7 @@
     flex-direction: column; /* 플렉스 방향: 세로방향  */
     justify-content: center; 
     align-items: center; /* 세로정렬:중앙 */
-    padding: 5vw;
+    padding: 9vw;
     
     
     .top-images, .bottom-images {
@@ -15,7 +15,10 @@
       div {
           
           flex:1;/* 이미지 너비 같게 */
-          
+          >a{
+            text-decoration: none;
+    color: #010101;
+          }
           img {
             
           width: 100%;
@@ -27,6 +30,7 @@
         
           font-family: Arial, Helvetica, sans-serif;
           font-size: 1.2rem;
+         
         }
       }
     }

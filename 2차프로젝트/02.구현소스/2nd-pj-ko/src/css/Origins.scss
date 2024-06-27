@@ -2,10 +2,10 @@
 /* 배경색 바뀌기 */
 .cont {
     background-color: #fdfdfd; /* 기본 배경색 설정 */
-    transition: background-color 0.3s ease-out; /* 배경색 변화에 대한 전환 효과 설정 */
+    transition: background-color 0.7s ease-out; /* 배경색 변화에 대한 전환 효과 설정 */
     
     &.change {
-        background-color: #010101; /* 검은 배경색 설정 */
+        background-color: #030303; /* 검은 배경색 설정 */
     }
 }
 
