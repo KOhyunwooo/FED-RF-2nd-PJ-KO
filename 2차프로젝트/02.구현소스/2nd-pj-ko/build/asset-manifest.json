@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/FED-RF-2nd-PJ-KO/static/css/main.44ef519a.css",
+    "main.js": "/FED-RF-2nd-PJ-KO/static/js/main.4ea52a23.js",
+    "static/media/TTOctosquaresTrialCondensedLight.ttf": "/FED-RF-2nd-PJ-KO/static/media/TTOctosquaresTrialCondensedLight.1938ed0a88d4b38edcbd.ttf",
+    "static/media/TTOctosquaresTrialRegular.ttf": "/FED-RF-2nd-PJ-KO/static/media/TTOctosquaresTrialRegular.8a6d2d79be1fe186f474.ttf",
+    "static/media/HelveticaNeueLTPro-Lt.otf": "/FED-RF-2nd-PJ-KO/static/media/HelveticaNeueLTPro-Lt.050c2978ce4f59d0c494.otf",
+    "static/media/HelveticaNeueLTPro-Bd.otf": "/FED-RF-2nd-PJ-KO/static/media/HelveticaNeueLTPro-Bd.4291b351b26f2740898f.otf",
+    "static/media/HelveticaNeueLTPro-Roman.otf": "/FED-RF-2nd-PJ-KO/static/media/HelveticaNeueLTPro-Roman.8c5641e9fe5cfb86ad8a.otf",
+    "static/media/CROOKED.otf": "/FED-RF-2nd-PJ-KO/static/media/CROOKED.adc10d2f81cdd468ce05.otf",
+    "index.html": "/FED-RF-2nd-PJ-KO/index.html",
+    "main.44ef519a.css.map": "/FED-RF-2nd-PJ-KO/static/css/main.44ef519a.css.map",
+    "main.4ea52a23.js.map": "/FED-RF-2nd-PJ-KO/static/js/main.4ea52a23.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44ef519a.css",
+    "static/js/main.4ea52a23.js"
+  ]
+}
