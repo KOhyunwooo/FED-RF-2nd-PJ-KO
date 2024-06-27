@@ -15,7 +15,7 @@
 
 .origins-title{
     font-family: "TTOctosquarescondensedlight", "Helvetica Neue", Helvetica, Arial;
-    padding: 20vw;
+    padding: 15vw;
     
     text-align: center;
     color: #010101;
@@ -26,6 +26,8 @@
 
 
 .origins-list {
+  padding-left: 70px;
+  padding-right: 70px;
     display: flex;
     flex-wrap: wrap;
   

@@ -29,6 +29,9 @@ function ProductPg({ cat }) {
   };
 
   useEffect(() => {
+    window.scrollTo(0,0);
+
+
     console.log("^^^^^useEffect실행");
     // 남자페이지에서 있을때만 이벤트 설정
     if (document.querySelector(".origins-list")) {
@@ -50,7 +53,7 @@ function ProductPg({ cat }) {
         document.querySelector(".cont").classList.remove("change");
         // document.style.backgroundColor = "transparent";
     };
-  });
+  },[]);
 
   const chgBg = () => {}; /////////// chgBg //////////////
 

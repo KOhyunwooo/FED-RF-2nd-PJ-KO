@@ -1,15 +1,18 @@
 //맨 페이지 컴포넌트//////
 
+import { useEffect } from "react";
 import Banner from "../modules/Banner";
 import Footer from "../modules/Footer";
 
-export default function Man(){
-    return(
-        <>
-        <Banner category="manData"/>
-        {/* 푸터에어리어 들어올 것 */}
-        <Footer/>
-        </>
-    );
-
+export default function Man() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  },[]);
+  return (
+    <>
+      <Banner category="manData" />
+      {/* 푸터에어리어 들어올 것 */}
+      <Footer />
+    </>
+  );
 }

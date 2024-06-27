@@ -4,6 +4,10 @@ import { mBestSeller, mNew, mSale, mOrigins } from "../data/products_man";
 import "../../css/ProductList.scss";
 
 function ProductList({ dbName }) {
+  const pdbutton=["색상", "사이즈", "가격", "컬렉션( )"];
+
+
+
   const selData = {
     wNew: wNew,
     wSale: wSale,
@@ -42,6 +46,14 @@ function ProductList({ dbName }) {
   }, []); // 빈 배열을 전달하여 한 번만 실행되도록 함
 
   return (
+    <>
+    <div className="pdbutton-box">
+      {pdbutton.map((v,i)=>
+        <button key={i} className="pdbutton">
+          {v}
+        </button>
+      )}
+    </div>
     <div className="product-list">
       {reversedData.map((v, i) => (
         <div key={i} className="product-item chgop">
@@ -60,6 +72,7 @@ function ProductList({ dbName }) {
         </div>
       ))}
     </div>
+      </>
   );
 }
 
