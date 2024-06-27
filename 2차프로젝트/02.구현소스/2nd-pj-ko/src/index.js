@@ -36,7 +36,7 @@ export default function MainComponent() {
           <Route path="sorry" element={<Sorry />} />
           
           {reName.map((e, i) => (
-            <Route key={i} path={e + "/product"} element={<ProductPg />} />
+            <Route key={i} path={e + "/product"} element={<ProductPg cat={e} />} />
           ))}
           {/* <Route path="product" element={<ProductPg />} /> */}
           
