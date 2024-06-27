@@ -43,7 +43,7 @@ body::after {
       height: 0;
       z-index: -1;
       /* gnb::before 배경색+배경블러 */
-      background-color: #fdfdfd4d;
+      background-color: #fdfdfd60;
       backdrop-filter: blur(6px);
       transition: 0.1s ease-out; /* 자라 로고에 아웃라인 생김!!!!!!!!!!!!!!!! */
     }
