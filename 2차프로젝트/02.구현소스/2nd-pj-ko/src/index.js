@@ -25,25 +25,34 @@ export default function MainComponent() {
   /////////////////아이폰에서 아래방향으로 드래그터치시에 브라우저네비 안나오게 하기///////////////
   ////////////////////////////////////////////////////////////////////////////////////////////////
   const startY = useRef(null);
+  const lastY = useRef(null);
+
   useEffect(() => {
     const handleTouchMove = (e) => {
       if (startY.current !== null) {
         const currentY = e.touches[0].clientY;
-        const deltaY = currentY - startY.current;
+        const deltaY = currentY - lastY.current;
 
-        if (deltaY > 0) {
-          // 아래로 드래그 중일 때 상단 네비게이션 숨기기
+        if (deltaY > 0 && lastY.current < startY.current) {
+          // 아래로 드래그 중일 때 네비게이션 숨기기
           hideNavigation();
+        } else if (deltaY < 0 && lastY.current > startY.current) {
+          // 위로 드래그 중일 때 네비게이션 보이기
+          showNavigation();
         }
+
+        lastY.current = currentY;
       }
     };
 
     const handleTouchStart = (e) => {
       startY.current = e.touches[0].clientY;
+      lastY.current = startY.current;
     };
 
     const handleTouchEnd = () => {
       startY.current = null;
+      lastY.current = null;
     };
 
     document.addEventListener('touchstart', handleTouchStart);
@@ -58,10 +67,15 @@ export default function MainComponent() {
   }, []);
 
   const hideNavigation = () => {
-    // 네비게이션 숨기기 로직 구현 (CSS로 처리할 수도 있고, JavaScript로 조작할 수도 있음)
-    // 예시: CSS 클래스 추가하여 숨기기
+    // 네비게이션 숨기기 로직 구현
     document.body.classList.add('hide-navigation');
   };
+
+  const showNavigation = () => {
+    // 네비게이션 보이기 로직 구현
+    document.body.classList.remove('hide-navigation');
+  };
+
 
   /* 
   css 설정 이거 추가 해야함
