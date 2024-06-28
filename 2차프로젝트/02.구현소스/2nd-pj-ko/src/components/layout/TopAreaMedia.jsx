@@ -144,7 +144,7 @@ function TopAreaMedia() {
                                 <div
                                     className="smenu-wrap" //순번 가로로 400vw 만듬
                                     style={{
-                                        transform: `translateX(-${
+                                        transform: `translateX(${////right->left로 바꾸면서 - 빠짐
                                             selectedIndex * 100
                                         }vw)`,
                                     }} //선택된순번*100 해서 vw값 변환

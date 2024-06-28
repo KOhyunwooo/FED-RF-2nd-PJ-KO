@@ -130,17 +130,17 @@
     position: absolute;
     z-index: 9;
     top: 0;
-    right: -100vw;
+    left: -100vw;/////right->left로 바꿈
     position: fixed;
     height: 100vh;
-    width: 100vw;
+    width: 100vw;///300px 로 바꿔보기
 
     display: flex;
     justify-content: space-evenly;
     font-size: 2vw;
     transition: 0.3s ease-in-out;
     &.on {
-      right: 0;
+      left: 0;/////right->left로 바꿈
     }
     .minbox {
       position: relative;
