@@ -138,11 +138,10 @@
     transition: 0.3s ease-in-out;
     
     position: fixed;
-    // left: -50vw;
-    // left: 200vw;
-    // transform: translateX(-100%);
+    left: 100vw;
+   
     &.on {
-      // left:100vw;
+      left:0;
     }
     .minbox {
       position: relative;
