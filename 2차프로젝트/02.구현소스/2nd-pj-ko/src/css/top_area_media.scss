@@ -130,7 +130,7 @@
     
     z-index: 9;
     top: 0;
-    right: -100vw;
+    left: 100vw;
     position: fixed;
     height: 100vh;
     width: 100%;///300px 로 바꿔보기
@@ -140,7 +140,7 @@
     font-size: 2vw;
     transition: 0.3s ease-in-out;
     &.on {
-      right: 0;
+      left: 0;
     }
     .minbox {
       position: relative;
