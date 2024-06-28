@@ -142,7 +142,7 @@
     left: 200vw;
     transform: translateY(-100%);
     &.on {
-      
+      transform: translateY(0);
     }
     .minbox {
       position: relative;
