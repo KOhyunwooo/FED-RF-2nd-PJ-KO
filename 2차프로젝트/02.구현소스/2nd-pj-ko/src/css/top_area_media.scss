@@ -130,7 +130,7 @@
     position: absolute;
     z-index: 9;
     top: 0;
-    left: -100vw;/////right->left로 바꿈
+    left: 100vw;/////right->left로 바꿈,-값 빠짐
     position: fixed;
     height: 100vh;
     width: 100vw;///300px 로 바꿔보기
