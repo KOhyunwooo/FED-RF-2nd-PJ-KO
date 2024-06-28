@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/FED-RF-2nd-PJ-KO/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/2nd-pj-ko/build/static/css/main.abffde53.css",
+    "main.js": "/FED-RF-2nd-PJ-KO/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/2nd-pj-ko/build/static/js/main.d9ce3d78.js",
+    "static/media/TTOctosquaresTrialCondensedLight.ttf": "/FED-RF-2nd-PJ-KO/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/2nd-pj-ko/build/static/media/TTOctosquaresTrialCondensedLight.1938ed0a88d4b38edcbd.ttf",
+    "static/media/TTOctosquaresTrialRegular.ttf": "/FED-RF-2nd-PJ-KO/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/2nd-pj-ko/build/static/media/TTOctosquaresTrialRegular.8a6d2d79be1fe186f474.ttf",
+    "static/media/HelveticaNeueLTPro-Lt.otf": "/FED-RF-2nd-PJ-KO/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/2nd-pj-ko/build/static/media/HelveticaNeueLTPro-Lt.050c2978ce4f59d0c494.otf",
+    "static/media/HelveticaNeueLTPro-Bd.otf": "/FED-RF-2nd-PJ-KO/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/2nd-pj-ko/build/static/media/HelveticaNeueLTPro-Bd.4291b351b26f2740898f.otf",
+    "static/media/HelveticaNeueLTPro-Roman.otf": "/FED-RF-2nd-PJ-KO/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/2nd-pj-ko/build/static/media/HelveticaNeueLTPro-Roman.8c5641e9fe5cfb86ad8a.otf",
+    "static/media/CROOKED.otf": "/FED-RF-2nd-PJ-KO/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/2nd-pj-ko/build/static/media/CROOKED.adc10d2f81cdd468ce05.otf",
+    "index.html": "/FED-RF-2nd-PJ-KO/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/2nd-pj-ko/build/index.html",
+    "main.abffde53.css.map": "/FED-RF-2nd-PJ-KO/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/2nd-pj-ko/build/static/css/main.abffde53.css.map",
+    "main.d9ce3d78.js.map": "/FED-RF-2nd-PJ-KO/2%EC%B0%A8%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/02.%EA%B5%AC%ED%98%84%EC%86%8C%EC%8A%A4/2nd-pj-ko/build/static/js/main.d9ce3d78.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abffde53.css",
+    "static/js/main.d9ce3d78.js"
+  ]
+}
