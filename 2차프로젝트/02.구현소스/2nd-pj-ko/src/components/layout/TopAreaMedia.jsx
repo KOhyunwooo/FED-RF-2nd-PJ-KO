@@ -10,9 +10,6 @@ import $ from "jquery";
 import { gnbData } from "../data/gnb_data";
 import { Link, useNavigate } from "react-router-dom";
 
-//심플바(아이폰 스크롤바 커스텀) 불러오기
-import SimpleBar from 'simplebar-react';
-import 'simplebar/dist/simplebar.min.css';
 
 function TopAreaMedia() {
   /* 우측상단 검색창: 이동함수 만들기 ************************************************* */
@@ -151,7 +148,7 @@ function TopAreaMedia() {
                   {gnbData.map((v, i) => (
                     <div key={i} className="sub-menu">
                       {v.sub && (
-                        <SimpleBar style={{color:"#333"}}>
+                      
 
                         <aside className="sm-box">
                           <ol>
@@ -178,7 +175,7 @@ function TopAreaMedia() {
                             </li>
                           </ol>
                         </aside>
-                      </SimpleBar>
+                    
                       )}
 
                       {v.txt === "about ZARA" && (
