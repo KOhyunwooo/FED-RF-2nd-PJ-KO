@@ -140,9 +140,9 @@
     position: fixed;
     // left: -50vw;
     left: 200vw;
-    transform: translateY(-100%);
+    transform: translateX(-100%);
     &.on {
-      transform: translateY(0);
+      left:100vw;
     }
     .minbox {
       position: relative;
