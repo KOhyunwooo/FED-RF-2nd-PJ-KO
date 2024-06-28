@@ -1,5 +1,15 @@
 /* 공통 CSS - core.scss */
 
+.hide-navigation {
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+  } 
+
+
+  
+
 @font-face {
     src: url(../../static/fonts/HelveticaNeueLTPro-Bd.otf);
     font-family: "HelveticaBd";
