@@ -127,13 +127,13 @@
 
  
   .mbox {
-    position: absolute;
+    
     z-index: 9;
     top: 0;
     right: -100vw;
     position: fixed;
     height: 100vh;
-    width: 300px;///300px 로 바꿔보기
+    width: 100%;///300px 로 바꿔보기
 
     display: flex;
     justify-content: space-evenly;
