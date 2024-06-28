@@ -132,10 +132,10 @@
     top: 0;
     height: 100vh;
     width: 100%;
-    // display: flex;
-    // justify-content: space-evenly;
+    // display: flex; //flex를 주게 되면 아이폰에서는 position:fixed가 정상 작동하지 않음.
+    // justify-content: space-evenly; //아니면 이게 문제일 수도??
     font-size: 2vw;
-    transition: 0.3s ease-in-out;
+    transition: 0.4s ease-in-out;
     
     position: fixed;
     left: 100vw;
@@ -144,6 +144,7 @@
       left:0;
     }
     .minbox {
+      height: 100vh;
       position: relative;
       background-color: #fdfdfdc9;
       backdrop-filter: blur(2px);

@@ -90,12 +90,16 @@
   
   /* 777이하 일떄 */
   @media screen and (max-width: 777px) {
+    .origins-list {
+      padding-left: 10px;
+    padding-right: 10px;
     .origins-item {
       flex: 1 calc(50%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
       max-width: calc(50%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
       box-sizing: border-box; /* 박스 모델 설정 */
       padding:10px
     }
+  }
   }
   /* 333이하 일떄 */
   @media screen and (max-width: 333px) {

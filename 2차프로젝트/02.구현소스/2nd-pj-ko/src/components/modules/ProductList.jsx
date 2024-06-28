@@ -38,10 +38,14 @@ function ProductList({ dbName }) {
   useEffect(() => {
     // 스크롤 이벤트 리스너 등록
     window.addEventListener("scroll", chgOpFn);
+    window.addEventListener("touchstart", chgOpFn);//모바일용
+    window.addEventListener("touchmove", chgOpFn);//모바일용
 
     // 컴포넌트 언마운트 시 스크롤 이벤트 리스너 해제
     return () => {
       window.removeEventListener("scroll", chgOpFn);
+      window.removeEventListener("touchstart", chgOpFn);//모바일용 리무브
+      window.removeEventListener("touchmove", chgOpFn);//모바일용 리무브
     };
   }, []); // 빈 배열을 전달하여 한 번만 실행되도록 함
 
