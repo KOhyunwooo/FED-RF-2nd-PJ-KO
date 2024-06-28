@@ -1,6 +1,6 @@
 /* 공통 CSS - core.scss */
 
-.hide-navigation {
+body {
     padding-top: constant(safe-area-inset-top);
     padding-top: env(safe-area-inset-top);
     padding-bottom: constant(safe-area-inset-bottom);
@@ -8,7 +8,7 @@
   } 
 
 
-  
+
 
 @font-face {
     src: url(../../static/fonts/HelveticaNeueLTPro-Bd.otf);
