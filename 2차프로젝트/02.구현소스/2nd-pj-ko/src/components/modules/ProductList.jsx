@@ -17,8 +17,11 @@ function ProductList({ dbName }) {
     mOrigins: mOrigins,
   };
 
+  //seldata를 슬라이스 리버스로 역순으로 데이터 만들기
   const reversedData = selData[dbName].slice().reverse();
 
+
+  /* *************************************************************  
   // 윈도우 위치값에 따라 이미지 오파시티 1로 변환하는 함수
   const chgOpFn = () => {
     const winH = window.innerHeight * 0.99; 
@@ -49,6 +52,7 @@ function ProductList({ dbName }) {
     };
   }, []); // 빈 배열을 전달하여 한 번만 실행되도록 함
 
+ ****************************************************************** */
   return (
     <>
     <div className="pdbutton-box">

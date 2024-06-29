@@ -43,6 +43,11 @@
         overflow: hidden;
         // float: right;
         select {
+           
+            appearance: none; /* 기본 UI 제거 (일부 브라우저) */
+            -webkit-appearance: none; /* Safari 및 Chrome 기본 UI 제거 */
+            -moz-appearance: none; /* Firefox 기본 UI 제거 */
+            cursor: pointer;
             font-size: 1rem;
             border: none;
             outline: none;
@@ -55,6 +60,7 @@
 /* Search 모듈용 CSS - searching.css  */
 .search-module {
     input {
+        border-radius: 0;
         width: 100%;
         box-sizing: border-box;
         border: 1px solid black;
@@ -82,10 +88,11 @@
         margin-top: 25vw;
     
     .resultandsort{
+        bottom: -17px;
     position: absolute;
     z-index: 1;
     right: 0;
-    bottom: 0px;}
+    }
 
     
 }

@@ -192,7 +192,7 @@ function SearchModule({ kword }) {
         <div className="resultandsort">
             {/*  //////////////////////검색 결과 ??개 /////////////////////////////////// */}
             <p >
-              검색 결과 {newList.length}개&nbsp;&nbsp;|&nbsp;&nbsp;
+              검색 결과 {newList.length}개&nbsp;&nbsp;|&nbsp;
             </p>
             {/* ///////////////////정렬부분sort//////////////////////////////////////// */}
             <div className="listbx">
@@ -205,11 +205,11 @@ function SearchModule({ kword }) {
                     setSort(e.target.value);
                   }}
                 >
-                  <option value="newpd">신상품순</option>
-                  <option value="uppd">오름차순</option>
-                  <option value="downpd">내림차순</option>
-                  <option value="expd">높은가격순</option>
-                  <option value="chpd">낮은가격순</option>
+                  <option value="newpd">&nbsp;신상품순&nbsp;</option>
+                  <option value="uppd">&nbsp;오름차순&nbsp;</option>
+                  <option value="downpd">&nbsp;내림차순&nbsp;</option>
+                  <option value="expd">&nbsp;높은가격순&nbsp;</option>
+                  <option value="chpd">&nbsp;낮은가격순&nbsp;</option>
                 </select>
               </aside>
             </div>

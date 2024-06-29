@@ -30,20 +30,25 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-//탑쪽으로 이동하면서 op1되게
-.chgop{
-  transition: .3s ease-out;
-opacity: 0;
-transform: translateY(15px);
-&.on{
-  transform: translateY(0);
-  opacity: 1;
-}}
+// //탑쪽으로 이동하면서 op1되게
+// .chgop{
+//   transition: .3s ease-out;
+// opacity: 0;
+// transform: translateY(15px);
+// &.on{
+//   transform: translateY(0);
+//   opacity: 1;
+// }}
+
+
+
+
 .product-item {
   flex: 1 calc(16.66%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
   max-width: calc(16.66%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
   box-sizing: border-box; 
   border: .5px solid #000000;
+  background-color: #fdfdfd;
 
 
   .txt-box {

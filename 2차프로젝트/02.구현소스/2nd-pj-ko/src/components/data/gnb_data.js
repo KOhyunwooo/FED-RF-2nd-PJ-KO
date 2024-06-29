@@ -8,134 +8,134 @@ export const gnbData = [
     sub: [
       {
         txt: "///NEW",
-        link: "/woman/product",
+        link: "/woman/product", 
         data: "wNew",
       },
       {
         txt: "베스트셀러",
-        link: "/sorry",
-        data: "wBestSeller",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "블레이저",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "원피스",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "탑 | 바디수트",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "셔츠",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "베스트",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "스커트",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "쇼츠 | 버뮤다팬츠",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "티셔츠",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "진 | 데님팬츠",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "팬츠",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "니트",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "슈즈",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "백",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product", // ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wNew",
       },
       {
         txt: "TOTAL LOOK",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product",// ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wSale",
       },
       {
         txt: "TREND",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product",// ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wSale",
       },
       {
         txt: "자켓 | 트렌치",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product",// ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wSale",
       },
       {
         txt: "HOLIDAY EDIT",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product",// ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wSale",
       },
 
       {
         txt: "액세서리 | 주얼리",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product",// ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wSale",
       },
       {
         txt: "란제리 | SHAPEWEAR",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product",// ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wSale",
       },
       {
         txt: "향수",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product",// ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wSale",
       },
       {
         txt: "ZARA HAIR",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product",// ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wSale",
       },
       {
         txt: "메이크업",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product",// ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wSale",
       },
       {
         txt: "BASICS",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product",// ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wSale",
       },
       {
         txt: "LINEN",
-        link: "/sorry",
-        data: "",
+        link: "/woman/product",// ///NEW, 특가상품 제외 다른데이터는 더미로 재활용
+        data: "wSale",
       },
 
       {
@@ -154,127 +154,127 @@ export const gnbData = [
     sub: [
       {
         txt: "///NEW",
-        link: "/man/product",
+        link: "/man/product", 
         data: "mNew",
       },
       {
         txt: "베스트셀러",
-        link: "/man/product",
+        link: "/man/product", 
         data: "mBestSeller",
       },
       {
         txt: "리넨",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mNew",
       },
       {
         txt: "셔츠",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mNew",
       },
       {
         txt: "티셔츠",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mNew",
       },
       {
         txt: "폴로셔츠",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mNew",
       },
       {
         txt: "반바지",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mNew",
       },
       {
         txt: "팬츠",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mNew",
       },
       {
         txt: "데님팬츠",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mNew",
       },
       {
         txt: "슈트",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mNew",
       },
       {
         txt: "SWIMWEAR",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mBestSeller",
       },
       {
         txt: "크로셰",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mBestSeller",
       },
       {
         txt: "아우터",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mBestSeller",
       },
       {
         txt: "맨투맨 | 후디",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mBestSeller",
       },
       {
         txt: "니트 | 가디건",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mBestSeller",
       },
       {
         txt: "오버셔츠",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mBestSeller",
       },
       {
         txt: "블레이저",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mBestSeller",
       },
       {
         txt: "TOTAL LOOK",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mBestSeller",
       },
       {
         txt: "카고팬츠",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mBestSeller",
       },
       {
         txt: "스니커즈",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mSale",
       },
       {
         txt: "슈즈",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mSale",
       },
       {
         txt: "백",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mSale",
       },
       {
         txt: "액세서리",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mSale",
       },
       {
         txt: "향수",
-        link: "/sorry",
-        data: "wNew",
+        link: "/man/product", // ///NEW, 베스트셀러, 특가상품 제외한건 더미로 재활용
+        data: "mSale",
       },
       {
         txt: "특가 상품",
-        link: "/man/product",
+        link: "/man/product", 
         data: "mSale",
       },
     ],
@@ -288,52 +288,52 @@ export const gnbData = [
     sub: [
       {
         txt: "여아",
-        link: "/sorry",
+        link: "/kids",
         data: "wNew",
       },
       {
         txt: "1세반 - 6세",
-        link: "/sorry",
+        link: "/kids",
         data: "wNew",
       },
       {
         txt: "6-14세",
-        link: "/sorry",
+        link: "/kids",
         data: "wNew",
       },
       {
         txt: "남아",
-        link: "/sorry",
+        link: "/kids",
         data: "wNew",
       },
       {
         txt: "1세반 - 6세",
-        link: "/sorry",
+        link: "/kids",
         data: "wNew",
       },
       {
         txt: "6-14세",
-        link: "/sorry",
+        link: "/kids",
         data: "wNew",
       },
       {
         txt: "베이비",
-        link: "/sorry",
+        link: "/kids",
         data: "wNew",
       },
       {
         txt: "0-6개월",
-        link: "/sorry",
+        link: "/kids",
         data: "wNew",
       },
       {
         txt: "6-18개월",
-        link: "/sorry",
+        link: "/kids",
         data: "wNew",
       },
       {
         txt: "액세서리 | 슈즈",
-        link: "/sorry",
+        link: "/kids",
         data: "wNew",
       },
     ],

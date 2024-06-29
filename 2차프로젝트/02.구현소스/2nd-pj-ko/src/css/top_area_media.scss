@@ -34,6 +34,7 @@
     
   }
   .loginbox {
+    font-size: 12px;
     position: absolute;
     right: -10px;
     bottom: 0;
@@ -244,7 +245,8 @@
   // height: 8vh;
   // background-color: #fdfdfd9d;
   input {
-
+    border-radius: 0;
+    border: 1px solid;
     width: min(350px, 70vw);
 
     height: 22px;

@@ -104,7 +104,7 @@ body::after {
 
         /* 마지막 li 검색창 부분 */
         &:last-child {
-          margin-right: 300px;
+          margin-right: 260px;
           margin-left: auto;
           animation: introsearch 0.5s 1.5s ease-out forwards;
           opacity: 0;
