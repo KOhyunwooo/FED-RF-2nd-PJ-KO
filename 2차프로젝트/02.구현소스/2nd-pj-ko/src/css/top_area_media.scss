@@ -145,7 +145,7 @@
     }
     .minbox {
       height: 100vh;
-      position: relative;
+      
       background-color: #fdfdfdc9;
       backdrop-filter: blur(2px);
       ////상위메뉴//////////////////////////
@@ -234,7 +234,7 @@
 }
 
 .input-box {
-  top: 90vh;
+  bottom: 7vh;
   position: absolute;
   display: flex;
   justify-content: center;
