@@ -8,9 +8,7 @@ import Footer from "../modules/Footer";
 import Sorry from "./Sorry";
 
 export default function AboutZara(){
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      },[]);
+    
     return(
         <>
         <Sorry/>

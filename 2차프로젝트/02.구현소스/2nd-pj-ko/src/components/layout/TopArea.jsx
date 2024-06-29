@@ -39,10 +39,12 @@ export default function TopArea() {
 
   //1. 검색페이지로 검색어와 함께 이동하기 함수
   const goSearch = (txt) => {
-    console.log("검색할래 응애");
+    console.log("검색할래~~~");
 
     goNav("search", { state: { keyword: txt } });
     $("#schin").focus();
+
+    window.scrollTo(0,0);
   };
 
   useEffect(() => {

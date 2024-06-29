@@ -46,6 +46,10 @@ function SearchModule({ kword }) {
   console.log("(내가 타이핑한)키워드:", kword);
   const [searchword, setSearchword] = useState(kword);
 
+
+  // 상단메뉴 검색창에서 다시 검색할 경우
+  // 검색 가능하도록 검색어 비교를 위한 검색어를 저장한다!
+  // 리렌더링 없이 값만 저장하기 위해 useRef 참조변수 사용!
   const beforeWord = useRef(kword);
   console.log(kword, "==?", beforeWord.current);
   // 만약 다음에 상단메뉴 검색창에서 검색한 경우 기존 검색어와 다른 경우
@@ -226,13 +230,14 @@ function SearchModule({ kword }) {
             // 검색어 상태변수만 업데이트 하면 끝!
             // ->setKw(검색어)
             onKeyUp={(e) => {
-              if (e.key == "Enter")
+              if (e.key == "Enter"){
                 //검색어 상태값 변경
                 setSearchword(e.target.value);
               //input의 값이 value
 
               //처음 검색시(엔터시) 모두 체크
               setCheck([true, true, true, true]);
+              window.scrollTo(0,0);}
             }}
           />
             </div>

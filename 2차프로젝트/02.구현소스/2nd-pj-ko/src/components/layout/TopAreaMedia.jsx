@@ -29,6 +29,7 @@ function TopAreaMedia() {
         $(e.target).val("").blur();
         $("#schin").focus();
         clickX();
+        
       }
     }
   };
@@ -37,6 +38,7 @@ function TopAreaMedia() {
     console.log("검색할래 응애");
 
     goNav("search", { state: { keyword: txt } });
+    // window.scrollTo(0,0); 이거 왜 안들어가지??
   };
   /* ********************************************************************************* */
 

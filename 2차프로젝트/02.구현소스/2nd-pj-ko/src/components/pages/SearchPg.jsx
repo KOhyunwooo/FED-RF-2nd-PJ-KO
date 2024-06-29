@@ -8,9 +8,7 @@ import Origins from '../modules/Origins';
 
 
 function SearchPg(props) {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      },[]);
+  
     
     let keyword = useLocation().state.keyword;
     console.log("searchPg 검색어:",keyword)

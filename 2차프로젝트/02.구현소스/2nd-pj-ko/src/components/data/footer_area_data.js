@@ -20,35 +20,35 @@ export const footerbox2data = [
   [
     { 
       txt: "도움말", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "내 ZARA 계정", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "상품 및 사이즈", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "배송", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "결제 및 청구서", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "내 구매", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "교환, 반품 및 환불", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "ZARA 경험", 
-      link: "#" 
+      link: "" 
     },
   ],
 
@@ -56,43 +56,43 @@ export const footerbox2data = [
 
     { 
       txt: "FOLLOW하기", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "뉴스레터", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "TIKTOK", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "INSTAGRAM", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "FACEBOOK", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "X", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "PINTEREST", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "KAKAO", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "YOUTUBE", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "SPOTIFY", 
-      link: "#" 
+      link: "" 
     },
   ],
 
@@ -100,27 +100,27 @@ export const footerbox2data = [
 
     { 
       txt: "회사", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "회사소개", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "JOIN LIFE", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "사무소", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "매장", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "자라에서 일하세요", 
-      link: "#" 
+      link: "" 
     },
   ],
 
@@ -128,19 +128,19 @@ export const footerbox2data = [
 
     { 
       txt: "정책", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "개인정보처리방침", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "이용약관", 
-      link: "#" 
+      link: "" 
     },
     { 
       txt: "쿠키 설정", 
-      link: "#" 
+      link: "" 
     },
   ],
 ];

@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react';
 
 function Sorry() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      },[]);
-  
+    
     return (
        <>
         <br /><br /><br /><br /><br /><br /><br /><br />

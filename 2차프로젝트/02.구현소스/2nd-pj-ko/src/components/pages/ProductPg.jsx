@@ -15,6 +15,9 @@ function ProductPg({ cat }) {
   const chgBgFn = () => {
     let olist = document.querySelector(".origins-list");
     let bgTg = document.querySelector(".cont");
+    
+  
+    
     let winH = window.innerHeight*1; 
 
     let pos = olist.getBoundingClientRect().top;
@@ -29,7 +32,7 @@ function ProductPg({ cat }) {
   };
 
   useEffect(() => {
-    window.scrollTo(0,0);
+    
 
 
     console.log("^^^^^useEffect실행");
@@ -61,7 +64,7 @@ function ProductPg({ cat }) {
     <>
       <div style={{ height: "140px" }}></div>
       <ProductList dbName={data} />
-      {cat == "man" && <Origins />}
+      {cat === "man" && <Origins />}
       <Footer />
     </>
   );

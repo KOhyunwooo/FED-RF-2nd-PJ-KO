@@ -17,7 +17,7 @@ function ProductList({ dbName }) {
     mOrigins: mOrigins,
   };
 
-  //seldata를 슬라이스 리버스로 역순으로 데이터 만들기
+  //seldata를 슬라이스 리버스로 역순으로 데이터 만들기-항상 신상품순으로 나오게 하기 위해
   const reversedData = selData[dbName].slice().reverse();
 
 

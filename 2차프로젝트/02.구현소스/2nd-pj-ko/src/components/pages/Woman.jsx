@@ -5,9 +5,7 @@ import Banner from "../modules/Banner";
 import Footer from "../modules/Footer";
 
 export default function Woman(){
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      },[]);
+   
     return(
         <>
               
