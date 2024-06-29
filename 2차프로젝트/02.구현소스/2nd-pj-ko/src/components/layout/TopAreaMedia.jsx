@@ -206,31 +206,32 @@ function TopAreaMedia() {
                 </div>
               </div>
               <div className="input-box">
-                <input
-                  type="text"
-                  name="schinGnb" /* name은 백엔드 개발자를 위한 약속, 보통id랑 같은이름으로 함 */
-                  id="schinGnb"
-                  onKeyUp={enterKey}
-                />
-                <div
-                  className="sgum"
+                <div className="input-inbox">
+                  <input
+                    type="text"
+                    name="schinGnb" /* name은 백엔드 개발자를 위한 약속, 보통id랑 같은이름으로 함 */
+                    id="schinGnb"
+                    onKeyUp={enterKey}
+                  />
+                  <div
+                    className="sgum"
                   
-                  onClick={(e) => {
-                    let inp = e.target.previousElementSibling;
-                    if (inp.value.trim() != "") {
-                      goSearch(inp.value);
-                      inp.value = "";
-                      clickX();
-                    } else {
-                      /* alert창 띄우고 포커스넣기 */
-                      // alert("검색어를 넣으세요!");
-                      // inp.focus();
-                      goSearch("");
-                      clickX();
-
-                    }
-                  }}
-                >검색</div>
+                    onClick={(e) => {
+                      let inp = e.target.previousElementSibling;
+                      if (inp.value.trim() != "") {
+                        goSearch(inp.value);
+                        inp.value = "";
+                        clickX();
+                      } else {
+                        /* alert창 띄우고 포커스넣기 */
+                        // alert("검색어를 넣으세요!");
+                        // inp.focus();
+                        goSearch("");
+                        clickX();
+                      }
+                    }}
+                  >검색</div>
+                </div>
               </div>
             </div>
           </div>

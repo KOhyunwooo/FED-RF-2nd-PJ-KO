@@ -43,7 +43,8 @@
         overflow: hidden;
         // float: right;
         select {
-           
+           background-color: transparent;
+           color: #000;
             appearance: none; /* 기본 UI 제거 (일부 브라우저) */
             -webkit-appearance: none; /* Safari 및 Chrome 기본 UI 제거 */
             -moz-appearance: none; /* Firefox 기본 UI 제거 */
