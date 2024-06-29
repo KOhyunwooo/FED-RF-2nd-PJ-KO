@@ -42,14 +42,14 @@ transform: translateY(15px);
 .product-item {
   flex: 1 calc(16.66%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
   max-width: calc(16.66%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
-  box-sizing: border-box; /* 박스 모델 설정 */
-  outline: 1px solid #000000;
+  box-sizing: border-box; 
+  border: .5px solid #000000;
 
 
   .txt-box {
     padding: 12px 12px 32px;
     font-size: 1rem;
-    background-color: #fdfdfd;
+    // background-color: #fdfdfd;
     
     //글자 넘치면 ...으로 바꾸기
     text-overflow: ellipsis;
@@ -95,7 +95,7 @@ transform: translateY(15px);
     flex: 1 calc(50%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
     max-width: calc(50%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
     box-sizing: border-box; /* 박스 모델 설정 */
-    outline: 1px solid #000000;
+    
   }
 }
 /* 333이하 일떄 */
@@ -105,6 +105,6 @@ transform: translateY(15px);
     flex-direction: column;
     max-width: calc(100%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
     box-sizing: border-box; /* 박스 모델 설정 */
-    outline: 1px solid #000000;
+    
   }
 }

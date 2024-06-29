@@ -1,4 +1,10 @@
 
+.product-item {
+    border: .5px solid #000000; 를 주면 하위 txt 박스 오른쪽 .5px 들어가서 얇아짐
+    그래서 outline을 주면 outline이 이상하게 들어감.
+
+
+ProductPg.jsx 핸드폰에서 작동안됨...
 
 
 

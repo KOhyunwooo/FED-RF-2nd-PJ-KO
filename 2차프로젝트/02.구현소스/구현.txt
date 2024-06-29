@@ -1,0 +1,34 @@
+메인페이지: 스와이퍼-네스티드 사용
+
+디자인적요소: 모든 박스 황금비로 할것: 1:1618
+    .image-container {
+            width: 100%;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1.1618;
+        }
+
+폰트: helvetica,arial
+색상: 검은색,흰색, #fdfdfd, #010101
+
+이유: 사용자가 웹사이트에서 빠져나가지 않게 하기 위해
+
+
+================================================================
+자동재생 안되게 하기
+iso 페이지 인라인 동영상 적용을 위한 코드를 아래처럼 넣어보세요~!
+<video
+        className={classProps}
+        loop={true}
+        muted={true}
+        ref={ref}
+        playsInline={true}
+        onClick={handleControlVisible}
+      >
+        <source src={videoSrc} type="video/mp4" />
+      </video>
+
+=================================================================
