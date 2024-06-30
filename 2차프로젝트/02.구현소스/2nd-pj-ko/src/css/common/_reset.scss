@@ -1,33 +1,52 @@
 /* 전체 페이지 공통 reset.scss
 - index.html 페이지 전체에 적용됨! */
-html,body,ul,ol,dl,dt,dd,p,figure,figcaption,h1,h2,h3,h4 {
-    margin: 0;
-    padding: 0;
-  }
+html,
+body,
+ul,
+ol,
+dl,
+dt,
+dd,
+p,
+figure,
+figcaption,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
 
 /* REM단위를 위한 폰트사이즈 10PX */
-  html{
-    font-size: 10px;
-    
-    scroll-behavior: smooth;//부드러운 스크롤
-  }
-  /* ul,ol,li 리스트스타일:none*/
-  ul,ol,li{
-    list-style: none;
-  }
-  
-  /* 전체 배경색 */
-  body{
-    background-color: #fdfdfd;
+html {
+  font-size: 10px;
 
-  }
-  body,html{
-    // width: 100vw; // 이거 넣으면 가로 스크롤바 생김
-    height: 100vh;
-  }
+  scroll-behavior: smooth; //부드러운 스크롤
+}
+/* ul,ol,li 리스트스타일:none*/
+ul,
+ol,
+li {
+  list-style: none;
+}
 
-  
-  /* 전체 아웃라인 */
-  // body * {
-  //   outline: 1px dashed red;
-  // }
+/* 전체 배경색 */
+body {
+  background-color: #fdfdfd;
+
+  padding-top: constant(safe-area-inset-top); /* iOS 11.2+ */
+  padding-top: env(safe-area-inset-top); /* iOS 11.2+ */
+  padding-bottom: constant(safe-area-inset-bottom); /* iOS 11.2+ */
+  padding-bottom: env(safe-area-inset-bottom); /* iOS 11.2+ */
+}
+body,
+html {
+  // width: 100vw; // 이거 넣으면 가로 스크롤바 생김
+  height: 100vh;
+}
+
+/* 전체 아웃라인 */
+// body * {
+//   outline: 1px dashed red;
+// }
