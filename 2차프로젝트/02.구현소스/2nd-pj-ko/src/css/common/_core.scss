@@ -1,5 +1,5 @@
 /* 공통 CSS - core.scss */
-body, #root {
+body{
     padding-top: constant(safe-area-inset-top); /* iOS 11.2+ */
     padding-top: env(safe-area-inset-top); /* iOS 11.2+ */
     padding-bottom: constant(safe-area-inset-bottom); /* iOS 11.2+ */
