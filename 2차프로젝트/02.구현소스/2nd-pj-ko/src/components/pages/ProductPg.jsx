@@ -18,7 +18,9 @@ function ProductPg({ cat }) {
     
   
     
-    let winH = window.innerHeight*1; 
+    // let winH = window.innerHeight*1; 
+    const winH = document.documentElement.clientHeight*0.9;
+     //window.innerHeight*1보다 더 일관된 높이 계산:브라우저의 주소 창이나 스크롤바와 같은 UI 요소를 더 정확히 고려함.///////////////////
 
     let pos = olist.getBoundingClientRect().top;
     console.log(pos);
@@ -46,6 +48,7 @@ function ProductPg({ cat }) {
     else{
 
         window.removeEventListener("scroll", chgBgFn);
+        window.addEventListener("touchmove", chgBgFn);//모바일 작동용 터치무브////////////////////////
         document.querySelector(".cont").classList.remove("change");
         // document.style.backgroundColor = "transparent";
     }
@@ -53,6 +56,7 @@ function ProductPg({ cat }) {
     return () => {
         console.log("소멸실행!");
         window.removeEventListener("scroll", chgBgFn);
+        window.removeEventListener("touchmove", chgBgFn);//모바일 작동용 터치무브//////////////////////////////
         document.querySelector(".cont").classList.remove("change");
         // document.style.backgroundColor = "transparent";
     };

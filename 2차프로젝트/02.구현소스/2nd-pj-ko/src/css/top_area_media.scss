@@ -244,7 +244,7 @@
     position: relative;//단순히 .sgum absolute 떄문에 부모자격주려고 relative줌
     input {
       border-radius: 0;
-      border: 1px solid;
+      border: .5px solid;
       width: min(350px, 70vw);
 
       height: 22px;
