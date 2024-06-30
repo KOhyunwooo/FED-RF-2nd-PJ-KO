@@ -124,7 +124,7 @@
 /* box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2 */
 
 .mbox {
-  padding-bottom: env(safe-area-inset-bottom);///////////////////하단에 가려져서 삽입해봄
+  padding-bottom: env(safe-area-inset-bottom,20px);///////////////////하단에 가려져서 삽입해봄
 
   z-index: 9;
   top: 0;
