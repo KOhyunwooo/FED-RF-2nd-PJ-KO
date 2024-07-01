@@ -140,15 +140,15 @@
 
   position: fixed;
   left: 100vw;
+  background-color: #fdfdfdc9;
+  backdrop-filter: blur(2px);
 
   &.on {
     left: 0;
   }
-  .minbox {
-    height: 100vh;
+  // .minbox {
+    // height: 100vh;
 
-    background-color: #fdfdfdc9;
-    backdrop-filter: blur(2px);
     ////상위메뉴//////////////////////////
     .gnb-list {
       display: flex;
@@ -185,7 +185,7 @@
       }
     }
   }
-}
+// }
 
 .sub-menu {
   min-width: 100vw; /* 각 하위 메뉴가 100vw 너비 */
