@@ -18,12 +18,7 @@ import Sorry from "./components/pages/Sorry";
 import $ from "jquery";
 
 export default function MainComponent() {
-  let vh = 0;
 
-  useEffect(() => {
-    vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-  }, []);
 
   const reName = ["man", "woman", "kids", "home"];
   return (
