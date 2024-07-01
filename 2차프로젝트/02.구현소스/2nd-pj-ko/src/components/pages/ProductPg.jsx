@@ -13,11 +13,9 @@ function ProductPg({ cat }) {
   let data = loc.state.data;
 
   const chgBgFn = () => {
-    if(cat!=="man")return;//카테고리가 man이 아니면 함수 종료
+    if (cat !== "man") return; //카테고리가 man이 아니면 함수 종료
     let olist = document.querySelector(".origins-list");
     let bgTg = document.querySelector(".cont");
-
-    
 
     // let winH = window.innerHeight*1;
     const winH = document.documentElement.clientHeight * 0.9;
@@ -39,7 +37,6 @@ function ProductPg({ cat }) {
     // 남자페이지에서 있을때만 이벤트 설정
     if (document.querySelector(".origins-list")) {
       window.addEventListener("scroll", chgBgFn);
-     
     }
 
     // 없는 페이지는 중간에 남자 페이지에서 이동할 경우
@@ -58,7 +55,7 @@ function ProductPg({ cat }) {
       document.querySelector(".cont").classList.remove("change");
       // document.style.backgroundColor = "transparent";
     };
-  }, [cat]);//cat 이 변경될때마다 소멸 실행
+  }, [cat]); //cat 이 변경될때마다 소멸 실행
 
   const chgBg = () => {}; /////////// chgBg //////////////
 
