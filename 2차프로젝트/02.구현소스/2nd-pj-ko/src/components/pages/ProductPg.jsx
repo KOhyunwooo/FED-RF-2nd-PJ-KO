@@ -13,6 +13,7 @@ function ProductPg({ cat }) {
   let data = loc.state.data;
 
   const chgBgFn = () => {
+    if(data!="man") return;
     let olist = document.querySelector(".origins-list");
     let bgTg = document.querySelector(".cont");
     

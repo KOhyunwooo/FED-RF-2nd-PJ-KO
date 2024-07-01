@@ -15,6 +15,8 @@ import SearchPg from "./components/pages/SearchPg";
 import ProductPg from "./components/pages/ProductPg";
 import Sorry from "./components/pages/Sorry";
 
+import $ from "jquery";
+
 
 export default function MainComponent() {
 
@@ -56,7 +58,8 @@ const WindowScrollTo00=()=>{
   const {pathname} = useLocation();
   
   useEffect(()=>{// 화면렌더링 구역에 스크롤상단이동 코드넣기
-    window.scrollTo(0,0); //스크롤 최상단이동!
+    // window.scrollTo(0,0); //스크롤 최상단이동!
+    $("html,body").animate({scrollTop: "0px"});
     console.log("라우터 경로:",pathname);
   },[pathname]);// 의존성을 라우터 경로변수로 설정한다.(의존성: 쟤가 바뀌면 나도 바뀜)
   

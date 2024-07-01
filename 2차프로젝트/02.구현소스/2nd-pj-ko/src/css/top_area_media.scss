@@ -1,5 +1,4 @@
 .box1 {
-  
   /* box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1 */
   mix-blend-mode: difference;
   filter: invert(1);
@@ -126,9 +125,11 @@
 .mbox {
   z-index: 9;
   top: 0;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   // height: 100vh;
-  height: -webkit-fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
-    height: fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
+  // height: -webkit-fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
+  // height: fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
   // height: 100%;
   width: 100%;
   // display: flex; //flex를 주게 되면 아이폰에서는 position:fixed가 정상 작동하지 않음.
@@ -144,7 +145,7 @@
   }
   .minbox {
     height: 100vh;
-    
+
     background-color: #fdfdfdc9;
     backdrop-filter: blur(2px);
     ////상위메뉴//////////////////////////
@@ -241,14 +242,15 @@
 
   // height: 8vh;
   // background-color: #fdfdfd9d;
-  .input-inbox {//단순 부모flex주고 중앙정렬 하려고 만듬
+  .input-inbox {
+    //단순 부모flex주고 중앙정렬 하려고 만듬
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    position: relative;//단순히 .sgum absolute 떄문에 부모자격주려고 relative줌
+    position: relative; //단순히 .sgum absolute 떄문에 부모자격주려고 relative줌
     input {
       border-radius: 0;
-      border: .5px solid;
+      border: 0.5px solid;
       width: min(350px, 70vw);
 
       height: 22px;
@@ -262,7 +264,6 @@
       font-size: 1.2rem;
       cursor: pointer;
       right: 7px;
-      
     }
   }
 }
