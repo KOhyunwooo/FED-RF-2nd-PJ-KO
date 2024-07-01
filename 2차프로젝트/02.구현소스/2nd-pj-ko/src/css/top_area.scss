@@ -5,7 +5,7 @@ body::after {
   /* 드래그 해서 파란블록 안생기게 하는 설정 */
   user-select: none;
   content: "";
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100vw;
