@@ -142,7 +142,8 @@
   }
   .minbox {
     height: 100vh;
-
+    height: -webkit-fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
+    height: fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
     background-color: #fdfdfdc9;
     backdrop-filter: blur(2px);
     ////상위메뉴//////////////////////////
