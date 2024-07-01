@@ -11,7 +11,14 @@
 //     min-height: calc(100vh - 58px - 210px);
 // }
 
-
+:root {
+    --vh: 100%;
+ }
+ 
+ .mbox {
+     height: 100vh;
+     height: var(--vh);
+ }
 
  
 html{
