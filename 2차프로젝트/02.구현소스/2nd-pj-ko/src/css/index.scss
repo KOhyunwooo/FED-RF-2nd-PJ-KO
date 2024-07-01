@@ -11,13 +11,13 @@
 //     min-height: calc(100vh - 58px - 210px);
 // }
 
-:root {
-    --vh: 100%;
- }
+// :root {
+//     --vh: 100%;
+//  }
  
- .mbox {
-    height: calc(var(--vh, 1vh) * 100);
- }
+//  .mbox {
+//     height: calc(var(--vh, 1vh) * 100);
+//  }
 
  
 html{
@@ -25,8 +25,17 @@ html{
     scroll-behavior: smooth;
 }
 
+
+#root{
+
+    height: 100vh;
+height: -webkit-fill-available;
+height: fill-available;
+}
 body{
     // background-color: red;
+
+    
 }
 /* 공사중 표시 */
 body *{

@@ -125,8 +125,9 @@
 .mbox {
   z-index: 9;
   top: 0;
+  
   min-height: 100vh;
-  min-height: -webkit-fill-available;
+  // min-height: -webkit-fill-available;
  
   // height: 100vh;
   // height: -webkit-fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
@@ -176,7 +177,7 @@
     }
     /////////////// 하위메뉴//////////////////////
     .smenu-box {
-      // overflow: hidden; 이게 필요한가?????
+      overflow: hidden;//이거 필요함, gnb 다른메뉴 열고 닫을때 다른메뉴들이 보임
 
       .smenu-wrap {
         display: flex;
