@@ -126,7 +126,9 @@
 .mbox {
   z-index: 9;
   top: 0;
-  height: 100vh;
+  // height: 100vh;
+  height: -webkit-fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
+    height: fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
   // height: 100%;
   width: 100%;
   // display: flex; //flex를 주게 되면 아이폰에서는 position:fixed가 정상 작동하지 않음.
@@ -142,8 +144,7 @@
   }
   .minbox {
     height: 100vh;
-    height: -webkit-fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
-    height: fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
+    
     background-color: #fdfdfdc9;
     backdrop-filter: blur(2px);
     ////상위메뉴//////////////////////////
