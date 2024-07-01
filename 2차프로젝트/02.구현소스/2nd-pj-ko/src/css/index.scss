@@ -27,10 +27,11 @@ html{
 
 
 #root{
-
-    height: 100vh;
-height: -webkit-fill-available;
-height: fill-available;
+// *** #root에 아래 설정 넣으면 productpg에서 아래로 터치무브 할떄 상하단이 검은색 네브바가 사라지지 않음
+// body나 html에 넣어도 비슷하게 검은색 네브바가 사라지지 않ㅇ을것으로 예상
+//     height: 100vh;
+//   height: -webkit-fill-available;
+//    height: fill-available;
 }
 body{
     // background-color: red;
