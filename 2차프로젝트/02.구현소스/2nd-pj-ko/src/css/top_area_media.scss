@@ -176,7 +176,7 @@
     }
     /////////////// 하위메뉴//////////////////////
     .smenu-box {
-      overflow: hidden;
+      // overflow: hidden; 이게 필요한가?????
 
       .smenu-wrap {
         display: flex;
