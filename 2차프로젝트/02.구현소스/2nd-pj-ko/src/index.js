@@ -3,7 +3,7 @@ import "../src/css/index.scss";
 //제이쿼리 불러오기
 import $ from "jquery";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Layout from "./components/layout/Layout";
@@ -34,9 +34,6 @@ export default function MainComponent() {
   window.addEventListener('resize', setVh);
 
 //8888888888888888888888888888888888888888888888888888888
-
-
-
 
   const reName = ["man", "woman", "kids", "home"];
   return (
@@ -84,7 +81,10 @@ const WindowScrollTo00 = () => {
     // window.scrollTo(0,0); //스크롤 최상단이동!
     $("html,body").animate({ scrollTop: "0px" });//스크롤 최상단이동! 제이쿼리방식, window.scrollTo(0,0); 제대로 안됨
     console.log("라우터 경로:", pathname);
+
   }, [pathname]); // 의존성을 라우터 경로변수로 설정한다.(의존성: 쟤가 바뀌면 나도 바뀜)
+
+  
 
   // 컴포넌트 리턴이 필요하나
   // 소스리턴이 아니므로 null을 쓴다.
