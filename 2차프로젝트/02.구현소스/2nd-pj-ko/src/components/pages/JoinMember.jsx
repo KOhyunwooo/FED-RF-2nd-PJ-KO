@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { initData } from "../func/mem_fn";
 
 // 회원가입 CSS 불러오기
-import "../../css/member.scss";
+import "../../css/join_member.scss";
 
 function Member() {
     // [ 회원가입 페이지 요구사항 ]

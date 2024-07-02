@@ -22,7 +22,7 @@ import JoinMember from "./components/pages/JoinMember";
 export default function MainComponent() {
 
 
-  //8888888888888888888888888888888888888888888888888888888
+  //88888888888888888888888888888888888888888888888888888888
   const setVh = () => {
     // --vh CSS 변수에 현재 뷰포트 높이를 설정하는 함수
     document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
