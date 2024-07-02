@@ -8,6 +8,8 @@ import { useLocation } from "react-router-dom";
 import Origins from "../modules/Origins";
 import { useState } from "react";
 
+import $ from "jquery";
+
 function ProductPg({ cat }) {
   const loc = useLocation();
   let data = loc.state.data;
@@ -31,6 +33,15 @@ function ProductPg({ cat }) {
       // bgTg.style.backgroundColor = "transparent"; //이렇게 해도 됨
     }
   };
+
+  useEffect(() => {
+    // 화면렌더링 구역에 스크롤상단이동 코드넣기
+    // window.scrollTo(0,0); //스크롤 최상단이동!
+    $("html,body").animate({ scrollTop: "0px" });
+  }, [data]); // 의존성을 라우터 경로변수로 설정한다.(의존성: 쟤가 바뀌면 나도 바뀜)
+
+  
+
 
   useEffect(() => {
     console.log("^^^^^useEffect실행");
