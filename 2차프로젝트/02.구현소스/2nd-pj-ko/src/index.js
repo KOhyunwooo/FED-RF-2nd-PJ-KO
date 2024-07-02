@@ -1,5 +1,7 @@
 //인덱스 index.scss 불러오기
 import "../src/css/index.scss";
+//제이쿼리 불러오기
+import $ from "jquery";
 
 import React, { useEffect, useRef } from "react";
 import ReactDOM from "react-dom/client";
@@ -14,8 +16,8 @@ import AboutZara from "./components/pages/Aboutzara";
 import SearchPg from "./components/pages/SearchPg";
 import ProductPg from "./components/pages/ProductPg";
 import Sorry from "./components/pages/Sorry";
+import JoinMember from "./components/pages/JoinMember";
 
-import $ from "jquery";
 
 export default function MainComponent() {
 
@@ -35,6 +37,7 @@ export default function MainComponent() {
           <Route path="home" element={<Home />} />
           <Route path="aboutzara" element={<AboutZara />} />
           <Route path="search" element={<SearchPg />} />
+          <Route path="joinmember" element={<JoinMember />} />
           <Route path="sorry" element={<Sorry />} />
 
           {reName.map((e, i) => (
