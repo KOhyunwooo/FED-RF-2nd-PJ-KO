@@ -11,17 +11,24 @@
 //     min-height: calc(100vh - 58px - 210px);
 // }
 
-// :root {
-//     --vh: 100%;
-//  }
+
+//8888888888888888888888888888888888888888888888888888888
+:root {
+    --vh: 100%;
+ }
  
-//  .mbox {
-//     height: calc(var(--vh, 1vh) * 100);
-//  }
+  .mbox {
+     height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  }
+//8888888888888888888888888888888888888888888888888888888
+
+
+
 
  
 html{
-//     overflow-x: hidden;
+
     scroll-behavior: smooth;
 }
 

@@ -7,6 +7,12 @@ import TopAreaMedia from "./TopAreaMedia";
 
 //전체 레이아웃 컴포넌트
 export default function Layout(){
+
+    
+
+
+
+
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1050)
     useEffect(()=>{
         const media = () => setIsMobile(window.innerWidth <= 1050);
