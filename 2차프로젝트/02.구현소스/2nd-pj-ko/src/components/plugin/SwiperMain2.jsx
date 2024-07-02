@@ -31,7 +31,7 @@ export default function SwiperMain() {
         <>
             {/* 가로방향 스와이프 설정///////////////////////////////////////////////////////////// */}
             <Swiper
-                className="mySwiper swiper-h"
+                className="mySwiper2 swiper-h"
                 mousewheel={false}
                 spaceBetween={0}
                 // pagination={{
