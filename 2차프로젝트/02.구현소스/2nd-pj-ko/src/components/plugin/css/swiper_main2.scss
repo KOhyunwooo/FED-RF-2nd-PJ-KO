@@ -1,12 +1,15 @@
 
 .cont{
  //  height: 100vh;
+//  overflow: hidden;
 }
 
 
 //이거 없으면 가로큐브 적용안됨.
 .swiper-cube{
-    height: calc(var(--vh) * 100) !important;
+    height: calc(var(--vh) * 100) ;
+// height: -webkit-fill-available;//여기 둘다 안먹힘
+// height: fill-available;//여기 둘다 안먹힘
     width: 100vw;
     // height: 100vh;
 }

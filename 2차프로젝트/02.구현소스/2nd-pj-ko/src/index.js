@@ -23,15 +23,12 @@ export default function MainComponent() {
 
 
   //88888888888888888888888888888888888888888888888888888888
-
-  const setVh = () => {
-    const vh = window.innerHeight * 0.01; 
-    // --vh CSS 변수에 현재 뷰포트 높이를 설정하는 함수
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  };
-  
-  window.addEventListener('load', setVh);
-  window.addEventListener('resize', setVh);
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', vh + 'px');
+  window.addEventListener('resize', function () {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', vh + 'px');
+  });
 
 //8888888888888888888888888888888888888888888888888888888
 

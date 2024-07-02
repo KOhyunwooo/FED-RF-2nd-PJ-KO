@@ -132,7 +132,7 @@
   // height: 100vh;
   // height: -webkit-fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
   // height: fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
-  // height: 100%;
+  height: calc(var(--vh) * 100) ;
   width: 100%;
   // display: flex; //flex를 주게 되면 아이폰에서는 position:fixed가 정상 작동하지 않음.
   // justify-content: space-evenly; //아니면 이게 문제일 수도??
@@ -146,6 +146,7 @@
 
   &.on {
     left: 0;
+    
   }
   // .minbox {
     // height: 100vh;
@@ -178,8 +179,9 @@
     /////////////// 하위메뉴//////////////////////
     .smenu-box {
       overflow: hidden;//이거 필요함, gnb 다른메뉴 열고 닫을때 다른메뉴들이 보임
-
+      height: 100%;
       .smenu-wrap {
+        height: 100%;
         display: flex;
         width: 400vw; /* 4개의 하위 메뉴를 수평으로 배치하기 위해 400vw */
         transition: transform 0.3s ease; /* 애니메이션 */
@@ -197,7 +199,8 @@
   .sm-box {
     position: relative;
     z-index: 10; //input박스 위로 올라오게 하기 위해
-    height: 70vh;
+    
+    height: 77%;
     overflow: auto;
     padding: 25px 25px 25px 28px;
     /* 스크롤바의 폭 너비 */
@@ -220,7 +223,8 @@
 .sm-box ol {
   list-style: none;
   padding: 0;
-  padding-bottom: 60px;
+  padding-bottom: 15%;
+  // padding-bottom: 30px;
   margin: 0;
 }
 .sm-box li {
@@ -235,8 +239,8 @@
 }
 
 .input-box {
-  bottom: 7vh;
-  position: relative;
+  bottom: 5%;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
