@@ -23,16 +23,15 @@ export default function MainComponent() {
 
 
   //88888888888888888888888888888888888888888888888888888888
+
   const setVh = () => {
+    const vh = window.innerHeight * 0.01; 
     // --vh CSS 변수에 현재 뷰포트 높이를 설정하는 함수
-    document.documentElement.style.setProperty('--vh', `${window.innerHeight}px`);
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
   };
   
-  // 브라우저 창 크기가 변경될 때마다 setVh 함수 호출
+  window.addEventListener('load', setVh);
   window.addEventListener('resize', setVh);
-  
-  // 페이지가 로드될 때 setVh 함수 호출하여 초기화
-  setVh();
 
 //8888888888888888888888888888888888888888888888888888888
 
