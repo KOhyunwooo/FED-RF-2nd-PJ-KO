@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Banner from "../modules/Banner";
-import Footer from "../modules/Footer";
+
 
 export default function Kids(){
   
@@ -10,8 +10,7 @@ export default function Kids(){
         <>
          {/* 메인 배너 영역 */}
          <Banner category="kidsData"/>
-        {/* 푸터에어리어*/}
-        <Footer/>
+        
         </>
     );
 

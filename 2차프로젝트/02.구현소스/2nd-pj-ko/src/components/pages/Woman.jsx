@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Banner from "../modules/Banner";
-import Footer from "../modules/Footer";
+
 
 export default function Woman(){
    
@@ -11,8 +11,7 @@ export default function Woman(){
               
         {/* 배너들어올것 */}
         <Banner category="womanData"/>
-        {/* 푸터모듈 들어올 것 */}
-        <Footer/>
+       
         </>
     );
 

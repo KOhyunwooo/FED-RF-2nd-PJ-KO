@@ -3,6 +3,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import MainArea from "./MainArea";
 import TopArea from "./TopArea";
 import TopAreaMedia from "./TopAreaMedia";
+import {Footer} from "./Footer";
 
 
 //전체 레이아웃 컴포넌트
@@ -26,7 +27,7 @@ export default function Layout(){
         {/* 메인영역 */}
         <MainArea/>
         {/* 하단영역? */}
-      
+       <Footer/>
         </>
     );
     

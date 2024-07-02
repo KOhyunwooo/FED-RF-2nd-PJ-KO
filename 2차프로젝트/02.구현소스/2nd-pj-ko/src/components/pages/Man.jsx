@@ -2,15 +2,14 @@
 
 import { useEffect } from "react";
 import Banner from "../modules/Banner";
-import Footer from "../modules/Footer";
+
 
 export default function Man() {
 
   return (
     <>
       <Banner category="manData" />
-      {/* 푸터에어리어 들어올 것 */}
-      <Footer />
+      
     </>
   );
 }

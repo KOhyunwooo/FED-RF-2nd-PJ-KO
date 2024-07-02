@@ -1,10 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 //box2 데이터 불러오기
 import { footerbox2data } from "../data/footer_area_data";
 // css불러오기
 import "../../css/footer.scss";
 
-const Footer = () => {
+export const Footer = memo(() => {
+  console.log("나는 하단이야~~~~~")
   return (
     <>
       <div className="footer-area">
@@ -52,6 +53,5 @@ const Footer = () => {
       </div>
     </>
   );
-};
+});
 
-export default Footer;

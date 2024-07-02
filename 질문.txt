@@ -4,20 +4,20 @@
     그래서 outline을 주면 outline이 이상하게 들어감.
 
 
-ProductPg.jsx 핸드폰에서 작동안됨...
 
 
 아이폰- 사파리에서는 하단이 짤려서 검색창이 안보임...
 
 
-window.scrollTo(0,0)이 미디어쿼리 1050시에 안먹힘...
+window.scrollTo(0,0)이 하위메뉴끼리 이동시에 적용되게 하려면??
+
+
+main일때만 <Footer/>가 안나오게 하려면???
 
 
 
 
-
-
-
+ProductPg.jsx 핸드폰에서 작동안됨...// 자체 해결
 
 
 

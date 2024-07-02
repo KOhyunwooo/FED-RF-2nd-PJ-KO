@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Footer from "../modules/Footer";
+
 
 //프로덕트리스트 모듈 불러오기
 import ProductList from "../modules/ProductList";
@@ -64,7 +64,7 @@ function ProductPg({ cat }) {
       <div style={{ height: "140px" }}></div>
       <ProductList dbName={data} />
       {cat === "man" && <Origins />}
-      <Footer />
+  
     </>
   );
 }

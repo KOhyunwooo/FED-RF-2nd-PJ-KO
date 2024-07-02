@@ -3,7 +3,7 @@ import SearchModule from '../modules/SearchModule';
 
 //라우터 전달변수값을 받기위해 useLocation을 불러오기
 import { useLocation } from 'react-router-dom';
-import Footer from '../modules/Footer';
+
 import Origins from '../modules/Origins';
 
 
@@ -18,7 +18,7 @@ function SearchPg(props) {
         <div>
             
             <SearchModule kword={keyword}/>
-            <Footer/>
+         
             
         </div>
     );
