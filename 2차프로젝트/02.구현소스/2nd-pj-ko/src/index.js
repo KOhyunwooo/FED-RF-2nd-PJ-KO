@@ -17,6 +17,7 @@ import SearchPg from "./components/pages/SearchPg";
 import ProductPg from "./components/pages/ProductPg";
 import Sorry from "./components/pages/Sorry";
 import JoinMember from "./components/pages/JoinMember";
+import Login from "./components/pages/Login";
 
 
 export default function MainComponent() {
@@ -51,6 +52,7 @@ export default function MainComponent() {
           <Route path="aboutzara" element={<AboutZara />} />
           <Route path="search" element={<SearchPg />} />
           <Route path="joinmember" element={<JoinMember />} />
+          <Route path="login" element={<Login />} />
           <Route path="sorry" element={<Sorry />} />
 
           {reName.map((e, i) => (

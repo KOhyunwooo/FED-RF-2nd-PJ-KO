@@ -2,252 +2,257 @@
 
 // 페이지 커버 만들어서 클릭 안되게 만들기/////////////
 body::after {
-  /* 드래그 해서 파란블록 안생기게 하는 설정 */
-  user-select: none;
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 999999;
-  // background-color: rgba(255, 0, 0, 0.323);
-  animation: cover 0.001s 1.8s forwards;
+    /* 드래그 해서 파란블록 안생기게 하는 설정 */
+    user-select: none;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999999;
+    // background-color: rgba(255, 0, 0, 0.323);
+    animation: cover 0.001s 1.8s forwards;
 }
 @keyframes cover {
-  to {
-    height: 0;
-  }
+    to {
+        height: 0;
+    }
 }
 ////////////////////////////////////////////////////
 
 .top-area {
-  /* 드래그 해서 파란블록 안생기게 하는 설정 */
-  user-select: none;
-  .gnb {
-    //gnb메뉴 글자 반전되게하기
-    filter: invert(1); //최대값 1임
-    mix-blend-mode: difference;
-    top: 0;
-    position: fixed;
-    z-index: 999;
-    padding: 20px 0 10px 8vw;
-    width: 100%;
-    /* gnb::before가상요소 */
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 0;
-      z-index: -1;
-      /* gnb::before 배경색+배경블러 */
-      background-color: #fdfdfd60;
-      backdrop-filter: blur(6px);
-      transition: 0.1s ease-out; /* 자라 로고에 아웃라인 생김!!!!!!!!!!!!!!!! */
-    }
-    /* gnb오버시 ::before 설정 */
-    &:hover::before {
-      height: 80px; //탑에이리어 높이값이랑 맞추기
-    }
-    /* gnb.on시 ::before 설정: 상위메뉴 오버시 슬라이드 되는 흰색+블러배경*/
-    &.on::before {
-      height: 370px; /* gnb마우스오버시li 높이값(50px)+gnb 패딩탑값(20px) 제외하면 390px */
-    }
-
-    /* gnb오버시 */
-    &:hover {
-      filter: none; //최대값 1임
-      mix-blend-mode: normal;
-    }
-
-    /* gnb메뉴들 */
-    ul {
-      font-size: 1.3rem;
-      font-family: "HelveticaRoman";
-
-      display: flex;
-      /* 로고랑 높이값 맞추기 */
-      align-items: center;
-      /* gnb 자라 로고박스 */
-      li:first-child {
-        width: auto;
-        height: auto;
-        //gnb 자라 로고 애니매이션////////////////////
-        .lgbx {
-          position: relative;
-          height: 15vw;
-          animation: intrologo 1s 0.8s ease-out forwards;
-          display: block;
-          @keyframes intrologo {
-            to {
-              height: 50px;
-            }
-          }
-          img {
-            position: relative;
-            z-index: 9;
-
-            height: 100%;
-          }
+    /* 드래그 해서 파란블록 안생기게 하는 설정 */
+    user-select: none;
+    .gnb {
+        //gnb메뉴 글자 반전되게하기
+        filter: invert(1); //최대값 1임
+        mix-blend-mode: difference;
+        top: 0;
+        position: fixed;
+        z-index: 999;
+        padding: 20px 0 10px 8vw;
+        width: 100%;
+        /* gnb::before가상요소 */
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            z-index: -1;
+            /* gnb::before 배경색+배경블러 */
+            background-color: #fdfdfd60;
+            backdrop-filter: blur(6px);
+            transition: 0.1s ease-out; /* 자라 로고에 아웃라인 생김!!!!!!!!!!!!!!!! */
         }
-        ////////////////////////////////////////////
-      }
-
-      > li {
-        height: 50px;
-        display: flex;
-        width: 10vw;
-        justify-content: center;
-        align-items: center;
-
-        /* 마지막 li 검색창 부분 */
-        &:last-child {
-          margin-right: 260px;
-          margin-left: auto;
-          animation: introsearch 0.5s 1.5s ease-out forwards;
-          opacity: 0;
-          @keyframes introsearch {
-            to {
-              opacity: 1;
-            }
-          }
+        /* gnb오버시 ::before 설정 */
+        &:hover::before {
+            height: 80px; //탑에이리어 높이값이랑 맞추기
         }
-        a {
-          text-decoration: none;
-          color: #010101;
+        /* gnb.on시 ::before 설정: 상위메뉴 오버시 슬라이드 되는 흰색+블러배경*/
+        &.on::before {
+            height: 370px; /* gnb마우스오버시li 높이값(50px)+gnb 패딩탑값(20px) 제외하면 390px */
         }
 
-        .smenu {
-          height: 0;
-          overflow: hidden;
-          opacity: 0;
-          transition: 0.2s ease-out;
-          top: 70px; /* gnb 마우스오버시li높이값(50px)+top-area패딩탑 값(20px) */
-          position: absolute;
-          left: 0;
+        /* gnb오버시 */
+        &:hover {
+            filter: none; //최대값 1임
+            mix-blend-mode: normal;
+        }
 
-          /* gnb 하위메뉴 */
-          ol {
-            //gnb메뉴 글자 반전되게하기
-            font-family: "HelveticaLt";
-            font-size: 1.2rem;
-            // background: linear-gradient(
-            //   to top,
-            //   #fdfdfd00 10%,
-            //   #fdfdfd4d
-            // );
+        /* gnb메뉴들 */
+        ul {
+            font-size: 1.3rem;
+            font-family: "HelveticaRoman";
 
-            width: 100vw - 8vw;
-            display: inline-flex;
-            // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;
-            flex-wrap: wrap;
-            // 진행방향을 세로방향으로 바꿈: flex-direction: column;
-            flex-direction: column;
+            display: flex;
+            /* 로고랑 높이값 맞추기 */
+            align-items: center;
+            /* gnb 자라 로고박스 */
+            li:first-child {
+                width: auto;
+                height: auto;
+                //gnb 자라 로고 애니매이션////////////////////
+                .lgbx {
+                    position: relative;
+                    height: 15vw;
+                    animation: intrologo 1s 0.8s ease-out forwards;
+                    display: block;
+                    @keyframes intrologo {
+                        to {
+                            height: 50px;
+                        }
+                    }
+                    img {
+                        position: relative;
+                        z-index: 9;
 
-            align-content: flex-start;
-            /* 하위메뉴 높이값 */
-            height: 250px;
-            padding: 20px 2vw 3vw 10vw;
-            gap: 0.8vw 5vw;
-            position: relative;
-            li {
-              text-align: left;
-            }
-            /* 하위메뉴 오른쪽 이미지 */
-            li:last-child {
-              position: absolute;
-              right: 15vw;
-              img {
-                width: 250px; //ol 높이랑 맞추기
-              }
-              .smenu-right-last-pbox{
-                position: absolute;
-                  bottom: 10px;
-                  left: 10px;
-                width: 80px;
-    height: 15px;
-                background-color: rgba(255, 255, 255, 0.441);
-                
-                p {
-                  position: absolute;
-                  left: 2px;
-                  
-                 
-                  
+                        height: 100%;
+                    }
                 }
-              }
+                ////////////////////////////////////////////
             }
-          }
-        }
-        /* .gnb ul li에 오버시 .smenu 보이기 */
-        &:hover .smenu {
-          height: 300px; // gnb.on시 ::before 높이랑 맞춰야함
-          opacity: 1;
-        }
-      }
-    }
-  }
 
-  /* toparea-상위메뉴 li직계하위(마지막li제외) a요소 오버시 색상 .6만큼 투명하게 */
-  & > .gnb > ul > li ~ li:not(:last-child) > a {
-    &:hover {
-      opacity: 0.45;
-      font-weight: bold;
+            > li {
+                height: 50px;
+                display: flex;
+                width: 10vw;
+                justify-content: center;
+                align-items: center;
+
+                /* 마지막 li 검색창 부분 */
+                &:last-child {
+                    margin-right: 260px;
+                    margin-left: auto;
+                    animation: introsearch 0.5s 1.5s ease-out forwards;
+                    opacity: 0;
+                    @keyframes introsearch {
+                        to {
+                            opacity: 1;
+                        }
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: #010101;
+                }
+
+                .smenu {
+                    height: 0;
+                    overflow: hidden;
+                    opacity: 0;
+                    transition: 0.2s ease-out;
+                    top: 70px; /* gnb 마우스오버시li높이값(50px)+top-area패딩탑 값(20px) */
+                    position: absolute;
+                    left: 0;
+
+                    /* gnb 하위메뉴 */
+                    ol {
+                        //gnb메뉴 글자 반전되게하기
+                        font-family: "HelveticaLt";
+                        font-size: 1.2rem;
+                        // background: linear-gradient(
+                        //   to top,
+                        //   #fdfdfd00 10%,
+                        //   #fdfdfd4d
+                        // );
+
+                        width: 100vw - 8vw;
+                        display: inline-flex;
+                        // 진행방향으로 박스크기의 한계에 닿으면 자동으로 아랫줄 혹은 옆줄로 줄바꿈되는 설정: flex-wrap: wrap;
+                        flex-wrap: wrap;
+                        // 진행방향을 세로방향으로 바꿈: flex-direction: column;
+                        flex-direction: column;
+
+                        align-content: flex-start;
+                        /* 하위메뉴 높이값 */
+                        height: 250px;
+                        padding: 20px 2vw 3vw 10vw;
+                        gap: 0.8vw 5vw;
+                        position: relative;
+                        li {
+                            text-align: left;
+                        }
+                        /* 하위메뉴 오른쪽 이미지 */
+                        li:last-child {
+                            position: absolute;
+                            right: 15vw;
+                            img {
+                                width: 250px; //ol 높이랑 맞추기
+                            }
+                            .smenu-right-last-pbox {
+                                position: absolute;
+                                bottom: 10px;
+                                left: 10px;
+                                width: 80px;
+                                height: 15px;
+                                background-color: rgba(255, 255, 255, 0.441);
+
+                                p {
+                                    position: absolute;
+                                    left: 2px;
+                                }
+                            }
+                        }
+                    }
+                }
+                /* .gnb ul li에 오버시 .smenu 보이기 */
+                &:hover .smenu {
+                    height: 300px; // gnb.on시 ::before 높이랑 맞춰야함
+                    opacity: 1;
+                }
+            }
+        }
     }
-  }
-  /* toparea-하위메뉴 smenu 밑에 li직계하위(마지막li제외) a요소 오버시 색상 .6만큼 투명하게 */
-  .smenu li:not(:last-child) > a {
-    &:hover {
-      opacity: 0.45;
-      font-weight: bold;
+
+    /* toparea-상위메뉴 li직계하위(마지막li제외) a요소 오버시 색상 .6만큼 투명하게 */
+    & > .gnb > ul > li ~ li:not(:last-child) > a {
+        &:hover {
+            opacity: 0.45;
+            font-weight: bold;
+        }
     }
-  }
+    /* toparea-하위메뉴 smenu 밑에 li직계하위(마지막li제외) a요소 오버시 색상 .6만큼 투명하게 */
+    .smenu li:not(:last-child) > a {
+        &:hover {
+            opacity: 0.45;
+            font-weight: bold;
+        }
+    }
 }
 
 /************************************************* gnb 우측 서치메뉴 *************************************************/
 .searchGnb {
-  display: flex;
-  flex-wrap: nowrap; //플렉스들이 줄바꿈 안되게~
-  align-items: center; // 세로줄맞춤
-  /* 오른쪽 글자태그 */
-  span {
-    font-size: 1.2rem;
-    // font-weight: bold;
-  }
-  .gum {
-    cursor: pointer;
-  }
-  /* 서치버튼 폰트어썸아이콘 버튼 */
-  // .schbtnGnb{
-
-  // }
-  input {
-    border-radius: 0;
-    border:1px solid;
-    &:focus {
-      outline: none;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap; //플렉스들이 줄바꿈 안되게~
+    align-items: center; // 세로줄맞춤
+    gap: 1vw;
+    .gum-box {
+        position: relative;
+        .gum {
+            position: absolute;
+            right: 0px;
+            cursor: pointer;
+        }
     }
-  }
+
+    /* 오른쪽 글자태그 */
+    span {
+        font-size: 1.2rem;
+        // font-weight: bold;
+    }
+    /* 서치버튼 폰트어썸아이콘 버튼 */
+    // .schbtnGnb{
+
+    // }
+    input {
+        border-radius: 0;
+        border: 1px solid;
+        &:focus {
+            outline: none;
+        }
+    }
 }
 
 /********************************************************** 미디어쿼리 **********************************************************/
 
 /* 1100이하 일떄 */
 @media screen and (max-width: 1280px) {
-  /* gnb 메뉴들 */
-  .top-area .gnb {
-    padding: 20px 0 10px 3vw;
-  }
-  /* 우측검색창 마지막li부분 */
-  .top-area .gnb ul > li:last-child {
-    margin-right: 190px;
-  }
+    /* gnb 메뉴들 */
+    .top-area .gnb {
+        padding: 20px 0 10px 3vw;
+    }
+    /* 우측검색창 마지막li부분 */
+    .top-area .gnb ul > li:last-child {
+        margin-right: 190px;
+    }
 }
 /* 1050이하 일떄 */
 @media screen and (max-width: 1050px) {
-  .top-area {
-    display: none;
-  }
+    .top-area {
+        display: none;
+    }
 }

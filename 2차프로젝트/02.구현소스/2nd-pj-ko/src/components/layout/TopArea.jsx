@@ -13,9 +13,15 @@ import { Link, useNavigate } from "react-router-dom";
 /* gnb데이터 불러오기 */
 import { gnbData } from "../data/gnb_data";
 import Logo from "../modules/Logo";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { dCon } from "../func/dCon";
+
+
 
 export default function TopArea() {
+    // 컨텍스트 사용하기
+    const myCon=useContext(dCon);
+
     /* 우측상단 검색창: 이동함수 만들기 **************************************************/
     const goNav = useNavigate(); //useNavigate를 사용하는 이동함수:goNav
 
@@ -149,51 +155,67 @@ export default function TopArea() {
                                     className="schbtnGnb"
                                     title="Open search"
                                 /> */}
-                                <input
-                                    type="text"
-                                    name="schinGnb" /* name은 백엔드 개발자를 위한 약속, 보통id랑 같은이름으로 함 */
-                                    id="schinGnb"
-                                    placeholder=""
-                                    onKeyUp={enterKey}
-                                />
-
-                                <span
-                                    className="gum"
-                                    style={{
-                                        whiteSpace: "nowrap",
-                                        marginLeft: "3px",
-                                    }}
-                                    onClick={(e) => {
-                                        let inp =
-                                            e.target.previousElementSibling;
-                                        if (inp.value.trim() != "") {
-                                            goSearch(inp.value);
-                                            inp.value = "";
-                                        } else {
-                                            // alert("검색어를 넣으세요!");
-                                            // inp.focus();
-                                            goSearch("");
-                                        }
-                                    }}
-                                >
-                                    검색
+                                <div className="gum-box">
+                                    <input
+                                        type="text"
+                                        name="schinGnb" /* name은 백엔드 개발자를 위한 약속, 보통id랑 같은이름으로 함 */
+                                        id="schinGnb"
+                                        placeholder=""
+                                        onKeyUp={enterKey}
+                                    />
+                                    <span
+                                        className="gum"
+                                    
+                                        onClick={(e) => {
+                                            let inp =
+                                                e.target.previousElementSibling;
+                                            if (inp.value.trim() != "") {
+                                                goSearch(inp.value);
+                                                inp.value = "";
+                                            } else {
+                                                // alert("검색어를 넣으세요!");
+                                                // inp.focus();
+                                                goSearch("");
+                                            }
+                                        }}
+                                    >
+                                        검색
+                                    </span>
+                                </div>
+                                <span>
+                                {
+              /* 회원가입, 로그인 버튼은 로그인 상태가 null일때 나옴 */
+              myCon.loginSts === null && (
+                <>
+                  <li>
+                    <Link to="/login">로그인</Link>
+                  </li>
+                
+                </>
+              )
+            }
+             {
+              /* 로그인 상태이면 로그아웃버튼 보임 */
+              myCon.loginSts !== null && (
+                <>
+                  <li>
+                    <a
+                      href="#"
+                      onClick={(e) => {
+                        // 기본이동 막기
+                        e.preventDefault();
+                        // 로그아웃처리함수 호출
+                        myCon.logoutFn();
+                      }}
+                    >
+                      로그아웃
+                    </a>
+                  </li>
+                </>
+              )
+            }
                                 </span>
-                                <span
-                                    style={{
-                                        whiteSpace: "nowrap",
-                                        marginLeft: "10px",
-                                    }}
-                                >
-                                    <Link to="/joinmember">로그인</Link>
-                                </span>
-                                <span
-                                    style={{
-                                        whiteSpace: "nowrap",
-                                        marginLeft: "10px",
-                                    }}
-                                >
-                                    바스켓백(0)
-                                </span>
+                                <span>바스켓백(0)</span>
                             </div>
                         </li>
                     </ul>
