@@ -23,8 +23,11 @@ export default function MainComponent() {
 
 
   //88888888888888888888888888888888888888888888888888888888
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', vh + 'px');
+  //toparea_media.scss -> .mbox {height: calc(var(--vh, 1dvh) * 100) ;} 하였음.
+  //초기 vh설정
+  let vh = window.innerHeight * 0.01;//window.innerHeight * 0.01을 계산하여 뷰포트 높이의 1%를 구함
+  document.documentElement.style.setProperty('--vh', vh + 'px');//document.documentElement.style.setProperty('--vh', vh + 'px');는 CSS 변수 --vh를 뷰포트 높이의 1%로 설정 
+  //리사이즈 이벤트: 뷰포트 높이에 기반한 스타일을 적용
   window.addEventListener('resize', function () {
       let vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', vh + 'px');

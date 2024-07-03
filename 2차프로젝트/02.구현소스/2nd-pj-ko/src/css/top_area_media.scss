@@ -132,7 +132,7 @@
   // height: 100vh;
   // height: -webkit-fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
   // height: fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
-  height: calc(var(--vh) * 100) ;
+  height: calc(var(--vh, 1dvh) * 100) ;
   width: 100%;
   // display: flex; //flex를 주게 되면 아이폰에서는 position:fixed가 정상 작동하지 않음.
   // justify-content: space-evenly; //아니면 이게 문제일 수도??
