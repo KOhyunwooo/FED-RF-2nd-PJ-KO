@@ -153,6 +153,7 @@
 
     ////상위메뉴//////////////////////////
     .gnb-list {
+      height: 6dvh;
       display: flex;
       padding-bottom: 3px;
       list-style: none;
@@ -196,11 +197,19 @@
 
   border-top: 1px solid #000000; /* 상단 경계선 */
   height: 100%;
+    
+    @supports (height: 100dvh) {
+        height: 100dvh;
+    }
   .sm-box {
     position: relative;
     z-index: 10; //input박스 위로 올라오게 하기 위해
     
-    height: 77%;
+    // height: calc(var(--vh, 1dvh) * 71) ;
+    
+    @supports (height: 75dvh) {
+        height: 75dvh;
+    }
     overflow: auto;
     padding: 25px 25px 25px 28px;
     /* 스크롤바의 폭 너비 */
@@ -222,9 +231,11 @@
 
 .sm-box ol {
   list-style: none;
-  padding: 0;
-  padding-bottom: 15%;
-  // padding-bottom: 30px;
+  padding-bottom: 7%;
+  @supports (padding-bottom: 7dvh) {
+    padding-bottom: 7dvh;
+}
+  
   margin: 0;
 }
 .sm-box li {

@@ -33,6 +33,8 @@ li {
 
 /* 전체 배경색 */
 body {
+  /* 탑에어리어 높이값 만큼 밀어주기 */
+  padding-top: 70px;
   background-color: #fdfdfd;
 
   // padding-top: constant(safe-area-inset-top) !important; /* iOS 11.2+ */

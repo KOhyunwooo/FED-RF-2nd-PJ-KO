@@ -211,10 +211,12 @@ body::after {
     align-items: center; // 세로줄맞춤
     gap: 1vw;
     .gum-box {
+        display: flex;
+        align-items: center;
         position: relative;
         .gum {
             position: absolute;
-            right: 0px;
+            right: 5px;
             cursor: pointer;
         }
     }

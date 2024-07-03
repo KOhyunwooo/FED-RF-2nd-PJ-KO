@@ -31,9 +31,9 @@ function Login(props) {
     const [pwdError, setPwdError] = useState(false);
 
     // [ 아이디관련 메시지 프리셋 ] ////
-    const msgId = ["필수 입력", "존재하지않는 아이디입니다."];
+    const msgId = ["필수 입력란입니다.", "유효한 이메일 주소를 입력하십시오."];
     // [ 비밀번호관련 메시지 프리셋 ] ////
-    const msgPwd = ["필수입력", "비밀번호가 일치하지 않습니다."];
+    const msgPwd = ["필수 입력란입니다.", "비밀번호가 일치하지 않습니다."];
 
     // [3] 에러메시지 상태변수 : 초기값 msgId[0]
     // -> 기본 메시지가 출력됨
@@ -201,15 +201,18 @@ function Login(props) {
                 <form method="post" action="process.php">
                     <ul>
                         <li>
-                            <label>ID : </label>
+                           {/* 이메일 입력 */}
                             <input
+
                                 id="user-id"
+                                className="loginput"
                                 type="text"
                                 maxLength="20"
-                                placeholder="Please enter your ID"
+                                placeholder=" "
                                 value={userId}
                                 onChange={changeUserId}
                             />
+                            <label for="user-id"> 이메일</label>
                             {
                                 //   에러일 경우 메시지 출력
                                 // 조건문 && 출력요소
@@ -230,14 +233,16 @@ function Login(props) {
                             }
                         </li>
                         <li>
-                            <label>Password : </label>
+                           {/* 비밀번호 */}
                             <input
                                 type="password"
+                                className="loginput"
                                 maxLength="20"
-                                placeholder="Please enter your Password"
+                                placeholder=" "
                                 value={pwd}
                                 onChange={changePwd}
                             />
+                            <label for="user-id"> 비밀번호</label>
                             {
                                 // 에러일 경우 메시지 출력
                                 // 조건문 && 출력요소
