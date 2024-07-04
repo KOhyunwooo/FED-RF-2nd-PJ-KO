@@ -231,12 +231,11 @@
 
 .sm-box ol {
   list-style: none;
-  padding-bottom: 7%;
-  @supports (padding-bottom: 7dvh) {
-    padding-bottom: 7dvh;
-}
+  margin-bottom: 7%;
+  @supports (margin-bottom: 7dvh) {
+    margin-bottom: 7dvh;
   
-  margin: 0;
+  }
 }
 .sm-box li {
   padding: 10px 20px;
