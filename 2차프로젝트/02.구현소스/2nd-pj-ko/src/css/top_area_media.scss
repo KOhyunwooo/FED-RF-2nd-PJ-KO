@@ -1,346 +1,352 @@
 .box1 {
-  /* box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1 */
-  mix-blend-mode: difference;
-  filter: invert(1);
+    /* box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1 */
+    mix-blend-mode: difference;
+    filter: invert(1);
 
-  box-sizing: border-box;
-  position: fixed;
-  padding: 20px 30px 0 30px;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100vw;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  .imgbox {
-    position: relative;
-    width: 85vw;
-    height: auto;
-    animation: intrologo2 0.8s 0.6s ease-out forwards;
-    display: block;
-    @keyframes intrologo2 {
-      to {
-        width: min(30vw, 180px);
-      }
-    }
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .loginbox {
-    font-size: 12px;
-    position: absolute;
-    right: -10px;
-    bottom: 0;
-    opacity: 0;
-    animation: introloginbag 0.5s 1.3s ease-out forwards;
-    @keyframes introloginbag {
-      to {
-        right: 30px;
-        bottom: 0;
-        opacity: 1;
-      }
-    }
-
-    > a {
-      text-decoration: none;
-      color: #000;
-    }
-  }
-
-  /* 햄버거버튼 ************************************************************8888*/
-  .ham {
-    transform: translateY(0%);
-
-    width: 33px;
-    height: 25px;
-    /* outline: 1px solid red; */
-    cursor: pointer;
-    /* 손가락모양 */
+    box-sizing: border-box;
+    position: fixed;
+    padding: 20px 30px 0 30px;
     z-index: 10;
-  }
-
-  /* 햄버거 막대 span공통 */
-  .ham span {
-    position: absolute;
-    width: 100%;
-    height: 1.5px;
-    background-color: #000000;
-    // box-shadow: 0 0 4px #777; /* 박스그림자 */
-    /* 트랜지션 */
-    transition: all 0.2s ease-out;
-  }
-
-  /* 햄버거 막대 개별위치이동 */
-  /* 1번막대 */
-  .ham span:nth-child(1) {
+    left: 0;
     top: 0;
-    transform: rotate(0deg);
-  }
+    width: 100vw;
 
-  /* 2번막대 */
-  .ham span:nth-child(2) {
-    top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
-    /* 트랜지션 때문에 초기값필요!(기본값이 auto라서!) */
-    transform: rotate(0deg);
-  }
+    .imgbox {
+        position: relative;
+        width: 85vw;
+        height: auto;
+        animation: intrologo2 0.8s 0.6s ease-out forwards;
+        display: block;
+        @keyframes intrologo2 {
+            to {
+                width: min(30vw, 180px);
+            }
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .loginbox {
+        font-size: 12px;
+        position: absolute;
+        right: -10px;
+        bottom: 0;
+        opacity: 0;
+        animation: introloginbag 0.5s 1.3s ease-out forwards;
+        @keyframes introloginbag {
+            to {
+                right: 30px;
+                bottom: 0;
+                opacity: 1;
+            }
+        }
 
-  /* 3번막대 */
-  .ham span:nth-child(3) {
-    top: 24px;
-    transform: rotate(0deg);
-  }
+        > a {
+            text-decoration: none;
+            color: #000;
+        }
+    }
 
-  /* .ham에 class="on"을 주면 span막대 변경하기 */
+    /* 햄버거버튼 ************************************************************8888*/
+    .ham {
+        transform: translateY(0%);
 
-  /* 1번막대 : 중앙이동+시계방향45도회전 */
-  .ham.on span:nth-child(1) {
-    top: 10px;
-    transform: rotate(45deg);
-    box-shadow: none;
-  }
+        width: 33px;
+        height: 25px;
+        /* outline: 1px solid red; */
+        cursor: pointer;
+        /* 손가락모양 */
+        z-index: 10;
+    }
 
-  /* 2번막대 : left위치 중앙이동+width는0 */
-  .ham.on span:nth-child(2) {
-    width: 0%;
-    opacity: 0;
-  }
+    /* 햄버거 막대 span공통 */
+    .ham span {
+        position: absolute;
+        width: 100%;
+        height: 1.5px;
+        background-color: #000000;
+        // box-shadow: 0 0 4px #777; /* 박스그림자 */
+        /* 트랜지션 */
+        transition: all 0.2s ease-out;
+    }
 
-  /* 3번막대 : 중앙이동+반시계방향45도회전 */
-  .ham.on span:nth-child(3) {
-    top: 10px;
-    transform: rotate(-45deg);
-    box-shadow: none;
-  }
-  /* ********************************************************************* */
+    /* 햄버거 막대 개별위치이동 */
+    /* 1번막대 */
+    .ham span:nth-child(1) {
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    /* 2번막대 */
+    .ham span:nth-child(2) {
+        top: 12px;
+
+        /* 트랜지션 때문에 초기값필요!(기본값이 auto라서!) */
+        transform: rotate(0deg);
+    }
+
+    /* 3번막대 */
+    .ham span:nth-child(3) {
+        top: 24px;
+        transform: rotate(0deg);
+    }
+
+    /* .ham에 class="on"을 주면 span막대 변경하기 */
+
+    /* 1번막대 : 중앙이동+시계방향45도회전 */
+    .ham.on span:nth-child(1) {
+        top: 10px;
+        transform: rotate(45deg);
+        box-shadow: none;
+    }
+
+    /* 2번막대 : left위치 중앙이동+width는0 */
+    .ham.on span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+    }
+
+    /* 3번막대 : 중앙이동+반시계방향45도회전 */
+    .ham.on span:nth-child(3) {
+        top: 10px;
+        transform: rotate(-45deg);
+        box-shadow: none;
+    }
+    /* ********************************************************************* */
 } /* box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1box1 */
 
 /* box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2box2 */
 
 .mbox {
-  z-index: 9;
-  top: 0;
-  // bottom: 0;
-  // min-height: 100vh;
-  // min-height: -webkit-fill-available;
- 
-  // height: 100vh;
-  // height: -webkit-fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
-  // height: fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
-  height: calc(var(--vh, 1dvh) * 200) ;
-  width: 100%;
-  // display: flex; //flex를 주게 되면 아이폰에서는 position:fixed가 정상 작동하지 않음.
-  // justify-content: space-evenly; //아니면 이게 문제일 수도??
-  font-size: 2vw;
-  transition: 0.4s ease-in-out;
+    z-index: 9;
+    top: 0;
+    // bottom: 0;
+    // min-height: 100vh;
+    // min-height: -webkit-fill-available;
 
-  position: fixed;
-  left: 100vw;
-  background-color: #fdfdfdc9;
-  backdrop-filter: blur(2px);
+    // height: 100vh;
+    // height: -webkit-fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
+    // height: fill-available;/////2024-07-01 아이폰에서 gnb메뉴 상하단 짤리는거 떄문에 추가해봄
+    height: calc(var(--vh, 1dvh) * 200);
+    width: 100%;
+    // display: flex; //flex를 주게 되면 아이폰에서는 position:fixed가 정상 작동하지 않음.
+    // justify-content: space-evenly; //아니면 이게 문제일 수도??
+    font-size: 2vw;
+    transition: 0.4s ease-in-out;
 
-  &.on {
-    left: 0;
-    
-  }
-  // .minbox {
+    position: fixed;
+    left: 100vw;
+    background-color: #fdfdfdc9;
+    backdrop-filter: blur(2px);
+
+    &.on {
+        left: 0;
+    }
+    // .minbox {
     // height: 100vh;
 
     ////상위메뉴//////////////////////////
     .gnb-list {
-      height: 6dvh;
-      display: flex;
-      padding-bottom: 3px;
-      list-style: none;
-      padding-top: 100px;
-      width: 100vw;
-      justify-content: center;
-      align-items: center;
+        height: 6dvh;
+        display: flex;
+        padding-bottom: 3px;
+        list-style: none;
+        padding-top: 100px;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
 
-      .gnb-button {
-        color: #010101;
-        background: none;
-        border: none;
-        font-size: 16px;
-        cursor: pointer;
-        padding: 10px 10px;
-        font-family: "HelveticaLt";
-      }
+        .gnb-button {
+            color: #010101;
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 10px;
+            font-family: "HelveticaLt";
+        }
 
-      .gnb-button.on {
-        font-family: "HelveticaBd";
-        // font-weight: bold;
-      }
+        .gnb-button.on {
+            font-family: "HelveticaBd";
+            // font-weight: bold;
+        }
     }
     /////////////// 하위메뉴//////////////////////
     .smenu-box {
-      overflow: hidden;//이거 필요함, gnb 다른메뉴 열고 닫을때 다른메뉴들이 보임
-      height: 100%;
-      .smenu-wrap {
-        height: 100%;
-        display: flex;
-        width: 400vw; /* 4개의 하위 메뉴를 수평으로 배치하기 위해 400vw */
-        transition: transform 0.3s ease; /* 애니메이션 */
-      }
+        overflow: hidden; //이거 필요함, gnb 다른메뉴 열고 닫을때 다른메뉴들이 보임
+        height: 100vh;
+        @supports (height: 100dvh) {
+            height: 100dvh;
+        }
+        .smenu-wrap {
+            height: 100vh;
+            @supports (height: 100dvh) {
+                height: 100dvh;
+            }
+            display: flex;
+            width: 400vw; /* 4개의 하위 메뉴를 수평으로 배치하기 위해 400vw */
+            transition: transform 0.3s ease; /* 애니메이션 */
+        }
     }
-  }
+}
 // }
 
 .sub-menu {
-  min-width: 100vw; /* 각 하위 메뉴가 100vw 너비 */
-  box-sizing: border-box;
-
-  border-top: 1px solid #000000; /* 상단 경계선 */
-  height: 100%;
+    min-width: 100vw; /* 각 하위 메뉴가 100vw 너비 */
+    box-sizing: border-box;
+    border-top: 1px solid #000000; /* 상단 경계선 */
     
+    height: 100vh;
     @supports (height: 100dvh) {
         height: 100dvh;
     }
-  .sm-box {
-    position: relative;
-    z-index: 10; //input박스 위로 올라오게 하기 위해
-    
-    // height: calc(var(--vh, 1dvh) * 71) ;
-    
-    @supports (height: 75dvh) {
-        height: 75dvh;
-    }
-    overflow: auto;
-    padding: 25px 25px 25px 28px;
-    /* 스크롤바의 폭 너비 */
-    &::-webkit-scrollbar {
-      width: 4px;
-    }
+    .sm-box {
+        position: relative;
+        z-index: 10; //input박스 위로 올라오게 하기 위해
 
-    &::-webkit-scrollbar-thumb {
-      background: rgb(109, 109, 109); /* 스크롤바 색상 */
-      border-radius: 10px; /* 스크롤바 둥근 테두리 */
-    }
+        height: calc(var(--vh, 1dvh) * 75);
 
-    &::-webkit-scrollbar-track {
-      background: #fdfdfd;
-      border-radius: 50%;
+        // @supports (height: 75dvh) {
+        //     height: 75dvh;
+        // }
+        overflow-y: auto;
+        padding: 25px 25px 25px 28px;
+       
+        /* 스크롤바 커스텀 */
+        /* 스크롤바의 폭 너비 */
+        // &::-webkit-scrollbar {
+        //     width: 4px;
+        // }
+        // &::-webkit-scrollbar-thumb {
+        //     background: rgb(109, 109, 109); /* 스크롤바 색상 */
+        //     border-radius: 10px; /* 스크롤바 둥근 테두리 */
+        // }
+        // &::-webkit-scrollbar-track {
+        //     background: #fdfdfd;
+        //     border-radius: 50%;
+        // }
     }
-  }
 }
 
 .sm-box ol {
-  list-style: none;
-  margin-bottom: 7%;
-  @supports (margin-bottom: 7dvh) {
-    margin-bottom: 7dvh;
-  
-  }
+    list-style: none;
+
+    height: 120dvh;
+    // margin-bottom: 7%;
+    // @supports (margin-bottom: 7dvh) {
+    //   margin-bottom: 7dvh;
+
+    // }
 }
 .sm-box li {
-  padding: 10px 20px;
-  font-size: 1.4rem;
-  font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .sm-box a {
-  text-decoration: none;
-  color: #333;
+    text-decoration: none;
+    color: #333;
 }
 
 .input-box {
-  bottom: 105dvh;//.mbox100vh이면 5vh만해도 되지만 .mbox 200vh해줘서 이렇게 해야됨 
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-
-  // height: 8vh;
-  // background-color: #fdfdfd9d;
-  .input-inbox {
-    //단순 부모flex주고 중앙정렬 하려고 만듬
+    bottom: 105dvh; //.mbox100vh이면 5vh만해도 되지만 .mbox 200vh해줘서 이렇게 해야됨
+    position: absolute;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    position: relative; //단순히 .sgum absolute 떄문에 부모자격주려고 relative줌
-    input {
-      border-radius: 0;
-      border: 0.5px solid;
-      width: min(350px, 70vw);
+    width: 100vw;
 
-      height: 22px;
-      &:focus {
-        outline: none;
-      }
-    }
+    // height: 8vh;
+    // background-color: #fdfdfd9d;
+    .input-inbox {
+        //단순 부모flex주고 중앙정렬 하려고 만듬
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative; //단순히 .sgum absolute 떄문에 부모자격주려고 relative줌
+        input {
+            border-radius: 0;
+            border: 0.5px solid;
+            width: min(350px, 70vw);
 
-    .sgum {
-      position: absolute;
-      font-size: 1.2rem;
-      cursor: pointer;
-      right: 7px;
+            height: 22px;
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .sgum {
+            position: absolute;
+            font-size: 1.2rem;
+            cursor: pointer;
+            right: 7px;
+        }
     }
-  }
 }
 
 .mabout-zara {
-  padding: 20px 40px 20px 40px;
-  overflow: auto;
-  height: 70vh;
-  overflow: auto;
-  :nth-child(1) {
-    font-size: 12px;
-    padding-bottom: 20px;
-  }
-  img {
-    width: 70vw;
-    margin: 0 auto;
-    display: block;
-    padding-bottom: 10px;
-  }
-  :nth-child(3) {
-    font-size: 14px;
-    font-weight: bold;
-    padding-bottom: 20px;
-  }
-  :nth-child(4) {
-    font-size: 11px;
-    padding-bottom: 40px;
-  }
+    padding: 20px 40px 20px 40px;
+    overflow: auto;
+    height: 70vh;
+    overflow: auto;
+    :nth-child(1) {
+        font-size: 12px;
+        padding-bottom: 20px;
+    }
+    img {
+        width: 70vw;
+        margin: 0 auto;
+        display: block;
+        padding-bottom: 10px;
+    }
+    :nth-child(3) {
+        font-size: 14px;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    :nth-child(4) {
+        font-size: 11px;
+        padding-bottom: 40px;
+    }
 
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
 
-  &::-webkit-scrollbar-thumb {
-    background: rgb(109, 109, 109); /* 스크롤바 색상 */
-    border-radius: 10px; /* 스크롤바 둥근 테두리 */
-  }
+    &::-webkit-scrollbar-thumb {
+        background: rgb(109, 109, 109); /* 스크롤바 색상 */
+        border-radius: 10px; /* 스크롤바 둥근 테두리 */
+    }
 
-  &::-webkit-scrollbar-track {
-    background: #fdfdfd;
-    border-radius: 50%;
-  }
+    &::-webkit-scrollbar-track {
+        background: #fdfdfd;
+        border-radius: 50%;
+    }
 }
 
 /* 1050이하 일떄 */
 @media screen and (max-width: 1050px) {
-  /* 중요:이거 없으면 smenu시 좌우, 상하 스크롤바 생김************************************************************** */
-  html.on,
-  html.on body {
-    overflow: hidden;
-  }
-  html,
-  body {
-    // 자식요소중에  absolete 인 요소가 오버플로우히든을 적용하기위해
-    // 최상위에 relative를 주고!! 부모자격을 주고 오버플로우 히든을 줌.
-    position: relative;
-    overflow-x: hidden;
-  }
-  /* ************************************************************** */
+    /* 중요:이거 없으면 smenu시 좌우, 상하 스크롤바 생김************************************************************** */
+    html.on,
+    html.on body {
+        overflow: hidden;
+    }
+    html,
+    body {
+        // 자식요소중에  absolete 인 요소가 오버플로우히든을 적용하기위해
+        // 최상위에 relative를 주고!! 부모자격을 주고 오버플로우 히든을 줌.
+        position: relative;
+        overflow-x: hidden;
+    }
+    /* ************************************************************** */
 
-  .hideimg {
-    display: none;
-  }
+    .hideimg {
+        display: none;
+    }
 }
