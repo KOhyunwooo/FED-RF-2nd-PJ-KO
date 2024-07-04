@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 //ham_gnb.scss불러오기
 import "../../css/top_area_media.scss";
@@ -12,6 +12,29 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 function TopAreaMedia() {
+  ////////////.smenu-box의 높이 구하기(.mbox  -  .gnb-list)/////////////
+  function adjustLayout() {
+    const mbox = document.querySelector('.mbox');
+    const gnbList = document.querySelector('.gnb-list');
+    const smenuBox = document.querySelector('.smenu-box');
+    
+    const gnbListHeight = gnbList.offsetHeight;
+    
+    // gnb-list의 높이를 CSS 변수로 설정
+    document.documentElement.style.setProperty('--gnb-list-height', `${gnbListHeight}px`);
+    
+    // smenu-box의 높이 조절
+    smenuBox.style.height = `calc(${mbox} - ${gnbListHeight}px)`;
+  }
+  
+  // 초기 실행 및 리사이즈 이벤트에 대한 리스너 추가
+  window.addEventListener('load', adjustLayout);
+  window.addEventListener('resize', adjustLayout);
+  
+  
+  
+  
+  
   /* 우측상단 검색창: 이동함수 만들기 ************************************************* */
   const goNav = useNavigate(); //useNavigate를 사용하는 이동함수:goNav
 
