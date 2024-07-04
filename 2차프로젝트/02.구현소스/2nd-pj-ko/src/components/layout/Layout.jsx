@@ -72,6 +72,12 @@ export default function Layout() {
         } ///// if ///////
     }, []);
 
+
+
+        // 경로에 따라 패딩을 설정하는 로직
+       
+       
+
     // '/'에서만 <Footer />실행하지 않게 하기//////////////////////////////////////////////////
     const { pathname } = useLocation();
     console.log("Layout에서경로:", pathname);
@@ -79,7 +85,13 @@ export default function Layout() {
 
     if (pathname == "/") sts = false;
     else sts = true;
-
+    // '/'에서만 패딩탑 0적용 그외는 패딩탑 70px////////////////////////////////////////////////
+    useEffect(() => {
+            document.body.style.paddingTop = pathname === "/" ? "0px" : "70px";
+            return () => {
+                document.body.style.paddingTop = ""; // 컴포넌트 언마운트 시 초기화
+            };
+        }, [pathname]);
     //가로1050이하일때 <TopAreaMedia /> 그렇지 않으면 <TopArea />호출//////////////////////////////////////////////////
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1050);
     useEffect(() => {

@@ -34,7 +34,7 @@ li {
 /* 전체 배경색 */
 body {
   /* 탑에어리어 높이값 만큼 밀어주기 */
-  padding-top: 70px;
+  // padding-top: 70px;//이거 하면 '/' 페이지에서도 상단이 밀려서 안됨
   background-color: #fdfdfd;
 
   // padding-top: constant(safe-area-inset-top) !important; /* iOS 11.2+ */
