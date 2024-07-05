@@ -1,4 +1,44 @@
-.loginput{
+.outbx {
+  padding: 25px;
+  display: flex;
+
+  /* 왼쪽 박스******************************************************************************** */
+  .login-left {
+    width: 400px;
+    min-height: 300px;
+    padding: 15px;
+    border: 2px dashed #ff0000;
+
+    .logtit {
+      font-size: 1.5rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    li {
+      position: relative;
+      padding-top: 50px;
+
+      .sbtn {
+        font-size: 1.1rem;
+        color: #000000;
+        border: 1px solid #000000;
+        background-color: #ffff;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: 0.3s;
+        max-height: 40px;
+        min-height: 32px;
+        width: 100%;
+        font-family: Arial, Helvetica, sans-serif;
+        &:hover {
+          background-color: #010101;
+          color: #fdfdfd;
+        }
+      }
+    }
+  }
+
+  .loginput {
     font-size: 1.1rem;
     background: none;
     border: none;
@@ -10,23 +50,24 @@
     padding: 1px;
     text-transform: none;
     width: 100%;
+  }
+  .user-id {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    transform: translateY(0px);
+    color: #969696;
+  }
 
+  input {
+    font-size: 1.3rem;
+    vertical-align: baseline;
+  }
 
-}
-.user-id{
-position: absolute;
-top: 0;
-left: 0;
-font-size: 1rem;
-transition: all 0.3s ease;
-pointer-events: none;
-transform: translateY(0px);
-color: #969696;
-}
-.membx{
-
-
-    label {
+  label {
     position: absolute;
     bottom: 5px;
     left: 0;
@@ -36,13 +77,12 @@ color: #969696;
     transform: translateY(0px);
     color: #969696;
     white-space: nowrap;
-    margin-left: 5%;
+
     font-size: 1.2rem;
     font-family: "HelveticaRoman";
-    
   }
 
-.loginput:not(:placeholder-shown) + label,//인접연산자 사용주의
+  .loginput:not(:placeholder-shown) + label,//인접연산자 사용주의
           .loginput:focus + label {
     font-size: 1rem;
     transform: translateY(-18px);
@@ -53,4 +93,11 @@ color: #969696;
     border-bottom: 1.5px solid #000;
   }
 
+  /* 오른쪽 박스******************************************************************************** */
+  .login-right {
+    width: 400px;
+    min-height: 300px;
+    padding: 15px;
+    border: 2px dashed #0055ff;
+  }
 }

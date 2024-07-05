@@ -45,8 +45,17 @@
                 opacity: 1;
             }
         }
-
+        //gnb로그인 
         > a {
+            white-space: nowrap;
+            padding: 5px;
+            text-decoration: none;
+            color: #000;
+        }
+        //gnb바스켓백 
+        > a:last-child {
+            white-space: nowrap;
+            padding-right: 0;
             text-decoration: none;
             color: #000;
         }
@@ -325,7 +334,7 @@
     }
     :nth-child(4) {
         font-size: 11px;
-        // padding-bottom: 40px;
+        padding-bottom: 5px;
     }
 
     &::-webkit-scrollbar {

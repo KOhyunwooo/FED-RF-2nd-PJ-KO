@@ -104,20 +104,14 @@ function TopAreaMedia() {
           <div className="loginbox">
             <Link to="#">
               <span
-                style={{
-                  whiteSpace: "nowrap",
-                  marginLeft: "10px",
-                }}
+              
               >
                 로그인
               </span>
             </Link>
             <Link to="#">
               <span
-                style={{
-                  whiteSpace: "nowrap",
-                  marginLeft: "10px",
-                }}
+              
               >
                 바스켓백(0)
               </span>
