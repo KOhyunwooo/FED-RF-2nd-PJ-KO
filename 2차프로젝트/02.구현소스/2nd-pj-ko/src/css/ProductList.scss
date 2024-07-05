@@ -1,63 +1,61 @@
-.pdbutton-box{
+.pdbutton-box {
   padding: 10px 10px 20px 60px;
-    .pdbutton{
-      font-family: "HelveticaLt";
-        outline: none;
-        background: none;
-        border: 1px solid black;
-        color: #010101;
-        padding: 5px;
-        margin-left: 7px;
-        cursor: pointer;
-        font-size: 1.1rem;
+  .pdbutton {
+    font-family: "HelveticaLt";
+    outline: none;
+    background: none;
+    border: 1px solid black;
+    color: #010101;
+    padding: 5px;
+    margin-left: 7px;
+    cursor: pointer;
+    font-size: 1.1rem;
 
-        &:focus{
-          font-weight: bold;
-        }
-      }
-
-
+    &:focus {
+      font-weight: bold;
+    }
   }
-
-
-
-/* ProductList 컴포넌트 스타일 */
-.product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-// //탑쪽으로 이동하면서 op1되게
-// .chgop{
-//   transition: .3s ease-out;
-// opacity: 0;
-// transform: translateY(15px);
-// &.on{
-//   transform: translateY(0);
-//   opacity: 1;
-// }}
+/* ProductList 컴포넌트 스타일 */
 
 
+  .product-list {
+    margin-left: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
 
+    font-family: Arial, Helvetica, sans-serif;
 
-.product-item {
-  flex: 1 calc(16.66%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
-  max-width: calc(16.66%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
-  box-sizing: border-box; 
-  border: 1px solid #000000;
-    background-color: #fdfdfd;
-    margin-left: -1px;
-    margin-top: -1px;
+    .product-item {
+  
+      flex: 1 calc(16.66%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+      max-width: calc(16.66%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+      box-sizing: border-box;
+      border: 1px solid #000000;
+      background-color: #fdfdfd;
+      margin-left: -1px;
+      margin-top: -1px;
+    }
+
+    // //탑쪽으로 이동하면서 op1되게
+    // .chgop{
+    //   transition: .3s ease-out;
+    // opacity: 0;
+    // transform: translateY(15px);
+    // &.on{
+    //   transform: translateY(0);
+    //   opacity: 1;
+    // }}
+  }
 
   .txt-box {
     padding: 12px 12px 32px;
     font-size: 1rem;
     // background-color: #fdfdfd;
-    
+
     //글자 넘치면 ...으로 바꾸기
     text-overflow: ellipsis;
     overflow: hidden;
@@ -83,7 +81,7 @@
     // padding-bottom: 16px;
     // outline: 1px solid #000000;
   }
-}
+
 
 ///////////////////////////미디어 쿼리/////////////////////////////////////////////////////////////
 
@@ -98,20 +96,25 @@
 
 /* 777이하 일떄 */
 @media screen and (max-width: 777px) {
-  .product-item {
-    flex: 1 calc(50%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
-    max-width: calc(50%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
-    box-sizing: border-box; /* 박스 모델 설정 */
+  .product-list{
+    margin-left: 3px;
     
+    .product-item {
+      flex: 1 calc(50%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+      max-width: calc(50%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+      box-sizing: border-box; /* 박스 모델 설정 */
+    }
   }
 }
 /* 333이하 일떄 */
 @media screen and (max-width: 333px) {
-  .product-item {
-    flex: 1 calc(100%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
-    flex-direction: column;
-    max-width: calc(100%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
-    box-sizing: border-box; /* 박스 모델 설정 */
-    
+  .product-list{
+    margin-left: 2px;
+    .product-item {
+      flex: 1 calc(100%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+      flex-direction: column;
+      max-width: calc(100%); /* 100% / 6 = 16.66%, 32px은 gap의 두 배 */
+      box-sizing: border-box; /* 박스 모델 설정 */
+    }
   }
 }

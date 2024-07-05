@@ -220,6 +220,7 @@ function TopAreaMedia() {
                     type="text"
                     name="schinGnb" /* name은 백엔드 개발자를 위한 약속, 보통id랑 같은이름으로 함 */
                     id="schinGnb"
+                    maxlength="15"
                     onKeyUp={enterKey}
                   />
                   <div

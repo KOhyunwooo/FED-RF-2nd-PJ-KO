@@ -62,24 +62,24 @@ function ProductList({ dbName }) {
         </button>
       )}
     </div>
-    <div className="product-list">
-      {reversedData.map((v, i) => (
-        <div key={i} className="product-item chgop">
-          <img src={process.env.PUBLIC_URL+v.isrc} alt={v.name} className="product-image" />
-          <div className="txt-box">
-            <span>{v.name}</span>
-            <span className="price">
-              {v.price[0] && <p>{v.price[0]}</p>}
-              {v.price[1] && (
-                <p>
-                  {v.price[1]}&nbsp;{v.price[2]}
-                </p>
-              )}
-            </span>
+      <div className="product-list">
+        {reversedData.map((v, i) => (
+          <div key={i} className="product-item chgop">
+            <img src={process.env.PUBLIC_URL+v.isrc} alt={v.name} className="product-image" />
+            <div className="txt-box">
+              <span>{v.name}</span>
+              <span className="price">
+                {v.price[0] && <p>{v.price[0]}</p>}
+                {v.price[1] && (
+                  <p>
+                    {v.price[1]}&nbsp;{v.price[2]}
+                  </p>
+                )}
+              </span>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
       </>
   );
 }

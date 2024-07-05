@@ -274,7 +274,7 @@
         //단순 부모flex주고 중앙정렬 하려고 만듬
         display: flex;
         justify-content: flex-end;
-        align-items: center;
+        align-items: stretch;
         position: relative; //단순히 .sgum absolute 떄문에 부모자격주려고 relative줌
         input {
             border-radius: 0;
@@ -291,7 +291,13 @@
             position: absolute;
             font-size: 1.2rem;
             cursor: pointer;
-            right: 7px;
+            right: 0px;
+            display: flex;
+            width: 38px;
+            height: 24px;
+           
+            justify-content: center;
+            align-items: center;
         }
     }
 }
