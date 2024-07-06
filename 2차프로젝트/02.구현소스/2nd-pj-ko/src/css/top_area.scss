@@ -215,6 +215,7 @@ body::after {
         align-items: center;
         position: relative;
         .gum {
+            font-size: 1rem;
             position: absolute;
             right: 5px;
             cursor: pointer;
@@ -223,8 +224,16 @@ body::after {
 
     /* 오른쪽 글자태그 */
     span {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         // font-weight: bold;
+        li{
+            a{
+                &:hover {
+                    opacity: 0.45;
+                    font-weight: bold;
+                }
+            }
+        }
     }
     /* 서치버튼 폰트어썸아이콘 버튼 */
     // .schbtnGnb{

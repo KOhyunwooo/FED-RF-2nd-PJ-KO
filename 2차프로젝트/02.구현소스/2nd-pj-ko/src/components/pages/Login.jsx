@@ -153,7 +153,7 @@ function Login(props) {
           myCon.makeMsg(result.unm);
 
           // 4. 로그인 성공 메시지 버튼에 출력하기
-          document.querySelector(".sbtn").innerText = "로그인 성공~!";
+          document.querySelector(".sbtn").innerText = "로그인 중...";
 
           // 5.라우팅 페이지 이동
           // 1초후 메인 페이지 이동
@@ -186,7 +186,7 @@ function Login(props) {
   // 화면 렌더링 구역/////////
   useEffect(() => {
     //아이디 입력창 포커스 넣기
-    document.querySelector("#user-id").focus();
+    // document.querySelector("#user-id").focus();
   }, []);
 
   // 코드 리턴구역 ////////////////////////
@@ -267,7 +267,9 @@ function Login(props) {
         </form>
       </section>
       <section className="login-right">
-        <span className="logtit">고객님의 계정에 엑세스 하세요</span>
+        <span className="logtit">계정이 필요하세요?</span>
+
+        <button className="sbtn">등록</button>
       </section>
     </div>
   );
