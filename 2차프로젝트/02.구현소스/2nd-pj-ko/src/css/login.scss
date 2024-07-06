@@ -2,6 +2,18 @@
   padding: 100px 0 0 100px;
   display: flex;
 
+
+  //붉은 메시지 공통/////////////////////////////////////////
+  .msg{
+    position: absolute;
+    >small{
+      color: red;
+      font-size: 9px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+
+
   //로그인 타이틀 공통 /////////////////////////////고객님의 계정에 엑세스 하세요,고객님의 계정에 엑세스 하세요
    .logtit {
     display: block;
@@ -52,7 +64,7 @@
     font-size: 1.1rem;
     background: none;
     border: none;
-    border-bottom: 1px solid #000;
+    border-bottom: 1.5px solid #969696;
     border-radius: 0;
     box-shadow: none;
     margin-bottom: 1.5px;
@@ -60,6 +72,7 @@
     padding: 1px;
     text-transform: none;
     width: 100%;
+    font-family: "HelveticaLt";
   }
   .user-id {
     position: absolute;
@@ -81,15 +94,16 @@
     position: absolute;
     bottom: 5px;
     left: 0;
-    font-size: 1rem;
+    
     transition: all 0.3s ease;
     pointer-events: none;
     transform: translateY(0px);
     color: #969696;
     white-space: nowrap;
 
-    font-size: 1.2rem;
-    font-family: "HelveticaRoman";
+    font-size: 1.1rem;
+    font-family: "HelveticaLt";
+    font-weight: lighter;
   }
 
   .loginput:not(:placeholder-shown) + label,//인접연산자 사용주의

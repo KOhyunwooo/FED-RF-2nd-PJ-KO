@@ -8,6 +8,7 @@ import "../../css/login.scss";
 import { initData } from "../func/mem_fn";
 // 컨텍스트 API불러오기
 import { dCon } from "../func/dCon";
+import { Link } from "react-router-dom";
 
 function Login(props) {
   // 컨텍스트 사용
@@ -202,7 +203,7 @@ function Login(props) {
                 id="user-id"
                 className="loginput"
                 type="text"
-                maxLength="20"
+                maxLength="30"
                 placeholder=" "
                 value={userId}
                 onChange={changeUserId}
@@ -215,14 +216,7 @@ function Login(props) {
                 // userId가 입력전엔 false로 리턴됨!
                 userIdError && (
                   <div className="msg">
-                    <small
-                      style={{
-                        color: "red",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {idMsg}
-                    </small>
+                    <small>{idMsg}</small>
                   </div>
                 )
               }
@@ -233,7 +227,7 @@ function Login(props) {
                 id="user-password"
                 type="password"
                 className="loginput"
-                maxLength="20"
+                maxLength="30"
                 placeholder=" "
                 value={pwd}
                 onChange={changePwd}
@@ -246,14 +240,7 @@ function Login(props) {
                 // pwd가 입력전엔 false로 리턴됨!
                 pwdError && (
                   <div className="msg">
-                    <small
-                      style={{
-                        color: "red",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {pwdMsg}
-                    </small>
+                    <small>{pwdMsg}</small>
                   </div>
                 )
               }
@@ -268,8 +255,9 @@ function Login(props) {
       </section>
       <section className="login-right">
         <span className="logtit">계정이 필요하세요?</span>
-
-        <button className="sbtn">등록</button>
+        <Link to="/joinmember">
+          <button className="sbtn"> 등록</button>
+        </Link>
       </section>
     </div>
   );

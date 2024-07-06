@@ -1,8 +1,6 @@
 // 회원가입 페이지 컴포넌트 - Member.jsx
 import React, { useState } from "react";
-import { Link,useNavigate } from "react-router-dom";
-
-
+import { Link, useNavigate } from "react-router-dom";
 
 // 로컬스토리지 생성 JS
 import { initData } from "../func/mem_fn";
@@ -11,11 +9,10 @@ import { initData } from "../func/mem_fn";
 import "../../css/join_member.scss";
 
 function Member() {
-    // 라우터 이동 네비게이트
-   const goNav=useNavigate();
-    
-    // goNav(라우터 주소, state변수)
+  // 라우터 이동 네비게이트
+  const goNav = useNavigate();
 
+  // goNav(라우터 주소, state변수)
 
   // [ 회원가입 페이지 요구사항 ]
   // 1. 각 입력항목별로 유효성검사를 실행함
@@ -36,8 +33,8 @@ function Member() {
   const [chkPwd, setChkPwd] = useState("");
   // 4. 사용자이름변수
   const [userName, setUserName] = useState("");
-  // 5. 이메일변수
-  const [email, setEmail] = useState("");
+  // 5. 휴대폰 변수
+  const [phone, setPhone] = useState("");
 
   // [2] 에러상태관리 변수
   // -> 에러상태값 초기값은 에러아님(false)
@@ -49,31 +46,29 @@ function Member() {
   const [chkPwdError, setChkPwdError] = useState(false);
   // 4. 사용자이름변수
   const [userNameError, setUserNameError] = useState(false);
-  // 5. 이메일변수
-  const [emailError, setEmailError] = useState(false);
+  // 5. 휴대폰 변수
+  const [phoneError, setPhoneError] = useState(false);
 
   console.log(">>>>", userIdError);
 
   // [ 아이디관련 메시지 프리셋 ] ////
   const msgId = [
-    // 1. 최소 5글자 이상 입력할것
-    "User ID must contain a minimum of 5 characters",
-    // 2. 이미 사용중인 아이디임
-    "This ID is already in use!",
-    // 3. 훌륭한 아이디!
-    "That's a great ID!",
+    "유효한 이메일 주소를 입력하십시오.",
+
+    "이미 사용중인 이메일 주소 입니다.",
+
+    " ",
   ];
 
   // [ 기타 메시지 프리셋 ]
   const msgEtc = {
-    // 비밀번호
-    pwd: "5 to 15 digits in the form of special characters, characters, and numbers",
-    // 비밀번호확인
-    confPwd: "Password verification does not match",
-    // 필수입력
-    req: "This is a required entry",
-    // 이메일
-    email: "Please enter a valid email format",
+    pwd: "8자 이상의 영문 대/소문자, 숫자, 특수문자를 사용해 주세요.",
+
+    confPwd: "비밀번호가 일치하지 않습니다",
+
+    req: "필수 입력란입니다.",
+
+    phone: "올바른 전화번호 형식을 입력하십시오",
   }; ///// msgEtc ///////
 
   // [3] 에러메시지 상태변수 : 초기값 msgId[0]
@@ -87,7 +82,8 @@ function Member() {
     let val = e.target.value;
 
     // 1. 아이디 유효성 검사식(따옴표로 싸지 말것!)
-    const valid = /^[A-Za-z0-9+]{5,}$/;
+    const valid =
+      /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
     // 유효성 검사방법: 정규식.test(값)
 
     // 2. 입력값 확인 : e.target
@@ -167,7 +163,8 @@ function Member() {
     let val = e.target.value;
 
     // 1. 비밀번호 유효성 검사식(따옴표로 싸지 말것!)
-    const valid = /^.*(?=^.{5,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
+    // const valid = /^.*(?=^.{5,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;  //특수문자, 문자, 숫자 형태의 5~15자리
+    const valid = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
     // 2. 입력값 확인 : e.target -> 이벤트가 발생한 요소
     // console.log(val);
@@ -206,34 +203,33 @@ function Member() {
     setUserName(val);
   }; ///////// changeUserName 함수 //////////
 
-  // 5. 이메일 유효성 검사 ///////////
-  const changeEmail = (e) => {
+  // 5. 휴대폰 검사 ///////////
+  const changephone = (e) => {
     // 입력된 값읽기
     let val = e.target.value;
 
-    // 1. 이메일 유효성 검사식(따옴표로 싸지 말것!)
-    const valid =
-      /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+    // 1. 휴대폰 유효성 검사식(따옴표로 싸지 말것!)
+    const valid = /^(010|011|012|013|014|015|016|017|018|019)\d{3,4}\d{4}$/;
 
     // 2. 입력값 확인 : e.target -> 이벤트가 발생한 요소
     // console.log(val);
 
     // 3. 에러에 따른 상태값 변경
-    if (valid.test(val)) setEmailError(false);
-    else setEmailError(true);
+    if (valid.test(val)) setPhoneError(false);
+    else setPhoneError(true);
 
     // 4. 기존입력값 반영하기
-    setEmail(val);
-  }; ///////// changeEmail 함수 //////////
+    setPhone(val);
+  }; ///////// changephone 함수 //////////
 
-  // [ 전체 유효성검사 체크함수 ] ///////////
+  // [ 전체 유효성검사 체크함수 ] ///////////////////////////////////////////////////////////////////////////////////////////
   const totalValid = () => {
     // 1. 모든 상태변수에 빈값일때 에러상태값 업데이트!
     if (!userId) setUserIdError(true);
     if (!pwd) setPwdError(true);
     if (!chkPwd) setChkPwdError(true);
     if (!userName) setUserNameError(true);
-    if (!email) setEmailError(true);
+    if (!phone) setPhoneError(true);
 
     // 2. 통과시 true, 불통과시 false 리턴처리
     // 통과조건 : 빈값아님 + 에러후크변수가 모두 false
@@ -242,12 +238,12 @@ function Member() {
       pwd &&
       chkPwd &&
       userName &&
-      email &&
+      phone &&
       !userIdError &&
       !pwdError &&
       !chkPwdError &&
       !userNameError &&
-      !emailError
+      !phoneError
     )
       return true;
     // 하나라도 false이면 false를 리턴함!
@@ -287,26 +283,22 @@ function Member() {
         uid: userId,
         pwd: pwd,
         unm: userName,
-        eml: email,
+        eml: phone,
       };
 
       // 5. 데이터 추가하기 : 배열에 데이터 추가 push()
       memData.push(newData);
 
       // 6. 로컬스에 반영하기 : 문자화해서 넣어야함!
-      localStorage.setItem("mem-data", 
-      JSON.stringify(memData));
+      localStorage.setItem("mem-data", JSON.stringify(memData));
 
       // 7. 회원가입 환영메시지 + 로그인 페이지 이동
       // 버튼 텍스트에 환영메시지
       document.querySelector(".sbtn").innerHTML = "환영합니다~";
       // 1초후 페이지 이동: 라우터 navigate로 이동함
       setTimeout(() => {
-        goNav("/login");// 주의: 경로 앞에 슬래쉬(/) 안쓰면 현재 Member경로 하위 경로를 불러옴
+        goNav("/login"); // 주의: 경로 앞에 슬래쉬(/) 안쓰면 현재 Member경로 하위 경로를 불러옴
       }, 1000);
-
-
-
     } ///////// if /////////
     // 3. 불통과시 /////
     else {
@@ -328,34 +320,27 @@ function Member() {
   // 코드리턴 구역 //////////////////
   return (
     <div className="outbx">
-      <section className="membx">
-        <h2>Join Us</h2>
+      <section className="join-member">
+        <span className="logtit">개인 정보</span>
         <form action="process.php" method="post">
           <ul>
             <li>
-              {/* 1. 아이디 */}
-              <label>ID : </label>
+              {/* 1. 이메일 아이디**************************************************************************************************************** */}
               <input
+                className="loginput"
                 type="text"
-                maxLength="20"
-                placeholder="Please enter your ID"
-                // defaultValue="ㅎㅎㅎ"
+                maxLength="30"
+                placeholder=" "
                 value={userId}
                 onChange={changeUserId}
               />
+              <label>이메일</label>
               {
                 //   에러일 경우 메시지 출력
                 // 조건문 && 출력요소
                 userIdError && (
                   <div className="msg">
-                    <small
-                      style={{
-                        color: "red",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {idMsg}
-                    </small>
+                    <small>{idMsg}</small>
                   </div>
                 )
               }
@@ -366,129 +351,102 @@ function Member() {
                 // userId가 입력전엔 false로 리턴됨!
                 !userIdError && userId && (
                   <div className="msg">
-                    <small
-                      style={{
-                        color: "green",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {msgId[2]}
-                    </small>
+                    <small>{msgId[2]}</small>
                   </div>
                 )
               }
             </li>
+            {/* 비밀번호**************************************************************************************************************** */}
             <li>
-              <label>Password : </label>
               <input
+                className="loginput"
                 type="password"
-                maxLength="20"
-                placeholder="Please enter your Password"
+                maxLength="30"
+                placeholder=""
                 value={pwd}
                 onChange={changePwd}
               />
+              <label>비밀번호</label>
               {
                 // 에러일 경우 메시지 출력
                 // 조건문 && 출력요소
                 pwdError && (
                   <div className="msg">
-                    <small
-                      style={{
-                        color: "red",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {msgEtc.pwd}
-                    </small>
+                    <small>{msgEtc.pwd}</small>
                   </div>
                 )
               }
             </li>
+            {/* 비밀번호 확인**************************************************************************************************************** */}
             <li>
-              <label>Confirm Password : </label>
               <input
+                className="loginput"
                 type="password"
-                maxLength="20"
-                placeholder="Please enter your Confirm Password"
+                maxLength="30"
+                placeholder=""
                 value={chkPwd}
                 onChange={changeChkPwd}
               />
+              <label>비밀번호 확인</label>
               {
                 // 에러일 경우 메시지 출력
                 // 조건문 && 출력요소
                 chkPwdError && (
                   <div className="msg">
-                    <small
-                      style={{
-                        color: "red",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {msgEtc.confPwd}
-                    </small>
+                    <small>{msgEtc.confPwd}</small>
                   </div>
                 )
               }
             </li>
+            {/* 유저이름**************************************************************************************************************** */}
             <li>
-              <label>User Name : </label>
               <input
+                className="loginput"
                 type="text"
                 maxLength="20"
-                placeholder="Please enter your Name"
+                placeholder=""
                 value={userName}
                 onChange={changeUserName}
               />
+              <label>이름</label>
               {
                 // 에러일 경우 메시지 출력
                 // 조건문 && 출력요소
                 userNameError && (
                   <div className="msg">
-                    <small
-                      style={{
-                        color: "red",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {msgEtc.req}
-                    </small>
+                    <small>{msgEtc.req}</small>
                   </div>
                 )
               }
             </li>
+            {/* 휴대폰 번호**************************************************************************************************************** */}
             <li>
-              <label>Email : </label>
               <input
+                className="loginput"
                 type="text"
-                maxLength="50"
-                placeholder="Please enter your Email"
-                value={email}
-                onChange={changeEmail}
+                maxLength="11"
+                placeholder=""
+                value={phone}
+                onChange={changephone}
               />
+              <label>휴대폰</label>
               {
                 // 에러일 경우 메시지 출력
                 // 조건문 && 출력요소
-                emailError && (
+                phoneError && (
                   <div className="msg">
-                    <small
-                      style={{
-                        color: "red",
-                        fontSize: "10px",
-                      }}
-                    >
-                      {msgEtc.email}
-                    </small>
+                    <small>{msgEtc.phone}</small>
                   </div>
                 )
               }
             </li>
             <li style={{ overflow: "hidden" }}>
               <button className="sbtn" onClick={onSubmit}>
-                Submit
+                계정 만들기
               </button>
             </li>
             <li>
-              Are you already a Member?
+              이미 회원입니까?
               <Link to="/login">Log In</Link>
             </li>
           </ul>

@@ -104,7 +104,10 @@ function TopAreaMedia() {
                 myCon.loginSts === null && (
                   <>
                   
-                      <Link to="/login" onClick={clickX}>로그인</Link>
+                      <Link to="/login" onClick={()=>{
+                        clickX();
+                        window.scrollTo(0,0);
+                      }}>로그인</Link>
                    
                   </>
                 )
@@ -121,6 +124,7 @@ function TopAreaMedia() {
                           e.preventDefault();
                           // 로그아웃처리함수 호출
                           myCon.logoutFn();
+                         
                         }}
                       >
                         로그아웃
