@@ -362,7 +362,7 @@ function Member() {
                 className="loginput"
                 type="password"
                 maxLength="30"
-                placeholder=""
+                placeholder=" "
                 value={pwd}
                 onChange={changePwd}
               />
