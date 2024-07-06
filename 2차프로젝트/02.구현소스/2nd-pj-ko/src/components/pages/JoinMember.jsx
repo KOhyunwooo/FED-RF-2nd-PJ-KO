@@ -330,7 +330,7 @@ function Member() {
                 className="loginput"
                 type="text"
                 maxLength="30"
-                placeholder=" "
+                placeholder=" "//placeholder에 공백값을 넣지 않으면 아이폰에서는 제대로 작동하지 않음.
                 value={userId}
                 onChange={changeUserId}
               />
@@ -383,7 +383,7 @@ function Member() {
                 className="loginput"
                 type="password"
                 maxLength="30"
-                placeholder=""
+                placeholder=" "
                 value={chkPwd}
                 onChange={changeChkPwd}
               />
@@ -404,7 +404,7 @@ function Member() {
                 className="loginput"
                 type="text"
                 maxLength="20"
-                placeholder=""
+                placeholder=" "
                 value={userName}
                 onChange={changeUserName}
               />
@@ -425,7 +425,7 @@ function Member() {
                 className="loginput"
                 type="text"
                 maxLength="11"
-                placeholder=""
+                placeholder=" "
                 value={phone}
                 onChange={changephone}
               />
