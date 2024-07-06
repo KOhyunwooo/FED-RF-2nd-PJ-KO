@@ -1,24 +1,24 @@
 .footer-area {
   display: flex;
   flex-direction: column;
-    align-items: center;
+  align-items: flex-start;
 
   padding: 5vw;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
 
   mix-blend-mode: difference;
-    filter: invert(1);
+  filter: invert(1);
 
   .footer-box1 {
+    width: 35vw;
     //뉴스레터가입하세요, input박스, sns박스////
-    padding:  30px 0 30px 0;
+    padding: 30px 0 30px 0;
     a {
       color: #010101;
       text-decoration: none;
     }
     .footer-input {
-      
       position: relative;
       margin-bottom: 20px;
       margin-top: 20px;
@@ -61,26 +61,20 @@
         border-bottom: 1.5px solid #000;
       }
       /* 라벨이동 ****************************************************************** */
-    }//.footer-input
+    } //.footer-input
 
-    .sns{
-        display: flex;
-        justify-content: space-between;
-        li{
-            padding: 5px;
-            a{
-                width: 100%;
-                height: 100%;
-            }
+    .sns {
+      display: flex;
+      justify-content: space-between;
+      li {
+        padding: 5px;
+        a {
+          width: 100%;
+          height: 100%;
         }
+      }
     }
-
-
   }
-
-
-
-
 
   .footer-box2 {
     //nav박스//////////////////
@@ -89,77 +83,77 @@
       text-decoration: none;
     }
 
-    ul{
-        padding: 50px 0 50px 0;
-        li{padding-right: 20px;
-            ol{
-                .navtxt{
-                    padding: 5px;
-                    &:first-child{
-                        font-weight: bold;
-                    }
-                    &:not(:first-child):hover{
-                        text-decoration-line: underline;
-                    }
-                }
+    ul {
+      padding: 50px 0 50px 0;
+      li {
+        padding-right: 20px;
+        ol {
+          .navtxt {
+            padding: 5px;
+            &:first-child {
+              font-weight: bold;
             }
+            &:not(:first-child):hover {
+              text-decoration-line: underline;
+            }
+          }
         }
+      }
     }
   }
   .footer-box3 {
     //회사정보구역/////////////
-    a{
-
+    a {
       color: #010101;
     }
 
     padding: 30px 0 20px 0;
     font-family: "HelveticaLt";
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
 
-
-
-
-
-
-
-.footer-input, .sns{
-    width: 30vw;
+.footer-input,
+.sns {
+  width: 100%;
 }
-
-
 
 /* 1050이하 일떄 */
 @media screen and (max-width: 1050px) {
-
-    .footer-input, .sns{
-        width: 80vw;
-        
-    }
-   
-
+  .footer-area .footer-box1 {
+    width: 50vw;
+  }
 }
 /* 777이하일때 */
 @media screen and (max-width: 777px) {
+  // .footer-input,
+  // .sns {
+  //   width: 80vw;
+  // }
+  .footer-area .footer-box1 {
+    width: 70vw;
+  }
 
-    .sns{
-        flex-wrap: wrap;    
-        li{
 
-            width: 20%; 
-           
-        }
+  .sns {
+    flex-wrap: wrap;
+    li {
+      width: 20%;
     }
-
+  }
 }
-
 
 /* 490이하일때 */
 @media screen and (max-width: 490px) {
-    .footer-box2{
-        display: none;
-    }
 
+  .footer-area .footer-box1 {
+    width: 80vw;
+  }
+  .footer-area {
+    align-items: center;
+  }
+
+  .footer-box2 {
+    display: none;
+  }
 }
