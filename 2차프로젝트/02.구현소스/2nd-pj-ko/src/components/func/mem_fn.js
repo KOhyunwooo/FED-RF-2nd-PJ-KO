@@ -27,14 +27,27 @@ const clearData = () => {
                 "uid":"admin",
                 "pwd":"1111",
                 "unm":"Administrator",
+                "phone":"01012345678",
                 "eml":"admin@dc.com"
+
             },
             {
                 "idx": "2",
-                "uid":"tomtom",
-                "pwd":"1111",
-                "unm":"Tom",
+                "uid":"ko",
+                "pwd":"1234",
+                "unm":"고현우",
+                "phone":"01012345678",
+                "eml":"ko@naver.com"
+
+            },
+            {
+              "idx": "3",
+              "uid":"tomtom",
+              "pwd":"1111",
+              "unm":"Tom",
+              "phone":"01012345678",
                 "eml":"tom@gmail.com"
+
             }
         ]
     `

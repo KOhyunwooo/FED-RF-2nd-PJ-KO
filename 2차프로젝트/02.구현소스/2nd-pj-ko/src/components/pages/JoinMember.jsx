@@ -283,7 +283,7 @@ function Member() {
         uid: userId,
         pwd: pwd,
         unm: userName,
-        eml: phone,
+        phone: phone,
       };
 
       // 5. 데이터 추가하기 : 배열에 데이터 추가 push()

@@ -337,19 +337,19 @@
         padding-bottom: 5px;
     }
 
-    &::-webkit-scrollbar {
-        width: 4px;
-    }
+    // &::-webkit-scrollbar {
+    //     width: 4px;
+    // }
 
-    &::-webkit-scrollbar-thumb {
-        background: rgb(109, 109, 109); /* 스크롤바 색상 */
-        border-radius: 10px; /* 스크롤바 둥근 테두리 */
-    }
+    // &::-webkit-scrollbar-thumb {
+    //     background: rgb(109, 109, 109); /* 스크롤바 색상 */
+    //     border-radius: 10px; /* 스크롤바 둥근 테두리 */
+    // }
 
-    &::-webkit-scrollbar-track {
-        background: #fdfdfd;
-        border-radius: 50%;
-    }
+    // &::-webkit-scrollbar-track {
+    //     background: #fdfdfd;
+    //     border-radius: 50%;
+    // }
 }
 
 /* 1050이하 일떄 */

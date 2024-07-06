@@ -208,7 +208,7 @@ function Login(props) {
                 value={userId}
                 onChange={changeUserId}
               />
-              <label for="user-id">이메일</label>
+              <label htmlFor="user-id">이메일</label>
               {
                 //   에러일 경우 메시지 출력
                 // 조건문 && 출력요소
@@ -232,7 +232,7 @@ function Login(props) {
                 value={pwd}
                 onChange={changePwd}
               />
-              <label for="user-password">비밀번호</label>
+              <label htmlFor="user-password">비밀번호</label>
               {
                 // 에러일 경우 메시지 출력
                 // 조건문 && 출력요소
