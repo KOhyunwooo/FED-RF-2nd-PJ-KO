@@ -24,12 +24,12 @@ export default function SwiperDetail() {
           "--swiper-pagination-color": "#000",
         }}
         direction={"vertical"}
-        mousewheel= "true"//설정 안들어감
+        mousewheel= {"true"}//설정 안들어감
         pagination={{
           type: "progressbar",
         }}
-        spaceBetween={10}
-        navigation={true}
+        spaceBetween={0}
+        navigation={false}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[Pagination, FreeMode, Navigation, Thumbs]}
         className="mySwiper2"

@@ -1,0 +1,93 @@
+// 왼쪽 두개+오른쪽 디테일 부분///flex하였음////////////////////////////////////
+.detailbox {
+  display: flex;
+  justify-content: space-evenly;
+
+  // 왼쪽 두개 부분///flex하였음////////////////////////////////////
+  .care_imgbx {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    
+   
+    
+    .care-box { 
+      line-height: 1.5;
+      position: relative;
+      overflow: hidden;
+      width: 280px;
+      height: 250px;
+      border: 1px solid black;
+      transition: 0.3s ease;
+      // transform-origin: bottom;
+
+      &.on {
+        // transform: scaleY(1.5);
+        height: 400px;
+      } 
+
+
+      .morebt{
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+
+  // 가장 오른쪽 디테일 부분///flex하였음////////////////////////////////////
+  .detail-txtbox {
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    //윗박스///////////////////
+    .dttxt-bx {
+      
+      font-size: 1rem;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 24px 20px;
+
+      outline: 1px solid black;
+
+      .tit {
+      }
+      .price {
+      }
+      .desc {
+        margin-top: 10px;
+        font-size: 1.1rem;
+      }
+      .info {
+        margin-top: 10px;
+        font-size: .85rem;
+        li {
+        }
+      }
+    }
+    //아래박스////////////////
+    .dtsize-bx {
+      padding: 24px 20px;
+      outline: 1px solid black;
+      margin-top: 1px;
+      .color {
+      }
+      .size {
+      }
+    }
+  }
+}
+
+
+
+
+
+
+/* 1050 이하 일떄 */
+@media screen and (max-width: 1050px) {
+
+.care-box{
+  display: none;  
+}
+
+}

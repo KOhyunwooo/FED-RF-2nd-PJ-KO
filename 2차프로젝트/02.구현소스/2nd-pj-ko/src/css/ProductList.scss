@@ -38,6 +38,11 @@
       background-color: #fdfdfd;
       margin-left: -1px;
       margin-top: -1px;
+
+      >a{
+        text-decoration: none;
+        color: #010101;
+      }
     }
 
     // //탑쪽으로 이동하면서 op1되게
@@ -85,7 +90,7 @@
 
 ///////////////////////////미디어 쿼리/////////////////////////////////////////////////////////////
 
-/* 1100이하 일떄 */
+/* 1100 이하 일떄 */
 @media screen and (max-width: 1100px) {
   .price {
     display: flex;
@@ -94,7 +99,7 @@
   }
 }
 
-/* 777이하 일떄 */
+/* 777 이하 일떄 */
 @media screen and (max-width: 777px) {
   .product-list{
     margin-left: 3px;
@@ -106,7 +111,7 @@
     }
   }
 }
-/* 333이하 일떄 */
+/* 333 이하 일떄 */
 @media screen and (max-width: 333px) {
   .product-list{
     margin-left: 2px;

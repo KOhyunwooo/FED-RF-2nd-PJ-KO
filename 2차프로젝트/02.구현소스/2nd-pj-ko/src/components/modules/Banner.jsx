@@ -21,7 +21,7 @@ const Banner = ({ category }) => {
         슬라이스로 셀데이터0~2까지 잘라도 가능,2는 포함x*/}
         {selData.map((v, i) => (
           i<2&&(<div key={i}>
-            <Link to={v.link} state={{data:v.data}}>{/* state:v.data값이 읽히지 않음.... */}
+            <Link to={v.link} state={{data:v.data}}>
               <img src={process.env.PUBLIC_URL+v.imgsrc} alt={v.txt} />
               <p>{v.txt}</p>
             </Link>

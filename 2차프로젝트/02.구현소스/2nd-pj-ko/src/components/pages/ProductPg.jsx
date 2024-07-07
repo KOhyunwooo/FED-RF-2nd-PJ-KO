@@ -13,6 +13,8 @@ import $ from "jquery";
 function ProductPg({ cat }) {
   const loc = useLocation();
   let data = loc.state.data;
+  console.log("ProductPg: 받아온 데이터는 무엇?",data);
+  console.log("ProductPg({cat})은 무엇?",cat);
 
   const chgBgFn = () => {
     if (cat !== "man") return; //카테고리가 man이 아니면 함수 종료

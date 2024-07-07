@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { wNew, wSale } from "../data/products_woman";
 import { mBestSeller, mNew, mSale, mOrigins } from "../data/products_man";
 import "../../css/ProductList.scss";
+import { Link } from "react-router-dom";
 
 function ProductList({ dbName }) {
   const pdbutton=["색상", "사이즈", "가격", "컬렉션( )"];
@@ -65,19 +66,21 @@ function ProductList({ dbName }) {
       <div className="product-list">
         {reversedData.map((v, i) => (
           <div key={i} className="product-item chgop">
-            <img src={process.env.PUBLIC_URL+v.isrc} alt={v.name} className="product-image" />
-            <div className="txt-box">
-              <span>{v.name}</span>
-              <span className="price">
-                {v.price[0] && <p>{v.price[0]}</p>}
-                {v.price[1] && (
-                  <p>
-                    {v.price[1]}&nbsp;{v.price[2]}
-                  </p>
-                )}
-              </span>
+              <Link to="/detail" state={selData}>{/* DetailPg.jsx로 selData보내기 */}
+              <img src={process.env.PUBLIC_URL+v.isrc} alt={v.name} className="product-image" />
+              <div className="txt-box">
+                <span>{v.name}</span>
+                <span className="price">
+                  {v.price[0] && <p>{v.price[0]}</p>}
+                  {v.price[1] && (
+                    <p>
+                      {v.price[1]}&nbsp;{v.price[2]}
+                    </p>
+                  )}
+                </span>
+              </div>
+          </Link>
             </div>
-          </div>
         ))}
       </div>
       </>
