@@ -21,24 +21,29 @@ function DetailPg(props) {
       <div className="care_imgbx">
         <div className={`care-box${toggle ? " on" : ""}`}>
           <p>
-          혼용률, 세탁 방법 및 원산지 혼용률 ZARA는 제품에 대한 사회적,
+            혼용률, 세탁 방법 및 원산지 혼용률 ZARA는 제품에 대한 사회적,
             환경적, 안전 및 건강 관련 표준을 준수하기 위해 모니터링 프로그램을
             운영합니다. 규정 준수 여부를 평가하기 위해 감사 프로그램과 지속적인
-            개선 계획을 개발하였습니다.혼용률, 세탁 방법 및 원산지 혼용률 ZARA는 제품에 대한 사회적,
-            환경적, 안전 및 건강 관련 표준을 준수하기 위해 모니터링 프로그램을
-            운영합니다. 규정 준수 여부를 평가하기 위해 감사 프로그램과 지속적인
-            개선 계획을 개발하였습니다.혼용률, 세탁 방법 및 원산지 혼용률 ZARA는 제품에 대한 사회적,
-            환경적, 안전 및 건강 관련 표준을 준수하기 위해 모니터링 프로그램을
-            운영합니다. 규정 준수 여부를 평가하기 위해 감사 프로그램과 지속적인
-            개선 계획을 개발하였습니다.혼용률, 세탁 방법 및 원산지 혼용률 ZARA는 제품에 대한 사회적,
-            환경적, 안전 및 건강 관련 표준을 준수하기 위해 모니터링 프로그램을
-            운영합니다. 규정 준수 여부를 평가하기 위해 감사 프로그램과 지속적인
-            개선 계획을 개발하였습니다.혼용률, 세탁 방법 및 원산지 혼용률 ZARA는 제품에 대한 사회적,
-            환경적, 안전 및 건강 관련 표준을 준수하기 위해 모니터링 프로그램을
-            운영합니다. 규정 준수 여부를 평가하기 위해 감사 프로그램과 지속적인
-            개선 계획을 개발하였습니다.
+            개선 계획을 개발하였습니다.혼용률, 세탁 방법 및 원산지 혼용률 ZARA는
+            제품에 대한 사회적, 환경적, 안전 및 건강 관련 표준을 준수하기 위해
+            모니터링 프로그램을 운영합니다. 규정 준수 여부를 평가하기 위해 감사
+            프로그램과 지속적인 개선 계획을 개발하였습니다.혼용률, 세탁 방법 및
+            원산지 혼용률 ZARA는 제품에 대한 사회적, 환경적, 안전 및 건강 관련
+            표준을 준수하기 위해 모니터링 프로그램을 운영합니다. 규정 준수
+            여부를 평가하기 위해 감사 프로그램과 지속적인 개선 계획을
+            개발하였습니다.혼용률, 세탁 방법 및 원산지 혼용률 ZARA는 제품에 대한
+            사회적, 환경적, 안전 및 건강 관련 표준을 준수하기 위해 모니터링
+            프로그램을 운영합니다. 규정 준수 여부를 평가하기 위해 감사
+            프로그램과 지속적인 개선 계획을 개발하였습니다.혼용률, 세탁 방법 및
+            원산지 혼용률 ZARA는 제품에 대한 사회적, 환경적, 안전 및 건강 관련
+            표준을 준수하기 위해 모니터링 프로그램을 운영합니다. 규정 준수
+            여부를 평가하기 위해 감사 프로그램과 지속적인 개선 계획을
+            개발하였습니다.
           </p>
-          <button className="morebt" onClick={() => setToggle((prevState) => !prevState)}>
+          <button
+            className="morebt"
+            onClick={() => setToggle((prevState) => !prevState)}
+          >
             {/* prevState => !prevState는 상태를 이전상태로 변경 시켜줌,toggle만들때 사용 */}
             {toggle == true ? "접기" : "더보기"}
           </button>
@@ -66,14 +71,14 @@ function DetailPg(props) {
         <div className="dtsize-bx">
           <div className="color">도트 그레이 | 2208/425</div>
           <div className="size">
-            <button>XS(KR 44)</button>
-            <button>S(KR 55)</button>
-            <button>M(KR 66)</button>
-            <button>L(KR 77)</button>
-            <button>XL(KR 88)</button>
+            <button>XS (KR 44)</button>
+            <button>S (KR 55)</button>
+            <button>M (KR 66)</button>
+            <button>L (KR 77)</button>
+            <button>XL (KR 88)</button>
           </div>
-          <button>추가하기</button>
         </div>
+        <button className="addbutton">추가하기</button>
       </div>
     </div>
   );

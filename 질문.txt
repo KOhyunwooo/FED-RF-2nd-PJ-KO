@@ -1,4 +1,9 @@
 
+ProductList.jsx에서 클릭한 데이터의 정보를 가지고 DetailPg.jsx 로 어떻게 넘기는지
+()
+
+swipeDetail로 데이터들 어떻게 가져가는지
+
 
 
 
