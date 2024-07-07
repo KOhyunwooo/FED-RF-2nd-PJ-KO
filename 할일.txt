@@ -1,3 +1,6 @@
+swipeDetail css 손보기
+
+
  kids, home 데이터 생성
 
 
@@ -8,6 +11,7 @@
 
 
 메모제이션 해야함
+https://www.youtube.com/watch?v=sGkNL1XLUwE&ab_channel=%ED%83%90%EC%8C%A4FED-RF-2024
 
 자라 페이지 아이콘따오기///////////
 

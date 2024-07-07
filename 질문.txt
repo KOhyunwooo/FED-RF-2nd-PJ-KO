@@ -4,7 +4,7 @@ ProductList.jsx에서 클릭한 데이터의 정보를 가지고 DetailPg.jsx �
 
 swipeDetail로 데이터들 어떻게 가져가는지
 
-
+DetailPg.jsx 좌측 더보기 버튼 클릭시 하단은 고정되고 상단만 올라가면서 height값 바뀌게
 
 
 

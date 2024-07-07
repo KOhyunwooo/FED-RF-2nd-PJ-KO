@@ -7,7 +7,7 @@ import "../../css/detail_pg.scss";
 
 function DetailPg(props) {
   const loc = useLocation();
-  const data = loc.state; //ProductList에서 받아온 데이터
+  const data = loc.state; //ProductList.jsx에서  <Link to="/detail" state={selData}>로 받아온 데이터
   console.log("DetailPg: useLocation", loc);
   console.log("DetailPg: loc.state", data);
 
@@ -57,7 +57,7 @@ function DetailPg(props) {
       <div className="detail-txtbox">
         <div className="dttxt-bx">
           <div className="tit">울 더블 브레스트 블레이저 ZW COLLECTION</div>
-          <div className="price">₩ 209,900 -57% ₩ 89,900</div>
+          <div className="price">₩ 89,900</div>
           <div className="desc">
             ZARA WOMAN COLLECTION 울 혼방 원사 소재로 제작한 블레이저. 버튼이
             달린 트임 마감 긴소매 라펠 칼라 디자인. 앞면 플랩 포켓과 가슴 부분
