@@ -1,0 +1,17 @@
+.cartlist-box{
+    width: 100vw;
+    backdrop-filter: blur(2px);
+    background-color: hsla(0, 0%, 99%, .788);
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+
+    .addedcart-box{
+        border: red 2px dashed;
+        width: 660px;
+        height: 100dvh;
+        float: right;
+    }
+}

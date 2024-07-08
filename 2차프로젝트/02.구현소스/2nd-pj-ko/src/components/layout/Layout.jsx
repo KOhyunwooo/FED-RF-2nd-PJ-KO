@@ -7,6 +7,7 @@ import { useLocation,useNavigate } from "react-router-dom";
 
 // 컨텍스트 API사용을 위한 불러오기
 import { dCon } from "../func/dCon";
+import CartList from "../modules/CartList";
 
 //전체 레이아웃 컴포넌트
 export default function Layout() {
@@ -116,8 +117,14 @@ export default function Layout() {
         >
             {/* 상단영역 */}
             {isMobile ? <TopAreaMedia /> : <TopArea />}
+
             {/* 메인영역 */}
             <MainArea />
+            {/* 카트리스트 */}
+            <CartList/>
+
+
+
             {/* 하단영역? */}
             {sts && <Footer />}
             {/* sts가 true면 <Footer />실행 */}
