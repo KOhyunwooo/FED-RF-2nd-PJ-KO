@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 //카트리스트 scss 불러오기
 import "../../css/cart-list.scss";
 import { dCon } from "../func/dCon";
@@ -9,9 +9,28 @@ function CartList(props) {
   //컨텍스트 API 불러오기
   const myCon = useContext(dCon);
 
+  console.log(myCon.setCartList);
+
+  /////////setCartList상태로 html에 오버플로우히든주기:추가하기버튼 클릭시 뒷배경 안눌리게  //////////////////////////
+  useEffect(() => {
+    if (myCon.setCartList) {
+      //mycon.cartList가 true냐 그럼 html에 오버플로우 히든
+      document.querySelector("html").style.overflow = "hidden";
+    } else {
+      //아니면 오버플로우 오토
+      document.querySelector("html").style.overflow = "auto";
+    }
+
+    //소멸자// 언마운트시 하는거
+    return () => {
+      document.querySelector("html").style.overflow = "auto";
+    };
+  }, [myCon.setCartList]); // myCon.cartList 상태가 변경될 때마다 useEffect 실행
+
   return (
     <>
       <div className="cartlist-box">
+        <div className="cartlist-bg"></div>
         <div className="addedcart-box">
           <button
             className="cbtn"
