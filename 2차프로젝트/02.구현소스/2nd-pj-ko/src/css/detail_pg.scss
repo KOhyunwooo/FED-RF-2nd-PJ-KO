@@ -33,11 +33,12 @@
 
 
     .detail-img{
+      position: relative;
       display: flex;
       align-items: flex-end;
-      width: 500px;
-      height: 750px;
-      border: red dashed 2px;
+      width: 350px;
+    height: 500px;
+      // border: blue dashed 2px;
     }
   }
 
