@@ -93,12 +93,17 @@
           background-color: #fdfdfd;
           padding: 4px 8px;
           height: 24px;
-          transition: background-color 0.3s;
+          transition: 0.3s ease-in-out;
+
           &:hover {
             background-color: #eaeaea;
           }
-
-          cursor: pointer; /* 클릭 가능한 커서 설정 */
+          &:focus{
+            background-color: black;
+            color: #fdfdfd;
+          }
+       
+          cursor: pointer; 
         }
       }
     }
