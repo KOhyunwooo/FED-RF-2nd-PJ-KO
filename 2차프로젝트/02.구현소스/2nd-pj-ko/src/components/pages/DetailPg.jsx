@@ -48,8 +48,9 @@ function DetailPg(props) {
             {toggle == true ? "접기" : "더보기"}
           </button>
         </div>
-        <div className="detail-img" style={{ width: "488px", height: "736px" }}>
-          <SwiperDetail />
+        {/* 스와이퍼 디테일 부분 ,detail-img */}
+        <div className="detail-img">
+          <SwiperDetail/>
         </div>
       </div>
 

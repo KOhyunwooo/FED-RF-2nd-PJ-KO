@@ -30,6 +30,15 @@
         bottom: 0;
       }
     }
+
+
+    .detail-img{
+      display: flex;
+      align-items: flex-end;
+      width: 500px;
+      height: 750px;
+      border: red dashed 2px;
+    }
   }
 
   // 가장 오른쪽 디테일 부분///flex하였음////////////////////////////////////
