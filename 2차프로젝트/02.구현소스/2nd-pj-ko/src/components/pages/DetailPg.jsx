@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import SwiperDetail from "../plugin/SwiperDetail";
 import { useLocation } from "react-router-dom";
 
 /* 디테일 pg scss 불러오기 */
 import "../../css/detail_pg.scss";
+import { dCon } from "../func/dCon";
 
 function DetailPg(props) {
+  //컨텍스트 사용하기(CartList상태변경해서 화면에 띄우는 용도)
+  const myCon = useContext(dCon);
+
   const loc = useLocation();
   const data = loc.state; //ProductList.jsx에서  <Link to="/detail" state={selData}>로 받아온 데이터
   console.log("DetailPg: useLocation", loc);
@@ -50,7 +54,7 @@ function DetailPg(props) {
         </div>
         {/* 스와이퍼 디테일 부분 ,detail-img */}
         <div className="detail-img">
-          <SwiperDetail/>
+          <SwiperDetail />
         </div>
       </div>
 
@@ -79,7 +83,14 @@ function DetailPg(props) {
             <button>XL (KR 88)</button>
           </div>
         </div>
-        <button className="addbutton">추가하기</button>
+        <button
+          className="addbutton"
+          onClick={() => {
+            myCon.setCartList(true);
+          }}
+        >
+          추가하기
+        </button>
       </div>
     </div>
   );

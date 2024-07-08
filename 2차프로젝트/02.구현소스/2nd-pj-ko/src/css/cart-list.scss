@@ -1,17 +1,79 @@
+.cartlist-box *{
+    border: red 2px dashed;
+}
+///배경 전체///////////////////////////////////
 .cartlist-box{
-    width: 100vw;
-    backdrop-filter: blur(2px);
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
     background-color: hsla(0, 0%, 99%, .788);
     
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    box-sizing: border-box;
+    overflow-y: auto;
+    
+
+    //오른쪽 박스/////////////////////////////////////////////////
+    .cbtn{
+        
+        
+        float: right;
+        margin-right: 10px;
+        font-size: 30px;
+        color: #010101;
+        transform: scaleX(1.5);
+        cursor: pointer;
+        background-color: #fdfdfd;
+        font-family:sans-serif;
+    }
+
 
     .addedcart-box{
-        border: red 2px dashed;
-        width: 660px;
-        height: 100dvh;
+        border-left: 1px solid black;
+        width: max(28%, 400px);
+        height: 100%;
         float: right;
+        background-color: #fdfdfd;
+        
+        .item-box{
+            border: 1px solid black;
+            margin: 72px auto 0 auto;
+            width: 366px;
+            height: 184px;
+            display: flex;
+            .item-img{
+                width: 122px;
+                height: 100%;
+               
+            }
+            .item-txt{
+                flex-grow: 1; /* 남은 공간 차지 */
+                height: 100%;
+
+            }
+        }
+        .look-my-cart{
+            background-color: #fdfdfd;
+            cursor: pointer;
+            width: 366px;//.item-box의 width만큼 설정해야함.
+            border: 1px solid black;
+            margin: 30px auto 0 auto;
+            display: block;
+            height: 40px;
+
+        }
+        .recommend-txt{
+            margin-right: auto;
+            font-size: 15px;
+            font-family: "HelveticaLt";
+            margin-right: 46px;
+    margin-top: 30px;
+    text-align: right;
+        }
+        .yu-gi-e-recommendcomp{
+            font-size: 20px;
+        }
     }
 }
