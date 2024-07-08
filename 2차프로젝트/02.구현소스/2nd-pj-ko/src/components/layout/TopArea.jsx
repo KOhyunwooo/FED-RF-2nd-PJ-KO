@@ -168,32 +168,22 @@ export default function TopArea() {
                 <span>
                   {
                     /* 회원가입, 로그인 버튼은 로그인 상태가 null일때 나옴 */
-                    myCon.loginSts === null && (
-                      <>
-                        <li>
-                          <Link to="/login">로그인</Link>
-                        </li>
-                      </>
-                    )
+                    myCon.loginSts === null && <Link to="/login">로그인</Link>
                   }
                   {
                     /* 로그인 상태이면 로그아웃버튼 보임 */
                     myCon.loginSts !== null && (
-                      <>
-                        <li>
-                          <a
-                            href="#"
-                            onClick={(e) => {
-                              // 기본이동 막기
-                              e.preventDefault();
-                              // 로그아웃처리함수 호출
-                              myCon.logoutFn();
-                            }}
-                          >
-                            로그아웃
-                          </a>
-                        </li>
-                      </>
+                      <a
+                        href="#"
+                        onClick={(e) => {
+                          // 기본이동 막기
+                          e.preventDefault();
+                          // 로그아웃처리함수 호출
+                          myCon.logoutFn();
+                        }}
+                      >
+                        로그아웃
+                      </a>
                     )
                   }
                 </span>
