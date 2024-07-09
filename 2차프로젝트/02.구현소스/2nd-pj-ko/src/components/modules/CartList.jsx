@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 //카트리스트 scss 불러오기
-import "../../css/cart-list.scss";
+import "../../css/cart_list.scss";
 import { dCon } from "../func/dCon";
 //제이쿼리 불러오기
 import $ from "jquery";

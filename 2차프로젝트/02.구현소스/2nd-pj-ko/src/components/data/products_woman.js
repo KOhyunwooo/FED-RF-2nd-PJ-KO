@@ -3,6 +3,7 @@ export const wNew = [
   {
     idx: "0",
     isrc: "/images/product/woman/new/101.jpg",
+    dtsrc:["",],
     name: "리본 포플린 탑",
     price: ["₩ 45,900"],
     txt: "조절 가능한 가느다란 어깨끈이 달린 스트레이트 네크라인 탑. 리본으로 여미는 앞면 트임.",
@@ -14,6 +15,7 @@ export const wNew = [
   {
     idx: "1",
     isrc: "/images/product/woman/new/102.jpg",
+    dtsrc:["",],
     name: "크로셰 니트 탑",
     price: ["₩ 89,900"],
     txt: "오픈워크 니트 소재의 라운드넥 반소매 탑.",
@@ -25,6 +27,7 @@ export const wNew = [
   {
     idx: "2",
     isrc: "/images/product/woman/new/103.jpg",
+    dtsrc:["",],
     name: "리본 새틴 토트백",
     price: ["₩ 49,900"],
     txt: "새틴 마감 소재 미니 토트백. 리본 디테일. 손잡이 디테일. 드로스트링으로 여미는 내부 가방. 리본과 지퍼로 여미는 내부 포켓.",
@@ -36,6 +39,7 @@ export const wNew = [
   {
     idx: "3",
     isrc: "/images/product/woman/new/104.jpg",
+    dtsrc:["",],
     name: "리본 새틴 토트백",
     price: ["₩ 49,900"],
     txt: "새틴 마감 소재 미니 토트백. 리본 디테일. 손잡이 디테일. 드로스트링으로 여미는 내부 가방. 리본과 지퍼로 여미는 내부 포켓.",
@@ -47,6 +51,7 @@ export const wNew = [
   {
     idx: "4",
     isrc: "/images/product/woman/new/105.jpg",
+    dtsrc:["",],
     name: "메쉬 플랫 샌들",
     price: ["₩ 79,900"],
     txt: [
@@ -61,6 +66,7 @@ export const wNew = [
   {
     idx: "5",
     isrc: "/images/product/woman/new/106.jpg",
+    dtsrc:["",],
     name: "리본 포플린 탑",
     price: ["₩ 45,900"],
     txt: "조절 가능한 가느다란 어깨끈이 달린 스트레이트 네크라인 탑. 리본으로 여미는 앞면 트임.",
@@ -72,6 +78,7 @@ export const wNew = [
   {
     idx: "6",
     isrc: "/images/product/woman/new/107.jpg",
+    dtsrc:["",],
     name: "리본 미디 원피스",
     price: ["₩ 79,900"],
     txt: "리본 장식 어깨끈이 달린 스트레이트 네크라인 미니 원피스. 심라인 콘실 지퍼 여밈.",
@@ -83,6 +90,7 @@ export const wNew = [
   {
     idx: "7",
     isrc: "/images/product/woman/new/108.jpg",
+    dtsrc:["",],
     name: "리본 미디 원피스",
     price: ["₩ 79,900"],
     txt: "리본 장식 어깨끈이 달린 스트레이트 네크라인 미니 원피스. 심라인 콘실 지퍼 여밈.",
@@ -94,6 +102,7 @@ export const wNew = [
   {
     idx: "8",
     isrc: "/images/product/woman/new/109.jpg",
+    dtsrc:["",],
     name: "볼륨 미디 원피스",
     price: ["₩ 79,900"],
     txt: "스트레이트 네크라인 미디 원피스. 리본이 달린 어깨끈. 옆면 심라인 히든 포켓. 톤온톤 내부 안감이 매치됨.",
@@ -105,6 +114,7 @@ export const wNew = [
   {
     idx: "9",
     isrc: "/images/product/woman/new/110.jpg",
+    dtsrc:["",],
     name: "리본 백",
     price: ["₩ 55,900"],
     txt: "리본 디테일과 지퍼 포켓이 있는 미니 백. 브레이드 디테일이 있는 손잡이. 길이 조절 가능한 탈부착형 크로스 스트랩. 내부 안감 처리. 자석이 달린 플랩으로 여밈.",
@@ -116,6 +126,7 @@ export const wNew = [
   {
     idx: "10",
     isrc: "/images/product/woman/new/111.jpg",
+    dtsrc:["",],
     name: "JEANS ZW COLLECTION BARREL CROPPED 미드라이즈",
     price: ["₩ 59,900"],
     txt: [
@@ -130,6 +141,7 @@ export const wNew = [
   {
     idx: "11",
     isrc: "/images/product/woman/new/112.jpg",
+    dtsrc:["",],
     name: "리본 백",
     price: ["₩ 55,900"],
     txt: "리본 디테일과 지퍼 포켓이 있는 미니 백. 브레이드 디테일이 있는 손잡이. 길이 조절 가능한 탈부착형 크로스 스트랩. 내부 안감 처리. 자석이 달린 플랩으로 여밈.",
@@ -141,6 +153,7 @@ export const wNew = [
   {
     idx: "12",
     isrc: "/images/product/woman/new/113.jpg",
+    dtsrc:["",],
     name: "100% 리넨 오버사이즈 셔츠",
     price: ["₩ 55,900"],
     txt: "100% 리넨 원사 소재로 제작한 오버사이즈 셔츠. 커프스 긴소매 라펠 칼라 디자인. 버튼이 달린 옆면 트임 디테일. 앞면 버튼 여밈.",
@@ -152,6 +165,7 @@ export const wNew = [
   {
     idx: "13",
     isrc: "/images/product/woman/new/114.jpg",
+    dtsrc:["",],
     name: "리본 포플린 탑",
     price: ["₩ 45,900"],
     txt: "뒷면 리본으로 조절 가능한 가느다란 어깨끈이 달린 브이넥 탑. 뒷면 엘라스틱 디테일. 같은 소재의 가슴 부분 리본으로 핏 조절 가능.",
@@ -163,6 +177,7 @@ export const wNew = [
   {
     idx: "14",
     isrc: "/images/product/woman/new/115.jpg",
+    dtsrc:["",],
     name: "나일론 벌룬 미디 스커트",
     price: ["₩ 55,900"],
     txt: "허리 내부가 리본으로 조절 가능한 신축성 있는 디자인의 하이웨이스트 미디 스커트. 옆면 포켓 디테일. 양 옆면 리본으로 핏 조절이 가능한 볼륨 있는 밑단.",
@@ -174,6 +189,7 @@ export const wNew = [
   {
     idx: "15",
     isrc: "/images/product/woman/new/116.jpg",
+    dtsrc:["",],
     name: "메탈릭 셔링 숄더백",
     price: ["₩ 59,900"],
     txt: [
@@ -188,6 +204,7 @@ export const wNew = [
   {
     idx: "16",
     isrc: "/images/product/woman/new/117.jpg",
+    dtsrc:["",],
     name: "메탈릭 셔링 숄더백",
     price: ["₩ 59,900"],
     txt: [
@@ -202,6 +219,7 @@ export const wNew = [
   {
     idx: "17",
     isrc: "/images/product/woman/new/118.jpg",
+    dtsrc:["",],
     name: "100% 리넨 오버사이즈 셔츠",
     price: ["₩ 55,900"],
     txt: "100% 리넨 원사 소재로 제작한 오버사이즈 셔츠. 커프스 긴소매 라펠 칼라 디자인. 버튼이 달린 옆면 트임 디테일. 앞면 버튼 여밈.",
@@ -217,6 +235,7 @@ export const wSale = [
   {
     idx: "0",
     isrc: "/images/product/woman/sale/001.jpg",
+    dtsrc:["",],
     name: "포켓 플레어 팬츠 ZW COLLECTION",
     price: ["₩ 59,900", "-33% ", "₩ 39,900"],
     txt: [
@@ -232,6 +251,7 @@ export const wSale = [
   {
     idx: "1",
     isrc: "/images/product/woman/sale/002.jpg",
+    dtsrc:["",],
     name: "타이트핏 미니 원피스",
     price: ["₩ 59,900", "-33% ", "₩ 39,900"],
     txt: [
@@ -245,6 +265,7 @@ export const wSale = [
   {
     idx: "2",
     isrc: "/images/product/woman/sale/003.jpg",
+    dtsrc:["",],
     name: "벨트 셔링 셔츠 ZW COLLECTION",
     price: ["₩ 59,900", "-33% ", "₩ 39,900"],
     txt: [
@@ -260,6 +281,7 @@ export const wSale = [
   {
     idx: "3",
     isrc: "/images/product/woman/sale/004.jpg",
+    dtsrc:["",],
     name: "JEANS TRF 스트레이트 하이웨이스트",
     price: ["₩ 55,900", "-35% ", "₩ 35,900"],
     txt: [
@@ -275,6 +297,7 @@ export const wSale = [
   {
     idx: "4",
     isrc: "/images/product/woman/sale/005.jpg",
+    dtsrc:["",],
     name: "매듭 포플린 셔츠 원피스 ZW COLLECTION",
     price: ["₩ 109,900", "-49% ", "₩ 55,900"],
     txt: [
@@ -290,6 +313,7 @@ export const wSale = [
   {
     idx: "5",
     isrc: "/images/product/woman/sale/006.jpg",
+    dtsrc:["",],
     name: "JEANS TRF BOOTCUT 미드라이즈",
     price: ["₩ 55,900", "-35% ", "₩ 35,900"],
 
@@ -305,6 +329,7 @@ export const wSale = [
   {
     idx: "6",
     isrc: "/images/product/woman/sale/007.jpg",
+    dtsrc:["",],
     name: "버튼 스트라이프 니트 스웨터",
     price: ["₩ 59,900", "-33% ", "₩ 39,900"],
     txt: "긴소매 라운드넥 스웨터. 엠보싱 마감 어깨 부분 메[탈릭 버튼 디테일. 톤온톤 리브드 마감.",
@@ -316,6 +341,7 @@ export const wSale = [
   {
     idx: "7",
     isrc: "/images/product/woman/sale/008.jpg",
+    dtsrc:["",],
     name: "미니 스커트 ZW COLLECTION",
     price: ["₩ 59,900", "-40% ", "₩ 35,900"],
     txt: [
@@ -331,6 +357,7 @@ export const wSale = [
   {
     idx: "8",
     isrc: "/images/product/woman/sale/009.jpg",
+    dtsrc:["",],
     name: "벨티드 치노 팬츠",
     price: ["₩ 59,900", "-33% ", "₩ 39,900"],
     txt: "벨트가 달린 앞면 턱 디테일 하이웨이스트 팬츠. 앞면 포켓과 뒷면 페이크 파[이핑 포켓. 앞면 지퍼와 버튼으로 여밈.",
@@ -342,6 +369,7 @@ export const wSale = [
   {
     idx: "9",
     isrc: "/images/product/woman/sale/010.jpg",
+    dtsrc:["",],
     name: "스트랩 니트 탑",
     price: ["₩ 35,900", "-38% ", "₩ 21,900"],
     txt: "가느다란[ 어깨끈이 달린 스트레이트 네크라인 탑.",
@@ -353,6 +381,7 @@ export const wSale = [
   {
     idx: "10",
     isrc: "/images/product/woman/sale/011.jpg",
+    dtsrc:["",],
     name: "버클 러그솔 앵클부츠",
     price: ["₩ 129,900", "-38% ", "₩ 79,900"],
     txt: [
@@ -367,6 +396,7 @@ export const wSale = [
   {
     idx: "11",
     isrc: "/images/product/woman/sale/012.jpg",
+    dtsrc:["",],
     name: "소프트 백팩 ROCK",
     price: ["₩ 55,900-", "-35% ", "₩ 35,900"],
     txt: [
@@ -381,6 +411,7 @@ export const wSale = [
   {
     idx: "12",
     isrc: "/images/product/woman/sale/013.jpg",
+    dtsrc:["",],
     name: "멀티포지션 크로스백",
     price: ["₩ 55,900", "-28% ", "₩ 39,900"],
     txt: [
@@ -395,6 +426,7 @@ export const wSale = [
   {
     idx: "13",
     isrc: "/images/product/woman/sale/014.jpg",
+    dtsrc:["",],
     name: "글리터 메쉬 발레리나 플랫슈즈",
     price: ["₩ 89,900", "-44% ", "₩ 49,900"],
     txt: [
@@ -410,6 +442,7 @@ export const wSale = [
   {
     idx: "14",
     isrc: "/images/product/woman/sale/015.jpg",
+    dtsrc:["",],
     name: "버클 플랫 부츠",
     price: ["₩ 129,900", "-53% ", "₩ 59,900"],
     txt: [
@@ -425,6 +458,7 @@ export const wSale = [
   {
     idx: "15",
     isrc: "/images/product/woman/sale/016.jpg",
+    dtsrc:["",],
     name: "플랫 바이커 앵클부츠",
     price: ["₩ 109,900", "-49% ", "₩ 55,900"],
     txt: [
@@ -442,6 +476,7 @@ export const wSale = [
   {
     idx: "16",
     isrc: "/images/product/woman/sale/017.jpg",
+    dtsrc:["",],
     name: "포인텔 파인 니트 탑",
     price: ["₩ 39,900", "-45% ", "₩ 21,900"],
     txt: "라운드넥 반소매 탑.",
@@ -453,6 +488,7 @@ export const wSale = [
   {
     idx: "17",
     isrc: "/images/product/woman/sale/018.jpg",
+    dtsrc:["",],
     name: "턱시도 칼라 블레이저 ZW COLLECTION",
     price: ["₩ 149,900", "-40% ", "₩ 89,900"],
     txt: [
@@ -467,6 +503,7 @@ export const wSale = [
   {
     idx: "18",
     isrc: "/images/product/woman/sale/019.jpg",
+    dtsrc:["",],
     name: "JEANS Z1975 JOGGER 하이웨이스트 드로스트링 헴라인",
     price: ["₩ 55,900", "-35% ", "₩ 35,900"],
     txt: [
@@ -481,6 +518,7 @@ export const wSale = [
   {
     idx: "19",
     isrc: "/images/product/woman/sale/020.jpg",
+    dtsrc:["",],
     name: "핀턱 캐롯 팬츠 ZW COLLECTION",
     price: ["₩ 89,900", "-48% ", "₩ 45,900"],
     txt: [
@@ -496,6 +534,7 @@ export const wSale = [
   {
     idx: "20",
     isrc: "/images/product/woman/sale/021.jpg",
+    dtsrc:["",],
     name: "베이직 크롭 블레이저",
     price: ["₩ 79,900", "-42% ", "₩ 45,900"],
     txt: "리넨 24% 혼방 소재로 제작한 블레이저. 숄더 패드가 매치된 긴소매 라펠 칼라 디자인. 파이핑 처리된 가슴 부분 페이크 포켓. 톤온톤[ 내부 안감이 매치됨. 앞면 버튼 여밈.",
@@ -507,6 +546,7 @@ export const wSale = [
   {
     idx: "21",
     isrc: "/images/product/woman/sale/022.jpg",
+    dtsrc:["",],
     name: "미니 크로스백",
     price: ["₩ 55,900", "-28% ", "₩ 39,900"],
     txt: [
@@ -521,6 +561,7 @@ export const wSale = [
   {
     idx: "22",
     isrc: "/images/product/woman/sale/023.jpg",
+    dtsrc:["",],
     name: "JEANS ZW BOOTCUT CROPPED 하이웨이스트",
     price: ["₩ 59,900", "-33% ", "₩ 39,900"],
     txt: [
@@ -537,6 +578,7 @@ export const wSale = [
   {
     idx: "23",
     isrc: "/images/product/woman/sale/024.jpg",
+    dtsrc:["",],
     name: "WINDPROOF & WATERPROOF RECCO® SYSTEM SKI COLLECTION",
     price: ["₩ 209,900", "-28%", " ₩149,900"],
     txt: [

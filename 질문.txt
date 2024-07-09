@@ -1,11 +1,10 @@
 
-ProductList.jsx에서 클릭한 데이터의 정보를 가지고 DetailPg.jsx 로 어떻게 넘기는지
-()
-Datailpg.jsx에서 클릭한 데이터(색상, 사이즈)를 가지고 CartList.jsx로 데이터 넘겨야함
+1. ProductList.jsx에서 클릭한 데이터의 정보를 가지고 DetailPg.jsx, swipeDetail 로 넘겨야함
 
-(추후: CartList->MyCart.jsx로 데이터 넘겨야함)
+2. Datailpg.jsx에서 클릭한 데이터("색상", "사이즈")를 가지고 CartList.jsx로 데이터 넘겨야함
 
-swipeDetail로 데이터들 어떻게 가져가는지
+3. CartList -> MyCart.jsx로 데이터 넘겨야함
+
 
 DetailPg.jsx 좌측 더보기 버튼: 클릭시 하단은 고정되고 상단만 올라가면서 height값 바뀌게
 

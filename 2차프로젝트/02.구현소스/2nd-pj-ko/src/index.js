@@ -19,6 +19,7 @@ import Sorry from "./components/pages/Sorry";
 import JoinMember from "./components/pages/JoinMember";
 import Login from "./components/pages/Login";
 import DetailPg from "./components/pages/DetailPg";
+import MyCart from "./components/pages/MyCart";
 
 
 
@@ -56,14 +57,15 @@ export default function MainComponent() {
           <Route path="joinmember" element={<JoinMember />} />
           <Route path="login" element={<Login />} />
           <Route path="detail" element={<DetailPg />} />
+          <Route path="mycart" element={<MyCart />} />
         
           <Route path="sorry" element={<Sorry />} />
 
-          {reName.map((e, i) => (
+          {reName.map((v, i) => (
             <Route
               key={i}
-              path={e + "/product"}
-              element={<ProductPg cat={e} />}
+              path={v + "/product"}
+              element={<ProductPg cat={v} />}
             />
           ))}
           {/* <Route path="product" element={<ProductPg />} /> */}

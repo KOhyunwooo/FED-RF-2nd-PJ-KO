@@ -135,7 +135,7 @@ function TopAreaMedia() {
                 )
               }
          
-            <Link to="#">
+            <Link to="/mycart">
               <span>바스켓백(0)</span>
             </Link>
           </div>

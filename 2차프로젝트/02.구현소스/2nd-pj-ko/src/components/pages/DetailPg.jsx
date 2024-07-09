@@ -7,7 +7,7 @@ import "../../css/detail_pg.scss";
 import { dCon } from "../func/dCon";
 
 function DetailPg(props) {
-  //컨텍스트 사용하기(CartList상태변경해서 화면에 띄우는 용도)
+  //컨텍스트 사용하기(Layout.jsx에서setCartList를 상태변경해서 화면에 띄우려고 사용함)
   const myCon = useContext(dCon);
 
   const loc = useLocation();

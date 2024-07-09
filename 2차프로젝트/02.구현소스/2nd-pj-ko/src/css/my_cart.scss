@@ -1,0 +1,116 @@
+//바스켓백 버튼
+.mycart-button {
+    margin-bottom: 1px;
+    position: relative;    
+    outline: none;
+    box-shadow: 0 0 0 1px #000000; /* 테두리 효과 설정 */
+    border: none ;
+    background-color: #fff;
+    color: black;
+    width: 25vw;
+    height: 32px;
+    cursor: pointer;
+    font-family: "HelveticaLt";
+    font-size: 1.1rem;
+}
+//마음에드는제품 버튼
+.favorite-button {
+    margin-bottom: 1px;
+    position: relative;    
+    outline: none;
+    box-shadow: 0 0 0 1px #000000; /* 테두리 효과 설정 */
+    border: none ;
+    background-color: #fff;
+    color: black;
+    width: 25vw;
+    height: 32px;
+    cursor: pointer;
+    font-family: "HelveticaLt";
+    font-size: 1.1rem;
+}
+
+.mycart-txt {
+    background-color: #eeeeee;
+    font-family: "HelveticaLt";
+    font-size: 1.1rem;
+    padding: 12px 16px;
+    outline: 1px solid black;
+    margin-bottom: 1px;
+}
+
+.mycart-box {
+    
+.product-list5 {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5개의 열을 생성 */
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%; /* 가로 방향으로 가득 채우기 */
+    padding: 0; /* 컨테이너의 패딩 제거 */
+    margin: 0; /* 컨테이너의 마진 제거 */
+    box-sizing: border-box;
+
+    .product-item {
+        background-color: #fdfdfd;
+        outline: 1px solid #000000;
+        box-sizing: border-box;
+        img{
+            border-right: 1px solid black;
+            height: 100%;
+        }
+        > a {
+            width: 100%;
+            text-decoration: none;
+            color: #010101;
+            display: block;
+            height: auto;
+        }
+        .txt-box{
+            
+        }
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+////////////////////미디어 쿼리
+
+/* 1050 이하 일떄 */
+@media screen and (max-width: 1050px) {
+    .mycart-box{
+
+        .product-list5 {
+            
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            
+        }
+    }
+}
+/* 777 이하 일떄 */
+@media screen and (max-width: 777px) {
+    .mycart-button, .favorite-button {
+        width: 50%;
+    }
+    .mycart-box{
+        .product-list5 {
+            
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            .product-item {
+            display: flex;
+            img{
+                border-bottom: none;
+            }
+            .txt-box{
+                width: 90%;
+            }
+        }}
+    }
+}
