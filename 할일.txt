@@ -1,19 +1,27 @@
-swipeDetail css 손보기
-
-
  kids, home 데이터 생성
-
 
 메인페이지- 영상으로 대체
 
 
-추천상품 모듈 추가
+추천상품 모듈 추가하기
+장바구니(MyCart.jsx) 페이지 만들기
+즐겨찾기 버튼 만들기-> 즐겨찾기한 데이터는 어떻게 넘기는가???
+
 
 
 메모제이션 해야함
 https://www.youtube.com/watch?v=sGkNL1XLUwE&ab_channel=%ED%83%90%EC%8C%A4FED-RF-2024
 
+
+
+
 자라 페이지 아이콘따오기///////////
+
+
+
+
+
+
 
 
 회원가입 만드는거 다시보고 이해하기

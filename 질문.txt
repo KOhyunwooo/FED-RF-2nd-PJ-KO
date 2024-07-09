@@ -1,10 +1,13 @@
 
 ProductList.jsx에서 클릭한 데이터의 정보를 가지고 DetailPg.jsx 로 어떻게 넘기는지
 ()
+Datailpg.jsx에서 클릭한 데이터(색상, 사이즈)를 가지고 CartList.jsx로 데이터 넘겨야함
+
+(추후: CartList->MyCart.jsx로 데이터 넘겨야함)
 
 swipeDetail로 데이터들 어떻게 가져가는지
 
-DetailPg.jsx 좌측 더보기 버튼 클릭시 하단은 고정되고 상단만 올라가면서 height값 바뀌게
+DetailPg.jsx 좌측 더보기 버튼: 클릭시 하단은 고정되고 상단만 올라가면서 height값 바뀌게
 
 
 DetailPg.jsx 사이즈 버튼 클릭시-> 추가하기 버튼에도 배경색 흰색 적용하는방법
@@ -21,7 +24,7 @@ swiper마우스 휠 작동안함
 
 
 
-
+  
 
 
 
