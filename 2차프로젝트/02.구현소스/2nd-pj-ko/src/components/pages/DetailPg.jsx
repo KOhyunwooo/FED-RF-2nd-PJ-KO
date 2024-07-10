@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 /* 디테일 pg scss 불러오기 */
 import "../../css/detail_pg.scss";
 import { dCon } from "../func/dCon";
+import CareTxt from "../modules/CareTxt";
 
 function DetailPg(props) {
   //컨텍스트 사용하기(Layout.jsx에서setCartList를 상태변경해서 화면에 띄우려고 사용함)
@@ -17,7 +18,8 @@ function DetailPg(props) {
 
   //토글 상태변수 만들기: 왼쪽 더보기,접기 버튼 부분
   const [toggle, setToggle] = useState(false);
-
+  //사이즈버튼 클릭시 색상 변경을 위한 상태관리변수
+  const [chgcolor, setChgcolor] = useState(null);
   
 
   return (
@@ -27,26 +29,9 @@ function DetailPg(props) {
       <div className="care_imgbx">
         <div className="care-box-wrap">
         <div className={`care-box${toggle ? " on" : ""}`}>
-          <p>
-            혼용률, 세탁 방법 및 원산지 혼용률 ZARA는 제품에 대한 사회적,
-            환경적, 안전 및 건강 관련 표준을 준수하기 위해 모니터링 프로그램을
-            운영합니다. 규정 준수 여부를 평가하기 위해 감사 프로그램과 지속적인
-            개선 계획을 개발하였습니다.혼용률, 세탁 방법 및 원산지 혼용률 ZARA는
-            제품에 대한 사회적, 환경적, 안전 및 건강 관련 표준을 준수하기 위해
-            모니터링 프로그램을 운영합니다. 규정 준수 여부를 평가하기 위해 감사
-            프로그램과 지속적인 개선 계획을 개발하였습니다.혼용률, 세탁 방법 및
-            원산지 혼용률 ZARA는 제품에 대한 사회적, 환경적, 안전 및 건강 관련
-            표준을 준수하기 위해 모니터링 프로그램을 운영합니다. 규정 준수
-            여부를 평가하기 위해 감사 프로그램과 지속적인 개선 계획을
-            개발하였습니다.혼용률, 세탁 방법 및 원산지 혼용률 ZARA는 제품에 대한
-            사회적, 환경적, 안전 및 건강 관련 표준을 준수하기 위해 모니터링
-            프로그램을 운영합니다. 규정 준수 여부를 평가하기 위해 감사
-            프로그램과 지속적인 개선 계획을 개발하였습니다.혼용률, 세탁 방법 및
-            원산지 혼용률 ZARA는 제품에 대한 사회적, 환경적, 안전 및 건강 관련
-            표준을 준수하기 위해 모니터링 프로그램을 운영합니다. 규정 준수
-            여부를 평가하기 위해 감사 프로그램과 지속적인 개선 계획을
-            개발하였습니다.
-          </p>
+          
+           <CareTxt/>
+          
           <button
             className="morebt"
             onClick={() => setToggle((prevState) => !prevState)}
@@ -79,25 +64,27 @@ function DetailPg(props) {
           </ul>
         </div>
         <div className="dtsize-bx">
-          <div className="color">도트 그레이 | 2208/425</div>
+          <div className="color">{data.color}</div>
           <div className="size">
             {data.size.map((v,i)=>
             <button key={i}
-            onBlur={e=>{
-              console.log("나두야!");
-              e.currentTarget
-              .parentElement.parentElement
-              .nextElementSibling.style.backgroundColor = "transparent";
-            }}
             
             onClick={(e)=>{
-              e.currentTarget              
-              .parentElement.parentElement
-              .nextElementSibling.style.backgroundColor = "red";//nextElementSibling 선택요소의 다음요소
+              setChgcolor(i);
+              
+              //e.자신의.부모요소의.부모요소의.nextElementSibling( 선택요소의 다음요소).style.backgroundColor주기
+              e.currentTarget.parentElement.parentElement.nextElementSibling.style.backgroundColor = "black";
+              
+              //데이터 전역.useRef에 저장하기
               let dt3 = data.isrc;
               let dt1 = e.target.innerText;
               let dt2 = document.querySelector(".color").innerText;
-              myCon.optVal.current = [dt1,dt2,dt3];
+              myCon.optVal.current = [dt1,dt2,dt3];//전역.useRef.자신 으로 dt1,dt2,dt3을 담기
+            }}
+            style={{
+              backgroundColor: chgcolor === i ? 'black' : 'transparent',
+              color: chgcolor === i ? 'white' : 'black',
+              transition: '0.3s ease, 0.3s ease'
             }}
             >{v}</button>
           

@@ -1,4 +1,28 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1. ProductList.jsx에서 클릭한 데이터의 정보를 가지고 DetailPg.jsx, swipeDetail 로 넘겨야함//
 
 2. Datailpg.jsx에서 클릭한 데이터("색상", "사이즈")를 가지고 CartList.jsx로 데이터 넘겨야함

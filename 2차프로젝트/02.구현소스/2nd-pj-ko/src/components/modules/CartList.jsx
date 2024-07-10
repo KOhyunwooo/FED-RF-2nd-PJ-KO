@@ -4,6 +4,7 @@ import "../../css/cart_list.scss";
 import { dCon } from "../func/dCon";
 //제이쿼리 불러오기
 import $ from "jquery";
+import { Link } from "react-router-dom";
 
 function CartList(props) {
   //컨텍스트 API 불러오기
@@ -46,7 +47,12 @@ function CartList(props) {
             <div className="item-img">이미지 들어올자리</div>
             <div className="item-txt">상품명, 색상 데이터 들어올자리</div>
           </div>
-          <button className="look-my-cart">장바구니 보기</button>
+            <Link to={"/mycart"}>
+          <button className="look-my-cart" onClick={()=>myCon.setCartList(false)}>
+            장바구니 보기
+
+            </button>
+            </Link>
           <div className="recommend-txt">추천상품</div>
           <div className="yu-gi-e-recommendcomp">
             여기에 추천상품 컴포넌트 들어와야함/여기에 추천상품 컴포넌트

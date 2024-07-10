@@ -23,7 +23,15 @@ export const mNew = [
     {
         idx: "2",
         isrc: "/images/product/man/new/002.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/man/new/042/01.jpg",
+        "/images/product/man/new/042/02.jpg",
+        "/images/product/man/new/042/03.jpg",
+        "/images/product/man/new/042/04.jpg",
+        "/images/product/man/new/042/05.jpg",
+        "/images/product/man/new/042/06.jpg",
+        "/images/product/man/new/042/07.jpg",
+        "/images/product/man/new/042/08.jpg",
+        "/images/product/man/new/042/09.jpg",],
         name: "100% 리넨 숏 트렌치 코트",
         price: ["₩ 169,900"],
         txt: [
@@ -31,7 +39,7 @@ export const mNew = [
         ],
         link: "",
         topcate: "man",
-        color: [""],
+        color: ["블랙 | 0706/510"],
         size: [
             "S (KR 90)",
             "M (KR 95-100)",
@@ -83,7 +91,15 @@ export const mNew = [
     {
         idx: "5",
         isrc: "/images/product/man/new/005.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/man/new/042/01.jpg",
+        "/images/product/man/new/042/02.jpg",
+        "/images/product/man/new/042/03.jpg",
+        "/images/product/man/new/042/04.jpg",
+        "/images/product/man/new/042/05.jpg",
+        "/images/product/man/new/042/06.jpg",
+        "/images/product/man/new/042/07.jpg",
+        "/images/product/man/new/042/08.jpg",
+        "/images/product/man/new/042/09.jpg",],
         name: "100% 리넨 숏 트렌치 코트",
         price: ["₩ 169,900"],
         txt: [
@@ -91,7 +107,7 @@ export const mNew = [
         ],
         link: "",
         topcate: "man",
-        color: [""],
+        color: ["블랙 | 0706/510"],
         size: [
             "S (KR 90)",
             "M (KR 95-100)",
@@ -840,7 +856,7 @@ export const mNew = [
         ],
         link: "",
         topcate: "man",
-        color: [""],
+        color: ["블랙 | 0706/510"],
         size: ["S (KR 90)", "M (KR 95-100)", "L (KR 100-105)"],
     },
 ];
