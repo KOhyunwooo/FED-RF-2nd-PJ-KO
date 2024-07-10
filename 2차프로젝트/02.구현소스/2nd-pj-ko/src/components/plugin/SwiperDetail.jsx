@@ -13,9 +13,11 @@ import "./css/SwiperDetail.scss";
 // import required modules
 import { Pagination, FreeMode, Navigation, Thumbs } from "swiper/modules";
 
-export default function SwiperDetail() {
+export default function SwiperDetail({data}) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+
+  console.log("구조분해할당으로 제대로 넘어왔니????",data);
   return (
     <>
       <Swiper
@@ -34,36 +36,14 @@ export default function SwiperDetail() {
         modules={[Pagination, FreeMode, Navigation, Thumbs]}
         className="mySwiper2"
       >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+        {data.dtsrc.map((v,i)=>{
+        <SwiperSlide key={i}>
+            <img src={v} alt={i}/>
         </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-        </SwiperSlide>
+
+
+        })}
+     
       </Swiper>
       <Swiper
        direction={"vertical"}

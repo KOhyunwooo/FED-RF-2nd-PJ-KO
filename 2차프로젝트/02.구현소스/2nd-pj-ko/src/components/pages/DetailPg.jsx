@@ -11,12 +11,14 @@ function DetailPg(props) {
   const myCon = useContext(dCon);
 
   const loc = useLocation();
-  const data = loc.state; //ProductList.jsx에서  <Link to="/detail" state={selData}>로 받아온 데이터
-  console.log("DetailPg: useLocation", loc);
-  console.log("DetailPg: loc.state", data);
+  const data = loc.state.v; //ProductList.jsx에서  <Link to="/detail" state={{v}}>로 받아온 데이터
+  console.log("useLocation", loc);
+  console.log("ProductList.jsx에서 loc.state로 넘어온 데이터:", data);
 
   //토글 상태변수 만들기: 왼쪽 더보기,접기 버튼 부분
   const [toggle, setToggle] = useState(false);
+
+  
 
   return (
     // 왼쪽 두개+오른쪽 디테일 부분///flex하였음////////////////////////////////////
@@ -54,20 +56,21 @@ function DetailPg(props) {
         </div>
         {/* 스와이퍼 디테일 부분 ,detail-img */}
         <div className="detail-img">
-          <SwiperDetail />
+          <SwiperDetail data={data}/>
         </div>
       </div>
 
       {/* 가장 오른쪽 디테일 부분///flex하였음//////////////////////////////////// */}
       <div className="detail-txtbox">
         <div className="dttxt-bx">
-          <div className="tit">울 더블 브레스트 블레이저 ZW COLLECTION</div>
-          <div className="price">₩ 89,900</div>
-          <div className="desc">
-            ZARA WOMAN COLLECTION 울 혼방 원사 소재로 제작한 블레이저. 버튼이
-            달린 트임 마감 긴소매 라펠 칼라 디자인. 앞면 플랩 포켓과 가슴 부분
-            파이핑 포켓. 톤온톤 내부 안감. 앞면 버튼 크로스 여밈.
-          </div>
+         
+          <div className="tit">{data.name}</div>
+          <div className="price">{data.price}</div>
+          <div className="desc">{data.txt}</div>
+          
+          
+
+        
           <ul className="info">
             <li>오프라인 매장에 재고 상태 보기</li>
             <li>배송, 교환 및 반품</li>
@@ -76,11 +79,11 @@ function DetailPg(props) {
         <div className="dtsize-bx">
           <div className="color">도트 그레이 | 2208/425</div>
           <div className="size">
-            <button>XS (KR 44)</button>
-            <button>S (KR 55)</button>
-            <button>M (KR 66)</button>
-            <button>L (KR 77)</button>
-            <button>XL (KR 88)</button>
+            {data.size.map((v,i)=>
+            <button key={i}>{v}</button>
+          
+          )}
+            
           </div>
         </div>
         <button

@@ -67,7 +67,7 @@ function ProductList({ dbName }) {
             <div className="product-list">
                 {reversedData.map((v, i) => (
                     <div key={i} className="product-item chgop">
-                        <Link to="/detail" state={{aaa:v}}>{/* state=속성:값//**state는 객체형식으로만 보낼 수 있다 */}
+                        <Link to="/detail" state={{v}}>{/* state={{키:값}}//**state는 객체형식으로만 보낼 수 있다 */}
                             {/* DetailPg.jsx로 selData보내기 */}
                             <img
                                 src={process.env.PUBLIC_URL + v.isrc}
