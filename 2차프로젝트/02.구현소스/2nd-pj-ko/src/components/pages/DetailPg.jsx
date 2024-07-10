@@ -25,6 +25,7 @@ function DetailPg(props) {
     <div className="detailbox">
       {/* 왼쪽 두개 부분///flex하였음//////////////////////////////////// */}
       <div className="care_imgbx">
+        <div className="care-box-wrap">
         <div className={`care-box${toggle ? " on" : ""}`}>
           <p>
             혼용률, 세탁 방법 및 원산지 혼용률 ZARA는 제품에 대한 사회적,
@@ -54,6 +55,7 @@ function DetailPg(props) {
             {toggle == true ? "접기" : "더보기"}
           </button>
         </div>
+        </div>
         {/* 스와이퍼 디테일 부분 ,detail-img */}
         <div className="detail-img">
           <SwiperDetail data={data}/>
@@ -80,7 +82,24 @@ function DetailPg(props) {
           <div className="color">도트 그레이 | 2208/425</div>
           <div className="size">
             {data.size.map((v,i)=>
-            <button key={i}>{v}</button>
+            <button key={i}
+            onBlur={e=>{
+              console.log("나두야!");
+              e.currentTarget
+              .parentElement.parentElement
+              .nextElementSibling.style.backgroundColor = "transparent";
+            }}
+            
+            onClick={(e)=>{
+              e.currentTarget              
+              .parentElement.parentElement
+              .nextElementSibling.style.backgroundColor = "red";//nextElementSibling 선택요소의 다음요소
+              let dt3 = data.isrc;
+              let dt1 = e.target.innerText;
+              let dt2 = document.querySelector(".color").innerText;
+              myCon.optVal.current = [dt1,dt2,dt3];
+            }}
+            >{v}</button>
           
           )}
             

@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState,useCallback } from "react";
+import { useEffect, useLayoutEffect, useState,useCallback, useRef } from "react";
 import MainArea from "./MainArea";
 import TopArea from "./TopArea";
 import TopAreaMedia from "./TopAreaMedia";
@@ -26,6 +26,9 @@ export default function Layout() {
     // 2. 로그인 환영 메시지 상태변수
     const [loginMsg, setLoginMsg] = useState(null);
     // console.log(loginMsg);
+
+    // 옵션값 저장 상태변수
+    const optVal = useRef(null);
 
     // [ 공통 함수 ] //////////////////////////////////////////////////////////////////
     // 1. 라우팅 이동함수 : 라우터 이동후크인 useNavigate는
@@ -117,6 +120,7 @@ export default function Layout() {
                 makeMsg,
                 logoutFn,
                 setCartList,
+                optVal
             }}
         >
             {/* 상단영역 */}

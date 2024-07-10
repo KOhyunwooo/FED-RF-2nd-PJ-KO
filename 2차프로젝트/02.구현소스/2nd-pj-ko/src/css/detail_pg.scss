@@ -10,24 +10,34 @@
     justify-content: space-between;
     align-items: center;
 
-    .care-box {
-      line-height: 1.5;
+    .care-box-wrap{
       position: relative;
-      overflow: hidden;
-      width: 280px;
-      height: 250px;
-      border: 1px solid black;
-      transition: 0.3s ease;
-      // transform-origin: bottom;
+      width: 350px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
 
-      &.on {
-        // transform: scaleY(1.5);
-        height: 400px;
-      }
-
-      .morebt {
-        position: absolute;
-        bottom: 0;
+      .care-box {
+        line-height: 1.5;
+        position: relative;
+        bottom: 100px;
+        overflow: hidden;
+        width: 280px;
+        height: 250px;
+        border: 1px solid black;
+        transition: 0.3s ease;
+        // transform-origin: bottom;
+  
+        &.on {
+          // transform: scaleY(1.5);
+          height: 400px;
+        }
+  
+        .morebt {
+          position: absolute;
+          bottom: 0;
+        }
       }
     }
 

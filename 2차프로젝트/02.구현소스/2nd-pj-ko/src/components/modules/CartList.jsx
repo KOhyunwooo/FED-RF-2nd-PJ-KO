@@ -10,6 +10,8 @@ function CartList(props) {
   const myCon = useContext(dCon);
 
   console.log(myCon.setCartList);
+  console.log(myCon.optVal.current);
+
 
   /////////setCartList상태로 html에 오버플로우히든주기:추가하기버튼 클릭시 뒷배경 안눌리게  //////////////////////////
   useEffect(() => {

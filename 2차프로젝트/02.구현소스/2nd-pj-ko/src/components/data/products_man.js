@@ -3,7 +3,7 @@ export const mNew = [
     {
         idx: "1",
         isrc: "/images/product/man/new/001.jpg",
-        dtsrc: [""],
+        dtsrc: [""], 
         name: "라이오셀 블렌드 셔츠",
         price: ["₩ 59,900"],
         txt: [
