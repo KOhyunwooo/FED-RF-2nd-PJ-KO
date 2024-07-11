@@ -21,7 +21,7 @@
     position: fixed;
     z-index: 999;
     top: 0;
-    right: 0;
+    right: -100%;//최초 오른쪽에 숨겨놓음
     overflow-y: auto;
     //닫기버튼////////////////////////
     .cbtn {
@@ -82,4 +82,19 @@
       font-size: 40px;
     }
   }
+}
+
+
+
+
+
+
+/* 미디어 쿼리 1050 일때 */
+
+@media screen and (max-width: 1050px) {
+  .cartlist-box .addedcart-box {
+    width: 100%;
+  }
+ 
+ 
 }

@@ -15,6 +15,11 @@ function TopAreaMedia() {
   //컨텍스트 불러오기
   const myCon=useContext(dCon)
 
+   //로컬스 데이터 가져오기
+   const localsData = JSON.parse(localStorage.getItem("mycart-data")) || [];
+   //JSON.parse(localStorage.getItem("mycart-data"))가false면 [];해라.
+
+
   ////////////.smenu-box의 높이 구하기(.mbox  -  .gnb-list)/////////////
 
   /* 우측상단 검색창: 이동함수 만들기 ************************************************* */
@@ -136,7 +141,7 @@ function TopAreaMedia() {
               }
          
             <Link to="/mycart">
-              <span>바스켓백(0)</span>
+              <span>바스켓백({localsData.length})</span>
             </Link>
           </div>
           {/* 햄버거 버튼 */}

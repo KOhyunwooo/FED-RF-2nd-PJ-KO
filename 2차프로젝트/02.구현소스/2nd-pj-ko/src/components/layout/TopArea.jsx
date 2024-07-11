@@ -18,11 +18,12 @@ import { dCon } from "../func/dCon";
 
 export default function TopArea() {
     // 컨텍스트 사용하기
-    const myCon = useContext(dCon);//myCon.localsMycart 위에 선언되어야함.
+    const myCon = useContext(dCon);
     
-    // 로컬스토리지("cart-data") 데이터 가져오기
-    const localData = JSON.parse(myCon.localsMycart);
-
+    //로컬스 데이터 가져오기
+    const localsData = JSON.parse(localStorage.getItem("mycart-data")) || [];
+    //JSON.parse(localStorage.getItem("mycart-data"))가false면 [];해라.
+  
 
 
     /* 우측상단 검색창: 이동함수 만들기 **************************************************/
@@ -209,7 +210,7 @@ export default function TopArea() {
                                     }
                                 </span>
                                 <span>
-                                    <Link to="/mycart">바스켓백({localData.length})</Link>
+                                    <Link to="/mycart">바스켓백({localsData.length})</Link>
                                 </span>
                             </div>
                         </li>

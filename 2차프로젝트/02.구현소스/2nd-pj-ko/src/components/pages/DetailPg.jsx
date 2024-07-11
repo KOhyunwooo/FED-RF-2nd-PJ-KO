@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import SwiperDetail from "../plugin/SwiperDetail";
 import { useLocation } from "react-router-dom";
-
+import $ from "jquery"
 /* 디테일 pg scss 불러오기 */
 import "../../css/detail_pg.scss";
 import { dCon } from "../func/dCon";
@@ -108,6 +108,10 @@ function DetailPg(props) {
                 <button
                     className="addbutton"
                     onClick={() => {
+                        
+                       // 카트리스트 생성 상태값 변경//true한번 해줘야됌 그래야 생성되어 있음
+                       myCon.setCartList(true);
+
                         //추가하기 버튼: 클릭시 로컬스토리지에 넣기///////////
                         //1. 로컬스토리지 만들기///////////////
                         if (!localStorage.getItem("mycart-data")) {
@@ -168,8 +172,10 @@ function DetailPg(props) {
                         );
 
 
-                         // 카트리스트 생성 상태값 변경!?????????????????????
-                        myCon.setCartList(true);
+                        
+
+                        $(".cartlist-bg").fadeIn(300);
+                        $(".addedcart-box").animate({ right: "0" });
                       
                     }}
                 >

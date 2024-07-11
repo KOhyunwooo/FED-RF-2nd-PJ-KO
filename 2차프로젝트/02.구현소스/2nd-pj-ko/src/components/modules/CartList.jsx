@@ -14,10 +14,12 @@ function CartList(props) {
 
   console.log(myCon.setCartList);
   console.log("DetailPg.jsx에서 size버튼 클릭해서 전역으로 저장된 데이터:",myCon.optVal.current);
-  
   //DetailPg.jsx에서 size버튼 클릭해서 전역으로 저장된 [[데이터]]
   const cartData= myCon.optVal.current;
   //cartData[이름,이미지주소,색상,사이즈];임
+
+  //로컬스 데이터 가져오기
+  const localsData=JSON.parse(localStorage.getItem("mycart-data"));
   
 
 
@@ -46,7 +48,9 @@ function CartList(props) {
           <button
             className="cbtn"
             onClick={() => {
-              myCon.setCartList(false); //상태변수 false로 바꿔서 숨겨버리기
+              
+              $(".addedcart-box").animate({ right: "-100%" });
+              $(".cartlist-bg").fadeOut(300);
             }}
           >
             X

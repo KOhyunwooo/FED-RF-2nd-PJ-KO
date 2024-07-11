@@ -124,7 +124,7 @@ export default function Layout() {
                 logoutFn,
                 setCartList,
                 optVal,
-                localsMycart,//로컬스토리지("cart-data")상태변수
+               
             }}
         >
             {/* 상단영역 */}
