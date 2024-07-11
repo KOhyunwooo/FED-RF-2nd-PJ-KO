@@ -12,7 +12,7 @@ import CartList from "../modules/CartList";
 //전체 레이아웃 컴포넌트
 export default function Layout() {
     // [ 상태관리 변수 ] //////////////////////////////////////////////////////////////
-    // 1. 로그인 상태관리변수
+    // 로그인 상태관리변수
     const [loginSts, setLoginSts] = useState(sessionStorage.getItem("minfo"));
 
     // 상태관리변수 변경함수도 전달시 콜백처리해야 메모이제이션됨!
@@ -20,15 +20,18 @@ export default function Layout() {
 
     // -> 초기값으로 세션스토리지 "minfo"를 할당함
 
-    // 2. 카트리스트 상태관리변수:true상태일때만 화면에 출력
+    // 카트리스트 상태관리변수:true상태일때만 화면에 출력
     const [cartList, setCartList] = useState(false);
 
-    // 2. 로그인 환영 메시지 상태변수
+    // 로그인 환영 메시지 상태변수
     const [loginMsg, setLoginMsg] = useState(null);
     // console.log(loginMsg);
 
     // 옵션값 저장 상태변수
     const optVal = useRef(null);
+
+    // 로컬스토리지 카트 데이터 상태변수(로컬스토리지-mycart-data)
+    const [localsMycart,setLocalsMycart]=useState(localStorage.getItem("mycart-data"));
 
     // [ 공통 함수 ] //////////////////////////////////////////////////////////////////
     // 1. 라우팅 이동함수 : 라우터 이동후크인 useNavigate는
@@ -120,7 +123,8 @@ export default function Layout() {
                 makeMsg,
                 logoutFn,
                 setCartList,
-                optVal
+                optVal,
+                localsMycart,//로컬스토리지("cart-data")상태변수
             }}
         >
             {/* 상단영역 */}

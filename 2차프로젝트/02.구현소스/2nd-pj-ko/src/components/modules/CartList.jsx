@@ -3,15 +3,22 @@ import React, { useContext, useEffect } from "react";
 import "../../css/cart_list.scss";
 import { dCon } from "../func/dCon";
 //제이쿼리 불러오기
-import $ from "jquery";
+import $, { data } from "jquery";
 import { Link } from "react-router-dom";
 
 function CartList(props) {
+
+
   //컨텍스트 API 불러오기
   const myCon = useContext(dCon);
 
   console.log(myCon.setCartList);
-  console.log(myCon.optVal.current);
+  console.log("DetailPg.jsx에서 size버튼 클릭해서 전역으로 저장된 데이터:",myCon.optVal.current);
+  
+  //DetailPg.jsx에서 size버튼 클릭해서 전역으로 저장된 [[데이터]]
+  const cartData= myCon.optVal.current;
+  //cartData[이름,이미지주소,색상,사이즈];임
+  
 
 
   /////////setCartList상태로 html에 오버플로우히든주기:추가하기버튼 클릭시 뒷배경 안눌리게  //////////////////////////
@@ -35,6 +42,7 @@ function CartList(props) {
       <div className="cartlist-box">
         <div className="cartlist-bg"></div>
         <div className="addedcart-box">
+          <h3>{cartData[3]} 사이즈가 장바구니에 추가됨</h3>
           <button
             className="cbtn"
             onClick={() => {
@@ -44,11 +52,18 @@ function CartList(props) {
             X
           </button>
           <div className="item-box">
-            <div className="item-img">이미지 들어올자리</div>
-            <div className="item-txt">상품명, 색상 데이터 들어올자리</div>
+            <div className="item-img"><img src={process.env.PUBLIC_URL+cartData[1]} alt="" /></div>
+            <div className="item-txt">
+              <p>{cartData[0]}</p>
+            <p>{cartData[2]}</p>
+            </div>
           </div>
             <Link to={"/mycart"}>
-          <button className="look-my-cart" onClick={()=>myCon.setCartList(false)}>
+          <button 
+          className="look-my-cart" 
+          onClick={()=>
+            myCon.setCartList(false)
+            }>
             장바구니 보기
 
             </button>

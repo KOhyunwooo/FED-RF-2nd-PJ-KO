@@ -1,4 +1,5 @@
-
+Detailpg.jsx의 추가하기 버튼 클릭시
+Top-area.jsx의 바스켓백 글자가 리렌더링 되게.
 
 
 

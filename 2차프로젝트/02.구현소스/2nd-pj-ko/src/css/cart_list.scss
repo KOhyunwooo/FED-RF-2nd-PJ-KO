@@ -1,5 +1,5 @@
 .cartlist-box * {
-  border: red 2px dashed;
+  // border: red 2px dashed;
 }
 ///전체박스
 .cartlist-box {
@@ -36,7 +36,7 @@
     }
 
     border-left: 1px solid black;
-    width: max(28%, 400px);
+    width: 34%;
     height: 100%;
     float: right;
     background-color: #fdfdfd;
@@ -44,12 +44,17 @@
     .item-box {
       border: 1px solid black;
       margin: 72px auto 0 auto;
-      width: 366px;
-      height: 184px;
+      width: max(225px, 87%);
+      height: 300px;
       display: flex;
       .item-img {
-        width: 122px;
-        height: 100%;
+        border-right: 1px solid black;
+        aspect-ratio:  2/3;
+        
+        >img{
+          width: 100%;
+          height: 100%;
+        }
       }
       .item-txt {
         flex-grow: 1; /* 남은 공간 차지 */
@@ -59,7 +64,7 @@
     .look-my-cart {
       background-color: #fdfdfd;
       cursor: pointer;
-      width: 366px; //.item-box의 width만큼 설정해야함.
+      width: max(225px, 87%); //.item-box의 width만큼 설정해야함.
       border: 1px solid black;
       margin: 30px auto 0 auto;
       display: block;
