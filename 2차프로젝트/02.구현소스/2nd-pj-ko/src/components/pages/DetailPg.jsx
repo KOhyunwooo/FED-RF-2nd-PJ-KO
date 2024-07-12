@@ -18,7 +18,7 @@ function DetailPg(props) {
 
     //토글 상태변수 만들기: 왼쪽 더보기,접기 버튼 부분
     const [toggle, setToggle] = useState(false);
-    //사이즈버튼 클릭시 색상 변경을 위한 상태관리변수
+    //사이즈버튼 클릭시 색상 변경, 사이즈 선택안하고 추가하기 버튼을 위한 상태관리변수
     const [chgcolor, setChgcolor] = useState(null);
 
     return (
@@ -98,9 +98,8 @@ function DetailPg(props) {
                                         ).innerText; //색상
                                     let dt4 = e.target.innerText; //선택 사이즈
                                     myCon.optVal.current = [dt1, dt2, dt3, dt4]; //전역.useRef.자신 으로 dt1,dt2,dt3을 담기
-
-
-                                    // <CartList/> 생성 상태값 변경//true로 생성되어 있음
+                                        console.log("사이즈 클릭하는 순간 사이즈는??",myCon.optVal.current[3]);
+                                    // <CartList/> 생성 상태값 변경//true로 생성
                                     myCon.setCartList(true);
                                 }}
                             >
@@ -109,12 +108,16 @@ function DetailPg(props) {
                         ))}
                     </div>
                 </div>
+                {/* ******************추가하기 버튼****************** */}
                 <button
                     className="addbutton"
                     onClick={() => {
-                       
+                        if (chgcolor === null){ 
+                            alert('사이즈를 선택해주세요');
+                            return;
+                          }
 
-                        //추가하기 버튼: 클릭시 로컬스토리지에 넣기///////////
+                        //추가하기 버튼: 클릭시 로컬스토리지에 넣기//////////////////////////////
                         //1. 로컬스토리지 만들기///////////////
                         if (!localStorage.getItem("mycart-data")) {
                             //localStorage.getItem("mycart-data")가 없으면

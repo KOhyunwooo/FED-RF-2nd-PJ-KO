@@ -11,6 +11,14 @@ import CartList from "../modules/CartList";
 
 //전체 레이아웃 컴포넌트
 export default function Layout() {
+
+
+
+
+
+    
+
+
     // [ 상태관리 변수 ] //////////////////////////////////////////////////////////////
     // 로그인 상태관리변수
     const [loginSts, setLoginSts] = useState(sessionStorage.getItem("minfo"));
@@ -29,6 +37,7 @@ export default function Layout() {
 
     // 옵션값 저장 상태변수
     const optVal = useRef(null);
+    
 
     // 로컬스토리지 카트 데이터 상태변수(로컬스토리지-mycart-data)
     const [localsMycart,setLocalsMycart]=useState(localStorage.getItem("mycart-data"));
@@ -84,7 +93,21 @@ export default function Layout() {
 
 
 
-        // 경로에 따라 패딩을 설정하는 로직
+    useEffect(() => {
+        // 이벤트 핸들러 함수
+        const handleWheel = (event) => {
+          // 스크롤 이벤트 처리 코드
+          console.log('Wheel event detected');
+        };
+    
+        // 이벤트 리스너 추가
+        window.addEventListener('wheel', handleWheel, { passive: true });
+    
+        // 클린업 함수: 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+        return () => {
+          window.removeEventListener('wheel', handleWheel);
+        };
+      }, []);
        
        
 

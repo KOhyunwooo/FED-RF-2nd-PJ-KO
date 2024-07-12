@@ -12,7 +12,7 @@ function CartList(props) {
   //컨텍스트 API 불러오기
   const myCon = useContext(dCon);
 
-  console.log(myCon.setCartList);
+  // console.log(myCon.setCartList);
   console.log("DetailPg.jsx에서 size버튼 클릭해서 전역으로 저장된 데이터:",myCon.optVal.current);
   //DetailPg.jsx에서 size버튼 클릭해서 전역으로 저장된 [[데이터]]
   const cartData= myCon.optVal.current;
@@ -29,7 +29,7 @@ function CartList(props) {
       <div className="cartlist-box">
         <div className="cartlist-bg"></div>
         <div className="addedcart-box">
-          <h3>{cartData[3]} 사이즈가 장바구니에 추가됨</h3>{/* ///////////????????????갱신안됨 */}
+          <h2>{cartData[3]} 사이즈가 장바구니에 추가됨</h2>
           {/* 오른쪽 상단 X엑스 버튼 */}
           <button
             className="cbtn"
@@ -37,9 +37,9 @@ function CartList(props) {
               
               $(".addedcart-box").animate({ right: "-100%" });
               $(".cartlist-bg").fadeOut(300);
-              //?????????순서대로 작동대어야함
-              // myCon.setCartList(false);//엑스버튼 클릭시false로 지우기
               document.querySelector("html").style.overflow = "auto";
+              //?????????순서대로 작동대어야함(안그러면 안이쁨)
+              myCon.setCartList(false);//엑스버튼 클릭시false로 지우기, 이게 없으면 {cartData[3]}가 제대로 작동하지 않음....
             }}
           >
             X
