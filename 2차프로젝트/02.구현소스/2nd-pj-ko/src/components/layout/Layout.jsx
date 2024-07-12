@@ -156,7 +156,7 @@ export default function Layout() {
             {/* 메인영역 */}
             <MainArea />
             {/* 카트리스트:cartList상태관리변수가 true이면 <CartList/> 출력 */}
-            {cartList && <CartList/>}
+            {cartList && <CartList optVal={optVal}/>}
 
 
 

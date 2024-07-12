@@ -6,16 +6,16 @@ import { dCon } from "../func/dCon";
 import $, { data } from "jquery";
 import { Link } from "react-router-dom";
 
-function CartList(props) {
+function CartList({optVal}) {
 
 
   //컨텍스트 API 불러오기
   const myCon = useContext(dCon);
 
   // console.log(myCon.setCartList);
-  console.log("DetailPg.jsx에서 size버튼 클릭해서 전역으로 저장된 데이터:",myCon.optVal.current);
+  console.log("DetailPg.jsx에서 size버튼 클릭해서 전역으로 저장된 데이터:",optVal.current);
   //DetailPg.jsx에서 size버튼 클릭해서 전역으로 저장된 [[데이터]]
-  const cartData= myCon.optVal.current;
+  const cartData= optVal.current;
   //cartData[이름,이미지주소,색상,사이즈];임
 
   //로컬스 데이터 가져오기
