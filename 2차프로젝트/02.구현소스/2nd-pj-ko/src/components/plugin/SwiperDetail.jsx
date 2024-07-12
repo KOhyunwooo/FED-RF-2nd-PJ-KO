@@ -18,7 +18,7 @@ export default function SwiperDetail({data}) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
 
-  console.log("구조분해할당으로 제대로 넘어왔니????",data);
+  // console.log("구조분해할당으로 제대로 넘어왔니????",data);
 
   return (
     <>

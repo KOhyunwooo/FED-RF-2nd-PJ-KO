@@ -26,7 +26,7 @@ function ProductPg({ cat }) {
     //window.innerHeight*1보다 더 일관된 높이 계산:브라우저의 주소 창이나 스크롤바와 같은 UI 요소를 더 정확히 고려함.///////////////////
 
     let pos = olist.getBoundingClientRect().top;
-    console.log(pos);
+    // console.log(pos);
     if (pos < winH) {
       bgTg.classList.add("change");
       // bgTg.style.backgroundColor = "black"; //이렇게 해도 됨

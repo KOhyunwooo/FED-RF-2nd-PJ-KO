@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import SwiperDetail from "../plugin/SwiperDetail";
 import { useLocation } from "react-router-dom";
 import $ from "jquery";
@@ -20,6 +20,30 @@ function DetailPg(props) {
     const [toggle, setToggle] = useState(false);
     //사이즈버튼 클릭시 색상 변경, 사이즈 선택안하고 추가하기 버튼을 위한 상태관리변수
     const [chgcolor, setChgcolor] = useState(null);
+
+
+     //카트리스트 안보이게->보이게 하기////////////////////////////////////////////  
+    const [showCart,setShowCart]= useState(false);//초깃값false안보이는 상태임
+    useEffect(()=>{
+        if(showCart){
+            document.querySelector("html").style.overflow = "hidden";
+            $(".addedcart-box").animate({ right: "0" });
+            $(".cartlist-bg").fadeIn(300);
+        }
+        else{
+            document.querySelector("html").style.overflow = "auto";
+            $(".addedcart-box").animate({ right: "-100%" });
+            $(".cartlist-bg").fadeOut(300);
+        }
+        return () => {//소멸자~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   
+            $(".addedcart-box").stop(true, true);//.addedcart-box 애니매이션 소멸
+            $(".cartlist-bg").stop(true, true);//.cartlist-bg 애니매이션 소멸
+            document.querySelector("html").style.overflow = "auto";//html오버플로우 오토로 복귀           
+          };
+    },[showCart])
+
+
+
 
     return (
         // 전체 박스//flex하였음////////////////////////////////////
@@ -98,9 +122,9 @@ function DetailPg(props) {
                                         ).innerText; //색상
                                     let dt4 = e.target.innerText; //선택 사이즈
                                     myCon.optVal.current = [dt1, dt2, dt3, dt4]; //전역.useRef.자신 으로 dt1,dt2,dt3을 담기
-                                        console.log("사이즈 클릭하는 순간 사이즈는??",myCon.optVal.current[3]);
-                                    // <CartList/> 생성 상태값 변경//true로 생성
-                                    myCon.setCartList(true);
+                                        console.log("사이즈 버튼 클릭하는 순간, 사이즈는??",myCon.optVal.current[3]);
+                                   
+                                    
                                 }}
                             >
                                 {v}
@@ -148,7 +172,6 @@ function DetailPg(props) {
                         if (aa) {
                             //(로컬스토리지에 들어간 배열.includes(선택데이터))
                             alert("이미 선택하신 상품입니다");
-                            document.querySelector("html").style.overflow = "auto";
                             return;
                         }
 
@@ -161,14 +184,14 @@ function DetailPg(props) {
                             size: myCon.optVal.current[3],
                             isrc: data.isrc,
                             /********************** 
-              [로컬스에 푸시할 데이터]
-              1.상품고유번호: idx
-              2.이름: name
-              3.가격: price
-              5.색상:color
-              4.사이즈:size
-              5.이미지주소:isrc
-              **********************/
+                        [로컬스에 푸시할 데이터]
+                        1.상품고유번호: idx
+                        2.이름: name
+                        3.가격: price
+                        5.색상:color
+                        4.사이즈:size
+                        5.이미지주소:isrc
+                        **********************/
                         });
                         //5. 로컬스토리지에 문자열(json형식)으로 변환하여 저장하기!!!
                         //넣을때:stringify, 불러올때:parse
@@ -176,17 +199,28 @@ function DetailPg(props) {
                             "mycart-data",
                             JSON.stringify(locals)
                         );
-                        //html에 오버플로우 히든해야함
-                        document.querySelector("html").style.overflow = "hidden";
-                        $(".cartlist-bg").fadeIn(300);
-                        $(".addedcart-box").animate({ right: "0" });
+                       
+                        myCon.setCartList(true); // <CartList/> 생성 상태값 변경//true로 생성
+                        setShowCart(true);
                        
                     }}
                 >
                     추가하기
                 </button>
             </div>
+            {/* 왜 되는지는 모르지만 777일때 footer-area 디스플레이 none하기 */}
+            <style jsx>{`
+        @media (max-width: 777px) {
+                body{
+                padding-top:0;
+                }
+          .footer-area {
+            display: none;
+          }
+        }
+      `}</style>
         </div>
+        
     );
 }
 

@@ -92,22 +92,20 @@ export default function Layout() {
     }, []);
 
 
-
-    useEffect(() => {
-        // 이벤트 핸들러 함수
-        const handleWheel = (event) => {
-          // 스크롤 이벤트 처리 코드
-          console.log('Wheel event detected');
-        };
-    
-        // 이벤트 리스너 추가
-        window.addEventListener('wheel', handleWheel, { passive: true });
-    
-        // 클린업 함수: 컴포넌트가 언마운트될 때 이벤트 리스너 제거
-        return () => {
-          window.removeEventListener('wheel', handleWheel);
-        };
-      }, []);
+    // 휠스크롤 성능 최적화/////////////////////////////////////////////////
+    // useEffect(() => {
+    //     // 이벤트 핸들러 함수
+    //     const handleWheel = (event) => {
+    //       // 스크롤 이벤트 처리 코드
+    //       console.log('Wheel event detected');
+    //     };    
+    //     // 이벤트 리스너 추가
+    //     window.addEventListener('wheel', handleWheel, { passive: true });    
+    //     // 클린업 함수: 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+    //     return () => {
+    //       window.removeEventListener('wheel', handleWheel);
+    //     };
+    //   }, []);
        
        
 
@@ -119,12 +117,12 @@ export default function Layout() {
     if (pathname == "/") sts = false;
     else sts = true;
     // '/'에서만 패딩탑 0적용 그외는 패딩탑 70px////////////////////////////////////////////////
-    useEffect(() => {
-            document.body.style.paddingTop = pathname === "/" ? "0px" : "70px";
-            return () => {
-                document.body.style.paddingTop = ""; // 컴포넌트 언마운트 시 초기화
-            };
-        }, [pathname]);
+    // useEffect(() => {
+    //         document.body.style.paddingTop = pathname === "/" ? "0px" : "70px";
+    //         return () => {
+    //             document.body.style.paddingTop = ""; // 컴포넌트 언마운트 시 초기화
+    //         };
+    //     }, [pathname]);
     //가로1050이하일때 <TopAreaMedia /> 그렇지 않으면 <TopArea />호출//////////////////////////////////////////////////
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 1050);
     useEffect(() => {
