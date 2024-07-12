@@ -98,6 +98,10 @@ function DetailPg(props) {
                                         ).innerText; //색상
                                     let dt4 = e.target.innerText; //선택 사이즈
                                     myCon.optVal.current = [dt1, dt2, dt3, dt4]; //전역.useRef.자신 으로 dt1,dt2,dt3을 담기
+
+
+                                    // <CartList/> 생성 상태값 변경//true로 생성되어 있음
+                                    myCon.setCartList(true);
                                 }}
                             >
                                 {v}
@@ -108,7 +112,7 @@ function DetailPg(props) {
                 <button
                     className="addbutton"
                     onClick={() => {
-                     
+                       
 
                         //추가하기 버튼: 클릭시 로컬스토리지에 넣기///////////
                         //1. 로컬스토리지 만들기///////////////
@@ -141,6 +145,7 @@ function DetailPg(props) {
                         if (aa) {
                             //(로컬스토리지에 들어간 배열.includes(선택데이터))
                             alert("이미 선택하신 상품입니다");
+                            document.querySelector("html").style.overflow = "auto";
                             return;
                         }
 
@@ -168,10 +173,11 @@ function DetailPg(props) {
                             "mycart-data",
                             JSON.stringify(locals)
                         );
-// 카트리스트 생성 상태값 변경//true한번 해줘야됌 그래야 생성되어 있음
-myCon.setCartList(true);
+                        //html에 오버플로우 히든해야함
+                        document.querySelector("html").style.overflow = "hidden";
                         $(".cartlist-bg").fadeIn(300);
                         $(".addedcart-box").animate({ right: "0" });
+                       
                     }}
                 >
                     추가하기

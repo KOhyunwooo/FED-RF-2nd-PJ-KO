@@ -23,34 +23,23 @@ function CartList(props) {
   
 
 
-  /////////setCartList상태로 html에 오버플로우히든주기:추가하기버튼 클릭시 뒷배경 안눌리게  //////////////////////////
-  useEffect(() => {
-    if (myCon.setCartList) {
-      //mycon.cartList가 true냐 그럼 html에 오버플로우 히든
-      document.querySelector("html").style.overflow = "hidden";
-    } else {
-      //아니면 오버플로우 오토
-      document.querySelector("html").style.overflow = "auto";
-    }
-
-    //소멸자// 언마운트시 하는거
-    return () => {
-      document.querySelector("html").style.overflow = "auto";
-    };
-  }, [myCon.setCartList]); // myCon.cartList 상태가 변경될 때마다 useEffect 실행
 
   return (
     <>
       <div className="cartlist-box">
         <div className="cartlist-bg"></div>
         <div className="addedcart-box">
-          <h3>{cartData[3]} 사이즈가 장바구니에 추가됨</h3>
+          <h3>{cartData[3]} 사이즈가 장바구니에 추가됨</h3>{/* ///////////????????????갱신안됨 */}
+          {/* 오른쪽 상단 X엑스 버튼 */}
           <button
             className="cbtn"
             onClick={() => {
               
               $(".addedcart-box").animate({ right: "-100%" });
               $(".cartlist-bg").fadeOut(300);
+              //?????????순서대로 작동대어야함
+              // myCon.setCartList(false);//엑스버튼 클릭시false로 지우기
+              document.querySelector("html").style.overflow = "auto";
             }}
           >
             X
