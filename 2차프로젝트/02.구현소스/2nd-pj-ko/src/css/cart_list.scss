@@ -21,7 +21,7 @@
     position: fixed;
     z-index: 999;
     top: 0;
-    right: -100%;//최초 오른쪽에 숨겨놓음
+    right: 0;
     overflow-y: auto;
     //닫기버튼////////////////////////
     .cbtn {
