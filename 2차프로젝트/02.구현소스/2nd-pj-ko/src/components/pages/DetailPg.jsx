@@ -180,6 +180,8 @@ function DetailPg(props) {
                             idx: data.idx,
                             name: data.name,
                             price: data.price[0],
+                            price1: data.price[1],
+                            price2: data.price[2],
                             color: data.color,
                             size: myCon.optVal.current[3],
                             isrc: data.isrc,
@@ -188,6 +190,8 @@ function DetailPg(props) {
                         1.상품고유번호: idx
                         2.이름: name
                         3.가격: price
+                        4.price2:할인율
+                        5.price3:할인율적용된 가격
                         5.색상:color
                         4.사이즈:size
                         5.이미지주소:isrc

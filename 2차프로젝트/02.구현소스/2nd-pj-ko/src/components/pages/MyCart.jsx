@@ -4,12 +4,18 @@ import "../../css/my_cart.scss";
 //임시데이터 불러오기
 import { mOrigins } from "../data/products_man";
 import { Link } from "react-router-dom";
+//폰트어썸 불러오기
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMinus, faPlus, faXmark } from "@fortawesome/free-solid-svg-icons"; 
+
+
 
 function MyCart(props) {
-    //로컬스 데이터 가져오기
-    const localsData = JSON.parse(localStorage.getItem("mycart-data"));
+    //로컬스 데이터 가져오기///////////////////////////////////////////////////////////
+    const localsData = JSON.parse(localStorage.getItem("mycart-data")) || [];
     console.log("이걸 장바구니에 뿌려야지", localsData);
 
+    const xmark=<FontAwesomeIcon icon="fa-light fa-xmark" />
     return (
         <>
             {" "}
@@ -34,9 +40,21 @@ function MyCart(props) {
                                 />
                             </Link>
                             <div className="txt-box">
+                            {/* <FontAwesomeIcon icon="fa-light fa-xmark" /> */}
+                            <FontAwesomeIcon icon={faXmark} size="3x"  />
+                            <FontAwesomeIcon icon="fa-light fa-xmark" />
+                            <FontAwesomeIcon icon={faPlus} size="3x"/>
+                            <FontAwesomeIcon icon={faMinus} size="3x" />
+                            {xmark}
                                 <span>{v.name}</span>
                                 <span className="price">
-                                    {v.price}{/* /?????????????????????????????? */}
+                                {v.price && <p>{v.price}</p>}
+                                    {v.price1 && (
+                                        <p>
+                                            {v.price1}&nbsp;{v.price2}
+                                        </p>
+                                    )}
+                                    
                                 </span>
                                 <span>
                                     {v.size} | {v.color}
