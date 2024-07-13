@@ -6,4 +6,4 @@ function addComma(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 // 내보내기
-export{ addComma};
+export{addComma};

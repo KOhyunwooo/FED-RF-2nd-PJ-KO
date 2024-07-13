@@ -68,7 +68,7 @@ function CartList({optVal}) {
             X
           </button>
           <div className="item-box">
-            <div className="item-img"><img src={process.env.PUBLIC_URL+cartData[1]} alt="" /></div>
+            <div className="item-img"><img src={process.env.PUBLIC_URL+cartData[1]} alt="img" /></div>
             <div className="item-txt">
               <p>{cartData[0]}</p>
             <p>{cartData[2]}</p>

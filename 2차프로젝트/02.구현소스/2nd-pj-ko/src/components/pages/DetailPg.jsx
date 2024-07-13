@@ -6,6 +6,7 @@ import $ from "jquery";
 import "../../css/detail_pg.scss";
 import { dCon } from "../func/dCon";
 import CareTxt from "../modules/CareTxt";
+import { addComma } from "../func/common_fn";
 
 function DetailPg(props) {
   //컨텍스트 사용하기(Layout.jsx에서setCartList를 상태변경해서 화면에 띄우려고 사용함)
@@ -76,10 +77,10 @@ function DetailPg(props) {
         <div className="dttxt-bx">
           <div className="tit">{data.name}</div>
           <div className="price">
-            {data.price[0] && <span>{data.price[0]}</span>}
+            {data.price[0] && <span>₩{addComma(data.price[0])}</span>}
             {data.price[1] && (
               <span>
-                {data.price[1]}&nbsp;{data.price[2]}
+                {data.price[1]}&nbsp;₩{addComma(data.price[2])}
               </span>
             )}
           </div>

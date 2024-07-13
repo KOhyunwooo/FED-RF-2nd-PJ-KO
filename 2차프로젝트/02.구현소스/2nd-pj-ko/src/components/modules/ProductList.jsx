@@ -7,6 +7,7 @@ import { mBestSeller, mNew, mSale, mOrigins } from "../data/products_man";
 
 import "../../css/ProductList.scss";
 import { Link } from "react-router-dom";
+import { addComma } from "../func/common_fn";
 
 function ProductList({ dbName }) {
     const pdbutton = ["색상", "사이즈", "가격", "컬렉션( )"];
@@ -77,10 +78,10 @@ function ProductList({ dbName }) {
                             <div className="txt-box">
                                 <span>{v.name}</span>
                                 <span className="price">
-                                    {v.price[0] && <p>{v.price[0]}</p>}
+                                    {v.price[0] && <p>₩{addComma(v.price[0])}</p>}
                                     {v.price[1] && (
                                         <p>
-                                            {v.price[1]}&nbsp;{v.price[2]}
+                                            {v.price[1]}&nbsp;₩{addComma(v.price[2])}
                                         </p>
                                     )}
                                 </span>
