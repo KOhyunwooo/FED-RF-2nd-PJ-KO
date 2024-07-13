@@ -175,6 +175,7 @@ function DetailPg(props) {
               color: data.color,
               size: myCon.optVal.current[3],
               isrc: data.isrc,
+              cnt:"1",
               /********************** 
                         [로컬스에 푸시할 데이터]
                         1.상품고유번호: idx
@@ -185,6 +186,7 @@ function DetailPg(props) {
                         5.색상:color
                         4.사이즈:size
                         5.이미지주소:isrc
+                        cnt: 상품갯수
                         **********************/
             });
             //5. 로컬스토리지에 문자열(json형식)으로 변환하여 저장하기!!!

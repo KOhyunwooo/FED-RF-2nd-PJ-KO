@@ -16,6 +16,16 @@ function MyCart(props) {
   console.log("이걸 장바구니에 뿌려야지", localsData);
 
 
+  // 로컬스에 집어넣고 상태변경(변경된 상태 리렌더링)
+  const intolocals=()=>{   
+    //데이터 문자화하기: 변경된 원본을 문자화(문자화: json형식 )
+  let res = JSON.stringify(localsData);
+  // 로컬스("cart-data")에 반영하기
+  localStorage.setItem("mycart-data", res);
+  // 카트리스트 전역상태변수 설정
+  myCon.setLocalsMycart(res);
+  }
+  
   return (
     <>
      
@@ -82,21 +92,35 @@ function MyCart(props) {
 
                 {/* +-버튼 박스**************************** */}
                 <div className="cntbox">
+                  {/* +버튼 */}
                   <button onClick={(e)=>{
                      let tg = $(e.currentTarget).siblings(
                       "input");
                     tg.val(Number(tg.val()) + 1);
+                    localsData[i].cnt = $(e.currentTarget)
+                    .siblings(".cnt")
+                    .val();
+
+                    intolocals();
                   }}>
                     <img
                       src={process.env.PUBLIC_URL + "/images/icons/plus.svg"}
                       alt="plus"
                     />
                   </button>
-                  <input type="text" readOnly value={1} />
+                  {/* 인풋박스 */}
+                  <input className="cnt" type="text" readOnly value={v.cnt} />
+                  {/* -버튼 */}
                   <button onClick={(e)=>{
                      let tg = $(e.currentTarget).siblings(
-                      "input");
+                      "input");//나 자신의. 형제요소의. input태그
                     tg.val(Number(tg.val()) ==1?1:Number(tg.val())- 1);
+                    localsData[i].cnt = $(e.currentTarget)
+                    .siblings(".cnt")
+                    .val();
+                    intolocals();
+                                  
+
                   }}>
                     <img
                       src={process.env.PUBLIC_URL + "/images/icons/minus.svg"}
