@@ -145,6 +145,7 @@ export default function Layout() {
                 logoutFn,
                 setCartList,
                 optVal,
+                setLocalsMycart,
                
             }}
         >
