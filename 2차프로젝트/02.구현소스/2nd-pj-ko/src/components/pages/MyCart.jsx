@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 //마이카트 (장바구니)scss불러오기
 import "../../css/my_cart.scss";
 
@@ -16,7 +16,7 @@ function MyCart(props) {
   console.log("이걸 장바구니에 뿌려야지", localsData);
 
 
-  // 로컬스에 집어넣고 상태변경(변경된 상태 리렌더링)
+  // 로컬스에 집어넣고, 상태변경(변경된 상태 리렌더링)함수////
   const intolocals=()=>{   
     //데이터 문자화하기: 변경된 원본을 문자화(문자화: json형식 )
   let res = JSON.stringify(localsData);
@@ -25,6 +25,31 @@ function MyCart(props) {
   // 카트리스트 전역상태변수 설정
   myCon.setLocalsMycart(res);
   }
+//합계금액 구하기 함수//////////////////////////////
+  const totalFn=()=>{
+    let result = 0; //초깃값 설정, 초깃값=0
+    // 제이쿼리 forEach는 each((순번,요소)=>{}) 메서드다!
+    //합계히든필드 값을 더하여 합계금액을 구함
+    $(".hiddenprice").each((idx,ele)=>{
+      console.log("값:", $(ele).val());
+      // 숫자로 변환후 기존값에 더하기함!
+      result += Number($(ele).val());//매순번의 값을 숫자화 시키고 result에 더해서 할당(+=)
+    });
+    return result;  //result 리턴!
+    
+  }
+
+
+  
+useEffect(()=>{
+  $(".totals").text(addComma(totalFn()));//.totals에 totalFn()을 addComma해서 text로 넣어라!
+
+},[localsData])//localsData가 바뀔때마다.
+
+  
+
+
+
   
   return (
     <>
@@ -78,14 +103,20 @@ function MyCart(props) {
                 {/* <img src={process.env.PUBLIC_URL+"/images/icons/multiply.png"} alt="minus" /> */}
 
                 <span>{v.name}</span>
+
+                {/* 가격 */}
                 <span className="price">
-                  {v.price && <p>₩{addComma(v.price)}</p>}
+                  {v.price && <p>₩{addComma(v.price*v.cnt)}</p>}{/* 가격 곱하기 v.cnt(갯수)해서 가격 변동되기 하기 */}
                   {v.price1 && (
                     <p>
-                      {v.price1}&nbsp;₩{addComma(v.price2)}
+                      {v.price1}&nbsp;₩{addComma(v.price2*v.cnt)}{/* 가격 곱하기 v.cnt(갯수)해서 가격 변동되기 하기 */}
                     </p>
                   )}
                 </span>
+                {/* 계산된 합계금액 숫자만 히든필드에 넣어놓기(foreach돌려서 계산에 사용하기 위함,히든필드는 화면에 표시 안됨) */}
+                <input type="hidden" className="hiddenprice" defaultValue={
+                  v.price1?v.price2*v.cnt:v.price*v.cnt
+                }/>
                 <span>
                   {v.size} | {v.color}
                 </span>
@@ -100,8 +131,7 @@ function MyCart(props) {
                     localsData[i].cnt = $(e.currentTarget)
                     .siblings(".cnt")
                     .val();
-
-                    intolocals();
+                    intolocals();//로컬스에 추가 함수
                   }}>
                     <img
                       src={process.env.PUBLIC_URL + "/images/icons/plus.svg"}
@@ -118,7 +148,7 @@ function MyCart(props) {
                     localsData[i].cnt = $(e.currentTarget)
                     .siblings(".cnt")
                     .val();
-                    intolocals();
+                    intolocals();//로컬스에 추가 함수
                                   
 
                   }}>
@@ -141,7 +171,7 @@ function MyCart(props) {
           *&nbsp;&nbsp;계속 진행함으로써 본인은 구매 조건을 읽고 이에 동의하며 Zara의
           개인정보 및 쿠키 정책을 이해했음을 선언합니다.
         </span>
-        <b className="totals">총 W: 1124124</b>
+        <b className="totals"></b>
         <button className="buybutton">계속</button>
       </div>
 
