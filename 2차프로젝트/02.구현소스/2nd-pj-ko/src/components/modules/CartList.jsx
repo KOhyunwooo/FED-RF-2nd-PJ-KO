@@ -54,36 +54,37 @@ function CartList({optVal}) {
       <div className="cartlist-box">
         <div className="cartlist-bg"></div>
         <div className="addedcart-box">
-          <h2>{cartData[3]} 사이즈가 장바구니에 추가됨</h2>
           {/* 오른쪽 상단 X엑스 버튼 */}
           <button
             className="cbtn"
             onClick={() => {
               setShowCart(false);
-
+              
               //?????????순서대로 작동대어야함(안그러면 안이쁨)
               // myCon.setCartList(false);//엑스버튼 클릭시false로 지우기, 이게 없으면 {cartData[3]}가 제대로 작동하지 않음....
             }}
           >
-            X
+         <img src={process.env.PUBLIC_URL +"/images/icons/x.svg"} alt="x" />
           </button>
-          <div className="item-box">
-            <div className="item-img"><img src={process.env.PUBLIC_URL+cartData[1]} alt="img" /></div>
-            <div className="item-txt">
-              <p>{cartData[0]}</p>
-            <p>{cartData[2]}</p>
+          <div className="itembox-wrap">
+            <span className="addmsg">{cartData[3]} 사이즈가 장바구니에 추가됨</span>
+            <div className="item-box">
+              <div className="item-img"><img src={process.env.PUBLIC_URL+cartData[1]} alt="img" /></div>
+              <div className="item-txt">
+                <p>{cartData[0]}</p>
+              <p>{cartData[2]}</p>
+              </div>
             </div>
+              <Link to={"/mycart"}>
+            <button
+            className="look-my-cart"
+            onClick={()=>
+              setShowCart(false)
+              }>
+              장바구니 보기
+              </button>
+              </Link>
           </div>
-            <Link to={"/mycart"}>
-          <button 
-          className="look-my-cart" 
-          onClick={()=>
-            setShowCart(false)
-            }>
-            장바구니 보기
-
-            </button>
-            </Link>
           <div className="recommend-txt">추천상품</div>
           <div className="yu-gi-e-recommendcomp">
             여기에 추천상품 컴포넌트 들어와야함/여기에 추천상품 컴포넌트

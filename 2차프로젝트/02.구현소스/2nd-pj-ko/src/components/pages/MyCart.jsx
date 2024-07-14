@@ -35,9 +35,8 @@ function MyCart(props) {
       // 숫자로 변환후 기존값에 더하기함!
       result += Number($(ele).val());//매순번의 값을 숫자화 시키고 result에 더해서 할당(+=)
     });
-    return result;  //result 리턴!
-    
-  }
+    return result;  //result 리턴!    
+  };
 
 
   

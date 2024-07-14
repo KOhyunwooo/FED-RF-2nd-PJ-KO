@@ -43,7 +43,9 @@ function DetailPg(props) {
   }, [showCart]);
 
   return (
-    // 전체 박스//flex하였음////////////////////////////////////
+    <>
+    <div style={{marginTop:"70px"}}></div>
+    {/* // 전체 박스//flex하였음//////////////////////////////////// */}
     <div className="detailbox">
       {/* 왼쪽 케어부분//////////////////////////////////// */}
       {/* <div className="care_imgbx"> */}
@@ -61,7 +63,7 @@ function DetailPg(props) {
               position: toggle ? "relative" : "absolute",
               bottom: toggle ? "0px" : "0px", // toggle 상태에 따라 top 위치 설정
             }}
-          >
+            >
             {toggle == true ? "접기" : "더보기"}
           </button>
         </div>
@@ -96,31 +98,31 @@ function DetailPg(props) {
           <div className="size">
             {data.size.map((v, i) => (
               <button
-                key={i}
-                className={`${chgcolor === i ? "on" : ""}`}
-                onClick={(e) => {
-                  //순번:i 담아서 적용되게 하기
-                  setChgcolor(i);
-
-                  //e.자신의.부모요소의.부모요소의.nextElementSibling( 선택요소의 다음요소).style주기: 여기에 주는 이유는 size버튼 클릭시 실행되게 하기 위해
-                  e.currentTarget.parentElement.parentElement.nextElementSibling.style.backgroundColor =
-                    "black";
-                  e.currentTarget.parentElement.parentElement.nextElementSibling.style.color =
-                    "#fdfdfd";
-                  e.currentTarget.parentElement.parentElement.nextElementSibling.style.transition =
-                    "0.3s 0.2s ease-in";
-
-                  //데이터 전역.useRef에 저장하기/////////////////
-                  let dt1 = data.name; //데이터 이름
-                  let dt2 = data.isrc; //데이터 이미지주소
-                  let dt3 = document.querySelector(".color").innerText; //색상
-                  let dt4 = e.target.innerText; //선택 사이즈
-                  myCon.optVal.current = [dt1, dt2, dt3, dt4]; //전역.useRef.자신 으로 dt1,dt2,dt3을 담기
-                  console.log(
-                    "사이즈 버튼 클릭하는 순간, 사이즈는??",
-                    myCon.optVal.current[3]
-                  );
-                }}
+              key={i}
+              className={`${chgcolor === i ? "on" : ""}`}
+              onClick={(e) => {
+                //순번:i 담아서 적용되게 하기
+                setChgcolor(i);
+                
+                //e.자신의.부모요소의.부모요소의.nextElementSibling( 선택요소의 다음요소).style주기: 여기에 주는 이유는 size버튼 클릭시 실행되게 하기 위해
+                e.currentTarget.parentElement.parentElement.nextElementSibling.style.backgroundColor =
+                "black";
+                e.currentTarget.parentElement.parentElement.nextElementSibling.style.color =
+                "#fdfdfd";
+                e.currentTarget.parentElement.parentElement.nextElementSibling.style.transition =
+                "0.3s 0.2s ease-in";
+                
+                //데이터 전역.useRef에 저장하기/////////////////
+                let dt1 = data.name; //데이터 이름
+                let dt2 = data.isrc; //데이터 이미지주소
+                let dt3 = document.querySelector(".color").innerText; //색상
+                let dt4 = e.target.innerText; //선택 사이즈
+                myCon.optVal.current = [dt1, dt2, dt3, dt4]; //전역.useRef.자신 으로 dt1,dt2,dt3을 담기
+                console.log(
+                  "사이즈 버튼 클릭하는 순간, 사이즈는??",
+                  myCon.optVal.current[3]
+                );
+              }}
               >
                 {v}
               </button>
@@ -135,7 +137,7 @@ function DetailPg(props) {
               alert("사이즈를 선택해주세요");
               return;
             }
-
+            
             //추가하기 버튼: 클릭시 로컬스토리지에 넣기//////////////////////////////
             //1. 로컬스토리지 만들기///////////////
             if (!localStorage.getItem("mycart-data")) {
@@ -144,16 +146,16 @@ function DetailPg(props) {
             }
             //2. 로컬스 파싱하기/////////???????????????????????????
             let locals = JSON.parse(localStorage.getItem("mycart-data"));
-
+            
             //3. 기존 데이터중 동일한 데이터 거르기///////////////////
             // 파싱된 로컬스 데이터중 idx항목을 검사하여
             // gIdx로 넣을 상품 idx와 같은 것이 있으면
             // 메시지와 함께 리턴처리하여 입력을 막아준다!
-
+            
             //******데이터 만들때 idx데이터 잘못만들어서 카테고리끼리 중복idx 가 있음
             //******그래서 내 데이터의 idx는 사실 상품 고유번호가 아님
             //******추후 수정 필요
-
+            
             // find로 중복검사하기
             let aa = locals.find((v) => {
               if (v.idx == data.idx && v.size == myCon.optVal.current[3])
@@ -164,7 +166,7 @@ function DetailPg(props) {
               alert("이미 선택하신 상품입니다");
               return;
             }
-
+            
             //4. 로컬스에 '중복검사된' 들어가야할 데이터 푸시하기(푸시하고-저장해야 로컬스토리지에 저장됨)//////////
             locals.push({
               idx: data.idx,
@@ -177,26 +179,26 @@ function DetailPg(props) {
               isrc: data.isrc,
               cnt:"1",
               /********************** 
-                        [로컬스에 푸시할 데이터]
-                        1.상품고유번호: idx
-                        2.이름: name
-                        3.가격: price
-                        4.price2:할인율
-                        5.price3:할인율적용된 가격
-                        5.색상:color
-                        4.사이즈:size
-                        5.이미지주소:isrc
-                        cnt: 상품갯수
-                        **********************/
+               [로컬스에 푸시할 데이터]
+               1.상품고유번호: idx
+               2.이름: name
+               3.가격: price
+               4.price2:할인율
+               5.price3:할인율적용된 가격
+               5.색상:color
+               4.사이즈:size
+               5.이미지주소:isrc
+               cnt: 상품갯수
+               **********************/
             });
             //5. 로컬스토리지에 문자열(json형식)으로 변환하여 저장하기!!!
             //넣을때:stringify, 불러올때:parse
             localStorage.setItem("mycart-data", JSON.stringify(locals));
-
+            
             myCon.setCartList(true); // <CartList/> 생성 상태값 변경//true로 생성
             setShowCart(true);
           }}
-        >
+          >
           추가하기
         </button>
       </div>
@@ -205,13 +207,14 @@ function DetailPg(props) {
         @media (max-width: 777px) {
           body {
             padding-top: 0;
-          }
-          .footer-area {
-            display: none;
-          }
-        }
-      `}</style>
+            }
+            .footer-area {
+              display: none;
+              }
+              }
+              `}</style>
     </div>
+              </>
   );
 }
 
