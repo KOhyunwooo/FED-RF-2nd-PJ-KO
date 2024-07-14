@@ -140,7 +140,7 @@ function TopAreaMedia() {
                 )
               }
          
-            <Link to="/mycart">
+            <Link to="/mycartselpg">
               <span>바스켓백({localsData.length})</span>
             </Link>
           </div>

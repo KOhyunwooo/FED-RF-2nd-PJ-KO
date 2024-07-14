@@ -75,7 +75,7 @@ function CartList({optVal}) {
               <p>{cartData[2]}</p>
               </div>
             </div>
-              <Link to={"/mycart"}>
+              <Link to={"/mycartselpg"}>
             <button
             className="look-my-cart"
             onClick={()=>

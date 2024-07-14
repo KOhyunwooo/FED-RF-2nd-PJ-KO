@@ -1,3 +1,8 @@
+.detailpgmargintop{
+  margin-top: 130px;
+}
+
+
 // 가장 바깥 박스////////////////////////////////////
 .detailbox {
   display: flex;
@@ -170,10 +175,10 @@
       width: 100vw;
       position: fixed;
       bottom: 0;
-.dttxt-bx {
-  border: none;
-  border-top: 1px solid black;
-}
+      .dttxt-bx {
+        border: none;
+        border-top: 1px solid black;
+      }
     }
     .dtsize-bx {
       border: none;
@@ -181,11 +186,22 @@
   }
   /* 스와이퍼 큰 이미지 */
   .detailbox .detail-img {
+    top: 0;
     width: 100dvw;
     height: 100dvh;
   }
   /* 스와이퍼 이미지 작은이미지들 */
   .detail-img .mySwiper {
     display: none;
+  }
+}
+
+
+
+
+/* 600 이하 일떄 */
+@media screen and (max-width: 600px) {
+  .detailpgmargintop{
+    margin-top: 0;
   }
 }

@@ -44,7 +44,7 @@ function DetailPg(props) {
 
   return (
     <>
-    <div style={{marginTop:"70px"}}></div>
+    <div className="detailpgmargintop" ></div>
     {/* // 전체 박스//flex하였음//////////////////////////////////// */}
     <div className="detailbox">
       {/* 왼쪽 케어부분//////////////////////////////////// */}

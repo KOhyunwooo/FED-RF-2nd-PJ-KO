@@ -210,7 +210,7 @@ export default function TopArea() {
                                     }
                                 </span>
                                 <span>
-                                    <Link to="/mycart">바스켓백({localsData.length})</Link>
+                                    <Link to="/mycartselpg">바스켓백({localsData.length})</Link>
                                 </span>
                             </div>
                         </li>

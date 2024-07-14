@@ -83,8 +83,11 @@
           }
         }
         .item-txt {
+          padding: 10px;
           flex-grow: 1; /* 남은 공간 차지 */
           height: 100%;
+          margin-bottom: 5px;
+
         }
       }
       >a{

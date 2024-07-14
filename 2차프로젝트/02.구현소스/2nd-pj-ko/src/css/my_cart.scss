@@ -1,3 +1,4 @@
+
 //바스켓백 버튼
 .mycart-button {
   margin-bottom: 1px;
@@ -138,21 +139,34 @@
   border-top: 1px solid black;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr auto;//첫번쨰열 두번쨰열 세번째열;
+  grid-template-columns: 1fr .2fr auto;//첫번쨰열 두번쨰열 세번째열;
   // grid-template-rows: auto 1fr;
   font-size: 13px;
 
   .buytxt {
     padding-left: 20px;
       align-self: center;
+      justify-self: start;
     font-family: Arial, Helvetica, sans-serif;
     left: 0;
   }
-  .totals {
+  >span{
     margin-right: 56px;
     align-self: center;
     justify-self: flex-end;
-}
+    font-family: Arial, Helvetica, sans-serif;
+
+    >b{
+      font-size: 11px;
+      .totals {
+    }
+
+    }
+    >p{
+      font-size: 9px;
+      text-align: right;
+    }
+  }
 .buybutton {
     width: 160px;
     font-size: 15px;
@@ -175,6 +189,7 @@
 }
 /* 777 이하 일떄 */
 @media screen and (max-width: 777px) {
+ 
   .mycart-button,
   .favorite-button {
     width: 50%;
@@ -189,8 +204,21 @@
         }
         .txt-box {
           width: 90%;
+          position: relative;
+          .cntbox {
+            // margin-top: 100%;
+            position: absolute;
+    bottom: 2.5%;
+          }
         }
       }
     }
+  }
+
+  .buybar {
+    height: 56px;
+    grid-template-columns: 1fr 1fr;
+    .buytxt  {display: none;}
+    .buybutton{width: auto;}
   }
 }
