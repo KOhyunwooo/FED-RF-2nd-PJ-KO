@@ -74,6 +74,8 @@ export default function Layout() {
         // 4. 메인 페이지로 돌아가기
         goPage("/");
     }, []); //////// logoutFn 함수 /////////
+    // 로그아웃처리함수 호출
+    // 다른곳에서 부를때 myCon.logoutFn();이렇게하면됨
 
     // 화면 랜더링 구역 ////////
     useEffect(() => {

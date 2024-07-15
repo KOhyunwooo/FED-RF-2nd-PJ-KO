@@ -21,6 +21,7 @@ import Login from "./components/pages/Login";
 import DetailPg from "./components/pages/DetailPg";
 
 import MyCartSelPg from "./components/pages/MyCartSelPg";
+import MyPage from "./components/pages/MyPage";
 
 
 
@@ -58,6 +59,7 @@ export default function MainComponent() {
           <Route path="joinmember" element={<JoinMember />} />
           <Route path="login" element={<Login />} />
           <Route path="detail" element={<DetailPg />} />
+          <Route path="mypage" element={<MyPage />} />
           <Route path="mycartselpg" element={<MyCartSelPg />} />
         
           <Route path="sorry" element={<Sorry />} />

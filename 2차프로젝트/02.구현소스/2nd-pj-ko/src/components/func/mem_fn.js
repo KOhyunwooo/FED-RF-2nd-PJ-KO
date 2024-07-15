@@ -34,7 +34,7 @@ const clearData = () => {
             {
                 "idx": "2",
                 "uid":"ko",
-                "pwd":"1234",
+                "pwd":"1111",
                 "unm":"고현우",
                 "phone":"01012345678",
                 "eml":"ko@naver.com"

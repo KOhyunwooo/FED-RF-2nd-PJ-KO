@@ -198,19 +198,12 @@ export default function TopArea() {
                                     {
                                         /* 로그인 상태이면 로그아웃버튼 보임 */
                                         myCon.loginSts !== null && (
-                                            <a
-                                                href="#"
-                                                onClick={(e) => {
-                                                    // 기본이동 막기
-                                                    e.preventDefault();
-                                                    // 로그아웃처리함수 호출
-                                                    // myCon.logoutFn();
-                                                    console.log(JSON.parse(myCon.loginSts).uid);
-                                                }}
-                                            >
-                                                로그아웃
-                                                {/* ({memLocalsData.uid}) */}
-                                            </a>
+                                        
+                                               <Link to="/mypage">
+                                                   {JSON.parse(myCon.loginSts).unm}
+
+                                               </Link>
+                                         
                                         )
                                     }
                                 </span>

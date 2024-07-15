@@ -195,7 +195,7 @@ function DetailPg(props) {
             //넣을때:stringify, 불러올때:parse
             localStorage.setItem("mycart-data", JSON.stringify(locals));
 
-            // 최상위 로컬스 카트에 추가하기
+            // 최상위 로컬스 카트에 추가하기(:이게 없으면 MyCart.jsx에서 물건이1개 일때 지워질떄 렌더링이 제대로 되지 않음 ㅠㅠ)
             myCon.setLocalsMycart(JSON.stringify(locals));
             
             myCon.setCartList(true); // <CartList/> 생성 상태값 변경//true로 생성
