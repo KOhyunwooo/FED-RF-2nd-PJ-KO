@@ -76,6 +76,7 @@
           border-right: 1px solid black;
           aspect-ratio: 2/3;
           object-fit: cover;
+          overflow: hidden;
 
           > img {
             width: 100%;
