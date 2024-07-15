@@ -88,7 +88,7 @@ function ProductList({ dbName }) {
                             <div className="txt-box">
                                 {/* 하트버튼:favorite버튼 */}
                             <div style={{ cursor: 'pointer' ,float:"right"}}>
-                           <IoMdHeart size={20} color="red" /> <IoMdHeartEmpty size={20}  />
+                           <IoMdHeart size={20} /> <IoMdHeartEmpty size={20}  />
                             </div>
                                 <span>{v.name}</span>
                                 <span className="price">
