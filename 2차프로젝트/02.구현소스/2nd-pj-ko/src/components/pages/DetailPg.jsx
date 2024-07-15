@@ -194,6 +194,9 @@ function DetailPg(props) {
             //5. 로컬스토리지에 문자열(json형식)으로 변환하여 저장하기!!!
             //넣을때:stringify, 불러올때:parse
             localStorage.setItem("mycart-data", JSON.stringify(locals));
+
+            // 최상위 로컬스 카트에 추가하기
+            myCon.setLocalsMycart(JSON.stringify(locals));
             
             myCon.setCartList(true); // <CartList/> 생성 상태값 변경//true로 생성
             setShowCart(true);

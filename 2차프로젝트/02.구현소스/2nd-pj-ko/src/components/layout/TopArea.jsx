@@ -204,7 +204,8 @@ export default function TopArea() {
                                                     // 기본이동 막기
                                                     e.preventDefault();
                                                     // 로그아웃처리함수 호출
-                                                    myCon.logoutFn();
+                                                    // myCon.logoutFn();
+                                                    console.log(JSON.parse(myCon.loginSts).uid);
                                                 }}
                                             >
                                                 로그아웃

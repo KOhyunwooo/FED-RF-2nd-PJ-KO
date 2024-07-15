@@ -42,6 +42,7 @@ export default function Layout() {
     // 로컬스토리지 카트 데이터 상태변수(로컬스토리지-mycart-data)
     const [localsMycart,setLocalsMycart]=useState(localStorage.getItem("mycart-data"));
 
+    console.log("최상위로컬스:",localsMycart);
     // [ 공통 함수 ] //////////////////////////////////////////////////////////////////
     // 1. 라우팅 이동함수 : 라우터 이동후크인 useNavigate는
     // 다른 useCallback() 후크로 처리할 수 없다!

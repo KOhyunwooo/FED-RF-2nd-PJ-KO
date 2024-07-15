@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 //마이카트 (장바구니)scss불러오기
 import "../../css/my_cart.scss";
 
@@ -8,11 +8,12 @@ import { dCon } from "../func/dCon";
 import { addComma } from "../func/common_fn";
 
 function MyCart(props) {
+
   //컨텍스트 api 가져오기
   const myCon = useContext(dCon);
   //로컬스 데이터 가져오기///////////////////////////////////////////////////////////
   const localsData = JSON.parse(localStorage.getItem("mycart-data")) || [];
-  // console.log("이걸 장바구니에 뿌려야지", localsData);
+  console.log("이걸 장바구니에 뿌려야지", localsData);
 
   // 로컬스에 집어넣고, 상태변경(변경된 상태 리렌더링)함수////
   const intolocals = () => {
@@ -73,6 +74,7 @@ function MyCart(props) {
 
                     // 5. 데이터 개수가 0 이면 카트리스트 상태변수를 false로 변경하여 카트리스트 출력 없애기.
                     if (localsData.length == 0) myCon.setCartList(false); //myCon.setCartList(false);는 index.js상태관리변수:true시<CartList/>출력임
+
                   }}
                 >
                   <img
