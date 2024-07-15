@@ -5,11 +5,19 @@ import { wNew, wSale } from "../data/products_woman";
 //데이터 불러오기 man
 import { mBestSeller, mNew, mSale, mOrigins } from "../data/products_man";
 
+//https://www.npmjs.com/package/react-icons  불러오기
+import { IoMdHeartEmpty } from "react-icons/io";
+import { IoMdHeart } from "react-icons/io";
+
 import "../../css/ProductList.scss";
 import { Link } from "react-router-dom";
 import { addComma } from "../func/common_fn";
+import { useState } from "react";
 
 function ProductList({ dbName }) {
+    
+
+
     const pdbutton = ["색상", "사이즈", "가격", "컬렉션( )"];
 
     const selData = {
@@ -58,6 +66,7 @@ function ProductList({ dbName }) {
  ****************************************************************** */
     return (
         <>
+       
             <div className="pdbutton-box">
                 {pdbutton.map((v, i) => (
                     <button key={i} className="pdbutton">
@@ -75,7 +84,12 @@ function ProductList({ dbName }) {
                                 alt={v.name}
                                 className="product-image"
                             />
+                            </Link>
                             <div className="txt-box">
+                                {/* 하트버튼:favorite버튼 */}
+                            <div style={{ cursor: 'pointer' ,float:"right"}}>
+                           <IoMdHeart size={20} color="red" /> <IoMdHeartEmpty size={20}  />
+                            </div>
                                 <span>{v.name}</span>
                                 <span className="price">
                                     {v.price[0] && <p>₩{addComma(v.price[0])}</p>}
@@ -86,7 +100,7 @@ function ProductList({ dbName }) {
                                     )}
                                 </span>
                             </div>
-                        </Link>
+                        
                     </div>
                 ))}
             </div>

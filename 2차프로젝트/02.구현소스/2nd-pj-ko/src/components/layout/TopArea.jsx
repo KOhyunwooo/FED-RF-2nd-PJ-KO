@@ -24,10 +24,7 @@ export default function TopArea() {
     //로컬스 데이터 가져오기
     //JSON.parse(localStorage.getItem("mycart-data"))가false면 [];해라.
     const localsData = JSON.parse(localStorage.getItem("mycart-data")) || [];
-    //로컬스 데이터 가져오기(mem-data)
-    const memLocalsData = JSON.parse(localStorage.getItem("mem-data")) || [];
-    console.log("로컬쓰에있는 멤버데이터",memLocalsData.uid)
-
+   
 
     /* 우측상단 검색창: 이동함수 만들기 **************************************************/
     const goNav = useNavigate(); //useNavigate를 사용하는 이동함수:goNav

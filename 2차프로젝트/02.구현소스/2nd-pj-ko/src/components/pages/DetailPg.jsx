@@ -51,20 +51,29 @@ function DetailPg(props) {
       {/* <div className="care_imgbx"> */}
       <div className="care-box-wrap">
         <div className={`care-box${toggle ? " on" : ""}`}>
-          <CareTxt />
+          <CareTxt/>
 
           <button
             className="morebt"
-            onClick={() =>
+            onClick={() =>{
+
               //prevState => !prevState는 상태를 이전상태로 변경 시켜줌,toggle만들때 사용
-              setToggle((prevState) => !prevState)
+              setToggle((prevState) => !prevState);
+             
+            }
             }
             style={{
+              border:"none",
+              boxSizing:"border-box",
+              backgroundColor:"white",
               position: toggle ? "relative" : "absolute",
-              bottom: toggle ? "0px" : "0px", // toggle 상태에 따라 top 위치 설정
+              bottom: toggle ? "0px" : ".5px", // toggle 상태에 따라 top 위치 설정
+
+             
+
             }}
             >
-            {toggle == true ? "접기" : "더보기"}
+            {toggle == true ? "감추기" : "더 보기"}
           </button>
         </div>
       </div>
