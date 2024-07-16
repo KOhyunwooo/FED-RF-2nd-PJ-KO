@@ -150,8 +150,6 @@ function Login(props) {
           myCon.setLoginSts(sessionStorage.getItem("minfo"));
           // ->업데이트된 minfo 세션스 값을 넣음!
 
-          // 3. 로그인 환영메시지 셋팅함수 호출
-          myCon.makeMsg(result.unm);
 
           // 4. 로그인 성공 메시지 버튼에 출력하기
           document.querySelector(".sbtn").innerText = "로그인 중...";

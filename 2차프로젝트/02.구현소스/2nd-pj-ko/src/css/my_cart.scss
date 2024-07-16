@@ -16,19 +16,29 @@
   font-size: 1.1rem;
 }
 
-
+.mycart-line{
+  border-top: 1px solid black;
+}
 .mycart-txt {
   background-color: #eeeeee;
   font-family: "HelveticaLt";
   font-size: 1.1rem;
   padding: 12px 16px;
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   // margin-bottom: 1px;
-  width: 100%;
+ 
   margin-left: -1px;
 }
 
 .mycart-box {
+  .noitem{
+    font-size: 11px;
+    .bagimg{
+      font-size: 20px;
+      margin-bottom: 5;
+    }
+    padding: 5%;
+  }
   .product-list5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5개의 열을 생성 */
@@ -124,7 +134,7 @@
   width: 100%;
   height: 76.67px;
   position: fixed;
-  bottom: 0;
+  bottom: -11%;
   background-color: #fdfdfd;
   border-top: 1px solid black;
   z-index: 1;
@@ -132,6 +142,14 @@
   grid-template-columns: 1fr .2fr auto;//첫번쨰열 두번쨰열 세번째열;
   // grid-template-rows: auto 1fr;
   font-size: 13px;
+  animation: buybaropen .7s ease forwards;
+  @keyframes buybaropen {
+    to{
+      bottom:0;
+    }
+    
+  }
+
 
   .buytxt {
     padding-left: 20px;
@@ -158,6 +176,7 @@
     }
   }
 .buybutton {
+  height: 100%;
     width: 160px;
     font-size: 15px;
     border: 0;
@@ -182,7 +201,7 @@
  
   .mycart-button,
   .favorite-button {
-    width: 50%;
+    width: calc(50% + 2px);
   }
   .mycart-box {
     .product-list5 {

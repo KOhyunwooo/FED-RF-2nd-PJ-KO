@@ -42,6 +42,11 @@ function DetailPg(props) {
     };
   }, [showCart]);
 
+
+  useEffect(() => {
+    $(".care-box").scrollTop(0);
+  }, [toggle]);
+
   return (
     <>
     <div className="detailpgmargintop" ></div>
@@ -50,7 +55,7 @@ function DetailPg(props) {
       {/* 왼쪽 케어부분//////////////////////////////////// */}
       {/* <div className="care_imgbx"> */}
       <div className="care-box-wrap">
-        <div className={`care-box${toggle ? " on" : ""}`}>
+        <div className={`care-box${toggle ? " on" : ""}`} >
           <CareTxt/>
 
           <button
@@ -65,9 +70,9 @@ function DetailPg(props) {
             style={{
               border:"none",
               boxSizing:"border-box",
-              backgroundColor:"white",
+              backgroundColor:"#fdfdfd",
               position: toggle ? "relative" : "absolute",
-              bottom: toggle ? "0px" : ".5px", // toggle 상태에 따라 top 위치 설정
+              bottom: toggle ? "1px" : "1px", // toggle 상태에 따라 top 위치 설정
 
              
 
@@ -186,7 +191,7 @@ function DetailPg(props) {
               color: data.color,
               size: myCon.optVal.current[3],
               isrc: data.isrc,
-              cnt:"1",
+              cnt:1,
               /********************** 
                [로컬스에 푸시할 데이터]
                1.상품고유번호: idx

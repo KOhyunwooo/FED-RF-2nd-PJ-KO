@@ -22,6 +22,7 @@ import DetailPg from "./components/pages/DetailPg";
 
 import MyCartSelPg from "./components/pages/MyCartSelPg";
 import MyPage from "./components/pages/MyPage";
+import CheckOut from "./components/pages/CheckOut";
 
 
 
@@ -60,6 +61,7 @@ export default function MainComponent() {
           <Route path="login" element={<Login />} />
           <Route path="detail" element={<DetailPg />} />
           <Route path="mypage" element={<MyPage />} />
+          <Route path="checkout" element={<CheckOut />} />
           <Route path="mycartselpg" element={<MyCartSelPg />} />
         
           <Route path="sorry" element={<Sorry />} />

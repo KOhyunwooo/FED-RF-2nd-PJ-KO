@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-function CareTxt(props) {
+function CareTxt(toggle) {
+    
+   
     return (
         <div>
         
@@ -20,7 +22,9 @@ function CareTxt(props) {
             
                 <p>안감 </p>
                 <p>73% 폴리에스터 </p>
-                <p>27%면 </p>
+                <p style={{paddingBottom:"30px"}}>27%면 </p>
+                  
+        
             
             
                 <p>최소 포함 내역: </p>

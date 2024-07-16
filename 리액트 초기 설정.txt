@@ -16,7 +16,7 @@
     (5) npm i swiper
     (6) npm i sass
 
-++폰트어썸 설치
++++폰트어썸 설치
 1. Font Awesome의 SVG 기반 아이콘을 활성화 시키기 위한 기본 패키지
 npm i @fortawesome/fontawesome-svg-core
 2. 무료로 제공되는 Solid, Regular Brands 3개의 카테고리에 대한 패키지만 설치
