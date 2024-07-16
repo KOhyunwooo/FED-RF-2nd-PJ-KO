@@ -8,9 +8,15 @@ import { Link } from "react-router-dom";
 import { dCon } from "../func/dCon";
 import { addComma } from "../func/common_fn";
 
-function MyCart(props) {
+function MyCart(props) {  
 
-  
+  //한번만 실행 useEffect/////////////////////여기다 넣을까 그냥 css로 전체에 오버플로우 히든 넣을까?
+  useEffect(()=>{
+    document.querySelector(".cont").style.overflow="hidden";
+    return(()=>{
+      document.querySelector(".cont").style.overflow="auto";
+    })
+  },[])
 
   //컨텍스트 api 가져오기
   const myCon = useContext(dCon);
@@ -39,13 +45,15 @@ function MyCart(props) {
     });
     return result; //result 리턴!
   };
-  
+
  
+  const [totalPrice, setTotalPrice] = useState(0);//총합계값을 /CheckOut으로 넘기기 위한 상태변수
   useEffect(() => {
-   
+    setTotalPrice(totalFn());//총합계값을 /CheckOut으로 넘기기 위한 상태변수에 담기
     $(".totals").text(addComma(totalFn())); //.totals에 totalFn()을 addComma해서 text로 넣어라!
   }, [localsData]); //localsData가 바뀔때마다.
-  
+
+  console.log("이거 보내는거",totalPrice)
   
 
   return (
@@ -176,7 +184,7 @@ function MyCart(props) {
           </b>
           <p>*&nbsp;부가세 포함</p>
         </span>
-        <Link to="/checkout" >
+        <Link to="/checkout" state={{totalPrice}}  >
         <button className="buybutton">계속</button>
         </Link>
       </div>

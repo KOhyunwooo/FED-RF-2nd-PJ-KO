@@ -43,9 +43,10 @@
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5개의 열을 생성 */
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%; /* 가로 방향으로 가득 채우기 */
-    padding: 0; /* 컨테이너의 패딩 제거 */
-    margin: 0; /* 컨테이너의 마진 제거 */
+    width: 100%; 
+    // width: 99.98%;
+    padding: 0; 
+    margin: 0; 
     box-sizing: border-box;
 
     .product-item {

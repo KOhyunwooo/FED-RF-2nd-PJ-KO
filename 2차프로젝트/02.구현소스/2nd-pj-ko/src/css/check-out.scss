@@ -1,44 +1,39 @@
-
-.check-out-box{
-
-    .where-delivery{
-        width: 393px;
-        height: 161px;
+.check-out-box {
+  .where-delivery {
+    width: 393px;
+    height: 161px;
+    box-sizing: border-box;
+    // border: 1px solid black;
+    .get-hz-wrap {
+      display: flex;
+      .gethome,
+      .getzara {
+        width: 50%;
+        height: 84px;
+        border: 1px solid black;
         box-sizing: border-box;
-        // border: 1px solid black;
-        .get-hz-wrap{
-display: flex;
-            .gethome, .getzara{
-             
-                width: 50%;
-                height: 84px;
-                border: 1px solid black; 
-                box-sizing: border-box;
-                font-size: 10px;
+        font-size: 10px;
 
-                display: flex;
-                 flex-direction: column;
-                 align-items: center;
-                 justify-content: center;
-                
-            }
-            .getzara{
-                border-left: none;
-          
-            }
-        }
-        
-        .getaddress{
-            border: 1px solid black; 
-            border-top: none;
-            box-sizing: border-box;
-            height: 77px;
-            width: 100%;
-       }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .getzara {
+        border-left: none;
+      }
     }
-    .payment{
-        width: 393px;
-        height: 100px;
-        
+
+    .getaddress {
+      border: 1px solid black;
+      border-top: none;
+      box-sizing: border-box;
+      height: 77px;
+      width: 100%;
     }
+  }
+  .payment {
+    width: 393px;
+    height: 100px;
+  }
 }
