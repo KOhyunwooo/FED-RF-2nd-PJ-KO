@@ -1,13 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
 //마이카트 (장바구니)scss불러오기
 import "../../css/my_cart.scss";
-
+//https://react-icons.github.io/react-icons/search/#q=bag불러오기
+import { SlBag } from "react-icons/sl";
 import $ from "jquery";
 import { Link } from "react-router-dom";
 import { dCon } from "../func/dCon";
 import { addComma } from "../func/common_fn";
 
 function MyCart(props) {
+
+  
 
   //컨텍스트 api 가져오기
   const myCon = useContext(dCon);
@@ -36,17 +39,25 @@ function MyCart(props) {
     });
     return result; //result 리턴!
   };
-
+  
+ 
   useEffect(() => {
+   
     $(".totals").text(addComma(totalFn())); //.totals에 totalFn()을 addComma해서 text로 넣어라!
   }, [localsData]); //localsData가 바뀔때마다.
+  
+  
 
   return (
     <>
-      <div className="mycart-txt">
-        장바구니에 담긴 상품은 구매가 완료될 때까지 예약되지 않습니다.
+    
+      <div className="mycart-line">
+        <div className="mycart-txt" style={{ display: localsData.length == 0 && 'none' }}>
+          장바구니에 담긴 상품은 구매가 완료될 때까지 예약되지 않습니다.
+        </div>
       </div>
       <div className="mycart-box">
+        <div className="noitem" style={{ display: localsData.length > 0 && 'none' }}><SlBag className="bagimg"/><p>장바구니가 비었습니다.</p></div>
         <div className="product-list5">
           {localsData.map((v, i) => (
             <div key={i} className="product-item chgop">
@@ -151,9 +162,9 @@ function MyCart(props) {
           ))}
         </div>
       </div>
-
-      {/* 최하단 fixed된 계속버튼 있는곳 */}
-      <div className="buybar">
+          
+      {/* 최하단 fixed된 계속버튼 있는곳 //checkout.jsx에서 재사용함*/}
+      <div className="buybar" style={{ display: localsData.length > 0 ? 'grid' : 'none' }}>
         <span className="buytxt">
           *&nbsp;&nbsp;계속 진행함으로써 본인은 구매 조건을 읽고 이에 동의하며
           Zara의 개인정보 및 쿠키 정책을 이해했음을 선언합니다.
@@ -165,7 +176,9 @@ function MyCart(props) {
           </b>
           <p>*&nbsp;부가세 포함</p>
         </span>
+        <Link to="/checkout" >
         <button className="buybutton">계속</button>
+        </Link>
       </div>
 
       <h1>여기에 추천상품 들어올것↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓</h1>

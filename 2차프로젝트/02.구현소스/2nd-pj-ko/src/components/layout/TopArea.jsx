@@ -4,9 +4,7 @@ import "../../css/top_area.scss";
 //제이쿼리 불러오기
 import $ from "jquery";
 
-/* 폰트어썸 불러오기 */
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 
 //상단영역 컴포넌트//////
 import { Link, useNavigate } from "react-router-dom";

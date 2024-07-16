@@ -2,9 +2,7 @@ import React, { useRef, useState } from "react";
 
 // search_module.scss불러오기
 import "../../css/search_module.scss";
-//폰트어썸아이콘
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 //캐릭터 리스트 결과 컴포넌트 불러오기
 // import SearchingCat from "./SearchingCat";
 
