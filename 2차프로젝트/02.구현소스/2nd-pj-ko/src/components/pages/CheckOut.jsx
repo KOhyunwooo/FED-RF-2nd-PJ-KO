@@ -60,16 +60,21 @@ function CheckOut() {
                                 </div>
                             </div>
                             <div className="getaddress">
-                                <h3>{mySessionData.uid}</h3>
-                                <h3>{mySessionData.address}</h3>
+                            <h3>{mySessionData.unm}</h3>
+                            <h3>{mySessionData.address && mySessionData.address[0] ? mySessionData.address[0].address : ''}</h3>
+                            <h3>{mySessionData.address && mySessionData.address[0] ? mySessionData.address[0].address2 : ''}</h3>
                                 {mySessionData.address === "" ? (
                                     <Link to="/addaddresspg" state={{totalPrice2}}>
-                                        <p>추가하기</p>
+                                        <span>추가하기</span>
                                     </Link>
                                 ) : (
-                                    <p onClick={showAddresslist}>편집</p>
+                                    <span onClick={showAddresslist}>편집</span>//클릭시 addressList 를 true로 바꿔줌
                                 )}
-                                {addressList==true &&<AddressList/>}
+                                {
+                                addressList &&<AddressList addressListDelete={() => setAddressList(false)}/>
+                                // addressListDelete는 addressListDelete를 false 하는 함수: 자식컴포넌트로 보내줌
+                                // addressListDelete는 addressListDelete를 false 하면 AddressList를 삭제함
+                                    }
                             </div>
                         </div>
                         <div className="payment">{/* 결제 관련 내용 */}</div>

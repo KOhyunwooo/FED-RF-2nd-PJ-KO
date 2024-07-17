@@ -25,21 +25,23 @@ function MyCartSelPg(props) {
 return (
     <>
       <div style={{ height: "120px" }}></div>
-      <button
-        className="mycart-button"
-        onClick={() => setShowMyCart(true)}
-        style={{ fontWeight: showMyCart ? 'bold' : 'normal' }}
-      >
-        {/* 바스켓백({lDLength}) */}
-        바스켓백({localsData.length})
-      </button>
-      <button
-        className="favorite-button"
-        onClick={() => setShowMyCart(false)}
-        style={{ fontWeight: !showMyCart ? 'bold' : 'normal' }}
-      >
-        마음에 드는 제품
-      </button>
+      <div className="select_cart-favorite">
+        <button
+          className="mycart-button"
+          onClick={() => setShowMyCart(true)}
+          style={{ fontWeight: showMyCart ? 'bold' : 'normal' }}
+        >
+          {/* 바스켓백({lDLength}) */}
+          바스켓백({localsData.length})
+        </button>
+        <button
+          className="favorite-button"
+          onClick={() => setShowMyCart(false)}
+          style={{ fontWeight: !showMyCart ? 'bold' : 'normal' }}
+        >
+          마음에 드는 제품
+        </button>
+      </div>
      {showMyCart ? <MyCart /> : <Favorite />}
     </>
   );

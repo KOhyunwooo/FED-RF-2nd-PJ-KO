@@ -69,101 +69,97 @@ function MyCart(props) {
         <div className="product-list5">
           {localsData.map((v, i) => (
             <div key={i} className="product-item chgop">
-              <Link to="/">
+              <Link to="">
                 <img
                   src={process.env.PUBLIC_URL + v.isrc}
                   alt={v.name}
                   className="product-image"
                 />
               </Link>
-              <div className="txt-box">
-                {/* x버튼:삭제 버튼/////////////////////////////////////////////// */}
-                <button
-                  className="del-button"
-                  onClick={() => {
-                    //1.데이터 지우기
-                    localsData.splice(i, 1);
-                    // 2.데이터 문자화하기: 변경된 원본을 문자화(문자화: json형식)해서 =res에 담기
-                    let res = JSON.stringify(localsData);
-                    // 3. 로컬스("cart-data")에 반영하기
-                    localStorage.setItem("mycart-data", res);
-
-                    // 4.카트리스트 전역상태변수 설정//상태가 res가 들어간 상태로 재렌더링
-                    myCon.setLocalsMycart(res);
-
-                    // 5. 데이터 개수가 0 이면 카트리스트 상태변수를 false로 변경하여 카트리스트 출력 없애기.
-                    if (localsData.length == 0) myCon.setCartList(false); //myCon.setCartList(false);는 index.js상태관리변수:true시<CartList/>출력임
-
-                  }}
-                >
-                  <img
-                    src={
-                      process.env.PUBLIC_URL + "/images/icons/multiply_thin.png"
-                    }
-                    alt="x"
+              <div className="txt-box-wrap">
+                <div className="txt-box">
+                  {/* x버튼:삭제 버튼/////////////////////////////////////////////// */}
+                  <button
+                    className="del-button"
+                    onClick={() => {
+                      //1.데이터 지우기
+                      localsData.splice(i, 1);
+                      // 2.데이터 문자화하기: 변경된 원본을 문자화(문자화: json형식)해서 =res에 담기
+                      let res = JSON.stringify(localsData);
+                      // 3. 로컬스("cart-data")에 반영하기
+                      localStorage.setItem("mycart-data", res);
+                      // 4.카트리스트 전역상태변수 설정//상태가 res가 들어간 상태로 재렌더링
+                      myCon.setLocalsMycart(res);
+                      // 5. 데이터 개수가 0 이면 카트리스트 상태변수를 false로 변경하여 카트리스트 출력 없애기.
+                      if (localsData.length == 0) myCon.setCartList(false); //myCon.setCartList(false);는 index.js상태관리변수:true시<CartList/>출력임
+                    }}
+                  >
+                    <img
+                      src={
+                        process.env.PUBLIC_URL + "/images/icons/multiply_thin.png"
+                      }
+                      alt="x"
+                    />
+                  </button>
+                  {/* <img src={process.env.PUBLIC_URL+"/images/icons/multiply.png"} alt="minus" /> */}
+                  <span>{v.name}</span>
+                  {/* 가격 */}
+                  <span className="price">
+                    {v.price && <p>₩{addComma(v.price * v.cnt)}</p>}
+                    {/* 가격 곱하기 v.cnt(갯수)해서 가격 변동되기 하기 */}
+                    {v.price1 && (
+                      <p>
+                        {v.price1}&nbsp;₩{addComma(v.price2 * v.cnt)}
+                        {/* 가격 곱하기 v.cnt(갯수)해서 가격 변동되기 하기 */}
+                      </p>
+                    )}
+                  </span>
+                  {/* 계산된 합계금액 숫자만 히든필드에 넣어놓기(foreach돌려서 계산에 사용하기 위함,히든필드는 화면에 표시 안됨) */}
+                  <input
+                    type="hidden"
+                    className="hiddenprice"
+                    defaultValue={v.price1 ? v.price2 * v.cnt : v.price * v.cnt}
                   />
-                </button>
-                {/* <img src={process.env.PUBLIC_URL+"/images/icons/multiply.png"} alt="minus" /> */}
-
-                <span>{v.name}</span>
-
-                {/* 가격 */}
-                <span className="price">
-                  {v.price && <p>₩{addComma(v.price * v.cnt)}</p>}
-                  {/* 가격 곱하기 v.cnt(갯수)해서 가격 변동되기 하기 */}
-                  {v.price1 && (
-                    <p>
-                      {v.price1}&nbsp;₩{addComma(v.price2 * v.cnt)}
-                      {/* 가격 곱하기 v.cnt(갯수)해서 가격 변동되기 하기 */}
-                    </p>
-                  )}
-                </span>
-                {/* 계산된 합계금액 숫자만 히든필드에 넣어놓기(foreach돌려서 계산에 사용하기 위함,히든필드는 화면에 표시 안됨) */}
-                <input
-                  type="hidden"
-                  className="hiddenprice"
-                  defaultValue={v.price1 ? v.price2 * v.cnt : v.price * v.cnt}
-                />
-                <span>
-                  {v.size} | {v.color}
-                </span>
-
-                {/* +-버튼 박스**************************** */}
-                <div className="cntbox">
-                  {/* +버튼 */}
-                  <button
-                    onClick={(e) => {
-                      let tg = $(e.currentTarget).siblings("input");
-                      tg.val(Number(tg.val()) + 1);
-                      localsData[i].cnt = $(e.currentTarget)
-                        .siblings(".cnt")
-                        .val();
-                      intolocals(); //로컬스에 추가 함수
-                    }}
-                  >
-                    <img
-                      src={process.env.PUBLIC_URL + "/images/icons/plus.svg"}
-                      alt="plus"
-                    />
-                  </button>
-                  {/* 인풋박스 */}
-                  <input className="cnt" type="text" readOnly value={v.cnt} />
-                  {/* -버튼 */}
-                  <button
-                    onClick={(e) => {
-                      let tg = $(e.currentTarget).siblings("input"); //나 자신의. 형제요소의. input태그
-                      tg.val(Number(tg.val()) == 1 ? 1 : Number(tg.val()) - 1);
-                      localsData[i].cnt = $(e.currentTarget)
-                        .siblings(".cnt")
-                        .val();
-                      intolocals(); //로컬스에 추가 함수
-                    }}
-                  >
-                    <img
-                      src={process.env.PUBLIC_URL + "/images/icons/minus.svg"}
-                      alt="minus"
-                    />
-                  </button>
+                  <span>
+                    {v.size} | {v.color}
+                  </span>
+                  {/* +-버튼 박스**************************** */}
+                  <div className="cntbox">
+                    {/* +버튼 */}
+                    <button
+                      onClick={(e) => {
+                        let tg = $(e.currentTarget).siblings("input");
+                        tg.val(Number(tg.val()) + 1);
+                        localsData[i].cnt = $(e.currentTarget)
+                          .siblings(".cnt")
+                          .val();
+                        intolocals(); //로컬스에 추가 함수
+                      }}
+                    >
+                      <img
+                        src={process.env.PUBLIC_URL + "/images/icons/plus.svg"}
+                        alt="plus"
+                      />
+                    </button>
+                    {/* 인풋박스 */}
+                    <input className="cnt" type="text" readOnly value={v.cnt} />
+                    {/* -버튼 */}
+                    <button
+                      onClick={(e) => {
+                        let tg = $(e.currentTarget).siblings("input"); //나 자신의. 형제요소의. input태그
+                        tg.val(Number(tg.val()) == 1 ? 1 : Number(tg.val()) - 1);
+                        localsData[i].cnt = $(e.currentTarget)
+                          .siblings(".cnt")
+                          .val();
+                        intolocals(); //로컬스에 추가 함수
+                      }}
+                    >
+                      <img
+                        src={process.env.PUBLIC_URL + "/images/icons/minus.svg"}
+                        alt="minus"
+                      />
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

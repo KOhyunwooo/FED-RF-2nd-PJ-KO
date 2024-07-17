@@ -28,7 +28,8 @@
     margin: 0; /* 컨테이너의 마진 제거 */
     box-sizing: border-box;
 
-    .product-item {
+    .product-item {display: flex;
+        flex-direction: column;
         background-color: #fdfdfd;
         outline: 1px solid #000000;
         box-sizing: border-box;
@@ -77,6 +78,10 @@
 // }
 
 .txt-box {
+    >span{
+        display: block;
+    padding-bottom: 4px;
+    }
     padding: 12px 12px 32px;
     font-size: 1rem;
     // background-color: #fdfdfd;

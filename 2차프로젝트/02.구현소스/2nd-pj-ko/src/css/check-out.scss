@@ -25,11 +25,16 @@
     }
 
     .getaddress {
+      padding:10px;
       border: 1px solid black;
       border-top: none;
       box-sizing: border-box;
-      height: 77px;
+      // height: 77px;
       width: 100%;
+      >span{
+        cursor: pointer;
+        text-decoration: underline;
+      }
     }
   }
   .payment {

@@ -1,0 +1,102 @@
+.cartlist-box * {
+  // border: red 2px dashed;
+}
+///전체박스
+.addresslist-box {
+  ///배경///////////////////////////////////
+  .cartlist-bg {
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    background-color: hsla(0, 0%, 99%, 0.788);
+    display: none; //<CartList/>불러올때 초깃값
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  //오른쪽 박스/////////////////////////////////////////////////
+  .addedcart-box {
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: -100%; //<CartList/>불러올때 초깃값
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    //닫기버튼////////////////////////
+    .cbtn {
+      outline: 0;
+      border: 0;
+      width: 32px;
+      height: 32px;
+      float: right;
+
+      margin-top: 10px;
+      margin-right: 10px;
+      color: #010101;
+      cursor: pointer;
+      background-color: #fdfdfd;
+      font-family: sans-serif;
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    border-left: 1px solid black;
+    width: 34%;
+    height: 100%;
+    float: right;
+    background-color: #fdfdfd;
+
+    .address-txt-wrap {
+      .address-box {
+        margin-bottom: 1px;
+        outline: 1px solid black;
+        box-sizing: border-box;
+        padding: 20px;
+        .addresses {
+          cursor: pointer;
+          > p {
+            padding-bottom: 3px;
+            font-family: "HelveticaLt";
+            font-size: 13px;
+          }
+        }
+        > span {
+          font-size: 13px;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .newaddress{
+        height: 32px;
+        line-height: 32px;//박스 높이값과 같이 하기
+        width: 100%;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        bottom: 3%;
+        font-size: 11px;
+    }
+  }
+}
+
+/* 미디어 쿼리 1050 일때 */
+
+@media screen and (max-width: 1050px) {
+  .cartlist-box .addedcart-box {
+    width: 100%;
+  }
+  .cartlist-box .cartlist-bg {
+    display: none;
+  }
+}
