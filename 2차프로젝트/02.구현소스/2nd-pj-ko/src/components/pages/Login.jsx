@@ -8,9 +8,14 @@ import "../../css/login.scss";
 import { initData } from "../func/mem_fn";
 // 컨텍스트 API불러오기
 import { dCon } from "../func/dCon";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Login(props) {
+  // pathname이 /checkout 아니면 1초후 메인 페이지("/")로 이동을 위한 useLocation만들기      
+  const { pathname } = useLocation();  
+  console.log("내경로는?",pathname  )
+
+
   // 컨텍스트 사용
   const myCon = useContext(dCon);
   console.log(myCon.loginSts);
@@ -155,10 +160,8 @@ function Login(props) {
           document.querySelector(".sbtn").innerText = "로그인 중...";
 
           // 5.라우팅 페이지 이동
-          // 1초후 메인 페이지 이동
-          setTimeout(() => {
-            myCon.goPage("/");
-          }, 1000);
+          // pathname이 /checkout 아니면 1초후 메인 페이지("/")로 이동          
+          pathname !== "/checkout"&& setTimeout(() => myCon.goPage("/"), 1000) ;
         }
         // 로그인 실패시 메시지 출력
         else {

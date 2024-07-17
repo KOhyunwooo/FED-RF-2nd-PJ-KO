@@ -12,15 +12,15 @@
 const clearData = () => {
     localStorage.clear();
     console.log("로컬쓰 클리어!");
-  }; /////////// clearData //////////////
-  
-  // [ 로컬쓰 초기체크셋팅! ] ////////////
-  const initData = () => {
+}; /////////// clearData //////////////
+
+// [ 로컬쓰 초기체크셋팅! ] ////////////
+const initData = () => {
     // 만약 로컬스 "mem-data"가 null이면 만들어준다!
     if (localStorage.getItem("mem-data") === null) {
-      localStorage.setItem(
-        "mem-data",
-        `
+        localStorage.setItem(
+            "mem-data",
+            `
         [
             {
                 "idx": "1",
@@ -28,7 +28,8 @@ const clearData = () => {
                 "pwd":"1111",
                 "unm":"Administrator",
                 "phone":"01012345678",
-                "eml":"admin@dc.com"
+                "eml":"admin@dc.com",
+                "address":"ㅁㄴㅇㄹ"
 
             },
             {
@@ -37,7 +38,8 @@ const clearData = () => {
                 "pwd":"1111",
                 "unm":"고현우",
                 "phone":"01012345678",
-                "eml":"ko@naver.com"
+                "eml":"ko@naver.com",
+                "address":""
 
             },
             {
@@ -46,14 +48,14 @@ const clearData = () => {
               "pwd":"1111",
               "unm":"Tom",
               "phone":"01012345678",
-                "eml":"tom@gmail.com"
+              "eml":"tom@gmail.com",
+              "address":""
 
             }
         ]
     `
-      );
+        );
     }
-  }; ///////////// initData /////////////////
-  
-  export { clearData, initData };
-  
+}; ///////////// initData /////////////////
+
+export { clearData, initData };

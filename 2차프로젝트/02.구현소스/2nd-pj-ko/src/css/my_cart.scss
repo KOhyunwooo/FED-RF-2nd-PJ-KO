@@ -228,7 +228,11 @@
   .buybar {
     height: 56px;
     grid-template-columns: 1fr 1fr;
-    .buytxt  {display: none;}
-    .buybutton{width: auto;}
+    .buytxt  {
+      display: none;
+    }
+    .buybutton{
+      width: 100%;
+    }
   }
 }
