@@ -6,16 +6,11 @@ import { useState } from 'react';
 function MyCartSelPg(props) {
  //showMyCart 기본값 true, MyCart 또는 Favorite 표시할 상태변수
   const [showMyCart, setShowMyCart] = useState(true);
-  const [force, setForce] = useState(true);
-  const localsData = JSON.parse(localStorage.getItem("mycart-data")) || [];
+  const localsData = JSON.parse(localStorage.getItem("mycart-data")) || [];         
+      console.log("장바구니 상품 갯수",localsData.length)
 
-
-             
-              
-
-
-              console.log("장바구니 상품 갯수",localsData.length)
-const chgNum = () => setForce(!force);
+  const [force, setForce] = useState(true);//강제 리렌더링을 위한 상태변수
+  const chgNum = () => setForce(!force);//강제 리렌더링 함수
               
 return (
     <>

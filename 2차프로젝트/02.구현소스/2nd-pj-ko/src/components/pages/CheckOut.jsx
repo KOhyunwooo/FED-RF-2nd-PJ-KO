@@ -61,8 +61,8 @@ function CheckOut() {
                             </div>
                             <div className="getaddress">
                             <h3>{mySessionData.unm}</h3>
-                            <h3>{mySessionData.address && mySessionData.address[0] ? mySessionData.address[0].address : ''}</h3>
-                            <h3>{mySessionData.address && mySessionData.address[0] ? mySessionData.address[0].address2 : ''}</h3>
+                            <p>{mySessionData.address && mySessionData.address[0] ? mySessionData.address[0].address : ''}</p>
+                            <p>{mySessionData.address && mySessionData.address[0] ? mySessionData.address[0].address2 : ''}</p>
                                 {mySessionData.address === "" ? (
                                     <Link to="/addaddresspg" state={{totalPrice2}}>
                                         <span>추가하기</span>

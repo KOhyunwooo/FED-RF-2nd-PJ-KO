@@ -93,7 +93,7 @@ function MyCart({chgNum}) {
                       // 5. 데이터 개수가 0 이면 카트리스트 상태변수를 false로 변경하여 카트리스트 출력 없애기.
                       if (localsData.length == 0) myCon.setCartList(false); //myCon.setCartList(false);는 index.js상태관리변수:true시<CartList/>출력임
 
-                      chgNum();
+                      chgNum();//MyCartSelPg.jsx에서 내려온 MyCartSelPg.jsx 강제 리렌더링 함수
                     }}
                   >
                     <img

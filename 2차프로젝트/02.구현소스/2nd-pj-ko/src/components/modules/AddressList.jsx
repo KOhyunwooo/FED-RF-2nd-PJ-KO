@@ -88,7 +88,9 @@ function AddressList({ addressListDelete }) {
             </div>
               <Link to={"/addaddresspg"} state={{totalPrice2}}>
               
-              <div className="newaddress">새로운 주소 추가</div>
+              <div className="newaddress">
+                새로운 주소 추가
+                </div>
               </Link>
 
         </div>

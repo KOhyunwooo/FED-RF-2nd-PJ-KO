@@ -68,6 +68,7 @@
 
   // // 가장 오른쪽 디테일 부분/////////////////////////////////////////////////////////////////
   .detail-txtbox {
+    border: 1px solid black;
     bottom: 50px;
     position: relative;
 
@@ -81,7 +82,7 @@
       font-family: Arial, Helvetica, sans-serif;
       padding: 24px 20px;
 
-      border: 1px solid black;
+      
 
       .tit {
       }
@@ -114,7 +115,8 @@
   .dtsize-bx {
     position: relative;
     padding: 24px 20px;
-    border: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     margin-top: -1px;
     .color {
     }
@@ -147,7 +149,7 @@
   }
 }
 .addbutton {
-  border: 1px solid black;
+  border: none;
   background-color: #fdfdfd;
   margin-top: -1px;
   padding: 4px 6px;

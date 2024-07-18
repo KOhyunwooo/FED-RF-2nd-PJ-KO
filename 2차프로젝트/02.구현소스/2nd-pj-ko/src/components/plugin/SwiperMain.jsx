@@ -188,9 +188,7 @@ export default function SwiperMain() {
                         //   //마지막 페이지에 도달하면 멈추기
                         //   stopOnLastSlide: true,
                         // }}
-                        pagination={{
-                            clickable: true,
-                        }}
+                       
                         // navigation={true}
                         modules={[
                             Autoplay,

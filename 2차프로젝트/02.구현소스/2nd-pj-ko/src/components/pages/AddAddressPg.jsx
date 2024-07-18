@@ -78,11 +78,11 @@ function AddAddressPg({ totalPrice2 }) {
   // 전화번호 유효성검사 함수***********************************
   const changephone = (e) => {
     // 입력된 값읽기
-    let val = e.target.value;
+    let val = e.target.value.replace(/[^0-9]/g, ''); // 숫자 이외의 문자 제거
 
     // 1. 휴대폰 유효성 검사식(따옴표로 싸지 말것!)
     const valid = /^(010|011|012|013|014|015|016|017|018|019)\d{3,4}\d{4}$/;
-
+    
     // 2. 입력값 확인 : e.target -> 이벤트가 발생한 요소
     // console.log(val);
 
@@ -290,11 +290,10 @@ function AddAddressPg({ totalPrice2 }) {
                   maxLength="30"
                   placeholder=" "
                   value={userZipCode}
-                  readOnly
-                  onClick={toggleHandler}
+                  readOnly                
                   onFocus={toggleHandler}
                   onChange={changeAddr} //유효성검사
-                  onBlur={changeAddr} //포커스변경시 실행하는 유효성검사
+                  // onBlur={changeAddr} //포커스변경시 실행하는 유효성검사
                 />
                 <label>우편번호</label>
                 {
@@ -336,7 +335,7 @@ function AddAddressPg({ totalPrice2 }) {
                 <input
                   className="loginput"
                   type="text"
-                  maxLength="20"
+                  maxLength="30"
                   placeholder=" "
                   value={userAddress2}
                   onChange={changeUserAddress2} //유효성검사

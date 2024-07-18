@@ -25,6 +25,7 @@
     right: -100%; //<CartList/>불러올때 초깃값
     overflow-y: auto;
     overflow-x: hidden;
+    padding-bottom: 100px;
 
     //닫기버튼////////////////////////
     .cbtn {
@@ -56,7 +57,10 @@
     .address-txt-wrap {
       .address-box {
         margin-bottom: 1px;
-        outline: 1px solid black;
+        border-top: 1px solid black;
+        &:last-child {
+          border-bottom: 1px solid black;
+        }
         box-sizing: border-box;
         padding: 20px;
         .addresses {
@@ -75,18 +79,20 @@
       }
     }
 
-    .newaddress{
+    .newaddress {
+      position: fixed;
+      background-color: #fff;
       color: #010101;
-        height: 32px;
-        line-height: 32px;//박스 높이값과 같이 하기
-        width: 100%;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
-        text-align: center;
-        cursor: pointer;
-        position: absolute;
-        bottom: 3%;
-        font-size: 11px;
+      height: 32px;
+      line-height: 32px; //박스 높이값과 같이 하기
+      width: calc(34% - 17px);
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+      text-align: center;
+      cursor: pointer;
+      // position: absolute;
+      bottom: 3%;
+      font-size: 11px;
     }
   }
 }
@@ -94,10 +100,29 @@
 /* 미디어 쿼리 1050 일때 */
 
 @media screen and (max-width: 1050px) {
-  .cartlist-box .addedcart-box {
-    width: 100%;
+  .addresslist-box {
+    .addedcart-box {
+      width: 50%;
+      .newaddress {
+        width: calc(50% - 17px);
+      }
+    }
   }
+
   .cartlist-box .cartlist-bg {
     display: none;
+  }
+}
+
+/* 미디어 쿼리 777 일때 */
+
+@media screen and (max-width: 777px) {
+  .addresslist-box {
+    .addedcart-box {
+      width: 100%;
+      .newaddress {
+        width: calc(100% - 17px);
+      }
+    }
   }
 }
