@@ -29,7 +29,7 @@ function AddAddressPg({ totalPrice2 }) {
   //5.전화번호 입력요소 상태변수
   const [userPhone, setUserPhone] = useState("");
 
-  //주소찾기 창 보이기 여부
+  //주소찾기 창 보이기 상태변수
   const [isOpen, setIsOpen] = useState(false);
   /////////////////////////////////에러 상태관리변수:초기값,에러아님:(false)///////////////////////
   //1.이름 에러 상태변수
@@ -215,37 +215,37 @@ function AddAddressPg({ totalPrice2 }) {
   };
   //DaumPostcode API 기능처리 함수:끝////////////////////////////////////////////////////
 
-  //contin 계속버튼 함수///////////////////////////////////////////
+  //contin '계속'버튼 함수///////////////////////////////////////////
   const contin = (e) => {
-    if (totalValid()) {
+    if (totalValid()) {//totalValid()(전체유효성검사) true이면
       const memData = JSON.parse(localStorage.getItem("mem-data"));
       let currid = JSON.parse(sessionStorage.getItem("minfo")).uid;
       console.log(currid);
       memData.some((v) => {
         if (v.uid == currid) {
-            if(v.address == "") v.address = [];
+            if(v.address == "") v.address = [];//v.address가 ""이면 [];만들고
             
-          v.address.push({
+          v.address.push({//v.address에 {}이런모양으로 푸씨
             address: userAddress,
             address2: userAddress2,
             zipcode: userZipCode,
           });
 
-          // 세션데이터 업데이트하기
+          // 세션데이터(minfo) 업데이트하기
           sessionStorage.setItem("minfo", JSON.stringify(v));
           return true;
         }
       });
-
+        //로컬데이터(mem-data)에도 업데이트 하기
       localStorage.setItem("mem-data", JSON.stringify(memData));
 
-      goNav("/checkout",{state:{totalPrice:totalPrice3}});
+      goNav("/checkout",{state:{totalPrice:totalPrice3}});//totalPrice라는 이름으로totalPrice3가지고 /checkout페이지로 가기
     } else {
       alert("Change your input!");
     }
   };
 
-  //contin 계속버튼 함수:끝///////////////////////////////////////////
+  //contin '계속'버튼 함수:끝///////////////////////////////////////////
 
   return (
     <>
@@ -292,6 +292,7 @@ function AddAddressPg({ totalPrice2 }) {
                   value={userZipCode}
                   readOnly
                   onClick={toggleHandler}
+                  onFocus={toggleHandler}
                   onChange={changeAddr} //유효성검사
                   onBlur={changeAddr} //포커스변경시 실행하는 유효성검사
                 />
@@ -339,7 +340,7 @@ function AddAddressPg({ totalPrice2 }) {
                   placeholder=" "
                   value={userAddress2}
                   onChange={changeUserAddress2} //유효성검사
-                  onBlur={changeUserAddress2} //포커스변경시 실행하는 유효성검사
+                  onBlur={changeUserAddress2} //포커스아웃시 실행하는 유효성검사
                 />
                 <label>상세주소</label>
                 {

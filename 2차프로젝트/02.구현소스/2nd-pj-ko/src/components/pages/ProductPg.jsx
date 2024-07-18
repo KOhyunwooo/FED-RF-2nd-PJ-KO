@@ -14,7 +14,7 @@ function ProductPg({ cat }) {
   const loc = useLocation();
   let data = loc.state.data;
   console.log("가져온 {cat} 은 무엇?:",cat);//cat은 index.js에서 보낸 배열값["man", "woman", "kids", "home"]임
-  console.log("useLocation으로 받아온 data?:",data);//banner에서 <Link to state={{data:v.data}}로 받아왔나????모름..
+  console.log("useLocation으로 받아온 data?:",data);//TopArea에서 <Link to state={{data:v.data}}로 받아왔나????모름..
 
   const chgBgFn = () => {
     if (cat !== "man") return; //카테고리가 man이 아니면 함수 종료

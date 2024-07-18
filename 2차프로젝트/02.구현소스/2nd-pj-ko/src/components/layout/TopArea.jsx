@@ -108,7 +108,7 @@ export default function TopArea() {
                                                                 <Link
                                                                     to={v.link}
                                                                     state={{
-                                                                        data: v.data,
+                                                                        data: v.data,//ProductPg로 보냄
                                                                     }}
                                                                     style={{
                                                                         color:
