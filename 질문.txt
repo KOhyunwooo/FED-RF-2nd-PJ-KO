@@ -1,5 +1,5 @@
 1)자식컴포넌트:MyCart에 X버튼을 클릭하여 localsData.length의 갯수를 변경해도
-부모컴포넌트:mycartselpg에 있는 바스켓백({localsData.length})가 반영되지 않음
+부모컴포넌트:mycartselpg에 있는 바스켓백({localsData.length})가 반영되지 않음//////////////////
 
 2)로그인 안한상태-> 바스켓백-> /checkout ->로그인시 홈으로 가면 안되고 /checkout에 페이지에 유지되어야함/////////////// 자체 해결하였지만 이 방법이 맞는지 확인하기
 

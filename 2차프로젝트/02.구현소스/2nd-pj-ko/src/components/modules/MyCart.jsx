@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { dCon } from "../func/dCon";
 import { addComma } from "../func/common_fn";
 
-function MyCart(props) {  
+function MyCart({chgNum}) {  
 
   //한번만 실행 useEffect/////////////////////여기다 넣을까 그냥 css로 전체에 오버플로우 히든 넣을까?
   useEffect(()=>{
@@ -92,6 +92,8 @@ function MyCart(props) {
                       myCon.setLocalsMycart(res);
                       // 5. 데이터 개수가 0 이면 카트리스트 상태변수를 false로 변경하여 카트리스트 출력 없애기.
                       if (localsData.length == 0) myCon.setCartList(false); //myCon.setCartList(false);는 index.js상태관리변수:true시<CartList/>출력임
+
+                      chgNum();
                     }}
                   >
                     <img

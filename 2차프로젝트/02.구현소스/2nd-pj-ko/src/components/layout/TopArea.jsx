@@ -22,6 +22,8 @@ export default function TopArea() {
     //로컬스 데이터 가져오기
     //JSON.parse(localStorage.getItem("mycart-data"))가false면 [];해라.
     const localsData = JSON.parse(localStorage.getItem("mycart-data")) || [];
+
+    // console.log("리랜......");
    
 
     /* 우측상단 검색창: 이동함수 만들기 **************************************************/

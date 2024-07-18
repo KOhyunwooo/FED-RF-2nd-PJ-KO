@@ -11,11 +11,11 @@ export const main_img = {
         { isrc: "/images/main_banner_pg/main_pg_0y/main_pg_06.jpg", tit: "bestseller" },
     ],
     main_man: [
-        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_10.jpg", tit: "sale" },
-        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_11.jpg", tit: "new" },
-        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_12.jpg", tit: "bestseller" },
-        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_13.jpg", tit: "new" },
-        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_14.jpg", tit: "sale" },
+        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_10.jpg", tit: "mSale" },
+        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_11.jpg", tit: "mNew" },
+        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_12.jpg", tit: "mBestSeller" },
+        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_13.jpg", tit: "mNew" },
+        { isrc: "/images/main_banner_pg/main_pg_1y/main_pg_14.jpg", tit: "mSale" },
     ],
 
     main_kids: [
