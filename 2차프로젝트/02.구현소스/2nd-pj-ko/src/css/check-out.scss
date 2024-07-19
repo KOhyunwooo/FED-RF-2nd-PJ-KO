@@ -1,4 +1,6 @@
 .check-out-box {
+  padding-left: 5vw;
+  padding-top: 200px;
   .where-delivery {
     width: 393px;
     height: 161px;
@@ -46,3 +48,66 @@
 
 
 
+
+
+/* 900 이하 일떄 */
+@media screen and (max-width: 900px) {
+.buybar {
+  height: 56px;
+  // grid-template-columns: 1fr 1fr;
+  display: flex;
+
+  .buytxt  {
+    flex: .7;
+    padding-left: 0;
+    text-align: center;
+  }
+  >span:nth-child(1){
+    padding-right: 0px;
+  }
+  >span:nth-child(2){
+    padding-right: 20px;
+    flex: .3;
+  }
+  >span:nth-child(3){
+    padding-right: 0px;
+  
+  
+      text-align: right; 
+    
+
+     
+    }
+    .buybutton{
+    // width: 100%;
+    justify-self: flex-end;
+    flex: 1;
+  }
+}
+}
+/* 777 이하 일떄 */
+@media screen and (max-width: 777px) {
+.buybar {
+  height: 56px;
+  // grid-template-columns: 1fr 1fr;
+> span {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+ > span:nth-child(2) {
+  padding-right: 0px;
+  align-items: start;
+  flex: .45;
+
+}
+  .buytxt  {
+    flex:.55;
+    
+    // display: none;
+  }
+  .buybutton{
+    width: 100%;
+  }
+}
+}

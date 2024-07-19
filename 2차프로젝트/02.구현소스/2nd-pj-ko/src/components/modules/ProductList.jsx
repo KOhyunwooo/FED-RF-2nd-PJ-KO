@@ -87,15 +87,15 @@ function ProductList({ dbName }) {
                             </Link>
                             <div className="txt-box">
                                 {/* 하트버튼:favorite버튼 */}
-                            <div style={{ cursor: 'pointer' ,float:"right"}}>
+                            <div className="heartbutton">
                            <IoMdHeart size={20} /> <IoMdHeartEmpty size={20}  />
                             </div>
                                 <span>{v.name}</span>
                                 <span className="price">
-                                    {v.price[0] && <p>₩{addComma(v.price[0])}</p>}
+                                    {v.price[0] && <p>₩&nbsp;{addComma(v.price[0])}</p>}
                                     {v.price[1] && (
                                         <p>
-                                            {v.price[1]}&nbsp;₩{addComma(v.price[2])}
+                                            {v.price[1]}&nbsp;₩&nbsp;{addComma(v.price[2])}
                                         </p>
                                     )}
                                 </span>

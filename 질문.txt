@@ -1,3 +1,31 @@
+
+MyCart에서 DetailPg로 못넘기겠어요....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1)자식컴포넌트:MyCart에 X버튼을 클릭하여 localsData.length의 갯수를 변경해도
 부모컴포넌트:mycartselpg에 있는 바스켓백({localsData.length})가 반영되지 않음//////////////////
 

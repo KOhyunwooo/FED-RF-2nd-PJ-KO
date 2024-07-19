@@ -39,10 +39,7 @@ function CheckOut() {
 
             {myCon.loginSts && (
                 <>
-                    <div
-                        className="check-out-box"
-                        style={{ margin: "0 auto", paddingTop: "200px" }}
-                    >
+                    <div className="check-out-box">
                         <h1>물품을 배송 받을 장소</h1>
                         <div className="where-delivery">
                             <div className="get-hz-wrap">
@@ -81,12 +78,17 @@ function CheckOut() {
                     </div>
                     {/* 최하단 fixed된 계속버튼 있는곳 //MyCart.jsx에서 재사용*/}
                     <div className="buybar">
-                        <span className="buytxt"></span>
+                        <span className="buytxt" style={{justifySelf:"end"}}>
+                            {(totalPrice2)>50000 ? "배송비 무료":  <>
+    <span>상품 ₩{addComma(totalPrice2)}</span>
+    <span> + 배송 ₩3000</span>
+  </>}
+                            </span>
                         <span>
-                            <b>
+                            <p>
                                 총&nbsp;&nbsp;&nbsp;&nbsp;₩&nbsp;
-                                {addComma(totalPrice2)}
-                            </b>
+                                {(totalPrice2)>50000?addComma(totalPrice2):addComma(totalPrice2 + 3000)}
+                            </p>
                             <p>*&nbsp;부가세 포함</p>
                         </span>
 
