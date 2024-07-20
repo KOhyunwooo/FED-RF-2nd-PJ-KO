@@ -1,9 +1,10 @@
 .check-out-box {
   padding-left: 5vw;
   padding-top: 200px;
+  //물품을 배송받을 장소부분///////////////////////////////////////////////
   .where-delivery {
     width: 393px;
-    height: 161px;
+    height: auto;
     box-sizing: border-box;
     // border: 1px solid black;
     .get-hz-wrap {
@@ -27,87 +28,175 @@
     }
 
     .getaddress {
-      padding:10px;
+      padding: 10px;
       border: 1px solid black;
       border-top: none;
       box-sizing: border-box;
       // height: 77px;
       width: 100%;
-      >span{
+      > span {
         cursor: pointer;
         text-decoration: underline;
       }
+
+      .reuse-box {
+      }
     }
   }
-  .payment {
+
+  //결제 선택부분////////////////////////////////
+  .payment-outbox {
     width: 393px;
-    height: 100px;
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid black;
+    
+    .payment {
+      display: flex;
+      .payment-imgbox {
+        cursor: pointer;
+        padding: 30px;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        box-sizing: border-box;
+        flex: 1;
+        &.on{
+          box-shadow: inset 0 0 0 .5px #000;
+          
+        }
+        &:last-child {
+          border-bottom: 1px solid black;
+          border-right: none;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .payment-txtbox {
+      padding: 20px;
+    }
   }
 }
 
+.buybar2 {
+  width: 100%;
+  height: 76.67px;
+  position: fixed;
+  bottom: -77.67px;
+  background-color: #fdfdfd;
+  border-top: 1px solid black;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 0.2fr auto; //첫번쨰열 두번쨰열 세번째열;
+  // grid-template-rows: auto 1fr;
+  font-size: 13px;
+  animation: buybaropen 0.7s ease forwards;
+  @keyframes buybaropen {
+    to {
+      bottom: -1px;
+    }
+  }
 
+  .buytxt {
+    font-size: 11px;
+    // padding-left: 20px;
+    align-self: center;
+    justify-self: start;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 0;
+    > span {
+      margin-right: 0;
+    }
+  }
+  > span:nth-child(2) {
+    > p:nth-child(1) {
+      font-weight: bolder;
+    }
+  }
+  > span {
+    padding-right: 50px;
 
+    align-self: center;
+    justify-self: flex-end;
+    font-family: Arial, Helvetica, sans-serif;
 
-
+    > b {
+      font-size: 11px;
+      .totals {
+      }
+    }
+    > p {
+      font-size: 11px;
+      text-align: right;
+    }
+  }
+  .buybutton {
+    height: 100%;
+    width: 160px;
+    font-size: 15px;
+    border: 0;
+    background-color: #030303;
+    color: #fdfdfd;
+    cursor: pointer;
+  }
+}
 
 /* 900 이하 일떄 */
 @media screen and (max-width: 900px) {
-.buybar {
-  height: 56px;
-  // grid-template-columns: 1fr 1fr;
-  display: flex;
+  .buybar2 {
+    height: 56px;
+    // grid-template-columns: 1fr 1fr;
+    display: flex;
 
-  .buytxt  {
-    flex: .7;
-    padding-left: 0;
-    text-align: center;
-  }
-  >span:nth-child(1){
-    padding-right: 0px;
-  }
-  >span:nth-child(2){
-    padding-right: 20px;
-    flex: .3;
-  }
-  >span:nth-child(3){
-    padding-right: 0px;
-  
-  
-      text-align: right; 
-    
-
-     
+    .buytxt {
+      flex: 0.7;
+      padding-left: 0;
+      text-align: center;
     }
-    .buybutton{
-    // width: 100%;
-    justify-self: flex-end;
-    flex: 1;
+    > span:nth-child(1) {
+      padding-right: 0px;
+    }
+    > span:nth-child(2) {
+      padding-right: 20px;
+      flex: 0.3;
+    }
+    > span:nth-child(3) {
+      padding-right: 0px;
+
+      text-align: right;
+    }
+    .buybutton {
+      // width: 100%;
+      justify-self: flex-end;
+      flex: 1;
+    }
   }
-}
 }
 /* 777 이하 일떄 */
 @media screen and (max-width: 777px) {
-.buybar {
-  height: 56px;
-  // grid-template-columns: 1fr 1fr;
-> span {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-}
- > span:nth-child(2) {
-  padding-right: 0px;
-  align-items: start;
-  flex: .45;
+  .buybar2 {
+    height: 56px;
+    // grid-template-columns: 1fr 1fr;
+    > span {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+    }
+    > span:nth-child(2) {
+      padding-right: 0px;
+      align-items: start;
+      flex: 0.45;
+    }
+    .buytxt {
+      flex: 0.55;
 
-}
-  .buytxt  {
-    flex:.55;
-    
-    // display: none;
+      // display: none;
+    }
+    .buybutton {
+      width: 100%;
+    }
   }
-  .buybutton{
-    width: 100%;
-  }
-}
 }

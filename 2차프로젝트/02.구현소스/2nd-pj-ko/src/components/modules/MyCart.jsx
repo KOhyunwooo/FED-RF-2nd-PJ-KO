@@ -70,6 +70,7 @@ function MyCart({chgNum}) {
           {localsData.map((v, i) => (
             <div key={i} className="product-item chgop">
               {/* <Link to="/detail" state={{data: localsData}}> */}
+              {/* <Link to="/detail" state={ localsData[i]} > */}
               <Link to="/" state={{}}>
                 <img
                   src={process.env.PUBLIC_URL + v.isrc}
@@ -170,7 +171,7 @@ function MyCart({chgNum}) {
         </div>
       </div>
           
-      {/* 최하단 fixed된 계속버튼 있는곳 //checkout.jsx에서 재사용함*/}
+      {/* 최하단 fixed된 계속버튼 있는곳 */}
       <div className="buybar" style={{ display: localsData.length > 0 ? 'grid' : 'none' }}>
         <span className="buytxt">
           *&nbsp;&nbsp;계속 진행함으로써 본인은 구매 조건을 읽고 이에 동의하며

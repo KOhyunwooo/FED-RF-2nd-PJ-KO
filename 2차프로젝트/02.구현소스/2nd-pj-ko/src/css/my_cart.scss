@@ -168,7 +168,7 @@
 
   .buytxt {
     font-size: 11px;
-    // padding-left: 20px;
+    padding-left: 20px;
       align-self: center;
       justify-self: start;
     font-family: Arial, Helvetica, sans-serif;
@@ -216,6 +216,8 @@
 
 /* 1050 이하 일떄 */
 @media screen and (max-width: 1050px) {
+
+
   .mycart-box {
     .product-list5 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -225,6 +227,18 @@
 /* 777 이하 일떄 */
 @media screen and (max-width: 777px) {
  
+
+  .buybar {
+    grid-template-columns: 1fr 1fr auto;
+    height: 56px;
+  .buytxt{
+    display: none;
+  }
+.buybutton {
+  width: 100%;
+  }
+  }
+
   .select_cart-favorite{
     width: 100%;
   }
