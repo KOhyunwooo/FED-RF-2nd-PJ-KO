@@ -9,7 +9,7 @@ import DaumPostcode from "react-daum-postcode";
 //제이쿼리 불러오기
 import $ from "jquery";
 
-function AddAddressPg({ totalPrice2 }) {
+function AddAddressPg() {//{totalPrice2}
 
   
     const goNav = useNavigate();
