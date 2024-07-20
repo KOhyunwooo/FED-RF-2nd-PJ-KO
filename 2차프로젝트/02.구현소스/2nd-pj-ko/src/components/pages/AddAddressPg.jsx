@@ -10,24 +10,29 @@ import DaumPostcode from "react-daum-postcode";
 import $ from "jquery";
 
 function AddAddressPg({ totalPrice2 }) {
+
+  
     const goNav = useNavigate();
   //유즈로케이션으로 받아오면 여기에 안써도 되는지 확인하기//
   //링크 스테이트값으로 CheckOut.jsx에서 받아오기 위한 useLocation
   const loc = useLocation();
   const totalPrice3 = loc.state.totalPrice2;
-  console.log("addaddresspg로 넘어온 총합게값", totalPrice3);
-
+//888888888888888888888888888888888888888888888888888888888888 */
+  const addressIndex = loc.state.addressIndex;
+  const addressData = loc.state.addressData;
+  // console.log("addaddresspg로 넘어온 총합게값", totalPrice3);
+  
   /////////////////////////////////입력요소 상태관리변수/////////////////////////////////////////
   //1.이름 입력요소 상태변수
-  const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useState(addressData.unm || "");//*8888888888888888888888888888888888888888
   //2.우편번호 입력요소 상태변수
-  const [userZipCode, setUserZipCode] = useState("");
+  const [userZipCode, setUserZipCode] = useState(addressData.zipcode || "");//*8888888888888888888888888888888888888888
   //3.주소 입력요소 상태변수
-  const [userAddress, setUserAddress] = useState("");
+  const [userAddress, setUserAddress] = useState(addressData.address || "");//*8888888888888888888888888888888888888888
   //4.상세주소 입력요소 상태변수
-  const [userAddress2, setUserAddress2] = useState("");
+  const [userAddress2, setUserAddress2] = useState(addressData.address2 || "");//*8888888888888888888888888888888888888888
   //5.전화번호 입력요소 상태변수
-  const [userPhone, setUserPhone] = useState("");
+  const [userPhone, setUserPhone] = useState(addressData.phone || "");//*8888888888888888888888888888888888888888
 
   //주소찾기 창 보이기 상태변수
   const [isOpen, setIsOpen] = useState(false);
@@ -224,13 +229,22 @@ function AddAddressPg({ totalPrice2 }) {
       memData.some((v) => {
         if (v.uid == currid) {
             if(v.address == "") v.address = [];//v.address가 ""이면 [];만들고
+             
             
+            // 기존 주소 데이터 수정8888888888888888888888888888888888888888888888888888888888888888
+          if (addressIndex !== undefined) {
+            v.address[addressIndex] = {
+              address: userAddress,
+              address2: userAddress2,
+              zipcode: userZipCode,
+            };
+          } else {
           v.address.push({//v.address에 {}이런모양으로 푸씨
             address: userAddress,
             address2: userAddress2,
             zipcode: userZipCode,
           });
-
+        }
           // 세션데이터(minfo) 업데이트하기
           sessionStorage.setItem("minfo", JSON.stringify(v));
           return true;

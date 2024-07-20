@@ -11,9 +11,8 @@ import { useContext } from "react";
 import { useEffect } from "react";
 
 function AddressList({ addressListDelete }) {
-  
-  const loc = useLocation();//링크 스테이트값으로 mycart.jsx에서 받아오기 위한 useLocation
-  const totalPrice2=loc.state.totalPrice;//mycart.jsx에서 받아온 값
+  const loc = useLocation(); //링크 스테이트값으로 mycart.jsx에서 받아오기 위한 useLocation
+  const totalPrice2 = loc.state.totalPrice; //mycart.jsx에서 받아온 값
 
   //세션스토리지에서 현재로그인한 데이터 가져오기
   const mySessionData = JSON.parse(sessionStorage.getItem("minfo"));
@@ -37,7 +36,7 @@ function AddressList({ addressListDelete }) {
       $(".cartlist-bg").fadeOut(300);
       setTimeout(() => {
         myCon.setCartList(false);
-        addressListDelete();//CheckOut.jsx에서 넘어온 <Addresslist/>삭제 함수
+        addressListDelete(); //CheckOut.jsx에서 넘어온 <Addresslist/>삭제 함수
       }, 300);
     }
     return () => {
@@ -63,36 +62,47 @@ function AddressList({ addressListDelete }) {
           >
             <img src={process.env.PUBLIC_URL + "/images/icons/x.svg"} alt="x" />
           </button>
-            <div style={{marginTop:"80px",marginBottom:"30px",paddingLeft:"20px", fontSize:"18px"}}>배송 위치를 선택하세요</div>
-            <div className="address-txt-wrap">
-
-              {mySessionData.address && mySessionData.address.length > 0 ? (
-                mySessionData.address.map((v, i) => (
-                  <div className="address-box" key={i}>
-                    <div className="addresses">
-                      <p>{mySessionData.unm}</p>
-                      <p>{v.address}</p>
-                      <p>{v.address2}</p>
-                      <p>{v.zipcode}</p>
-                      <p>대한민국</p>
-                      <p>{mySessionData.phone}</p>
-                    </div>
-                    <span>편집</span>
-
+          <div
+            style={{
+              marginTop: "80px",
+              marginBottom: "30px",
+              paddingLeft: "20px",
+              fontSize: "18px",
+            }}
+          >
+            배송 위치를 선택하세요
+          </div>
+          <div className="address-txt-wrap">
+            {mySessionData.address && mySessionData.address.length > 0 ? (
+              mySessionData.address.map((v, i) => (
+                <div className="address-box" key={i}>
+                  <div className="addresses">
+                    <p>{mySessionData.unm}</p>
+                    <p>{v.address}</p>
+                    <p>{v.address2}</p>
+                    <p>{v.zipcode}</p>
+                    <p>대한민국</p>
+                    <p>{mySessionData.phone}</p>
                   </div>
-                ))
-              ) : (
-                <p>등록된 주소가 없습니다.</p>
-              )}
-                     
-            </div>
-              <Link to={"/addaddresspg"} state={{totalPrice2}}>
-              
-              <div className="newaddress">
-                새로운 주소 추가
+                  <Link
+                    to={"/addaddresspg"}
+                    state={{
+                      addressIndex: i,
+                      addressData: v,
+                      totalPrice2: totalPrice2,
+                    }}
+                  >
+                    <span>편집</span>
+                  </Link>
                 </div>
-              </Link>
-
+              ))
+            ) : (
+              <p>등록된 주소가 없습니다.</p>
+            )}
+          </div>
+          <Link to={"/addaddresspg"} state={{ totalPrice2 }}>
+            <div className="newaddress">새로운 주소 추가</div>
+          </Link>
         </div>
       </div>
     </>

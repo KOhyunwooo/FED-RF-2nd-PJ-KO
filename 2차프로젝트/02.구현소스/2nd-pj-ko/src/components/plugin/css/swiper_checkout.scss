@@ -1,0 +1,34 @@
+.swiper-checkout{
+    width: 100%;
+    height: 180px;
+    margin-left: -1px;
+    
+    .swiper-slide {
+        width: 100%;
+        height: 100%;
+       
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        &:first-child{
+            border-left: 1px solid black;
+
+        }
+        text-align: center;
+        // font-size: 18px;
+        // background: #ff4848;
+      
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+}
+  

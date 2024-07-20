@@ -13,6 +13,8 @@ import { addComma } from "../func/common_fn";
 import { Link, useLocation } from "react-router-dom";
 import AddressList from "../modules/AddressList";
 import Switch from "../modules/Switch";
+import DeliveryDate from "../modules/DeliveryDate ";
+import SwiperCheckOut from "../plugin/SwiperCheckOut";
 
 function CheckOut() {
   //세션스토리지에서 현재로그인한 데이터 가져오기
@@ -41,7 +43,7 @@ function CheckOut() {
     setIsOn(!isOn);
   };
 
-  // 
+  // 결제정보 상태변수, 함수/////////////////////
   const [selPayment,setSelPayment]=useState({
     text:'결제정보를 선택하여 주문을 완료하십시오.',
     color:"red"   
@@ -68,12 +70,16 @@ function CheckOut() {
     }
   };
 
+  //로컬스 데이터 가져오기///////////////////////////////////////////////////////////
+  const localsData = JSON.parse(localStorage.getItem("mycart-data")) || [];
+
   return (
     <>
       {!myCon.loginSts && <Login />}
 
       {myCon.loginSts && (
         <>
+        <div className="check-out-item-box">
           <div className="check-out-box">
             <h1>배송</h1>
             <div className="where-delivery">
@@ -94,15 +100,16 @@ function CheckOut() {
               <div className="getaddress">
                 {/* 재사용상자 부분********** */}
                 <div className="reuse-box">
-                  <label onClick={toggleSwitch} style={{ cursor: "pointer" }}>
+                  <label onClick={toggleSwitch}>
                     재사용 상자
                   </label>
 
                   {/* 스위치 버튼 */}
                   <Switch checked={isOn} onChange={toggleSwitch} />
                 </div>
-
-                <h3>{mySessionData.unm}</h3>
+                {/* 배송날짜 */}
+                <p><DeliveryDate/></p>
+                <p>{mySessionData.unm}</p>
                 <p>
                   {mySessionData.address && mySessionData.address[0]
                     ? mySessionData.address[0].address
@@ -112,7 +119,9 @@ function CheckOut() {
                   {mySessionData.address && mySessionData.address[0]
                     ? mySessionData.address[0].address2
                     : ""}
-                </p>
+                </p>                
+                <p>{mySessionData.phone}</p>
+            
                 {mySessionData.address === "" ? (
                   <Link to="/addaddresspg" state={{ totalPrice2 }}>
                     <span>추가하기</span>
@@ -160,6 +169,14 @@ function CheckOut() {
                 <p style={{color:selPayment.color}}>{selPayment.text}</p>
                 </div>
             </div>
+          </div>
+          <div className="check-out-item">
+            <div className="check-out-item-txt">
+              <p><DeliveryDate/></p>
+              <p>{localsData.length} 아이템</p>
+            </div>
+            <SwiperCheckOut/>
+          </div>
           </div>
 
           {/* 최하단 fixed된 계속버튼 있는곳 //MyCart.jsx에서 재사용*/}
