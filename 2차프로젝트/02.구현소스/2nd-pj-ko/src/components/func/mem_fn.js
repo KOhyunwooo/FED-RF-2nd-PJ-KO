@@ -30,17 +30,23 @@ const initData = () => {
                 "phone":"01012345678",
                 "eml":"admin@dc.com",
                 "address": [
-                    {
+                    {   
+                        "unm":"admin(집)",
+                        "phone":"01011111111",
                         "address":"서울시 가나다마바사 1234-5번지",
                         "address2":"아자차 아파트 101동 809호",
-                        "zipcode":"00123"
+                        "zipcode":"12345"
                     },
                     {
+                        "unm":"admin(회사)",
+                        "phone":"01022222222",
                         "address":"부산시 해운대구 마린시티 1로",
                         "address2":"마린파크 A동 1505호",
                         "zipcode":"48120"
                     },
                     {
+                        "unm":"admin(별장)",
+                        "phone":"01033333333",
                         "address":"제주특별자치도 서귀포시 중문관광로 72번길",
                         "address2":"제주 휴양리조트",
                         "zipcode":"63535"

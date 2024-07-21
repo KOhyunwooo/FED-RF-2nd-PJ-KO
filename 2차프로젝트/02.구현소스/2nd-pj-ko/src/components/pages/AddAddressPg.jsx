@@ -14,14 +14,13 @@ function AddAddressPg() {//{totalPrice2}
   
     const goNav = useNavigate();
   //유즈로케이션으로 받아오면 여기에 안써도 되는지 확인하기//
-  //링크 스테이트값으로 CheckOut.jsx에서 받아오기 위한 useLocation
+  //링크 스테이트값으로 CheckOut.jsx||AddressList에서 받아오기 위한 useLocation
   const loc = useLocation();
   const totalPrice3 = loc.state.totalPrice2;
-//888888888888888888888888888888888888888888888888888888888888 */
-  const addressIndex = loc.state.addressIndex;
-  const addressData = loc.state.addressData;
+  const addressIndex = loc.state.addressIndex;//AddressList.jsx에서 받아온 선택된 순번
+  const addressData = loc.state.addressData || {};//AddressList.jsx에서 받아온 데이터(주소1,주소2,우편번호,어드레스안에 이름,어드레스안에 번호)
   // console.log("addaddresspg로 넘어온 총합게값", totalPrice3);
-  
+  console.log("addressData: ", addressData)
   /////////////////////////////////입력요소 상태관리변수/////////////////////////////////////////
   //1.이름 입력요소 상태변수
   const [userName, setUserName] = useState(addressData.unm || "");//*8888888888888888888888888888888888888888
@@ -228,18 +227,25 @@ function AddAddressPg() {//{totalPrice2}
       console.log(currid);
       memData.some((v) => {
         if (v.uid == currid) {
+          // v.unm = userName; <-여기에 입력하면 사용자 정보가 전체적으로 바뀜/여기다는 사용자정보(마이페이지) 바꿀떄 사용
+          
             if(v.address == "") v.address = [];//v.address가 ""이면 [];만들고
              
             
-            // 기존 주소 데이터 수정8888888888888888888888888888888888888888888888888888888888888888
+            // 기존 주소 데이터 수정해서 저장8888888888888888888888888888888888888888888888888888888888888888
           if (addressIndex !== undefined) {
             v.address[addressIndex] = {
+              unm: userName, // 이름 추가
+              phone: userPhone, // 전화번호 추가              
               address: userAddress,
               address2: userAddress2,
               zipcode: userZipCode,
             };
+            // 데이터 입력해서 저장////////////////////////////////////
           } else {
           v.address.push({//v.address에 {}이런모양으로 푸씨
+            unm: userName, // 이름 추가
+            phone: userPhone, // 전화번호 추가
             address: userAddress,
             address2: userAddress2,
             zipcode: userZipCode,

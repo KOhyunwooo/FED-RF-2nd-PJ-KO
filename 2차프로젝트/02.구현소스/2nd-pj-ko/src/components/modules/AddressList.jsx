@@ -10,7 +10,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { useEffect } from "react";
 
-function AddressList({ addressListDelete }) {
+function AddressList({ addressListDelete, setSelAddr }) {
   const loc = useLocation(); //링크 스테이트값으로 mycart.jsx에서 받아오기 위한 useLocation
   const totalPrice2 = loc.state.totalPrice; //mycart.jsx에서 받아온 값
 
@@ -22,6 +22,8 @@ function AddressList({ addressListDelete }) {
 
   //로컬스 데이터 가져오기
   const localsData = JSON.parse(localStorage.getItem("mycart-data"));
+
+  console.log("보낼거", mySessionData.address);
 
   //카트리스트 보이게->안보이게 하기////////////////////////////////////////////
   const [showCart, setShowCart] = useState(true); //초깃값true로 보이는 상태임
@@ -76,20 +78,26 @@ function AddressList({ addressListDelete }) {
             {mySessionData.address && mySessionData.address.length > 0 ? (
               mySessionData.address.map((v, i) => (
                 <div className="address-box" key={i}>
-                  <div className="addresses">
-                    <p>{mySessionData.unm}</p>
+                  <div
+                    className="addresses"
+                    onClick={() => {// ()=> 이거 꼭 해줄것
+                      setSelAddr(i); 
+                      setShowCart(false);
+                    }}
+                  >
+                    <p>{v.unm}</p>
                     <p>{v.address}</p>
                     <p>{v.address2}</p>
                     <p>{v.zipcode}</p>
                     <p>대한민국</p>
-                    <p>{mySessionData.phone}</p>
+                    <p>{v.phone}</p>
                   </div>
                   <Link
                     to={"/addaddresspg"}
                     state={{
-                      addressIndex: i,
-                      addressData: v,
-                      totalPrice2: totalPrice2,
+                      addressIndex: i, //선택된 순번넘기기
+                      addressData: v, //선택된 값(주소1,주소2,우편번호,어드레스안에 이름,어드레스안에 번호)넘기기
+                      totalPrice2: totalPrice2, //총합계값 넘기기
                     }}
                   >
                     <span>편집</span>
