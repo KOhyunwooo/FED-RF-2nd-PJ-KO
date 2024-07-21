@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 //데이터 불러오기 woman
 import { wNew, wSale } from "../data/products_woman";
@@ -13,10 +13,11 @@ import "../../css/ProductList.scss";
 import { Link } from "react-router-dom";
 import { addComma } from "../func/common_fn";
 import { useState } from "react";
+import { dCon } from "../func/dCon";
 
 function ProductList({ dbName }) {
+    const myCon= useContext(dCon); 
     
-
 
     const pdbutton = ["색상", "사이즈", "가격", "컬렉션( )"];
 
@@ -28,10 +29,11 @@ function ProductList({ dbName }) {
         mSale: mSale,
         mOrigins: mOrigins,
     };
+    console.log(selData[dbName])
 
     //seldata를 슬라이스 리버스로 역순으로 데이터 만들기-항상 신상품순으로 나오게 하기 위해
     const reversedData = selData[dbName].slice().reverse();
-
+    
     /* *************************************************************  
   // 윈도우 위치값에 따라 이미지 오파시티 1로 변환하는 함수
   const chgOpFn = () => {
@@ -64,6 +66,56 @@ function ProductList({ dbName }) {
   }, []); // 빈 배열을 전달하여 한 번만 실행되도록 함
 
  ****************************************************************** */
+
+
+
+
+   // 즐겨찾기 상태를 토글하는 함수
+   const toggleFavorite = () => {
+
+ if (!localStorage.getItem("favorite-data")) {
+              //localStorage.getItem("favorite-data")가 없으면
+              localStorage.setItem("favorite-data", "[]"); // localStorage.setItem(키,값);해라. 키:mycart-data, 값[ ]
+            }
+            //2. 로컬스 파싱하기/////////???????????????????????????
+            let locals = JSON.parse(localStorage.getItem("favorite-data"));
+
+
+            const data =selData[dbName];
+    
+            locals.push({
+                idx: data.idx,
+                name: data.name,
+                price: data.price[0],
+                price1: data.price[1],
+                price2: data.price[2],
+                color: data.color,
+                size: myCon.optVal.current[3],
+                isrc: data.isrc,
+                cnt:1,
+     });
+
+    // 새로운 즐겨찾기 "상태"를 업데이트하고, 로컬 스토리지에 저장
+    myCon.setLocalsFavortie(JSON.stringify(locals));
+    localStorage.setItem("favorite-data", JSON.stringify(locals));
+};
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <>
        
@@ -87,8 +139,9 @@ function ProductList({ dbName }) {
                             </Link>
                             <div className="txt-box">
                                 {/* 하트버튼:favorite버튼 */}
-                            <div className="heartbutton">
-                           <IoMdHeart size={20} /> <IoMdHeartEmpty size={20}  />
+                                <div className="heartbutton" onClick={() => toggleFavorite()}>
+                              
+                                    <IoMdHeart size={20} />  <IoMdHeartEmpty size={20} />
                             </div>
                                 <span>{v.name}</span>
                                 <span className="price">

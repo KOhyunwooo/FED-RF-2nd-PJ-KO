@@ -153,7 +153,7 @@ function DetailPg(props) {
             }
             
             //추가하기 버튼: 클릭시 로컬스토리지에 넣기//////////////////////////////
-            //1. 로컬스토리지 만들기///////////////
+            //1. 로컬스토리지 만들기(로컬스 생성, 로컬스토리지 생성)///////////////
             if (!localStorage.getItem("mycart-data")) {
               //localStorage.getItem("mycart-data")가 없으면
               localStorage.setItem("mycart-data", "[]"); // localStorage.setItem(키,값);해라. 키:mycart-data, 값[ ]
