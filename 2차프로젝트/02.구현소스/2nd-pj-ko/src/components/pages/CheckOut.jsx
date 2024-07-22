@@ -221,14 +221,17 @@ function CheckOut() {
                 </div>
               </div>
             </div>
-            <div className="check-out-item">
-              <div className="check-out-item-txt">
-                <p>
-                  <DeliveryDate />
-                </p>
-                <p>{localsData.length} 아이템</p>
+            <div className="check-out-box2">
+              <h1>배송요약</h1>
+              <div className="check-out-item">
+                <div className="check-out-item-txt">
+                  <p>
+                    <DeliveryDate />
+                  </p>
+                  <p>{localsData.length} 아이템</p>
+                </div>
+                <SwiperCheckOut />
               </div>
-              <SwiperCheckOut />
             </div>
           </div>
 

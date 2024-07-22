@@ -95,9 +95,9 @@ function ProductList({ dbName }) {
       newFavorites.push({
         idx: data.idx,
         name: data.name,
-        price: data.price[0],
-        price1: data.price[1],
-        price2: data.price[2],
+        price: data.price1||data.price[0],
+        price1: data.price2||data.price[1],
+        price2: data.price3||data.price[2],
         color: data.color,
         isrc: data.isrc,
         cnt: 1, // 기본 수량을 1로 설정

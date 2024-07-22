@@ -7,6 +7,7 @@ import "../../css/detail_pg.scss";
 import { dCon } from "../func/dCon";
 import CareTxt from "../modules/CareTxt";
 import { addComma } from "../func/common_fn";
+import { IoMdHeart, IoMdHeartEmpty } from "react-icons/io"; // react-icons 추가
 
 function DetailPg(props) {
   //컨텍스트 사용하기(Layout.jsx에서setCartList를 상태변경해서 화면에 띄우려고 사용함)
@@ -46,6 +47,61 @@ function DetailPg(props) {
   useEffect(() => {
     $(".care-box").scrollTop(0);
   }, [toggle]);
+
+
+
+
+
+
+/////////////////////////즐겨찾기 시작/////////////////////////////////////////////////////
+  // 즐겨찾기 목록을 관리하기 위한 상태
+  const [favorites, setFavorites] = useState([]);
+
+  // 컴포넌트가 마운트될 때 로컬 스토리지에서 즐겨찾기 데이터를 불러옴
+  useEffect(() => {
+    // 로컬 스토리지에서 "favorite-data" 키로 저장된 데이터를 가져옴
+    const storedFavorites = localStorage.getItem("favorite-data");
+    // 저장된 데이터가 있으면 파싱하여 상태에 설정
+    if (storedFavorites) {
+      setFavorites(JSON.parse(storedFavorites));
+    }
+  }, []); // 빈 배열을 전달하여 컴포넌트 마운트 시에만 실행
+
+  // 즐겨찾기 토글 함수
+  const toggleFavorite = (aaaa) => {
+    // 현재 즐겨찾기 목록을 복사
+    const newFavorites = [...favorites];
+    // 현재 아이템이 즐겨찾기에 있는지 확인
+    const index = newFavorites.findIndex((item) => item.idx === aaaa.idx);
+
+    if (index !== -1) {
+      // 이미 즐겨찾기에 있으면 제거
+      newFavorites.splice(index, 1);
+    } else {
+      // 즐겨찾기에 없으면 추가
+      newFavorites.push({
+        idx: aaaa.idx,
+        name: aaaa.name,
+        price: aaaa.price1||aaaa.price[0],
+        price1: aaaa.price2||aaaa.price[1],
+        price2: aaaa.price3||aaaa.price[2],
+        color: aaaa.color,
+        isrc: aaaa.isrc,
+        cnt: 1, // 기본 수량을 1로 설정
+      });
+    }
+
+    // 새로운 즐겨찾기 목록으로 상태 업데이트
+    setFavorites(newFavorites);
+    // 업데이트된 즐겨찾기 목록을 로컬 스토리지에 저장
+    localStorage.setItem("favorite-data", JSON.stringify(newFavorites));
+  };
+
+
+
+
+  /////////////////////즐겨찾기 끝///////////////////////////////////////////////////////////////////////////
+
 
   return (
     <>
@@ -91,6 +147,20 @@ function DetailPg(props) {
       {/* 오른쪽 디테일 부분///flex하였음//////////////////////////////////// */}
       <div className="detail-txtbox">
         <div className="dttxt-bx">
+          {/* 하트버튼:favorite버튼 */}
+          <div className="heartbutton" onClick={() => toggleFavorite(data)}>
+                {/* 
+                  현재 아이템(data)이 즐겨찾기 목록에 있는지 확인
+                  some() 메서드는 배열의 요소 중 하나라도 조건을 만족하면 true를 반환
+                */}
+                {favorites.some((fav) => fav.idx === data.idx) ? (
+                  // 아이템이 즐겨찾기에 있으면 채워진 하트 아이콘 표시
+                  <IoMdHeart size={20} />
+                ) : (
+                  // 아이템이 즐겨찾기에 없으면 빈 하트 아이콘 표시
+                  <IoMdHeartEmpty size={20} />
+                )}
+              </div>
           <div className="tit">{data.name}</div>
           <div className="price">
             {data.price[0] && <span>₩{addComma(data.price[0])}</span>}

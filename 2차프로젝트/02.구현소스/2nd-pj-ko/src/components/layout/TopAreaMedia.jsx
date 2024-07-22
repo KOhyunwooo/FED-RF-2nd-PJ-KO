@@ -127,7 +127,7 @@ function TopAreaMedia() {
                 )
               }
          
-            <Link to="/mycartselpg">
+            <Link to="/mycartselpg" onClick={clickX}>
               <span>바스켓백({localsData.length})</span>
             </Link>
           </div>

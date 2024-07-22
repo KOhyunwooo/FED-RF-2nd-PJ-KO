@@ -5,10 +5,11 @@
     align-items: center;
   //왼쪽 배송, 결제부분////////////////////////////////////////////////////////////////////////////
   .check-out-box {
+    width: 393px;
     // padding-left: 5vw;
     //물품을 배송받을 장소부분///////////////////////////////////////////////
     .where-delivery {
-      width: 393px;
+      width: 100%;
       height: auto;
       box-sizing: border-box;
       // border: 1px solid black;
@@ -62,7 +63,7 @@
   
     //결제 선택부분////////////////////////////////
     .payment-outbox {
-      width: 393px;
+      width: 100%;
       height: auto;
       box-sizing: border-box;
       border: 1px solid black;
@@ -98,22 +99,26 @@
   }
 
   /////////////오른쪽 상품 나열 부분///////////////////////////////////////////////////////////////////
-  .check-out-item{
-    overflow: hidden;
+  .check-out-box2{
     width: 480px;
-    height: auto;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    .check-out-item-txt{
-      padding: 20px;
-      >p{
-       
+    .check-out-item{
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      box-sizing: border-box;
+      .check-out-item-txt{
+        padding: 20px;
+        >p{
+         
+        }
       }
+  
+  
     }
-
-
   }
 
 }
@@ -182,6 +187,22 @@
   }
 }
 
+/* 1050 이하 일떄 */
+@media screen and (max-width: 1050px) {
+  .check-out-item-box{
+    flex-direction: column-reverse;
+    .check-out-box {
+      width: 80%;
+
+  }
+    .check-out-box2{
+      width: 80%;
+    }
+ 
+}
+
+
+}
 /* 900 이하 일떄 */
 @media screen and (max-width: 900px) {
   .buybar2 {
@@ -215,6 +236,19 @@
 }
 /* 777 이하 일떄 */
 @media screen and (max-width: 777px) {
+  .check-out-item-box{
+    
+    .check-out-box {
+      width: 100%;
+
+  }
+    .check-out-box2{
+      width: 100%;
+    }
+ 
+}
+
+
   .buybar2 {
     height: 56px;
     // grid-template-columns: 1fr 1fr;

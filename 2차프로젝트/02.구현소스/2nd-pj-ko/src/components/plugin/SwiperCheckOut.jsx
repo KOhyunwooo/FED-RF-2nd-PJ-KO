@@ -20,7 +20,41 @@ export default function SwiperCheckOut() {
     <>
     <div className="swiper-checkout">
       <Swiper
-        slidesPerView={4.2}
+        breakpoints={{
+          // 화면 너비가 0~300
+          0: {
+            slidesPerView: 2.8,
+          },
+          //화면너비 300~380
+          300: {
+            slidesPerView: 3.2,
+          },
+          //화면너비 380~480
+          380: {
+            slidesPerView: 3.8,
+          },
+          //화면너비 480~600
+          480: {
+            slidesPerView: 5.2,
+          },
+          //화면너비 600~777
+          600: {
+            slidesPerView: 5.8,
+          },
+          // 화면 너비가 777~900 
+          777: {
+            slidesPerView: 6.2,
+          },
+          // 화면 너비가 900~1050 
+          900: {
+            slidesPerView: 6.8,
+          },
+          // 화면 너비가 1050~ 
+          1050: {
+            slidesPerView: 4.2,
+          },
+        
+        }}
         spaceBetween={0}
         freeMode={true}
         // pagination={{

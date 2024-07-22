@@ -81,7 +81,10 @@
       font-size: 1rem;
       font-family: Arial, Helvetica, sans-serif;
       padding: 24px 20px;
-
+      .heartbutton{
+        cursor: pointer;
+        float: right;
+      }
       
 
       .tit {

@@ -3,6 +3,9 @@
   width: 50%;
   //바스켓백 버튼,마음에드는제품 버튼
   .mycart-button,.favorite-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     // margin-bottom: 1px;
     margin: -1px;
     position: relative;
@@ -51,6 +54,7 @@
     padding: 0; 
     margin: 0; 
     box-sizing: border-box;
+    overflow: hidden;
 
     .product-item {
       display: flex;
@@ -76,7 +80,11 @@
         .txt-box {
           padding: 12px 12px 12px;
          
-       
+       .x-heart-buttons-wrap{
+        display: flex;
+        float: right;
+        align-items: flex-end;
+       }
           .del-button {
             float: right;
             width: 24px;

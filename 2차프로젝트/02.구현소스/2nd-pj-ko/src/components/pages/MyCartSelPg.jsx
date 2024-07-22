@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import MyCart from '../modules/MyCart';
-import Favorite from '../modules/Favorite';
+import Favorite from '../modules/Favorites';
 import { useState } from 'react';
+//https://www.npmjs.com/package/react-icons  불러오기
+import { IoMdHeartEmpty } from "react-icons/io";
+
 
 function MyCartSelPg(props) {
  //showMyCart 기본값 true, MyCart 또는 Favorite 표시할 상태변수
@@ -29,7 +32,7 @@ return (
           onClick={() => setShowMyCart(false)}
           style={{ fontWeight: !showMyCart ? 'bold' : 'normal' }}
         >
-          마음에 드는 제품
+          마음에 드는 제품<IoMdHeartEmpty size={17} style={{marginTop:"3px"}} color='#2c2c2c;'/>
         </button>
       </div>
      {showMyCart ? <MyCart chgNum={chgNum} /> : <Favorite />}
