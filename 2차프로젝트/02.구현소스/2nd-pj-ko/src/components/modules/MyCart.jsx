@@ -115,9 +115,10 @@ function MyCart({ chgNum }) {
                 <div className="product-list5">
                     {localsData.map((v, i) => (
                         <div key={i} className="product-item chgop">
+                            {console.log("dddddddd",localsData[i])}
                             {/* <Link to="/detail" state={{data: localsData}}> */}
-                            {/* <Link to="/detail" state={ localsData[i]} > */}
-                            <Link to="/" state={{}}>
+                            <Link to="/detail" state={{v:localsData[i]}} >
+                            {/* <Link to="/" state={{}}> */}
                                 <img
                                     src={process.env.PUBLIC_URL + v.isrc}
                                     alt={v.name}

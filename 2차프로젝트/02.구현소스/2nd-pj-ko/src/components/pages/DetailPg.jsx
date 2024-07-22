@@ -9,14 +9,31 @@ import CareTxt from "../modules/CareTxt";
 import { addComma } from "../func/common_fn";
 import { IoMdHeart, IoMdHeartEmpty } from "react-icons/io"; // react-icons 추가
 
+//데이터 불러오기 man
+import { mBestSeller, mNew, mSale, mOrigins } from "../data/products_man";
+
 function DetailPg(props) {
   //컨텍스트 사용하기(Layout.jsx에서setCartList를 상태변경해서 화면에 띄우려고 사용함)
   const myCon = useContext(dCon);
-
+  
   const loc = useLocation();
   const data = loc.state.v; //ProductList.jsx에서  <Link to="/detail" state={{v}}>로 받아온 선택 데이터
   console.log("useLocation", loc);
-  console.log("ProductList.jsx에서 loc.state로 넘어온 데이터:", data);
+  console.log("ProductList.jsx에서 loc.state로 넘어온 데이터:", data, data.idx);
+  
+  const sizeData = [...mBestSeller, ...mNew, ...mOrigins, ...mSale];
+  
+  console.log(sizeData);
+  let temp = sizeData.find(v=>{
+    // console.log(v.isrc);
+    // console.log(data.isrc);
+    if(v.isrc==data.isrc)return true});
+  console.log("사이즈만:",temp.size);
+  console.log("넘어온 객체:",data);
+
+  // 기존 data 의 사이즈 객체값 업데이트하기
+  data.size = temp.size;
+
 
   //토글 상태변수 만들기: 왼쪽 더보기,접기 버튼 부분
   const [toggle, setToggle] = useState(false);
@@ -140,7 +157,7 @@ function DetailPg(props) {
       </div>
       {/*중앙 스와이퍼 부분 ,detail-img */}
       <div className="detail-img">
-        <SwiperDetail data={data} />
+        {/* <SwiperDetail data={data} /> */}
       </div>
       {/* </div> */}
 
@@ -180,7 +197,7 @@ function DetailPg(props) {
         <div className="dtsize-bx">
           <div className="color">{data.color}</div>
           <div className="size">
-            {data.size.map((v, i) => (
+            {data.size&&data.size.map((v, i) => (
               <button
               key={i}
               className={`${chgcolor === i ? "on" : ""}`}

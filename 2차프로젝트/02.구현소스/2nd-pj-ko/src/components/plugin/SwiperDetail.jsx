@@ -36,7 +36,7 @@ export default function SwiperDetail({data}) {
         navigation={false}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[Pagination, FreeMode, Navigation, Thumbs, Mousewheel]}
-        className="mySwiper2"
+        className="mySwiper"
       >
         {data.dtsrc.map((v,i)=>
         <SwiperSlide key={i}>
