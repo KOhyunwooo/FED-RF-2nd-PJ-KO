@@ -10,6 +10,7 @@ import { addComma } from "../func/common_fn";
 //https://www.npmjs.com/package/react-icons  불러오기
 import { IoMdHeartEmpty } from "react-icons/io";
 import { IoMdHeart } from "react-icons/io";
+import useFavoriteFn from "../func/useFavoriteFn";
 function MyCart({ chgNum }) {
     //컨텍스트 api 가져오기
     const myCon = useContext(dCon);
@@ -47,51 +48,8 @@ function MyCart({ chgNum }) {
 
     console.log("이거 보내는거", totalPrice);
 
-    /////////////////////////즐겨찾기 시작/////////////////////////////////////////////////////
-    // 즐겨찾기 목록을 관리하기 위한 상태
-    const [favorites, setFavorites] = useState([]);
-
-    // 컴포넌트가 마운트될 때 로컬 스토리지에서 즐겨찾기 데이터를 불러옴
-    useEffect(() => {
-        // 로컬 스토리지에서 "favorite-data" 키로 저장된 데이터를 가져옴
-        const storedFavorites = localStorage.getItem("favorite-data");
-        // 저장된 데이터가 있으면 파싱하여 상태에 설정
-        if (storedFavorites) {
-            setFavorites(JSON.parse(storedFavorites));
-        }
-    }, []); // 빈 배열을 전달하여 컴포넌트 마운트 시에만 실행
-
-    // 즐겨찾기 토글 함수
-    const toggleFavorite = (data) => {
-        // 현재 즐겨찾기 목록을 복사
-        const newFavorites = [...favorites];
-        // 현재 아이템이 즐겨찾기에 있는지 확인
-        const index = newFavorites.findIndex((item) => item.idx === data.idx);
-
-        if (index !== -1) {
-            // 이미 즐겨찾기에 있으면 제거
-            newFavorites.splice(index, 1);
-        } else {
-            // 즐겨찾기에 없으면 추가
-            newFavorites.push({
-                idx: data.idx,
-                name: data.name,
-                price: data.price,
-                price1: data.price1,
-                price2: data.price2,
-                color: data.color,
-                isrc: data.isrc,
-                cnt: 1, // 기본 수량을 1로 설정
-            });
-        }
-
-        // 새로운 즐겨찾기 목록으로 상태 업데이트
-        setFavorites(newFavorites);
-        // 업데이트된 즐겨찾기 목록을 로컬 스토리지에 저장
-        localStorage.setItem("favorite-data", JSON.stringify(newFavorites));
-    };
-
-    /////////////////////즐겨찾기 끝///////////////////////////////////////////////////
+     //favorite, 하트버튼 사용을 위한 내가만든 커스텀 훅!
+     const { favorites, toggleFavorite } = useFavoriteFn();
 
     return (
         <>
@@ -116,9 +74,10 @@ function MyCart({ chgNum }) {
                     {localsData.map((v, i) => (
                         <div key={i} className="product-item chgop">
                             {console.log("dddddddd",localsData[i])}
-                            {/* <Link to="/detail" state={{data: localsData}}> */}
+                           
                             <Link to="/detail" state={{v:localsData[i]}} >
-                            {/* <Link to="/" state={{}}> */}
+                            {/* localsData[i]를 v라는 이름으로 보냄 */}
+                         
                                 <img
                                     src={process.env.PUBLIC_URL + v.isrc}
                                     alt={v.name}
@@ -183,13 +142,13 @@ function MyCart({ chgNum }) {
                                     {/* 가격 */}
                                     <span className="price">
                                         {v.price && (
-                                            <p>₩{addComma(v.price * v.cnt)}</p>
+                                            <p>₩{addComma(v.price[0] * v.cnt)}</p>
                                         )}
                                         {/* 가격 곱하기 v.cnt(갯수)해서 가격 변동되기 하기 */}
                                         {v.price1 && (
                                             <p>
-                                                {v.price1}&nbsp;₩
-                                                {addComma(v.price2 * v.cnt)}
+                                                {v.price[1]}&nbsp;₩
+                                                {addComma(v.price[2] * v.cnt)}
                                                 {/* 가격 곱하기 v.cnt(갯수)해서 가격 변동되기 하기 */}
                                             </p>
                                         )}
@@ -199,9 +158,9 @@ function MyCart({ chgNum }) {
                                         type="hidden"
                                         className="hiddenprice"
                                         defaultValue={
-                                            v.price1
-                                                ? v.price2 * v.cnt
-                                                : v.price * v.cnt
+                                            v.price[1]
+                                                ? v.price[2] * v.cnt
+                                                : v.price[0] * v.cnt
                                         }
                                     />
                                     <span>

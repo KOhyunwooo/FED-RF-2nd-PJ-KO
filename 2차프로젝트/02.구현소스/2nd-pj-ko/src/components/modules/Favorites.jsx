@@ -11,68 +11,28 @@ import "../../css/favorites.scss";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { IoMdHeart } from "react-icons/io";
 
-function Favorite({ chgNum }) {
+import useFavoriteFn from "../func/useFavoriteFn";
+
+function Favorite() {
     //컨텍스트 api 가져오기
     const myCon = useContext(dCon);
-    //"즐겨찾기" 로컬스 데이터 가져오기///////////////////////////////////////////////////////////
-    const favLocalsData =
-        JSON.parse(localStorage.getItem("favorite-data")) || [];
+
+    //"즐겨찾기" 로컬스 데이터 가져오기(맵돌릴려고 가져옴)/////////////////////////////////////////
+    const favLocalsData =JSON.parse(localStorage.getItem("favorite-data")) || [];
     console.log("이걸 마음에드는 제품에 뿌려야지", favLocalsData);
+    
+    //favorite, 하트버튼 사용을 위한 내가만든 커스텀 훅!
+    const { favorites, toggleFavorite } = useFavoriteFn();
 
-    /////////////////////////즐겨찾기 시작/////////////////////////////////////////////////////
-    // 즐겨찾기 목록을 관리하기 위한 상태
-    const [favorites, setFavorites] = useState([]);
 
-    // 컴포넌트가 마운트될 때 로컬 스토리지에서 즐겨찾기 데이터를 불러옴
-    useEffect(() => {
-        // 로컬 스토리지에서 "favorite-data" 키로 저장된 데이터를 가져옴
-        const storedFavorites = localStorage.getItem("favorite-data");
-        // 저장된 데이터가 있으면 파싱하여 상태에 설정
-        if (storedFavorites) {
-            setFavorites(JSON.parse(storedFavorites));
-        }
-    }, []); // 빈 배열을 전달하여 컴포넌트 마운트 시에만 실행
-
-    // 즐겨찾기 토글 함수
-    const toggleFavorite = (data) => {
-        // 현재 즐겨찾기 목록을 복사
-        const newFavorites = [...favorites];
-        // 현재 아이템이 즐겨찾기에 있는지 확인
-        const index = newFavorites.findIndex((item) => item.idx === data.idx);
-
-        if (index !== -1) {
-            // 이미 즐겨찾기에 있으면 제거
-            newFavorites.splice(index, 1);
-        } else {
-            // 즐겨찾기에 없으면 추가
-            newFavorites.push({
-                idx: data.idx,
-                name: data.name,
-                price: data.price,
-                price1: data.price1,
-                price2: data.price2,
-                color: data.color,
-                isrc: data.isrc,
-                cnt: 1, // 기본 수량을 1로 설정
-            });
-        }
-
-        // 새로운 즐겨찾기 목록으로 상태 업데이트
-        setFavorites(newFavorites);
-        // 업데이트된 즐겨찾기 목록을 로컬 스토리지에 저장
-        localStorage.setItem("favorite-data", JSON.stringify(newFavorites));
-    };
-
-    /////////////////////즐겨찾기 끝///////////////////////////////////////////////////
     return (
         <>
             <div className="favorites">
                 <div className="product-list fav-pd-list">
                     {favLocalsData.map((v, i) => (
                         <div key={i} className="product-item chgop">
-                            {/* <Link to="/detail" state={{data: favLocalsData}}> */}
-                            {/* <Link to="/detail" state={ favLocalsData[i]} > */}
-                            <Link to="/" state={{}}>
+                            <Link to="/detail" state={{v:favLocalsData[i]}} >
+                            {/* localsData[i]를 v라는 이름으로 보냄 */} 
                                 <img
                                     src={process.env.PUBLIC_URL + v.isrc}
                                     alt={v.name}
@@ -105,27 +65,17 @@ function Favorite({ chgNum }) {
                                     {/* 가격 */}
                                     <span className="price">
                                         {v.price && (
-                                            <p>₩{addComma(v.price * v.cnt)}</p>
+                                            <p>₩{addComma(v.price[0] * v.cnt)}</p>
                                         )}
                                         {/* 가격 곱하기 v.cnt(갯수)해서 가격 변동되기 하기 */}
-                                        {v.price1 && (
+                                        {v.price[1] && (
                                             <p>
-                                                {v.price1}&nbsp;₩
-                                                {addComma(v.price2 * v.cnt)}
+                                                {v.price[1]}&nbsp;₩
+                                                {addComma(v.price[2] * v.cnt)}
                                                 {/* 가격 곱하기 v.cnt(갯수)해서 가격 변동되기 하기 */}
                                             </p>
                                         )}
-                                    </span>
-                                    {/* 계산된 합계금액 숫자만 히든필드에 넣어놓기(foreach돌려서 계산에 사용하기 위함,히든필드는 화면에 표시 안됨) */}
-                                    <input
-                                        type="hidden"
-                                        className="hiddenprice"
-                                        defaultValue={
-                                            v.price1
-                                                ? v.price2 * v.cnt
-                                                : v.price * v.cnt
-                                        }
-                                    />
+                                    </span>                                 
                                     <span>
                                         {v.size} {v.color}
                                     </span>

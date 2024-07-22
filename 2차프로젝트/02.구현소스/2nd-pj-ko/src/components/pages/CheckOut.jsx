@@ -89,6 +89,7 @@ function CheckOut() {
   const localsData = JSON.parse(localStorage.getItem("mycart-data")) || [];
 
   //배송주소 선택해서 원하는 배송주소 넣기 위한 상태변수:기본값0(idx가0임)
+  //프롭스다운해서 상태변경함.
   const [selAddr,setSelAddr] =useState(0);
   console.log("나는 0이어야함",selAddr)
 

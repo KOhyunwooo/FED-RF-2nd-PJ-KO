@@ -226,7 +226,7 @@ export const wNew = [
     link: "",
     topcate: "woman",
     color: [""],
-    size: ["XS (KR 44)", "S (KR 55)", "M (KR 66)", "L (KR 77)", "XL (KR 88)"],
+    size: ["S (KR 55)", "M (KR 66)", "L (KR 77)"],
   },
 ];
 

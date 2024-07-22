@@ -11,6 +11,9 @@ import { IoMdHeart, IoMdHeartEmpty } from "react-icons/io"; // react-icons 추�
 
 //데이터 불러오기 man
 import { mBestSeller, mNew, mSale, mOrigins } from "../data/products_man";
+//데이터 불러오기 woman
+import { wNew,wSale } from "../data/products_woman";
+import useFavoriteFn from "../func/useFavoriteFn";
 
 function DetailPg(props) {
   //컨텍스트 사용하기(Layout.jsx에서setCartList를 상태변경해서 화면에 띄우려고 사용함)
@@ -20,20 +23,24 @@ function DetailPg(props) {
   const data = loc.state.v; //ProductList.jsx에서  <Link to="/detail" state={{v}}>로 받아온 선택 데이터
   console.log("useLocation", loc);
   console.log("ProductList.jsx에서 loc.state로 넘어온 데이터:", data, data.idx);
-  
-  const sizeData = [...mBestSeller, ...mNew, ...mOrigins, ...mSale];
-  
-  console.log(sizeData);
-  let temp = sizeData.find(v=>{
-    // console.log(v.isrc);
-    // console.log(data.isrc);
-    if(v.isrc==data.isrc)return true});
-  console.log("사이즈만:",temp.size);
-  console.log("넘어온 객체:",data);
+  /////////////////////////////////////////2024-07-22//////////////////////////////////////////////////////
+  //데이터 합쳐서 배열에 담기(sizeData)
+  const sizeData = [...mBestSeller, ...mNew, ...mOrigins, ...mSale,...wNew,...wSale];
+  // console.log(sizeData);
+  // 합친데이터로(sizeData) find 메서드를 사용하여 isrc 값이 data.isrc와 일치하는 객체를 찾음.
+  let temp = sizeData.find(v=>{    
+    // v.isrc와 data.isrc가 일치하면 true를 반환 해당 객체를 찾음.
+    if(v.isrc==data.isrc) return true});
+  // console.log("사이즈만:",temp.size);
+  // console.log("넘어온 객체:",data);
 
-  // 기존 data 의 사이즈 객체값 업데이트하기
+  // 기존 data 의 "사이즈" 객체값 업데이트하기
   data.size = temp.size;
-
+  // 기존 data 의 "이미지 데이터" 객체값 업데이트하기
+  data.dtsrc = temp.dtsrc;
+  // 기존 data 의 "설명 데이터" 객체값 업데이트하기
+  data.txt = temp.txt;
+/////////////////////////////////////////2024-07-22//////////////////////////////////////////////////////
 
   //토글 상태변수 만들기: 왼쪽 더보기,접기 버튼 부분
   const [toggle, setToggle] = useState(false);
@@ -65,60 +72,8 @@ function DetailPg(props) {
     $(".care-box").scrollTop(0);
   }, [toggle]);
 
-
-
-
-
-
-/////////////////////////즐겨찾기 시작/////////////////////////////////////////////////////
-  // 즐겨찾기 목록을 관리하기 위한 상태
-  const [favorites, setFavorites] = useState([]);
-
-  // 컴포넌트가 마운트될 때 로컬 스토리지에서 즐겨찾기 데이터를 불러옴
-  useEffect(() => {
-    // 로컬 스토리지에서 "favorite-data" 키로 저장된 데이터를 가져옴
-    const storedFavorites = localStorage.getItem("favorite-data");
-    // 저장된 데이터가 있으면 파싱하여 상태에 설정
-    if (storedFavorites) {
-      setFavorites(JSON.parse(storedFavorites));
-    }
-  }, []); // 빈 배열을 전달하여 컴포넌트 마운트 시에만 실행
-
-  // 즐겨찾기 토글 함수
-  const toggleFavorite = (aaaa) => {
-    // 현재 즐겨찾기 목록을 복사
-    const newFavorites = [...favorites];
-    // 현재 아이템이 즐겨찾기에 있는지 확인
-    const index = newFavorites.findIndex((item) => item.idx === aaaa.idx);
-
-    if (index !== -1) {
-      // 이미 즐겨찾기에 있으면 제거
-      newFavorites.splice(index, 1);
-    } else {
-      // 즐겨찾기에 없으면 추가
-      newFavorites.push({
-        idx: aaaa.idx,
-        name: aaaa.name,
-        price: aaaa.price1||aaaa.price[0],
-        price1: aaaa.price2||aaaa.price[1],
-        price2: aaaa.price3||aaaa.price[2],
-        color: aaaa.color,
-        isrc: aaaa.isrc,
-        cnt: 1, // 기본 수량을 1로 설정
-      });
-    }
-
-    // 새로운 즐겨찾기 목록으로 상태 업데이트
-    setFavorites(newFavorites);
-    // 업데이트된 즐겨찾기 목록을 로컬 스토리지에 저장
-    localStorage.setItem("favorite-data", JSON.stringify(newFavorites));
-  };
-
-
-
-
-  /////////////////////즐겨찾기 끝///////////////////////////////////////////////////////////////////////////
-
+  //favorite, 하트버튼 사용을 위한 내가만든 커스텀 훅!
+   const { favorites, toggleFavorite } = useFavoriteFn();
 
   return (
     <>
@@ -157,14 +112,14 @@ function DetailPg(props) {
       </div>
       {/*중앙 스와이퍼 부분 ,detail-img */}
       <div className="detail-img">
-        {/* <SwiperDetail data={data} /> */}
+        <SwiperDetail data={data} />
       </div>
       {/* </div> */}
 
       {/* 오른쪽 디테일 부분///flex하였음//////////////////////////////////// */}
       <div className="detail-txtbox">
         <div className="dttxt-bx">
-          {/* 하트버튼:favorite버튼 */}
+          {/* 하트버튼:favorite버튼 **************** */}
           <div className="heartbutton" onClick={() => toggleFavorite(data)}>
                 {/* 
                   현재 아이템(data)이 즐겨찾기 목록에 있는지 확인
@@ -270,27 +225,15 @@ function DetailPg(props) {
             
             //4. 로컬스에 '중복검사된' 들어가야할 데이터 푸시하기(푸시하고-저장해야 로컬스토리지에 저장됨)//////////
             locals.push({
-              idx: data.idx,
-              name: data.name,
-              price: data.price[0],
-              price1: data.price[1],
-              price2: data.price[2],
-              color: data.color,
-              size: myCon.optVal.current[3],
-              isrc: data.isrc,
+              idx: data.idx,//idx
+              name: data.name,//이름
+              price: [data.price[0],data.price[1],data.price[2]],//[가격,할인율,할인된가격]
+              color: data.color,//색상
+              size: myCon.optVal.current[3],//선택된 색상
+              isrc: data.isrc,//이미지주소
               cnt:1,
-              /********************** 
-               [로컬스에 푸시할 데이터]
-               1.상품고유번호: idx
-               2.이름: name
-               3.가격: price
-               4.price2:할인율
-               5.price3:할인율적용된 가격
-               5.색상:color
-               4.사이즈:size
-               5.이미지주소:isrc
-               cnt: 상품갯수
-               **********************/
+            
+             
             });
             //5. 로컬스토리지에 문자열(json형식)으로 변환하여 저장하기!!!
             //넣을때:stringify, 불러올때:parse
