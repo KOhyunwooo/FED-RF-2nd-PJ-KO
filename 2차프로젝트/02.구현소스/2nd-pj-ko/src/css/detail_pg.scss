@@ -1,7 +1,9 @@
 .detailpgmargintop{
   margin-top: 130px;
 }
-
+.hidden-txt-box{
+  display: none;
+}
 
 // 가장 바깥 박스////////////////////////////////////
 .detailbox {
@@ -180,6 +182,21 @@
 }
 /* 777 이하 일떄 */
 @media screen and (max-width: 777px) {
+  .hidden-txt-box{
+    padding: 8px 24px;
+    display: block;
+    order: 4;
+    >p{
+      margin-bottom: 3px;
+    }
+  }
+  .addbutton{
+    width: 70%;
+    border: 1px solid black;
+    margin-left: 24px;
+    height: 30px;
+  }
+  .detailpg-recomend-wrap{display: none;}
   .detailbox {
     display: flex;
     width: 100%;
@@ -190,29 +207,56 @@
       z-index: 1;
       background: #fdfdfd;
       position: fixed;
-      // bottom: 0;
+      bottom: -25%;
       width: 100vw;
-      height: 100dvh;
-      bottom: -95%;
+      justify-content: flex-end;
+      height: 260px;
+      // height: 100dvh;
+      // bottom: -95%;
+      
 
       //임시로 하는 미디어쿼리시 스와이프로 결제창올리기
       transition: bottom 0.3s ease-out;
-      &.open{
+      &.on{
         bottom: 0;
       }
         //임시로 하는 미디어쿼리시 스와이프로 결제창올리기  
 
       .dttxt-bx {
-        padding-top: 85px;
+        padding: 10px 24px;
         border: none;
-        border-top: 1px solid black;
+        >.heartbutton{
+          border: 1px solid black;
+          width: 47px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          right: 0px;
+          top: 39px;
+          box-sizing: border-box;
+          
+        }
+        >.desc{
+          display: none;
+
+        }
+        >.info{
+          display: none;
+        }
       }
     }
     .dtsize-bx {
       border: none;
+      order: 3;
+      padding: 7px 24px;
+      >.color{
+        display: none;
+      };
       .size {
         >button {
-          height: 50px;
+          // height: 50px;
   
       }
       }

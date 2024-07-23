@@ -21,7 +21,7 @@ function Recomend(props) {
           <div className="product-list">
             {mNew.map((v, i) => (
               <div key={i} className="product-item chgop">
-                <Link to="/detail" state={{ v }}>
+                <Link to="/detail" state={{ v }}  onClick={() => window.scrollTo(0, 0)}>
                   {/* state={{키:값}}//**state는 객체형식으로만 보낼 수 있다 */}
                   {/* DetailPg.jsx로 selData보내기 */}
                   <img

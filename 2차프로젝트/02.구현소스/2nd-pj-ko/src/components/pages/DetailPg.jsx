@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import SwiperDetail from "../plugin/SwiperDetail";
 import { useLocation } from "react-router-dom";
 import $ from "jquery";
@@ -83,34 +83,45 @@ function DetailPg(props) {
   //favorite, 하트버튼 사용을 위한 내가만든 커스텀 훅!
   const { favorites, toggleFavorite } = useFavoriteFn();
 
+  /////////////////////////////////////////////////////////////////////////////
+  const [isBottom, setIsBottom] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const detailTxtBoxRef = useRef(null);//
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 777);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
 
 
+      // 전체 페이지 클릭 이벤트 리스너 추가
+      const handlePageClick = (e) => {
+        if (isMobile && isBottom && detailTxtBoxRef.current && !detailTxtBoxRef.current.contains(e.target)) {
+          setIsBottom(false);
+          //isMobile: 모바일 환경일 때
+          //isBottom: detail-txtbox가 열려 있을 때
+          //detailTxtBoxRef.current: detail-txtbox 요소가 존재할 때
+          //!detailTxtBoxRef.current.contains(e.target): 클릭된 요소가 detail-txtbox 외부일 때
+        }
+      };
+      document.addEventListener('click', handlePageClick);//
 
- //임시로 하는 미디어쿼리시 스와이프로 결제창올리기/////////////////////////////////////
-  const [isOpen, setIsOpen] = useState(false);
-  const [startY, setStartY] = useState(0);
-  const [currentY, setCurrentY] = useState(0);
+      return () => {//소멸자~
+        window.removeEventListener('resize', checkMobile);
+        document.removeEventListener('click', handlePageClick);
+      };
+  }, [isMobile, isBottom]);
 
-  const handleTouchStart = (e) => {
-    setStartY(e.touches[0].clientY);
-  };
-
-  const handleTouchMove = (e) => {
-    setCurrentY(e.touches[0].clientY);
-  };
-
-  const handleTouchEnd = () => {
-    const diff = startY - currentY;
-    if (diff > 50) {
-      setIsOpen(true);
-    } else if (diff < -50) {
-      setIsOpen(false);
+  const handleClick = (event) => {
+    if (isMobile && !event.target.closest('button') && !event.target.closest('.heartbutton')) {
+      setIsBottom(!isBottom);
+      //이 함수는 detail-txtbox 내부 클릭을 처리
+      //모바일 환경에서, 클릭된 요소가 버튼이나 하트 버튼이 아닐 때 isBottom 상태를 토글합니다.
     }
   };
-
-   //임시로 하는 미디어쿼리시 스와이프로 결제창올리기 끝 /////////////////////////////////////
-
-
+  ////////////////////////////////////////////////////////////////////////////////////////
   return (
     <>
       <div className="detailpgmargintop"></div>
@@ -145,19 +156,23 @@ function DetailPg(props) {
           <SwiperDetail data={data} />
         </div>
         {/* </div> */}
-              
-        {/* 오른쪽 디테일 부분///flex하였음//////////////////////////////////// */}
-        {/* <div className="detail-txtbox"> 이게 원본*/}
-        {/* 임시로 하는 미디어쿼리시 스와이프로 결제창올리기 */}
-        <div className={`detail-txtbox ${isOpen ? 'open' : ''}`}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}>
-          {/* 임시로 하는 미디어쿼리시 스와이프로 결제창올리기 */}
 
+        {/* 오른쪽 디테일 부분///flex하였음//////////////////////////////////// */}
+        <div
+          className="detail-txtbox"
+          onClick={handleClick}
+          style={isMobile ? { bottom: isBottom ? "0" : "-25%" } : {}}
+          ref={detailTxtBoxRef}//detail-txtbox DOM 요소와 detailTxtBoxRef 참조를 연결,detailTxtBoxRef.current를 통해 해당 요소에 접근가능
+        >
           <div className="dttxt-bx">
             {/* 하트버튼:favorite버튼 **************** */}
-            <div className="heartbutton" onClick={() => toggleFavorite(data)}>
+            <div
+              className="heartbutton"
+              onClick={(e) => {
+                if (isMobile) e.stopPropagation(); //모바일일때만e.stopPropagation()실행
+                toggleFavorite(data);
+              }}
+            >
               {/* 
                   현재 아이템(data)이 즐겨찾기 목록에 있는지 확인
                   some() 메서드는 배열의 요소 중 하나라도 조건을 만족하면 true를 반환
@@ -195,7 +210,7 @@ function DetailPg(props) {
                     key={i}
                     className={`${chgcolor === i ? "on" : ""}`}
                     onClick={(e) => {
-                      //순번:i 담아서 적용되게 하기
+                      if (isMobile) e.stopPropagation(); //모바일일때만e.stopPropagation()실행
                       setChgcolor(i);
 
                       //e.자신의.부모요소의.부모요소의.nextElementSibling( 선택요소의 다음요소).style주기: 여기에 주는 이유는 size버튼 클릭시 실행되게 하기 위해
@@ -226,10 +241,24 @@ function DetailPg(props) {
           {/* ******************추가하기 버튼****************** */}
           <button
             className="addbutton"
-            onClick={() => {
-              if (chgcolor === null) {
-                alert("사이즈를 선택해주세요");
-                return;
+            onClick={(e) => {
+              e.stopPropagation(); // 이벤트 버블링 방지
+              if (isMobile) {//모바일일때
+                if (isBottom) {
+                  // 기존의 추가하기 버튼 클릭 로직
+                  if (chgcolor === null) {
+                    alert("사이즈를 선택해주세요");
+                    return;
+                  }
+                } else {
+                  setIsBottom(true);
+                }
+              } else {
+                // 데스크톱 버전의 추가하기 버튼 로직
+                if (chgcolor === null) {
+                  alert("사이즈를 선택해주세요");
+                  return;
+                }
               }
 
               //추가하기 버튼: 클릭시 로컬스토리지에 넣기//////////////////////////////
@@ -284,6 +313,11 @@ function DetailPg(props) {
           >
             추가하기
           </button>
+
+          <div className="hidden-txt-box">
+          <p>{data.txt}</p>
+          <p>{data.color}</p>
+          </div>
         </div>
 
         {/* 왜 되는지는 모르지만 777일때 footer-area 디스플레이 none하기 */}
@@ -291,16 +325,17 @@ function DetailPg(props) {
           @media (max-width: 777px) {
             body {
               padding-top: 0;
-              }
-              .footer-area {
-                display: none;
-                }
-                }
-                `}</style>
+            }
+            .footer-area {
+              display: none;
+            }
+          }
+        `}</style>
       </div>
-
-      <h3 style={{margin:"50px 0 20px 20px"}}>추천 제품</h3>
-                <Recomend/>
+      <div className="detailpg-recomend-wrap">
+        <h3 style={{ margin: "50px 0 20px 20px" }}>추천 제품</h3>
+        <Recomend />
+      </div>
     </>
   );
 }
