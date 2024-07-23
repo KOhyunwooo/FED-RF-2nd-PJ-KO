@@ -229,7 +229,7 @@ function AddAddressPg() {//{totalPrice2}
         if (v.uid == currid) {
           // v.unm = userName; <-여기에 입력하면 사용자 정보가 전체적으로 바뀜/여기다는 사용자정보(마이페이지) 바꿀떄 사용
           
-            if(v.address == "") v.address = [];//v.address가 ""이면 [];만들고
+            if(v.address == ""||!v.address) v.address = [];//v.address가 ""이면 [];만들고
              
             
             // 기존 주소 데이터 수정해서 저장8888888888888888888888888888888888888888888888888888888888888888
