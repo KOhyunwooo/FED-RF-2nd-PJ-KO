@@ -79,6 +79,8 @@
           overflow: hidden;
           border-right: 1px solid black;
           box-sizing: border-box;
+          position: relative;
+          z-index: 1;
      
           
           > img {

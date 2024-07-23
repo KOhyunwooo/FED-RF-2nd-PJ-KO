@@ -10,7 +10,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { useEffect } from "react";
 
-function MyPageModify({ mode, setShowProfileMode }) {
+function MyPageModify({ mode, setShowProfileMode, data }) {
     //mode:MyPage.jsx에서 프롭스다운 해서 가져온 모드( "addr", "eml", "phone", "pass")
     //setShowProfileMode: MyPage.jsx에서 프롭스다운 해서 가져온 MyPageModify 보이기(true),안보이기(false)상태변수
     const loc = useLocation(); //링크 스테이트값으로 mycart.jsx에서 받아오기 위한 useLocation
@@ -141,6 +141,7 @@ function MyPageModify({ mode, setShowProfileMode }) {
                             />
                         </button>
                         <div className="modal-tit">전화번호 수정</div>
+                        <div>{data}</div>
                     </div>
                 </div>
             )}

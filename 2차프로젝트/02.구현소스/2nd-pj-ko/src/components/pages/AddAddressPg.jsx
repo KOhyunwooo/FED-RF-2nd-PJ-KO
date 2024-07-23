@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 //css불러오기
 import "../../css/add_address_pg.scss";
@@ -20,18 +20,20 @@ function AddAddressPg() {//{totalPrice2}
   const addressIndex = loc.state.addressIndex;//AddressList.jsx에서 받아온 선택된 순번
   const addressData = loc.state.addressData || {};//AddressList.jsx에서 받아온 데이터(주소1,주소2,우편번호,어드레스안에 이름,어드레스안에 번호)
   // console.log("addaddresspg로 넘어온 총합게값", totalPrice3);
-  console.log("addressData: ", addressData)
+  // if(!addressData) return '';
+  console.log("addressData: ", addressData,loc.state.addressData)
+
   /////////////////////////////////입력요소 상태관리변수/////////////////////////////////////////
   //1.이름 입력요소 상태변수
-  const [userName, setUserName] = useState(addressData.unm || "");//*8888888888888888888888888888888888888888
+  const [userName,setUserName] = useState(addressData.unm || "");//*8888888888888888888888888888888888888888
   //2.우편번호 입력요소 상태변수
-  const [userZipCode, setUserZipCode] = useState(addressData.zipcode || "");//*8888888888888888888888888888888888888888
+  const userZipCode = useRef(addressData.zipcode || "");//*8888888888888888888888888888888888888888
   //3.주소 입력요소 상태변수
-  const [userAddress, setUserAddress] = useState(addressData.address || "");//*8888888888888888888888888888888888888888
+  const userAddress = useRef(addressData.address || "");//*8888888888888888888888888888888888888888
   //4.상세주소 입력요소 상태변수
-  const [userAddress2, setUserAddress2] = useState(addressData.address2 || "");//*8888888888888888888888888888888888888888
+  const [userAddress2,setUserAddress2] = useState(addressData.address2 || "");//*8888888888888888888888888888888888888888
   //5.전화번호 입력요소 상태변수
-  const [userPhone, setUserPhone] = useState(addressData.phone || "");//*8888888888888888888888888888888888888888
+  const [userPhone,setUserPhone] = useState(addressData.phone || "");//*8888888888888888888888888888888888888888
 
   //주소찾기 창 보이기 상태변수
   const [isOpen, setIsOpen] = useState(false);
@@ -119,11 +121,11 @@ function AddAddressPg() {//{totalPrice2}
 
     // 3. 기존입력값 반영하기: 상태변수에 반영함
     // (1)앞주소 저장
-    setUserAddress(address);
+    userAddress.current(address);
     // (2)뒷주소(상세주소) 저장
-    setUserAddress(address2);
+    userAddress.current(address2);
     // (3) 우편번호 저장
-    setUserZipCode(zipcode);
+    userZipCode.current = zipcode;
     //  console.log(zipcode);
   };
   //주소,우편번호 유효성 검사 함수***********************************
@@ -132,8 +134,8 @@ function AddAddressPg() {//{totalPrice2}
   const totalValid = () => {
     // 1. 모든 상태변수에 빈값일때 에러상태값 업데이트!
     if (!userName) setUserNameError(true);
-    if (!userZipCode) setUserZipCodeError(true);
-    if (!userAddress) setUserAddressError(true);
+    if (!userZipCode.current) setUserZipCodeError(true);
+    if (!userAddress.current) setUserAddressError(true);
     if (!userAddress2) setUserAddress2Error(true);
     if (!userPhone) setUserPhoneError(true);
     // 2. 통과시 true, 불통과시 false 리턴처리
@@ -141,9 +143,9 @@ function AddAddressPg() {//{totalPrice2}
     if (
       userName &&
       !userNameError &&
-      userZipCode &&
+      userZipCode.current &&
       !userZipCodeError &&
-      userAddress &&
+      userAddress.current &&
       !userAddressError &&
       userAddress2 &&
       !userAddress2Error &&
@@ -199,8 +201,8 @@ function AddAddressPg() {//{totalPrice2}
   //[1]주소선택완료시 처리함수(주소선택 완료시 주소가 들어감)
   const completeHandler = (data) => {
     //DaumPostcode API에서 반환된 data 객체에서 zonecode와 address를 추출하여 상태를 업데이트
-    setUserZipCode(data.zonecode); //DaumPostcode API의 기본 동작:우편번호
-    setUserAddress(data.address); //DaumPostcode API의 기본 동작:전체주소
+    userZipCode.current = data.zonecode; //DaumPostcode API의 기본 동작:우편번호
+    userAddress.current = data.address; //DaumPostcode API의 기본 동작:전체주소
   };
   //[2]주소창 닫기처리 함수
   const closeHandler = (state) => {
@@ -237,18 +239,18 @@ function AddAddressPg() {//{totalPrice2}
             v.address[addressIndex] = {
               unm: userName, // 이름 추가
               phone: userPhone, // 전화번호 추가              
-              address: userAddress,
+              address: userAddress.current,
               address2: userAddress2,
-              zipcode: userZipCode,
+              zipcode: userZipCode.current,
             };
             // 데이터 입력해서 저장////////////////////////////////////
           } else {
           v.address.push({//v.address에 {}이런모양으로 푸씨
             unm: userName, // 이름 추가
             phone: userPhone, // 전화번호 추가
-            address: userAddress,
+            address: userAddress.current,
             address2: userAddress2,
-            zipcode: userZipCode,
+            zipcode: userZipCode.current,
           });
         }
           // 세션데이터(minfo) 업데이트하기
@@ -309,7 +311,7 @@ function AddAddressPg() {//{totalPrice2}
                   type="text"
                   maxLength="30"
                   placeholder=" "
-                  value={userZipCode}
+                  value={userZipCode.current}
                   readOnly                
                   onFocus={toggleHandler}
                   onChange={changeAddr} //유효성검사
@@ -333,7 +335,7 @@ function AddAddressPg() {//{totalPrice2}
                   type="text"
                   maxLength="30"
                   placeholder=" "
-                  value={userAddress}
+                  value={userAddress.current}
                   readOnly
                   onClick={toggleHandler}
                   onChange={changeAddr} //유효성검사
@@ -402,6 +404,7 @@ function AddAddressPg() {//{totalPrice2}
                   style={postCodeStyle}
                   onComplete={completeHandler}
                   onClose={closeHandler}
+                  
                 />
                 <button style={closeButtonStyle} onClick={toggleHandler}>
                   ×

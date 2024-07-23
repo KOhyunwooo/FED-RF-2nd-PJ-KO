@@ -41,8 +41,10 @@ function MyPage(props) {
     const [profileMode, setProfileMode] = useState("");
     // 프로필모드 모달(MyPageModify.jsx) 보이기(true),안보이기(false)상태변수
     const [showProfileMode,setShowProfileMode] = useState(false);
+    const [data,setData] = useState(null);
 
-    const profileClick = (mode) => {
+    const profileClick = (e,mode) => {
+        setData(e.currentTarget.innerText);
         setProfileMode(mode);//모드 상태 업데이트용( "addr", "eml", "phone", "pass")
         setShowProfileMode(true);
     };
@@ -75,7 +77,7 @@ function MyPage(props) {
                     <div>이메일</div>
                     <p>{sesstionsDataI.eml || sesstionsDataI.uid}</p>
                 </button>
-                <button onClick={() => profileClick("phone")}>
+                <button onClick={(e) => profileClick(e,"phone")}>
                     <div>전화번호</div>
                     <p>{sesstionsDataI.phone}</p>
                 </button>
@@ -84,7 +86,7 @@ function MyPage(props) {
                     <p>{maskPassword(sesstionsDataI.pwd)}</p>
                 </button>
             </div>
-            {showProfileMode&& <MyPageModify mode={profileMode} setShowProfileMode={setShowProfileMode} />}
+            {showProfileMode&& <MyPageModify mode={profileMode} data={data} setShowProfileMode={setShowProfileMode} />}
             {/* showProfileMode true 일때 뒤에것 실행 */}
         </>
     );
