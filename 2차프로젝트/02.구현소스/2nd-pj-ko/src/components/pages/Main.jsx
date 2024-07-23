@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import SwiperMain from "../plugin/SwiperMain";
 import SwiperMain2 from "../plugin/SwiperMain2";
+import CookieIntro from "../modules/CookieIntro";
 
 export default function Main() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 777);//초기값770보다 작거나 같냐?
@@ -16,6 +17,7 @@ export default function Main() {
 
     return (
         <>
+            <CookieIntro/>
             {/* isMobile이 1050보다 작거나 같냐? 그럼  <SwiperMain2 /> 실행 아니면  <SwiperMain /> 실행*/}
             {isMobile ? <SwiperMain2 /> : <SwiperMain />} 
         </>

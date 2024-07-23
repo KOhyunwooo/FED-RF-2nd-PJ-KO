@@ -4,6 +4,7 @@ import Favorite from '../modules/Favorites';
 import { useState } from 'react';
 //https://www.npmjs.com/package/react-icons  불러오기
 import { IoMdHeartEmpty } from "react-icons/io";
+import Recomend from '../modules/Recomend';
 
 
 function MyCartSelPg(props) {
@@ -36,6 +37,8 @@ return (
         </button>
       </div>
      {showMyCart ? <MyCart chgNum={chgNum} /> : <Favorite />}
+     <h3 style={{margin:"50px 0 20px 20px"}}>추천 제품</h3>
+     <Recomend/>
     </>
   );
 }

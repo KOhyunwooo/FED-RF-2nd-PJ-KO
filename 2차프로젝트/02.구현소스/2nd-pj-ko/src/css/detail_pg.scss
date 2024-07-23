@@ -189,16 +189,33 @@
     .detail-txtbox {
       z-index: 1;
       background: #fdfdfd;
-      width: 100vw;
       position: fixed;
-      bottom: 0;
+      // bottom: 0;
+      width: 100vw;
+      height: 100dvh;
+      bottom: -95%;
+
+      //임시로 하는 미디어쿼리시 스와이프로 결제창올리기
+      transition: bottom 0.3s ease-out;
+      &.open{
+        bottom: 0;
+      }
+        //임시로 하는 미디어쿼리시 스와이프로 결제창올리기  
+
       .dttxt-bx {
+        padding-top: 85px;
         border: none;
         border-top: 1px solid black;
       }
     }
     .dtsize-bx {
       border: none;
+      .size {
+        >button {
+          height: 50px;
+  
+      }
+      }
     }
   }
   /* 스와이퍼 큰 이미지 */

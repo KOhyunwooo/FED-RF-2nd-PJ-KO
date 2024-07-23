@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 //css불러오기
 import "../../css/ProductList.scss";
 import { addComma } from "../func/common_fn";
+import Recomend from "./Recomend";
 function SearchModuleList({ data }) {
     const total = data.length;
     console.log("데이터수가 왜이래", total);
@@ -40,6 +41,9 @@ function SearchModuleList({ data }) {
                     해당되는 상품을 찾을 수 없습니다.
                 </h1>
             )}
+
+<h3 style={{margin:"50px 0 20px 20px"}}>추천 제품</h3>
+<Recomend/>
         </>
     );
 }

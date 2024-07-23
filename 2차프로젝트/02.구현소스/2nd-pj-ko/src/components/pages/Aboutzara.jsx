@@ -12,7 +12,7 @@ export default function AboutZara(){
     
     return(
         <>
-        <CookieIntro/>
+   
         <Sorry/>
       
         </>
