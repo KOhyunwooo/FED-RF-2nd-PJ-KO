@@ -1,0 +1,13 @@
+.mypage-pdbutton-box{
+    >button:last-child{
+        float: right;
+    }
+}
+
+.profile-box{
+    width: 580px;
+    height: 280px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}

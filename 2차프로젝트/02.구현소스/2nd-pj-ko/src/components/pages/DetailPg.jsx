@@ -36,7 +36,7 @@ function DetailPg(props) {
 
   // 기존 data 의 "사이즈" 객체값 업데이트하기
   data.size = temp.size;
-  // 기존 data 의 "이미지 데이터" 객체값 업데이트하기
+  // 기존 data 의 "이미지 데이터들" 객체값 업데이트하기
   data.dtsrc = temp.dtsrc;
   // 기존 data 의 "설명 데이터" 객체값 업데이트하기
   data.txt = temp.txt;

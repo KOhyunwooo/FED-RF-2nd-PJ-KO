@@ -36,15 +36,15 @@
   margin-left: -1px;
 }
 
-.mycart-box {
-  .noitem{
-    font-size: 11px;
-    .bagimg{
-      font-size: 20px;
-      margin-bottom: 5;
-    }
-    padding: 5%;
+.noitem{
+  font-size: 11px;
+  .bagimg{
+    font-size: 20px;
+    margin-bottom: 5;
   }
+  padding: 5%;
+}
+.mycart-box {
   .product-list5 {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5개의 열을 생성 */

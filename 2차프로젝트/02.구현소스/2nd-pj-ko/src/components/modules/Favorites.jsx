@@ -28,6 +28,13 @@ function Favorite() {
     return (
         <>
             <div className="favorites">
+            <div
+                    className="noitem"
+                    style={{ display: favLocalsData.length > 0 && "none" }}
+                >
+                    <IoMdHeartEmpty className="bagimg" />
+                    <p>장바구니가 비었습니다.</p>
+                </div>
                 <div className="product-list fav-pd-list">
                     {favLocalsData.map((v, i) => (
                         <div key={i} className="product-item chgop">

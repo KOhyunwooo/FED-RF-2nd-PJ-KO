@@ -1,14 +1,11 @@
 
-MyCart에서 DetailPg로 넘기는법
-
-woman/product 에서 상품리스트 하단쪽이 아웃라인 적용안됨(새로고침하면 적용됨)
-
 주소 넣을시에 로컬스에 다음api가 과도하게 쌓임
 
 새로운 주소 추가시 추가된 주소가 checkout들어가게
 
 mycart에 바닥에 있는 outline이 표시안됨.
 
+콘솔 여러개 찍히는것
 
 
 
@@ -19,6 +16,9 @@ mycart에 바닥에 있는 outline이 표시안됨.
 
 
 
+MyCart에서 DetailPg로 넘기는법
+
+woman/product 에서 상품리스트 하단쪽이 아웃라인 적용안됨(새로고침하면 적용됨)
 
 
 
