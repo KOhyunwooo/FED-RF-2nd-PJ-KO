@@ -3,11 +3,65 @@
         float: right;
     }
 }
-
-.profile-box{
-    width: 580px;
-    height: 280px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
+.profile-box-wrap{
+   margin-left: 60px;
+    .profile-box{
+        width: 580px;
+        height: 280px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+    }
 }
+
+//미디어 777이하
+@media screen and (max-width: 777px) {
+    .profile-box-wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        .profile-box {
+            width: 80%;
+          
+        }
+    }
+
+
+  }
+//미디어 500이하
+@media screen and (max-width: 500px) {
+    .pdbutton-box {//productList.scss 1번째줄
+        padding: 10px 20px 20px 20px;
+    }
+
+
+  }
+  
+//미디어 400이하
+@media screen and (max-width: 400px) {
+    .pdbutton-box {//productList.scss 1번째줄
+        padding: 10px 5px 20px 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+
+  }
+//미디어 371이하
+@media screen and (max-width: 371px) {
+    .pdbutton-box {//productList.scss 1번째줄
+        padding: 10px 5px 20px 5px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .pdbutton {
+        margin-left: 0;
+        margin-bottom: 3px;
+        }
+    
+    }
+
+
+  }
+  

@@ -141,11 +141,11 @@ function MyCart({ chgNum }) {
                                     <span>{v.name}</span>
                                     {/* 가격 */}
                                     <span className="price">
-                                        {v.price && (
+                                        {v.price[0] && (
                                             <p>₩{addComma(v.price[0] * v.cnt)}</p>
                                         )}
                                         {/* 가격 곱하기 v.cnt(갯수)해서 가격 변동되기 하기 */}
-                                        {v.price1 && (
+                                        {v.price[1] && (
                                             <p>
                                                 {v.price[1]}&nbsp;₩
                                                 {addComma(v.price[2] * v.cnt)}

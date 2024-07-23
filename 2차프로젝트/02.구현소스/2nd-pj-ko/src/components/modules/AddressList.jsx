@@ -54,7 +54,7 @@ function AddressList({ addressListDelete, setSelAddr }) {
   return (
     <>
       <div className="addresslist-box">
-        <div className="cartlist-bg"></div>
+        <div className="cartlist-bg" onClick={()=>{setShowCart(false);}}></div>
         <div className="addedcart-box">
           {/* 오른쪽 상단 X엑스 버튼 */}
           <button

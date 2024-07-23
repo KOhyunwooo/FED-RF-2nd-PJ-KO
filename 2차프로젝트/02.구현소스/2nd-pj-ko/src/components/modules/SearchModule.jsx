@@ -136,40 +136,23 @@ function SearchModule({ kword }) {
   }
   //(4)저렴한순일 경우
   else if (sort == "chpd") {
-    newList.sort(
-      (
-        a,
-        b //중괄호 없으면 바로 리턴
-      ) =>
-        (a.price[2] ? a.price[2] : a.price[0]) >
-        (b.price[2] ? b.price[2] : b.price[0])
-          ? 1
-          : (a.price[2] ? a.price[2] : a.price[0]) <
-            (b.price[2] ? b.price[2] : b.price[0])
-          ? -1
-          : 0
-      //a.price > b.price보다 크냐? 그럼 1(일)단 바꿔 a.price < b.price보다 작냐? 그럼 -1(마)꾸지마
-    );
-  }
-  //(5)비싼순일 경우
-  else if (sort == "expd") {
-    newList.sort(
-      (
-        a,
-        b //중괄호 없으면 바로 리턴
-      ) =>
-        (a.price[2] ? a.price[2] : a.price[0]) >
-        (b.price[2] ? b.price[2] : b.price[0])
-          ? -1
-          : (a.price[2] ? a.price[2] : a.price[0]) <
-            (b.price[2] ? b.price[2] : b.price[0])
-          ? 1
-          : 0
-      //a.price > b.price보다 크냐? 그럼 1(일)단 바꿔 a.price < b.price보다 작냐? 그럼 -1(마)꾸지마
-    );
-  } ////////////////////////////////////////////////////////////////////////////////////////////////////
+    newList.sort((a, b) => {
+      const priceA = a.price[2] !== undefined ? a.price[2] : a.price[0];
+      const priceB = b.price[2] !== undefined ? b.price[2] : b.price[0];
+      return priceA - priceB;
+    });
+    //(5)비싼순일 경우
 
-  // 코드 리턴구역 ////////////////////////
+  } else if (sort == "expd") {
+    newList.sort((a, b) => {
+      const priceA = a.price[2] !== undefined ? a.price[2] : a.price[0];
+      const priceB = b.price[2] !== undefined ? b.price[2] : b.price[0];
+      return priceB - priceA;
+    });
+  }
+ 
+
+    // 코드 리턴구역 ////////////////////////
   return (
     <>
       <div className="sticky-search-box">
@@ -210,8 +193,8 @@ function SearchModule({ kword }) {
                   <option value="newpd">&nbsp;신상품순&nbsp;</option>
                   <option value="uppd">&nbsp;오름차순&nbsp;</option>
                   <option value="downpd">&nbsp;내림차순&nbsp;</option>
-                  <option value="expd">&nbsp;높은가격순&nbsp;</option>
-                  <option value="chpd">&nbsp;낮은가격순&nbsp;</option>
+                  <option value="expd">&nbsp;높은 가격순&nbsp;</option>
+                  <option value="chpd">&nbsp;낮은 가격순&nbsp;</option>
                 </select>
               </aside>
             </div>

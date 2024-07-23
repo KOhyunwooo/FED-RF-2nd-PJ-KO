@@ -10,7 +10,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { useEffect } from "react";
 
-function MyPageModify({ mode, setShowProfileMode, data }) {
+function MyPageModify({ mode, setShowProfileMode }) {
     //mode:MyPage.jsx에서 프롭스다운 해서 가져온 모드( "addr", "eml", "phone", "pass")
     //setShowProfileMode: MyPage.jsx에서 프롭스다운 해서 가져온 MyPageModify 보이기(true),안보이기(false)상태변수
     const loc = useLocation(); //링크 스테이트값으로 mycart.jsx에서 받아오기 위한 useLocation
@@ -52,32 +52,9 @@ function MyPageModify({ mode, setShowProfileMode, data }) {
 
     return (
         <>
-            {mode === "addr" && (
+           {mode === "addr" && (
                 <div className="addresslist-box">
-                    <div className="cartlist-bg"></div>
-                    <div className="addedcart-box">
-                        {/* 오른쪽 상단 X엑스 버튼 */}
-                        <button
-                            className="cbtn"
-                            onClick={() => {
-                                setShowCart(false);
-                            }}
-                        >
-                            <img
-                                src={
-                                    process.env.PUBLIC_URL +
-                                    "/images/icons/x.svg"
-                                }
-                                alt="x"
-                            />
-                        </button>
-                        <div className="modal-tit">주소수정</div>
-                    </div>
-                </div>
-            )}
-            {mode === "addr" && (
-                <div className="addresslist-box">
-                    <div className="cartlist-bg"></div>
+                    <div className="cartlist-bg" onClick={()=>{setShowCart(false);}}></div>
                     <div className="addedcart-box">
                         {/* 오른쪽 상단 X엑스 버튼 */}
                         <button
@@ -100,7 +77,7 @@ function MyPageModify({ mode, setShowProfileMode, data }) {
             )}
             {mode === "eml" && (
                 <div className="addresslist-box">
-                    <div className="cartlist-bg"></div>
+                    <div className="cartlist-bg" onClick={()=>{setShowCart(false);}}></div>
                     <div className="addedcart-box">
                         {/* 오른쪽 상단 X엑스 버튼 */}
                         <button
@@ -123,7 +100,7 @@ function MyPageModify({ mode, setShowProfileMode, data }) {
             )}
             {mode === "phone" && (
                 <div className="addresslist-box">
-                    <div className="cartlist-bg"></div>
+                    <div className="cartlist-bg" onClick={()=>{setShowCart(false);}}></div>
                     <div className="addedcart-box">
                         {/* 오른쪽 상단 X엑스 버튼 */}
                         <button
@@ -141,13 +118,13 @@ function MyPageModify({ mode, setShowProfileMode, data }) {
                             />
                         </button>
                         <div className="modal-tit">전화번호 수정</div>
-                        <div>{data}</div>
+                        
                     </div>
                 </div>
             )}
             {mode === "pass" && (
                 <div className="addresslist-box">
-                    <div className="cartlist-bg"></div>
+                    <div className="cartlist-bg" onClick={()=>{setShowCart(false);}}></div>
                     <div className="addedcart-box">
                         {/* 오른쪽 상단 X엑스 버튼 */}
                         <button
