@@ -83,7 +83,8 @@ function CookieIntro(props) {
             right: "20px",
             height:"22px",
             width:"41px",
-            color:"black"
+            color:"black",
+            whiteSpace:"nowrap",
            
           }}
           onClick={handleClose}
