@@ -6,6 +6,8 @@ import MyPageModify from "../modules/MyPageModify";
 import MyCart from "../modules/MyCart";
 import Favorite from "../modules/Favorites";
 
+import { IoIosArrowForward } from "react-icons/io";
+
 function MyPage(props) {
     const myCon = useContext(dCon);
     ////////////////////////////////////////////////////////////////////
@@ -82,19 +84,29 @@ function MyPage(props) {
                     <p>{sesstionsDataI.unm}</p>
                     <div className="profile-box">
                         <button onClick={() => profileClick("addr")}>
-                            <div>주소</div>
+                            <p>주소</p>
+                            <IoIosArrowForward />
                         </button>
                         <button onClick={() => profileClick("eml")}>
-                            <div>이메일</div>
-                            <p>{sesstionsDataI.eml || sesstionsDataI.uid}</p>
+                            <div>
+                                <p>이메일</p>
+                                <p>{sesstionsDataI.eml || sesstionsDataI.uid}</p>
+                            </div>
+                            <IoIosArrowForward />
                         </button>
                         <button onClick={(e) => profileClick("phone")}>
-                            <div>전화번호</div>
-                            <p>{sesstionsDataI.phone}</p>
+                            <div>
+                                <p>전화번호</p>
+                                <p>{sesstionsDataI.phone}</p>
+                            </div>
+                            <IoIosArrowForward />
                         </button>
                         <button onClick={() => profileClick("pass")}>
-                            <div>비밀번호 변경</div>
-                            <p>{maskPassword(sesstionsDataI.pwd)}</p>
+                            <div>
+                                <p>비밀번호 변경</p>
+                                <p>{maskPassword(sesstionsDataI.pwd)}</p>
+                            </div>
+                            <IoIosArrowForward />
                         </button>
                     </div>
                     {showProfileMode && (

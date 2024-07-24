@@ -8,9 +8,31 @@
     .profile-box{
         width: 580px;
         height: 280px;
-        border: 1px solid black;
+        // border: 1px solid black;
         display: flex;
         flex-direction: column;
+        >button{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fdfdfd;
+    border: 1px solid black;
+    outline: none;
+    width: 100%;
+    font-family: 'HelveticaLt';
+    cursor: pointer;
+    padding: 10px;
+    text-align: left;
+    margin-bottom: -1px;
+    >p{
+        
+        padding-bottom: 4px;
+    }
+    >div>p{
+        padding-bottom: 4px;
+
+    }
+        }
     }
 }
 

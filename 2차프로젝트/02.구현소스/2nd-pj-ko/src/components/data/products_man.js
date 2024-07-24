@@ -3,7 +3,15 @@ export const mNew = [
     {
         idx: "1",
         isrc: "/images/product/man/new/001.jpg",
-        dtsrc: [""], 
+        dtsrc: [
+            "/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",
+
+        ], 
         name: "라이오셀 블렌드 셔츠",
         price: ["59900"],
         txt: [
@@ -51,7 +59,12 @@ export const mNew = [
     {
         idx: "3",
         isrc: "/images/product/man/new/003.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "라이오셀 블렌드 팬츠",
         price: ["79900"],
         txt: [
@@ -71,7 +84,12 @@ export const mNew = [
     {
         idx: "4",
         isrc: "/images/product/man/new/004.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "플라워 패턴 셔츠",
         price: ["59900"],
         txt: [
@@ -119,7 +137,12 @@ export const mNew = [
     {
         idx: "6",
         isrc: "/images/product/man/new/006.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "WIDE-LEG TROUSERS",
         price: ["79900"],
         txt: [
@@ -139,7 +162,12 @@ export const mNew = [
     {
         idx: "7",
         isrc: "/images/product/man/new/007.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "레더 로퍼 리미티드 에디션",
         price: ["169900"],
         txt: [
@@ -159,7 +187,12 @@ export const mNew = [
     {
         idx: "8",
         isrc: "/images/product/man/new/008.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "지오메트릭 자카드 오버셔츠",
         price: ["89900"],
         txt: [
@@ -179,7 +212,12 @@ export const mNew = [
     {
         idx: "9",
         isrc: "/images/product/man/new/009.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "라이오셀 블렌드 셔츠",
         price: ["59900"],
         txt: [
@@ -199,7 +237,12 @@ export const mNew = [
     {
         idx: "10",
         isrc: "/images/product/man/new/010.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "라이오셀 블렌드 팬츠",
         price: ["79900"],
         txt: [
@@ -219,7 +262,12 @@ export const mNew = [
     {
         idx: "11",
         isrc: "/images/product/man/new/011.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "라이오셀 블렌드 셔츠",
         price: ["59900"],
         txt: [
@@ -239,7 +287,12 @@ export const mNew = [
     {
         idx: "12",
         isrc: "/images/product/man/new/012.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "라이오셀 블렌드 팬츠",
         price: ["79900"],
         txt: [
@@ -259,7 +312,12 @@ export const mNew = [
     {
         idx: "13",
         isrc: "/images/product/man/new/013.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "CONTRAST JACQUARD SHIRT",
         price: ["89900"],
         txt: [
@@ -279,7 +337,12 @@ export const mNew = [
     {
         idx: "14",
         isrc: "/images/product/man/new/014.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "지오메트릭 자카드 버뮤다 팬츠",
         price: ["79900"],
         txt: [
@@ -299,7 +362,12 @@ export const mNew = [
     {
         idx: "15",
         isrc: "/images/product/man/new/015.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "와이드핏 턱 디테일 팬츠",
         price: ["89900"],
         txt: [
@@ -319,7 +387,12 @@ export const mNew = [
     {
         idx: "16",
         isrc: "/images/product/man/new/016.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "지오메트릭 자카드 셔츠",
         price: ["79900"],
         txt: [
@@ -339,7 +412,12 @@ export const mNew = [
     {
         idx: "17",
         isrc: "/images/product/man/new/017.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "오픈워크 니트 티셔츠",
         price: ["59900"],
         txt: [
@@ -359,7 +437,12 @@ export const mNew = [
     {
         idx: "18",
         isrc: "/images/product/man/new/018.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "와이드핏 턱 디테일 팬츠",
         price: ["89900"],
         txt: [
@@ -379,7 +462,12 @@ export const mNew = [
     {
         idx: "19",
         isrc: "/images/product/man/new/019.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "CONTRAST JACQUARD SHIRT",
         price: ["89900"],
         txt: [
@@ -399,7 +487,12 @@ export const mNew = [
     {
         idx: "20",
         isrc: "/images/product/man/new/020.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "BALLOON FIT TROUSERS",
         price: ["79900"],
         txt: [
@@ -419,7 +512,12 @@ export const mNew = [
     {
         idx: "21",
         isrc: "/images/product/man/new/021.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "지오메트릭 자카드 오버셔츠",
         price: ["109900"],
         txt: [
@@ -439,7 +537,12 @@ export const mNew = [
     {
         idx: "22",
         isrc: "/images/product/man/new/022.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "지오메트릭 자카드 버뮤다 팬츠",
         price: ["79900"],
         txt: [
@@ -459,7 +562,12 @@ export const mNew = [
     {
         idx: "23",
         isrc: "/images/product/man/new/023.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "지오메트릭 자카드 셔츠",
         price: ["79900"],
         txt: [
@@ -479,7 +587,12 @@ export const mNew = [
     {
         idx: "24",
         isrc: "/images/product/man/new/024.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "FLARED TROUSERS",
         price: ["79900"],
         txt: [
@@ -499,7 +612,12 @@ export const mNew = [
     {
         idx: "25",
         isrc: "/images/product/man/new/025.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "SLIM FIT TROUSERS",
         price: ["79900"],
         txt: [
@@ -519,7 +637,12 @@ export const mNew = [
     {
         idx: "26",
         isrc: "/images/product/man/new/026.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "타이다이 프린트 셔츠",
         price: ["79900"],
         txt: [
@@ -539,7 +662,12 @@ export const mNew = [
     {
         idx: "27",
         isrc: "/images/product/man/new/027.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "WIDE-LEG TROUSERS",
         price: ["79900"],
         txt: [
@@ -559,7 +687,12 @@ export const mNew = [
     {
         idx: "28",
         isrc: "/images/product/man/new/028.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "KNIT POLO SHIRT WITH BUTTONS",
         price: ["59900"],
         txt: [
@@ -579,7 +712,12 @@ export const mNew = [
     {
         idx: "29",
         isrc: "/images/product/man/new/029.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "KNIT POLO SHIRT WITH BUTTONS",
         price: ["59900"],
         txt: [
@@ -599,7 +737,12 @@ export const mNew = [
     {
         idx: "30",
         isrc: "/images/product/man/new/030.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "SLIM FIT TROUSERS",
         price: ["79900"],
         txt: [
@@ -619,7 +762,12 @@ export const mNew = [
     {
         idx: "31",
         isrc: "/images/product/man/new/031.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "타이다이 프린트 셔츠",
         price: ["79900"],
         txt: [
@@ -639,7 +787,12 @@ export const mNew = [
     {
         idx: "32",
         isrc: "/images/product/man/new/032.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "와이드핏 턱 디테일 팬츠",
         price: ["89900"],
         txt: [
@@ -659,7 +812,12 @@ export const mNew = [
     {
         idx: "33",
         isrc: "/images/product/man/new/033.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "LEATHER SANDALS",
         price: ["59900"],
         txt: [
@@ -679,7 +837,12 @@ export const mNew = [
     {
         idx: "34",
         isrc: "/images/product/man/new/034.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "브레이드 쇼퍼백",
         price: ["55900"],
         txt: [
@@ -700,7 +863,12 @@ export const mNew = [
     {
         idx: "35",
         isrc: "/images/product/man/new/035.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "스트랩 샌들",
         price: ["55900"],
         txt: [
@@ -720,7 +888,12 @@ export const mNew = [
     {
         idx: "36",
         isrc: "/images/product/man/new/036.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "LEATHER SANDALS",
         price: ["59900"],
         txt: [
@@ -740,7 +913,12 @@ export const mNew = [
     {
         idx: "37",
         isrc: "/images/product/man/new/037.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "크로스 샌들",
         price: ["55900"],
         txt: ["발등에 이중 크로스 스트랩 디테일이 있는 샌들. 같은 톤의 밑창."],
@@ -758,7 +936,12 @@ export const mNew = [
     {
         idx: "38",
         isrc: "/images/product/man/new/038.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "지오메트릭 크로셰 셔츠",
         price: ["89900"],
         txt: [
@@ -778,7 +961,12 @@ export const mNew = [
     {
         idx: "39",
         isrc: "/images/product/man/new/039.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "비스코스 블렌드 스트라이프 셔츠",
         price: ["59900"],
         txt: [
@@ -798,7 +986,12 @@ export const mNew = [
     {
         idx: "40",
         isrc: "/images/product/man/new/040.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "리넨-코튼 셔츠",
         price: ["59900"],
         txt: [
@@ -818,7 +1011,12 @@ export const mNew = [
     {
         idx: "41",
         isrc: "/images/product/man/new/041.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "크로셰 패치 티셔츠",
         price: ["49900"],
         txt: [
@@ -866,7 +1064,12 @@ export const mSale = [
     {
         idx: "1",
         isrc: "/images/product/man/sale/001.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "2 IN 1 하이테크 트렌치 코트",
         price: ["169900", "-52%", "79900"],
         txt: [
@@ -888,7 +1091,12 @@ export const mSale = [
     {
         idx: "2",
         isrc: "/images/product/man/sale/002.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "2 IN 1 하이테크 트렌치 코트",
         price: ["169900", "-52%", "79900"],
         txt: [
@@ -910,7 +1118,12 @@ export const mSale = [
     {
         idx: "3",
         isrc: "/images/product/man/sale/003.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "캐시미어 블렌드 스웨터 X STUDIO NICHOLSON",
         price: ["459900", "-43%", "259900"],
         txt: [
@@ -932,7 +1145,12 @@ export const mSale = [
     {
         idx: "4",
         isrc: "/images/product/man/sale/004.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "콘트라스트 네크라인 점퍼",
         price: ["99900", "-40%", "59900"],
         txt: [
@@ -952,7 +1170,12 @@ export const mSale = [
     {
         idx: "5",
         isrc: "/images/product/man/sale/005.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "더블 브레스트 블레이저 X STUDIO NICHOLSON",
         price: ["329900", "-45%", "179900"],
         txt: [
@@ -974,7 +1197,12 @@ export const mSale = [
     {
         idx: "6",
         isrc: "/images/product/man/sale/006.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "데님 재킷 X STUDIO NICHOLSON",
         price: ["209900", "-42%", "119900"],
         txt: [
@@ -996,7 +1224,12 @@ export const mSale = [
     {
         idx: "7",
         isrc: "/images/product/man/sale/007.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "더블 페이스드 점퍼",
         price: ["169900", "-52%", "79900"],
         txt: [
@@ -1016,7 +1249,12 @@ export const mSale = [
     {
         idx: "8",
         isrc: "/images/product/man/sale/008.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "캐시미어 블렌드 스웨터 X STUDIO NICHOLSON",
         price: ["459900", "-43%", "259900"],
         txt: [
@@ -1038,7 +1276,12 @@ export const mSale = [
     {
         idx: "9",
         isrc: "/images/product/man/sale/009.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "레더 부츠 VIBRAM® X STUDIO NICHOLSON",
         price: ["279900", "-42%", "159900"],
         txt: [
@@ -1059,7 +1302,12 @@ export const mSale = [
     {
         idx: "10",
         isrc: "/images/product/man/sale/010.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "데님 재킷 X STUDIO NICHOLSON",
         price: ["209900", "-42%", "119900"],
         txt: [
@@ -1081,7 +1329,12 @@ export const mSale = [
     {
         idx: "11",
         isrc: "/images/product/man/sale/011.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "후드 점퍼 X STUDIO NICHOLSON",
         price: ["209900", "-42%", "119900"],
         txt: [
@@ -1103,7 +1356,12 @@ export const mSale = [
     {
         idx: "12",
         isrc: "/images/product/man/sale/012.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "퍼 텍스처 스웨터",
         price: ["89900", "-44%", "49900"],
         txt: [
@@ -1123,7 +1381,12 @@ export const mSale = [
     {
         idx: "13",
         isrc: "/images/product/man/sale/013.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "페이크 레더 점퍼",
         price: ["89900", "-44%", "49900"],
         txt: [
@@ -1143,7 +1406,12 @@ export const mSale = [
     {
         idx: "14",
         isrc: "/images/product/man/sale/014.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "울 수트 블레이저",
         price: ["209900", "-42%", "119900"],
         txt: [
@@ -1163,7 +1431,12 @@ export const mSale = [
     {
         idx: "15",
         isrc: "/images/product/man/sale/015.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "캥거루 오버셔츠 X STUDIO NICHOLSON",
         price: ["209900", "-42%", "119900"],
         txt: [
@@ -1185,7 +1458,12 @@ export const mSale = [
     {
         idx: "16",
         isrc: "/images/product/man/sale/016.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "박시핏 데님 점퍼",
         price: ["109900", "-45%", "59900"],
         txt: [
@@ -1205,7 +1483,12 @@ export const mSale = [
     {
         idx: "17",
         isrc: "/images/product/man/sale/017.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "후드 콤비 패치 점퍼",
         price: ["139900", "-42%", "79900"],
         txt: [
@@ -1225,7 +1508,12 @@ export const mSale = [
     {
         idx: "18",
         isrc: "/images/product/man/sale/018.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "리버시블 봄버 재킷",
         price: ["139900", "-42%", "79900"],
         txt: [
@@ -1245,7 +1533,12 @@ export const mSale = [
     {
         idx: "19",
         isrc: "/images/product/man/sale/019.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "스트럭처 니트 폴로셔츠",
         price: ["89900", "-44%", "49900"],
         txt: [
@@ -1265,7 +1558,12 @@ export const mSale = [
     {
         idx: "20",
         isrc: "/images/product/man/sale/020.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "더블 브레스트 체크 코트",
         price: ["209900", "-42%", "119900"],
         txt: [
@@ -1285,7 +1583,12 @@ export const mSale = [
     {
         idx: "21",
         isrc: "/images/product/man/sale/021.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "소프트 크로스백 X STUDIO NICHOLSON",
         price: ["189900", "-47%", "99900"],
         txt: [
@@ -1307,7 +1610,12 @@ export const mSale = [
     {
         idx: "22",
         isrc: "/images/product/man/sale/022.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "울 블렌드 점퍼",
         price: ["169900", "-52%", "79900"],
         txt: [
@@ -1327,7 +1635,12 @@ export const mSale = [
     {
         idx: "23",
         isrc: "/images/product/man/sale/023.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "페이크 레더 봄버 재킷",
         price: ["89900", "-44%", "49900"],
         txt: [
@@ -1347,7 +1660,12 @@ export const mSale = [
     {
         idx: "24",
         isrc: "/images/product/man/sale/024.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "페이크 퍼 텍스처 가디건",
         price: ["99900", "-40%", "59900"],
         txt: [
@@ -1367,7 +1685,12 @@ export const mSale = [
     {
         idx: "25",
         isrc: "/images/product/man/sale/025.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "러버라이즈드 여행용 백팩",
         price: ["99900", "-40%", "59900"],
         txt: [
@@ -1388,7 +1711,12 @@ export const mSale = [
     {
         idx: "26",
         isrc: "/images/product/man/sale/026.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "박시핏 패딩 점퍼",
         price: ["149900", "-46%", "79900"],
         txt: [
@@ -1408,7 +1736,12 @@ export const mSale = [
     {
         idx: "27",
         isrc: "/images/product/man/sale/027.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "하이테크 패딩 점퍼",
         price: ["169900", "-52%", "79900"],
         txt: [
@@ -1428,7 +1761,12 @@ export const mSale = [
     {
         idx: "28",
         isrc: "/images/product/man/sale/028.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "페이크 레더 패딩 점퍼",
         price: ["139900", "-42%", "79900"],
         txt: [
@@ -1448,7 +1786,12 @@ export const mSale = [
     {
         idx: "29",
         isrc: "/images/product/man/sale/029.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "퍼 텍스처 스웨터",
         price: ["89900", "-44%", "49900"],
         txt: [
@@ -1468,7 +1811,12 @@ export const mSale = [
     {
         idx: "30",
         isrc: "/images/product/man/sale/030.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "페이크 시어링 체크 재킷",
         price: ["109900", "-45%", "59900"],
         txt: [
@@ -1491,7 +1839,12 @@ export const mOrigins = [
     {
         idx: "1",
         isrc: "/images/product/man/origins/001.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "코튼-울 지퍼 스웨터",
         price: ["119900"],
         txt: [
@@ -1512,7 +1865,12 @@ export const mOrigins = [
     {
         idx: "2",
         isrc: "/images/product/man/origins/002.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "코튼-라이오셀 카고 팬츠",
         price: ["109900"],
         txt: [
@@ -1533,7 +1891,12 @@ export const mOrigins = [
     {
         idx: "3",
         isrc: "/images/product/man/origins/003.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "코튼-울 스웨터",
         price: ["99900"],
         txt: [
@@ -1554,7 +1917,12 @@ export const mOrigins = [
     {
         idx: "4",
         isrc: "/images/product/man/origins/004.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "크루넥 스웨트셔츠",
         price: ["89900"],
         txt: [
@@ -1575,7 +1943,12 @@ export const mOrigins = [
     {
         idx: "5",
         isrc: "/images/product/man/origins/005.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "코튼-헴프 셔츠",
         price: ["89900"],
         txt: [
@@ -1596,7 +1969,12 @@ export const mOrigins = [
     {
         idx: "6",
         isrc: "/images/product/man/origins/006.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "레더 스니커즈",
         price: ["129900"],
         txt: [
@@ -1617,7 +1995,12 @@ export const mOrigins = [
     {
         idx: "7",
         isrc: "/images/product/man/origins/007.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "크루넥 스웨트셔츠",
         price: ["89900"],
         txt: [
@@ -1638,7 +2021,12 @@ export const mOrigins = [
     {
         idx: "8",
         isrc: "/images/product/man/origins/008.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "라이트웨이트 2 IN 1 재킷",
         price: ["189900"],
         txt: [
@@ -1661,7 +2049,12 @@ export const mOrigins = [
     {
         idx: "9",
         isrc: "/images/product/man/origins/009.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "니트 티셔츠",
         price: ["109900"],
         txt: [
@@ -1682,7 +2075,12 @@ export const mOrigins = [
     {
         idx: "10",
         isrc: "/images/product/man/origins/010.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "코튼-울 지퍼 스웨터",
         price: ["119900"],
         txt: [
@@ -1703,7 +2101,12 @@ export const mOrigins = [
     {
         idx: "11",
         isrc: "/images/product/man/origins/011.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "지퍼 스웨트셔츠",
         price: ["89900"],
         txt: [
@@ -1724,7 +2127,12 @@ export const mOrigins = [
     {
         idx: "12",
         isrc: "/images/product/man/origins/012.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "워시드 조거 팬츠",
         price: ["89900"],
         txt: [
@@ -1745,7 +2153,12 @@ export const mOrigins = [
     {
         idx: "13",
         isrc: "/images/product/man/origins/013.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "워시드 이펙트 하이테크 오버셔츠",
         price: ["139900"],
         txt: [
@@ -1767,7 +2180,12 @@ export const mOrigins = [
     {
         idx: "14",
         isrc: "/images/product/man/origins/014.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "레더 데크 로퍼",
         price: ["149900"],
         txt: [
@@ -1788,7 +2206,12 @@ export const mOrigins = [
     {
         idx: "15",
         isrc: "/images/product/man/origins/015.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "지퍼 후드 스웨트셔츠",
         price: ["89900"],
         txt: [
@@ -1809,7 +2232,12 @@ export const mOrigins = [
     {
         idx: "16",
         isrc: "/images/product/man/origins/016.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "콤비 레더 러닝 스니커즈",
         price: ["149900"],
         txt: [
@@ -1830,7 +2258,12 @@ export const mOrigins = [
     {
         idx: "17",
         isrc: "/images/product/man/origins/017.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "크루넥 워시드 스웨트셔츠",
         price: ["89900"],
         txt: [
@@ -1851,7 +2284,12 @@ export const mOrigins = [
     {
         idx: "18",
         isrc: "/images/product/man/origins/018.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "코튼 점퍼",
         price: ["149900"],
         txt: [
@@ -1872,7 +2310,12 @@ export const mOrigins = [
     {
         idx: "19",
         isrc: "/images/product/man/origins/019.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "EXTRA HEAVY WEIGHT 티셔츠",
         price: ["59900"],
         txt: [
@@ -1893,7 +2336,12 @@ export const mOrigins = [
     {
         idx: "20",
         isrc: "/images/product/man/origins/020.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "후드 스웨트셔츠",
         price: ["89900"],
         txt: [
@@ -1914,7 +2362,12 @@ export const mOrigins = [
     {
         idx: "21",
         isrc: "/images/product/man/origins/021.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "코튼-헴프 셔츠",
         price: ["89900"],
         txt: [
@@ -1936,7 +2389,12 @@ export const mOrigins = [
     {
         idx: "22",
         isrc: "/images/product/man/origins/022.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "지퍼 후드 스웨트셔츠",
         price: ["89900"],
         txt: [
@@ -1957,7 +2415,12 @@ export const mOrigins = [
     {
         idx: "23",
         isrc: "/images/product/man/origins/023.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "코튼 점퍼",
         price: ["149900"],
         txt: [
@@ -1978,7 +2441,12 @@ export const mOrigins = [
     {
         idx: "24",
         isrc: "/images/product/man/origins/024.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "후드 스웨트셔츠",
         price: ["89900"],
         txt: [
@@ -1999,7 +2467,12 @@ export const mOrigins = [
     {
         idx: "25",
         isrc: "/images/product/man/origins/025.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "콤비 레더 러닝 스니커즈",
         price: ["149900"],
         txt: [
@@ -2024,7 +2497,12 @@ export const mBestSeller = [
     {
         idx: "0",
         isrc: "/images/product/man/bestseller/bestseller00.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "스트럭처 니트 셔츠",
         price: ["79900"],
         txt: "면 소재 우븐 니트 릴렉스핏 니트 셔츠. 볼링 칼라 반소매 디자인. 리브드 마감. 앞면 버튼 여밈.",
@@ -2042,7 +2520,12 @@ export const mBestSeller = [
     {
         idx: "1",
         isrc: "/images/product/man/bestseller/bestseller01.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "비스코스 블렌드 니트 폴로셔츠",
         price: ["55900"],
         txt: "비스코스 혼방 소재 우븐 니트 폴로셔츠. 앞면 버튼으로 여미는 라펠 칼라 디자인. 반소매 디자인. 리브드 마감.",
@@ -2060,7 +2543,12 @@ export const mBestSeller = [
     {
         idx: "2",
         isrc: "/images/product/man/bestseller/bestseller02.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "BERMUDA DENIM BAGGY FIT",
         price: ["59900"],
         txt: "배기핏 조츠 버뮤다 팬츠. 5개의 포켓. 워싱 이펙트. 앞면 지퍼와 버튼으로 여밈.",
@@ -2078,7 +2566,12 @@ export const mBestSeller = [
     {
         idx: "3",
         isrc: "/images/product/man/bestseller/bestseller03.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "BERMUDA DENIM BAGGY FIT",
         price: ["59900"],
         txt: "배기핏 조츠 버뮤다 팬츠. 5개의 포켓. 워싱 이펙트. 앞면 지퍼와 버튼으로 여밈.",
@@ -2096,7 +2589,12 @@ export const mBestSeller = [
     {
         idx: "4",
         isrc: "/images/product/man/bestseller/bestseller04.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "조거 웨이스트 와이드핏 팬츠",
         price: ["79900"],
         txt: "리넨과 면 혼방 소재 와이드핏 팬츠. 핏 조절이 가능한 신축성 있는 허리 디자인. 옆면 포켓과 뒷면 패치 포켓.",
@@ -2114,7 +2612,12 @@ export const mBestSeller = [
     {
         idx: "5",
         isrc: "/images/product/man/bestseller/bestseller05.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "카고 데님 버뮤다 팬츠",
         price: ["59900"],
         txt: "릴렉스핏 버뮤다 팬츠. 5개의 포켓. 다리 부분에 플랩 패치 포켓 아플리케가 매치됨. 워싱 이펙트. 앞면 지퍼와 버튼으로 여밈.",
@@ -2132,7 +2635,12 @@ export const mBestSeller = [
     {
         idx: "6",
         isrc: "/images/product/man/bestseller/bestseller06.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "셔닐 니트 폴로셔츠",
         price: ["59900"],
         txt: "앞면 버튼으로 여미는 라펠 칼라 니트 폴로셔츠. 반소매 디자인. 리브드 마감.",
@@ -2150,7 +2658,12 @@ export const mBestSeller = [
     {
         idx: "7",
         isrc: "/images/product/man/bestseller/bestseller07.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "모달 블렌드 팬츠",
         price: ["79900"],
         txt: "모달 혼방 소재 릴렉스핏 팬츠. 신축성 있는 허리 부분에서 끈으로 핏 조절 가능. 앞면 포켓과 뒷면 파이핑 포켓 디테일.",
@@ -2168,7 +2681,12 @@ export const mBestSeller = [
     {
         idx: "8",
         isrc: "/images/product/man/bestseller/bestseller08.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "베이직 티셔츠 HEAVY WEIGHT",
         price: ["35900"],
         txt: "컴팩트 면 소재의 와이드핏 티셔츠. 라운드넥 반소매 디자인.",
@@ -2186,7 +2704,12 @@ export const mBestSeller = [
     {
         idx: "9",
         isrc: "/images/product/man/bestseller/bestseller09.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "오버사이즈 니트 폴로셔츠",
         price: ["59900"],
         txt: "면 원사 소재로 제작한 오버사이즈 핏 폴로셔츠. 앞면 버튼으로 여미는 라펠 칼라 디자인. 반소매 디자인.",
@@ -2204,7 +2727,12 @@ export const mBestSeller = [
     {
         idx: "10",
         isrc: "/images/product/man/bestseller/bestseller10.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "리브드 탱크 탑",
         price: ["35900"],
         txt: "넓은 라운드넥 슬리브리스 티셔츠. 워싱 이펙트.특별한 염색과 세탁 과정을 거쳐 독특한 개성을 느낄 수 있는 제품입니다. 따라서 사진과 제품의 색상이 약간 다를 수 있습니다.",
@@ -2222,7 +2750,12 @@ export const mBestSeller = [
     {
         idx: "11",
         isrc: "/images/product/man/bestseller/bestseller11.jpg",
-        dtsrc: [""],
+        dtsrc: ["/images/product/dummy/1.jpg",
+            "/images/product/dummy/2.jpg",
+            "/images/product/dummy/3.jpg",
+            "/images/product/dummy/4.jpg",
+            "/images/product/dummy/5.jpg",
+            "/images/product/dummy/6.jpg",],
         name: "비스코스 블렌드 니트 폴로셔츠",
         price: ["55900"],
         txt: "비스코스 혼방 소재 우븐 니트 폴로셔츠. 앞면 버튼으로 여미는 라펠 칼라 디자인. 반소매 디자인. 리브드 마감.",

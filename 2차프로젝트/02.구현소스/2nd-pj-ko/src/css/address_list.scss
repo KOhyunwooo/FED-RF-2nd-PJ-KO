@@ -64,6 +64,7 @@
       .address-box {
         margin-bottom: 1px;
         border-top: 1px solid black;
+
         &:last-child {
           border-bottom: 1px solid black;
         }
@@ -77,10 +78,14 @@
             font-size: 13px;
           }
         }
-        > span {
-          font-size: 13px;
-          cursor: pointer;
-          text-decoration: underline;
+        a{
+
+          > span {
+            font-size: 13px;
+            cursor: pointer;
+            text-decoration: underline;
+            color: black;
+          }
         }
       }
     }
