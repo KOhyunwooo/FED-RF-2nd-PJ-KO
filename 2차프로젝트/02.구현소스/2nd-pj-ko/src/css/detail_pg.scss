@@ -207,10 +207,13 @@
       z-index: 1;
       background: #fdfdfd;
       position: fixed;
-      bottom: -25%;
+      // bottom: -25dvh;
       width: 100vw;
       justify-content: flex-end;
-      height: 260px;
+      border: none;
+      border-top:1px solid black;
+      // height: 100vh;
+
       // height: 100dvh;
       // bottom: -95%;
       

@@ -71,7 +71,7 @@ function MyPage(props) {
             {/* ********************구매내역 부분************************** */}
             {selButton === "구매내역" && 
             <div className="history-box">
-            <h2 style={{textAlign:"center"}}>준비중입니다.</h2>
+            <h2 style={{textAlign:"center", margin:"50px"}}>구매내역이 없습니다.</h2>
 
             </div>
             }

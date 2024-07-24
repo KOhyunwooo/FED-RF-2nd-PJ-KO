@@ -53,7 +53,7 @@ function CartList({optVal}) {
   return (
     <>
       <div className="cartlist-box">
-        <div className="cartlist-bg"></div>
+        <div className="cartlist-bg" onClick={()=>setShowCart(false)}></div>
         <div className="addedcart-box">
           {/* 오른쪽 상단 X엑스 버튼 */}
           <button

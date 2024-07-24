@@ -1,89 +1,90 @@
-.mypage-pdbutton-box{
-    >button:last-child{
+.mypage-pdbutton-box {
+    > button:hover {
+        transition: 0.3s ease-in-out;
+        color: #fdfdfd;
+        background-color: #030303;
+    }
+    > button:last-child {
         float: right;
     }
 }
-.profile-box-wrap{
-   margin-left: 60px;
-    .profile-box{
+.profile-box-wrap {
+    margin-left: 60px;
+    > p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        padding-bottom: 4px;
+    }
+    .profile-box {
         width: 580px;
         height: 280px;
         // border: 1px solid black;
         display: flex;
         flex-direction: column;
-        >button{
+        > button {
             display: flex;
             justify-content: space-between;
             align-items: center;
             background: #fdfdfd;
-    border: 1px solid black;
-    outline: none;
-    width: 100%;
-    font-family: 'HelveticaLt';
-    cursor: pointer;
-    padding: 10px;
-    text-align: left;
-    margin-bottom: -1px;
-    >p{
-        
-        padding-bottom: 4px;
-    }
-    >div>p{
-        padding-bottom: 4px;
-
-    }
+            border: 1px solid black;
+            outline: none;
+            width: 100%;
+            font-family: "HelveticaLt";
+            cursor: pointer;
+            padding: 10px;
+            text-align: left;
+            margin-bottom: -1px;
+            > p {
+                padding-bottom: 4px;
+            }
+            > div > p {
+                padding-bottom: 4px;
+            }
         }
     }
 }
 
 //미디어 777이하
 @media screen and (max-width: 777px) {
-    .profile-box-wrap{
+    .profile-box-wrap {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-left: 0;
+
         .profile-box {
             width: 80%;
-          
         }
     }
-
-
-  }
+}
 //미디어 500이하
 @media screen and (max-width: 500px) {
-    .pdbutton-box {//productList.scss 1번째줄
+    .pdbutton-box {
+        //productList.scss 1번째줄
         padding: 10px 20px 20px 20px;
     }
+}
 
-
-  }
-  
 //미디어 400이하
 @media screen and (max-width: 400px) {
-    .pdbutton-box {//productList.scss 1번째줄
+    .pdbutton-box {
+        //productList.scss 1번째줄
         padding: 10px 5px 20px 5px;
         display: flex;
         justify-content: center;
     }
-
-
-  }
+}
 //미디어 371이하
 @media screen and (max-width: 371px) {
-    .pdbutton-box {//productList.scss 1번째줄
+    .pdbutton-box {
+        //productList.scss 1번째줄
         padding: 10px 5px 20px 5px;
         display: flex;
         justify-content: center;
         flex-direction: column;
         .pdbutton {
-        margin-left: 0;
-        margin-bottom: 3px;
+            margin-left: 0;
+            margin-bottom: 3px;
         }
-    
     }
-
-
-  }
-  
+}
