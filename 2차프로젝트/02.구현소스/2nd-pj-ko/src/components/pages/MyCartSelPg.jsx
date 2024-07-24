@@ -33,7 +33,7 @@ return (
           onClick={() => setShowMyCart(false)}
           style={{ fontWeight: !showMyCart ? 'bold' : 'normal' }}
         >
-          마음에 드는 제품<IoMdHeartEmpty size={17} style={{marginTop:"3px"}} color='#2c2c2c;'/>
+          마음에 드는 제품<IoMdHeartEmpty size={17} color='#2c2c2c;'/>
         </button>
       </div>
      {showMyCart ? <MyCart chgNum={chgNum} /> : <Favorite />}

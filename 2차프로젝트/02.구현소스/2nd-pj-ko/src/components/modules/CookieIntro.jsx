@@ -63,7 +63,7 @@ function CookieIntro(props) {
         >
           여기를 클릭하여 PDF 파일을 열어보세요.
         </p>
-        <label style={{display:"flex",alignItems:"flex-start",position:"absolute",bottom:"20px",fontSize:"13px"}}>
+        <label style={{display:"flex",alignItems:"center",position:"absolute",bottom:"20px",fontSize:"13px"}}>
           <input
             type="checkbox"
             checked={dontShowAgain}
@@ -81,6 +81,10 @@ function CookieIntro(props) {
             position: "absolute",
             bottom: "20px",
             right: "20px",
+            height:"22px",
+            width:"41px",
+            color:"black"
+           
           }}
           onClick={handleClose}
           onMouseEnter={(e) => {
