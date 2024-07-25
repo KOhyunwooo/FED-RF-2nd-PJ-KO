@@ -167,10 +167,38 @@ function AddAddressPg() {//{totalPrice2}
     emphTextColor: "#222222",
   };
   //[2] 검색창 크기설정 객체
-  const postCodeStyle = {
+  const [postCodeStyle, setPostCodeStyle] = useState({
     width: "40vw",
-    height: "60vh",
-  };
+    height: "470px",
+  });
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 1050) {
+        setPostCodeStyle({
+          width: "60vw",
+          height: "60vh",
+        });
+      } 
+      if (window.innerWidth <= 777){
+        setPostCodeStyle({
+          width: "80vw",
+          height: "60vh",
+        });
+      }
+      else {
+        setPostCodeStyle({
+          width: "40vw",
+          height: "470px",
+        });
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // 초기 로드 시 실행
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   //[3] 전체박스 스타일 객체
   const wholeBoxStyle = {
     display: "inline-block",
@@ -183,8 +211,8 @@ function AddAddressPg() {//{totalPrice2}
     left: "50%",
     translate: "-50% -50%",
     backgroundColor: "white",
-    padding: "20px",
-    border: "4px double #000",
+    padding: "40px 20px",
+    border: "1px solid #000",
     zIndex: "1",
   };
   //[5]닫기버튼 스타일

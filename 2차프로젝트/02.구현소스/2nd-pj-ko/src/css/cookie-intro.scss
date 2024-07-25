@@ -13,6 +13,24 @@ height: auto;
 font-family: "HelveticaLt";
 
 }
+.cookie-bgc{
+  width: 100vw;
+  height: 100dvh;
+  background-color: #000000;
+  position: absolute;
+  z-index: 9995;
+  opacity: 0;
+  animation: cookiebgcani 1s forwards;
+  @keyframes cookiebgcani {
+   to{
+     opacity: .6;
+
+   }
+  }
+}
+
+
+
 @media screen and (max-width: 777px) {
 .popup {
       width: 50% ;

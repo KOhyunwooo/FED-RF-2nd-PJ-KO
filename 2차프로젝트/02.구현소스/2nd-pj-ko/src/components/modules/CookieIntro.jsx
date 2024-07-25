@@ -56,7 +56,7 @@ function CookieIntro(props) {
                         padding: "10px",
                     }}
                 >
-                    여기를 클릭하여 PDF 파일을 열어보세요.😄
+                    여기를 클릭하여 PDF 파일을 열어보세요.
                 </p>
 
                 <div
@@ -150,15 +150,7 @@ function CookieIntro(props) {
             </div>
             <div
                 className="cookie-bgc"
-                style={{
-                    width: "100vw",
-                    height: "100dvh",
-                    backgroundColor: "#fff",
-                    position: "absolute",
-                    zIndex: 9995,
-                    opacity: 0.8,
-                    backdropFilter: "blur(2px)",
-                }}
+              
             ></div>
         </>
     );
