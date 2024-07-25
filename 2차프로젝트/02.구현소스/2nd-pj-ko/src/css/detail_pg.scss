@@ -1,7 +1,7 @@
-.detailpgmargintop{
+.detailpgmargintop {
   margin-top: 130px;
 }
-.hidden-txt-box{
+.hidden-txt-box {
   display: none;
 }
 
@@ -29,7 +29,7 @@
       border: 1px solid black;
       transition: 0.3s ease;
       // transform-origin: bottom;
-      div>{
+      div > {
         top: 0;
       }
       &.on {
@@ -43,17 +43,15 @@
       }
 
       .morebt {
-      border: none;
-      text-decoration: underline;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      padding-top: 5px;
-      // padding-right: 200px;
-      cursor: pointer;
-      padding-left: 0;
-      padding-right: 0;
-      
-      
+        border: none;
+        text-decoration: underline;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-top: 5px;
+        // padding-right: 200px;
+        cursor: pointer;
+        padding-left: 0;
+        padding-right: 0;
       }
     }
   }
@@ -83,11 +81,10 @@
       font-size: 1rem;
       font-family: Arial, Helvetica, sans-serif;
       padding: 24px 20px;
-      .heartbutton{
+      .heartbutton {
         cursor: pointer;
         float: right;
       }
-      
 
       .tit {
       }
@@ -182,21 +179,23 @@
 }
 /* 777 이하 일떄 */
 @media screen and (max-width: 777px) {
-  .hidden-txt-box{
+  .hidden-txt-box {
     padding: 8px 24px;
     display: block;
     order: 4;
-    >p{
+    > p {
       margin-bottom: 3px;
     }
   }
-  .addbutton{
+  .addbutton {
     width: 70%;
     border: 1px solid black;
     margin-left: 24px;
     height: 30px;
   }
-  .detailpg-recomend-wrap{display: none;}
+  .detailpg-recomend-wrap {
+    display: none;
+  }
   .detailbox {
     display: flex;
     width: 100%;
@@ -211,24 +210,23 @@
       width: 100vw;
       justify-content: flex-end;
       border: none;
-      border-top:1px solid black;
+      border-top: 1px solid black;
       // height: 100vh;
 
       // height: 100dvh;
       // bottom: -95%;
-      
 
       //임시로 하는 미디어쿼리시 스와이프로 결제창올리기
       transition: bottom 0.3s ease-out;
-      &.on{
+      &.on {
         bottom: 0;
       }
-        //임시로 하는 미디어쿼리시 스와이프로 결제창올리기  
+      //임시로 하는 미디어쿼리시 스와이프로 결제창올리기
 
       .dttxt-bx {
         padding: 10px 24px;
         border: none;
-        >.heartbutton{
+        > .heartbutton {
           border: 1px solid black;
           width: 47px;
           height: 30px;
@@ -239,14 +237,20 @@
           right: 0px;
           top: 39px;
           box-sizing: border-box;
-          
         }
-        >.desc{
+        > .desc {
           display: none;
-
         }
-        >.info{
+        > .info {
           display: none;
+        }
+        > .price {
+          flex-direction: row;
+        }
+        > .tit {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
         }
       }
     }
@@ -254,14 +258,13 @@
       border: none;
       order: 3;
       padding: 7px 24px;
-      >.color{
+      > .color {
         display: none;
-      };
-      .size {
-        >button {
-          // height: 50px;
-  
       }
+      .size {
+        > button {
+          // height: 50px;
+        }
       }
     }
   }
@@ -277,12 +280,9 @@
   }
 }
 
-
-
-
 /* 600 이하 일떄 */
 @media screen and (max-width: 600px) {
-  .detailpgmargintop{
+  .detailpgmargintop {
     margin-top: 0;
   }
 }

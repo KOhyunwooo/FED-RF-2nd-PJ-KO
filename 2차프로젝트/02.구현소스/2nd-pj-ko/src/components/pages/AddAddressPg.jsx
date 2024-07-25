@@ -170,51 +170,79 @@ function AddAddressPg() {//{totalPrice2}
   const [postCodeStyle, setPostCodeStyle] = useState({
     width: "40vw",
     height: "470px",
+    padding:"0"
   });
 
   useEffect(() => {
     function handleResize() {
+      let newPostCodeStyle = {
+        width: "40vw",
+        height: "470px",
+        
+      };
+      let newPopupWindowStyle = {
+        position: "fixed",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        backgroundColor: "white",
+        padding: "40px 20px",
+        border: "1px solid #000",
+        zIndex: "1",
+      };
+  
       if (window.innerWidth <= 1050) {
-        setPostCodeStyle({
-          width: "60vw",
-          height: "60vh",
-        });
-      } 
-      if (window.innerWidth <= 777){
-        setPostCodeStyle({
-          width: "80vw",
-          height: "60vh",
-        });
+        newPostCodeStyle.width = "60vw";
+        newPostCodeStyle.height = "60vh";
       }
-      else {
-        setPostCodeStyle({
-          width: "40vw",
-          height: "470px",
-        });
+  
+      if (window.innerWidth <= 777) {
+        newPostCodeStyle.width = "80vw";
+        newPostCodeStyle.height = "60vh";
       }
+  
+      if (window.innerWidth <= 500) {
+        newPostCodeStyle.width = "80vw";
+        newPostCodeStyle.height = "400px";
+        newPostCodeStyle.scale = "0.9";
+        newPostCodeStyle.margin = "0 auto";
+        newPopupWindowStyle.width = "90%";
+        newPopupWindowStyle.padding = "20px 5px";
+        
+      }
+  
+      setPostCodeStyle(newPostCodeStyle);
+      setPopupWindowStyle(newPopupWindowStyle);
     }
-
+  
     window.addEventListener('resize', handleResize);
-    handleResize(); // 초기 로드 시 실행
-
-    return () => window.removeEventListener('resize', handleResize);
+    handleResize(); // 초기 렌더링 시 스타일 설정
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
+
+  
   //[3] 전체박스 스타일 객체
   const wholeBoxStyle = {
     display: "inline-block",
     verticalAlign: "top",
   };
   //[4]팝업 스타일 객체
-  const popupWindowStyle = {
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-    translate: "-50% -50%",
-    backgroundColor: "white",
-    padding: "40px 20px",
-    border: "1px solid #000",
-    zIndex: "1",
-  };
+  const [popupWindowStyle,setPopupWindowStyle] =useState({
+
+        position: "fixed",
+        top: "50%",
+        left: "50%",
+        translate: "-50% -50%",
+        backgroundColor: "white",
+        padding: "40px 20px",
+        border: "1px solid #000",
+        zIndex: "1",})
+        
+
+  
   //[5]닫기버튼 스타일
   const closeButtonStyle = {
     position: "absolute",
