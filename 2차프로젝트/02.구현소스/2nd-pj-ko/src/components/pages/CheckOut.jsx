@@ -250,7 +250,7 @@ function CheckOut() {
             </span>
             <span>
               <p>
-                총&nbsp;&nbsp;&nbsp;&nbsp;₩&nbsp;
+                총&nbsp;&nbsp;&nbsp;₩&nbsp;
                 {totalPrice2 > 50000
                   ? addComma(totalPrice2)
                   : addComma(totalPrice2 + 3000)}

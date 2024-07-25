@@ -6,9 +6,12 @@ transform: translate(-50%, -50%);
 padding: 20px;
 background: #fff;
 border: 1px solid #000;
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.527);
 z-index: 9999;
 width: 30%;
-height: 30%;
+height: auto;
+font-family: "HelveticaLt";
+
 }
 @media screen and (max-width: 777px) {
 .popup {
