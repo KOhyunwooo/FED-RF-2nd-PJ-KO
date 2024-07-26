@@ -191,17 +191,17 @@ function AddAddressPg() {//{totalPrice2}
         zIndex: "1",
       };
   
-      if (window.innerWidth <= 1050) {
+      if (window.innerWidth < 1050) {
         newPostCodeStyle.width = "60vw";
         newPostCodeStyle.height = "60vh";
       }
   
-      if (window.innerWidth <= 777) {
+      if (window.innerWidth < 777) {
         newPostCodeStyle.width = "80vw";
         newPostCodeStyle.height = "60vh";
       }
   
-      if (window.innerWidth <= 500) {
+      if (window.innerWidth < 500) {
         newPostCodeStyle.width = "80vw";
         newPostCodeStyle.height = "400px";
         newPostCodeStyle.scale = "0.9";
