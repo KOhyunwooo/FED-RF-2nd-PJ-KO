@@ -38,7 +38,7 @@
         border: 1px solid black;
         border-top: none;
         box-sizing: border-box;
-        font-size: 11px;
+        font-size: 12px;
         font-family: Arial, Helvetica, sans-serif;
         // height: 77px;
         width: 100%;
@@ -51,6 +51,7 @@
         }
   
         .reuse-box {
+          padding-bottom: 5px;
           display:flex;
           justify-content: space-between;
           >label{

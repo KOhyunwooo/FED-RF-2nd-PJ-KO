@@ -12,6 +12,19 @@ width: 30%;
 height: auto;
 font-family: "HelveticaLt";
 
+
+  >button{
+    border: 1px solid black;
+    border-radius: 0;
+    background-color: #fff;
+    position: absolute;
+    bottom: 12.5px;
+    right: 20px;
+    height: 22px;
+    width: 41px;
+    color: black;
+    white-space: nowrap;
+  }
 }
 .cookie-bgc{
   width: 100vw;
@@ -20,7 +33,7 @@ font-family: "HelveticaLt";
   position: absolute;
   z-index: 9995;
   opacity: 0;
-  animation: cookiebgcani 2s forwards;
+  animation: cookiebgcani 3s forwards;
   @keyframes cookiebgcani {
    to{
      opacity: .7;
@@ -34,10 +47,15 @@ font-family: "HelveticaLt";
 @media screen and (max-width: 777px) {
 .popup {
       width: 50% ;
+
     }
 }
 @media screen and (max-width: 450px) {
 .popup {
-      width: 80% ;
+      width: 90% ;
+      padding: 10px 10px 20px 10px;
+      >button{
+        right:10px;
+      }
     }
 }

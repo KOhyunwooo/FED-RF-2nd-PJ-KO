@@ -65,15 +65,18 @@ function CookieIntro(props) {
                         width: "100",
                         padding: "10px",
                         display:"flex",
+                        fontSize:"12px"
                     }}
                 >
                     <div style={{flex:1}}>
-                      <p>기본 로그인 정보1 (주소有)</p>
+                      <p>기본 로그인 정보1</p>
+                      <p>(주소Data 有)</p>
                       <p>아이디: admin</p>
                       <p>비밀번호: 1111</p>
                     </div>
                     <div style={{flex:1}}>
-                      <p>기본 로그인 정보2 (주소無)</p>
+                      <p>기본 로그인 정보2</p>
+                      <p>(주소Data 無)</p>
                       <p>아이디: ko</p>
                       <p>비밀번호: 1111</p>
                     </div>
@@ -82,9 +85,10 @@ function CookieIntro(props) {
                 <div style={{ display: "flex", padding: "10px" ,border:"1px solid black", marginTop:"-1px"}}>
                     <div
                         style={{
-                            fontSize: "11px",
+                            fontSize: "12px",
                             fontWeight: "bold",
                             whiteSpace: "nowrap",
+                            flex:1,
                         }}
                     >
                         <p>로그인: O</p>
@@ -95,7 +99,7 @@ function CookieIntro(props) {
                         <p>검색기능: O</p>
                         <p>메모이제이션(Footer): O</p>
                     </div>
-                    <div style={{ color: "grey" }}>
+                    <div style={{ color: "grey" ,flex:1}}>
                         <p>메모이제이션(TopArea): X</p>
                         <p>메모이제이션(MainArea): X</p>
                         <p>프로필 편집: X</p>
@@ -108,7 +112,7 @@ function CookieIntro(props) {
                         display: "flex",
                         alignItems: "center",
                         position: "absolute",
-                        bottom: "20px",
+                        bottom: "12.5px",
                         fontSize: "13px",
                     }}
                 >
@@ -122,18 +126,7 @@ function CookieIntro(props) {
                 <br />
                 <br />
                 <button
-                    style={{
-                        border: "1px solid black",
-                        borderRadius: "0",
-                        backgroundColor: "#fff",
-                        position: "absolute",
-                        bottom: "20px",
-                        right: "20px",
-                        height: "22px",
-                        width: "41px",
-                        color: "black",
-                        whiteSpace: "nowrap",
-                    }}
+                   
                     onClick={handleClose}
                     onMouseEnter={(e) => {
                         e.target.style.backgroundColor = "#030303";
