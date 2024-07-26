@@ -121,9 +121,7 @@ function AddAddressPg() {//{totalPrice2}
 
     // 3. 기존입력값 반영하기: 상태변수에 반영함
     // (1)앞주소 저장
-    userAddress.current(address);
-    // (2)뒷주소(상세주소) 저장
-    userAddress.current(address2);
+    userAddress.current = address;
     // (3) 우편번호 저장
     userZipCode.current = zipcode;
     //  console.log(zipcode);
@@ -393,7 +391,7 @@ function AddAddressPg() {//{totalPrice2}
                   placeholder=" "
                   value={userAddress.current}
                   readOnly
-                  onClick={toggleHandler}
+                  onFocus={toggleHandler}
                   onChange={changeAddr} //유효성검사
                   onBlur={changeAddr} //포커스변경시 실행하는 유효성검사
                 />
