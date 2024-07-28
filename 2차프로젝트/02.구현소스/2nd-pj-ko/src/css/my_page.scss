@@ -67,7 +67,7 @@
 
 //미디어 400이하
 @media screen and (max-width: 400px) {
-    .pdbutton-box {
+    .pdbutton-box .mypage-pdbutton-box {
         //productList.scss 1번째줄
         padding: 10px 5px 20px 5px;
         display: flex;
@@ -75,8 +75,8 @@
     }
 }
 //미디어 371이하
-@media screen and (max-width: 371px) {
-    .pdbutton-box {
+@media screen and (max-width: 380px) {
+    .pdbutton-box.mypage-pdbutton-box {
         //productList.scss 1번째줄
         padding: 10px 5px 20px 5px;
         display: flex;
