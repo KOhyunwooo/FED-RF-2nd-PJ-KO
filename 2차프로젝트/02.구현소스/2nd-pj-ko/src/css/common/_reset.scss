@@ -22,7 +22,8 @@ h4 {
 html {
   font-size: 10px;
 
-  scroll-behavior: smooth; //부드러운 스크롤
+  // scroll-behavior: smooth; //부드러운 스크롤
+  // 근데 이거 하면 페이지 이동시 상단에서 바로출력 안됨?
 }
 /* ul,ol,li 리스트스타일:none*/
 ul,

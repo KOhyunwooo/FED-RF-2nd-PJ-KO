@@ -93,8 +93,8 @@ const WindowScrollTo00 = () => {
 
   useEffect(() => {
     // 화면렌더링 구역에 스크롤상단이동 코드넣기
-    // window.scrollTo(0,0); //스크롤 최상단이동!
-    $("html,body").animate({ scrollTop: "0px" });//스크롤 최상단이동! 제이쿼리방식, window.scrollTo(0,0); 제대로 안됨
+    window.scrollTo(0,0); //스크롤 최상단이동!
+    // $("html,body").animate({ scrollTop: "0px" });//스크롤 최상단이동! 제이쿼리방식, window.scrollTo(0,0); 제대로 안됨
 
     // $("html, body").scrollTop(0,0); 
     console.log("라우터 경로:", pathname);

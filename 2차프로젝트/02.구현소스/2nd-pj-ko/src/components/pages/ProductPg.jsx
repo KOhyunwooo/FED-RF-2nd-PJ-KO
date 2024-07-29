@@ -38,11 +38,11 @@ function ProductPg({ cat }) {
 
 
   //////////////////같은 카테고리내에서 컴포넌트 전환시 스크롤투탑 되게 (index.js에 있는 scrolltotop은 의존성이 pathname임)한번더 줌///////////////////////
-  useEffect(() => {
-    // 화면렌더링 구역에 스크롤상단이동 코드넣기
-    // window.scrollTo(0,0); //스크롤 최상단이동!
-    $("html,body").animate({ scrollTop: "0px" });
-  }, [data]); // 의존성을 라우터 경로변수로 설정한다.(의존성: 쟤가 바뀌면 나도 바뀜)
+  // useEffect(() => {
+  //   // 화면렌더링 구역에 스크롤상단이동 코드넣기
+  //   // window.scrollTo(0,0); //스크롤 최상단이동!
+  //   $("html,body").animate({ scrollTop: "0px" });
+  // }, [data]); // 의존성을 라우터 경로변수로 설정한다.(의존성: 쟤가 바뀌면 나도 바뀜)
 
   
 
