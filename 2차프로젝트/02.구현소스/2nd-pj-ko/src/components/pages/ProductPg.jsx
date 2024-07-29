@@ -19,7 +19,7 @@ function ProductPg({ cat }) {
   const chgBgFn = () => {
     if (cat !== "man") return; //카테고리가 man이 아니면 함수 종료
     let olist = document.querySelector(".origins-list");
-    let bgTg = document.querySelector(".cont");
+    let bgTg = document.querySelector(".cont");    
 
     // let winH = window.innerHeight*1;
     const winH = document.documentElement.clientHeight * 0.9;
@@ -36,6 +36,8 @@ function ProductPg({ cat }) {
     }
   };
 
+
+  //////////////////같은 카테고리내에서 컴포넌트 전환시 스크롤투탑 되게 (index.js에 있는 scrolltotop은 의존성이 pathname임)한번더 줌///////////////////////
   useEffect(() => {
     // 화면렌더링 구역에 스크롤상단이동 코드넣기
     // window.scrollTo(0,0); //스크롤 최상단이동!

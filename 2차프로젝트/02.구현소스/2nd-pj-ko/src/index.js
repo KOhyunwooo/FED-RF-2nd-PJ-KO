@@ -3,7 +3,7 @@ import "../src/css/index.scss";
 //제이쿼리 불러오기
 import $ from "jquery";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Layout from "./components/layout/Layout";
@@ -95,6 +95,8 @@ const WindowScrollTo00 = () => {
     // 화면렌더링 구역에 스크롤상단이동 코드넣기
     // window.scrollTo(0,0); //스크롤 최상단이동!
     $("html,body").animate({ scrollTop: "0px" });//스크롤 최상단이동! 제이쿼리방식, window.scrollTo(0,0); 제대로 안됨
+
+    // $("html, body").scrollTop(0,0); 
     console.log("라우터 경로:", pathname);
 
   }, [pathname]); // 의존성을 라우터 경로변수로 설정한다.(의존성: 쟤가 바뀌면 나도 바뀜)
