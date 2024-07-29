@@ -88,6 +88,11 @@
     font-size: 1rem;
 
     .heartbutton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
         margin-bottom: 1px;
         cursor: pointer;
         float: right;

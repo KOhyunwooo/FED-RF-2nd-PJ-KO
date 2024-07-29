@@ -33,7 +33,7 @@ function Favorite() {
                     style={{ display: favLocalsData.length > 0 && "none" }}
                 >
                     <IoMdHeartEmpty className="bagimg" />
-                    <p>장바구니가 비었습니다.</p>
+                    <p>마음에 드는 제품이 없습니다.</p>
                 </div>
                 <div className="product-list fav-pd-list">
                     {favLocalsData.map((v, i) => (
