@@ -9,6 +9,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useContext } from "react";
 import { useEffect } from "react";
+import MyPageModifyAddr from "./MyPageModifyAddr";
 
 function MyPageModify({ mode, setShowProfileMode }) {
     //mode:MyPage.jsx에서 프롭스다운 해서 가져온 모드( "addr", "eml", "phone", "pass")
@@ -72,7 +73,13 @@ function MyPageModify({ mode, setShowProfileMode }) {
                             />
                         </button>
                         <div className="modal-tit">주소수정</div>
+                        <MyPageModifyAddr/>
                     </div>
+
+
+
+
+
                 </div>
             )}
             {mode === "eml" && (

@@ -16,6 +16,7 @@ function AddressList({ addressListDelete, setSelAddr }) {
 
   //세션스토리지에서 현재로그인한 데이터 가져오기
   const mySessionData = JSON.parse(sessionStorage.getItem("minfo"));
+  //로컬스토리지 멤버들 데이터 가져오기
   const tgData = JSON.parse(localStorage.getItem("mem-data"));
 
   //컨텍스트 API 불러오기
