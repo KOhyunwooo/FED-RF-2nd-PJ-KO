@@ -80,9 +80,9 @@ function MyPageModifyAddr(props) {
           <p>등록된 주소가 없습니다.</p>
         )}
       </div>
-      <Link to={"/addaddresspg"} state={{ totalPrice2 }}>
+      {/* <Link to={"/addaddresspg"} state={{ totalPrice2 }}>
             <div className="newaddress">새로운 주소 추가</div>
-          </Link>
+          </Link> */}
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 //데이터들 불러오기////////////////////////////////
-import { wOrigins } from "../data/products_woman";
+// import { wOrigins } from "../data/products_woman";
 import { mOrigins } from "../data/products_man";
 //css불러오기
 import "../../css/Origins.scss";

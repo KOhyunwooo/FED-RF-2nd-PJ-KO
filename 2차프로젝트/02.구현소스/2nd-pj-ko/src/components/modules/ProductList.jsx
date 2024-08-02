@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 
 //데이터 불러오기 woman
 import { wNew, wSale } from "../data/products_woman";
@@ -12,7 +12,7 @@ import { IoMdHeart } from "react-icons/io";
 import "../../css/ProductList.scss";
 import { Link } from "react-router-dom";
 import { addComma } from "../func/common_fn";
-import { useState } from "react";
+
 import { dCon } from "../func/dCon";
 import useFavoriteFn from "../func/useFavoriteFn";
 

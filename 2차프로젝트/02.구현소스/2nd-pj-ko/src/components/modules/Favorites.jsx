@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import $ from "jquery";
+// import $ from "jquery";
 import { Link } from "react-router-dom";
 import { dCon } from "../func/dCon";
 import { addComma } from "../func/common_fn";
