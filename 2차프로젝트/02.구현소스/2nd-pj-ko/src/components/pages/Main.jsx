@@ -17,7 +17,7 @@ export default function Main() {
 
     return (
         <>
-            <CookieIntro/>
+            {/* <CookieIntro/> */}
             {/* isMobile이 1050보다 작거나 같냐? 그럼  <SwiperMain2 /> 실행 아니면  <SwiperMain /> 실행*/}
             {isMobile ? <SwiperMain2 /> : <SwiperMain />} 
         </>
