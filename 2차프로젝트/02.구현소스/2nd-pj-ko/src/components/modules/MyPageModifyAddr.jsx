@@ -14,6 +14,7 @@ function MyPageModifyAddr(props) {
     //로컬스토리지 멤버들 데이터 가져오기
     const tgData = JSON.parse(localStorage.getItem("mem-data"));
     
+    // const totalPrice2=0;
     
   
 
@@ -80,9 +81,10 @@ function MyPageModifyAddr(props) {
           <p>등록된 주소가 없습니다.</p>
         )}
       </div>
-      {/* <Link to={"/addaddresspg"} state={{ totalPrice2 }}>
+      
+      <Link to={"/addaddresspg"} state={{ totalPrice2:0 }}>
             <div className="newaddress">새로운 주소 추가</div>
-          </Link> */}
+          </Link>
     </>
   );
 }

@@ -9,14 +9,14 @@ import DaumPostcode from "react-daum-postcode";
 //제이쿼리 불러오기
 import $ from "jquery";
 
-function AddAddressPg() {//{totalPrice2}
+function AddAddressPg() {
 
   
     const goNav = useNavigate();
   //유즈로케이션으로 받아오면 여기에 안써도 되는지 확인하기//
   //링크 스테이트값으로 CheckOut.jsx||AddressList에서 받아오기 위한 useLocation
   const loc = useLocation();
-  const totalPrice3 = loc.state.totalPrice2;
+  const totalPrice3 = loc.state.totalPrice2;//AddressList.jsx에서 받아온 총합계가격
   const addressIndex = loc.state.addressIndex;//AddressList.jsx에서 받아온 선택된 순번
   const addressData = loc.state.addressData || {};//AddressList.jsx에서 받아온 데이터(주소1,주소2,우편번호,어드레스안에 이름,어드레스안에 번호)
   // console.log("addaddresspg로 넘어온 총합게값", totalPrice3);
@@ -316,6 +316,8 @@ function AddAddressPg() {//{totalPrice2}
       localStorage.setItem("mem-data", JSON.stringify(memData));
 
       goNav("/checkout",{state:{totalPrice:totalPrice3}});//totalPrice라는 이름으로totalPrice3가지고 /checkout페이지로 가기
+
+      
     } else {
       alert("Change your input!");
     }
@@ -451,6 +453,9 @@ function AddAddressPg() {//{totalPrice2}
                 }
               </li>
             </ul>
+            {totalPrice3==0&&
+            <div onClick={contin}>저장하기</div>
+            }
             {isOpen && (
               <div style={popupWindowStyle}>
                 <DaumPostcode
@@ -469,8 +474,11 @@ function AddAddressPg() {//{totalPrice2}
         </div>
       </div>
       {/* 최하단 fixed된 계속버튼 있는곳 //MyCart.jsx에서 재사용*/}
-      <div className="buybar">
+      {totalPrice3>0&&
+
+        <div className="buybar">
         <span className="buytxt"></span>
+        
         <span>
           <b>
             총&nbsp;&nbsp;&nbsp;&nbsp;₩&nbsp;
@@ -483,6 +491,7 @@ function AddAddressPg() {//{totalPrice2}
           계속
         </button>
       </div>
+      }
     </>
   );
 }
