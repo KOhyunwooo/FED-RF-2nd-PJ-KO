@@ -453,9 +453,7 @@ function AddAddressPg() {
                 }
               </li>
             </ul>
-            {totalPrice3==0&&
-            <div onClick={contin}>저장하기</div>
-            }
+           
             {isOpen && (
               <div style={popupWindowStyle}>
                 <DaumPostcode
@@ -471,10 +469,13 @@ function AddAddressPg() {
               </div>
             )}
           </div>
+          {totalPrice3==0&&
+            <div className="addaddr-save-button" onClick={contin}>저장하기</div>
+            }
         </div>
       </div>
       {/* 최하단 fixed된 계속버튼 있는곳 //MyCart.jsx에서 재사용*/}
-      {totalPrice3>0&&
+      {totalPrice3!==0&&
 
         <div className="buybar">
         <span className="buytxt"></span>

@@ -21,7 +21,23 @@ flex-direction: column;
     }
 
 
-
+    .addaddr-save-button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -1px;
+        position: relative;
+        outline: none;
+        border: 1px solid black;
+        background-color: #fff;
+        color: black;
+        width: 350px;
+        margin-left:15px ;
+        height: 32px;
+        cursor: pointer;
+        font-family: "HelveticaLt";
+        font-size: 1.2rem;
+    }
     
     
     
