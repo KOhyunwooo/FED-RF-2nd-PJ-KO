@@ -69,7 +69,7 @@ function MyPageModifyAddr(props) {
                 state={{
                   addressIndex: i, //선택된 순번넘기기
                   addressData: v, //선택된 값(주소1,주소2,우편번호,어드레스안에 이름,어드레스안에 번호)넘기기
-                //   totalPrice2: totalPrice2, //총합계값 넘기기
+                  totalPrice2: 0, //총합계값 넘기기,0을 넘겨서 AddAddressPg.jsx에서 0일때조건 다르게 출력
                 }}
               >
                 <span>편집</span>

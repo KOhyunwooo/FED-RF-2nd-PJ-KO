@@ -315,7 +315,8 @@ function AddAddressPg() {
         //로컬데이터(mem-data)에도 업데이트 하기
       localStorage.setItem("mem-data", JSON.stringify(memData));
 
-      goNav("/checkout",{state:{totalPrice:totalPrice3}});//totalPrice라는 이름으로totalPrice3가지고 /checkout페이지로 가기
+
+      totalPrice3==0? goNav("/mypage"): goNav("/checkout",{state:{totalPrice:totalPrice3}});//totalPrice라는 이름으로totalPrice3가지고 /checkout페이지로 가기
 
       
     } else {

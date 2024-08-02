@@ -29,7 +29,7 @@ flex-direction: column;
         position: relative;
         outline: none;
         border: 1px solid black;
-        background-color: #fff;
+        background-color: #fdfdfd;
         color: black;
         width: 350px;
         margin-left:15px ;
@@ -37,6 +37,11 @@ flex-direction: column;
         cursor: pointer;
         font-family: "HelveticaLt";
         font-size: 1.2rem;
+        transition: .3s;
+        &:hover{
+            background-color: #010101;
+            color: #fdfdfd;
+        }
     }
     
     
