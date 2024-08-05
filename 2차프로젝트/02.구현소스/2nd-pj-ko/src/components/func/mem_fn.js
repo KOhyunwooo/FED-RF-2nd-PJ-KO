@@ -28,7 +28,7 @@ const initData = () => {
                 "pwd":"1111",
                 "unm":"Administrator",
                 "phone":"01012345678",
-                "eml":"admin@dc.com",
+                "eml":"admin@admin.com",
                 "address": [
                     {   
                         "unm":"admin(집)",
@@ -70,7 +70,7 @@ const initData = () => {
                 "pwd":"1111",
                 "unm":"고현우",
                 "phone":"01012345678",
-                "eml":"ko@naver.com",
+                "eml":"ko@ko.com",
                 "address": ""
             }
         ]

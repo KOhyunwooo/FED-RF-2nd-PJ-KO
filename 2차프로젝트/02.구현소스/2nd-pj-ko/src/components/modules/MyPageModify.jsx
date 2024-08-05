@@ -1,5 +1,6 @@
 import React from "react";
 
+
 //카트리스트 scss 불러오기
 import "../../css/address_list.scss";
 import { dCon } from "../func/dCon";
@@ -11,6 +12,9 @@ import { useContext } from "react";
 import { useEffect } from "react";
 import MyPageModifyAddr from "./MyPageModifyAddr";
 import MyPageModifyEml from "./MyPageModifyEml";
+import MyPageModifyPhone from "./MyPageModifyPhone";
+import MyPageModifyPass from "./MyPageModifyPass";
+
 
 function MyPageModify({ mode, setShowProfileMode }) {
     //mode:MyPage.jsx에서 프롭스다운 해서 가져온 모드( "addr", "eml", "phone", "pass")
@@ -103,11 +107,11 @@ function MyPageModify({ mode, setShowProfileMode }) {
                             />
                         </button>
                         <div className="modal-tit">이메일 수정</div>
-                        <p>현재 이메일:{mySessionData.eml||mySessionData.uid}</p>
+                        <p style={{paddingLeft:'10%',fontSize:"1.1rem"}}>현재 이메일:{mySessionData.eml||mySessionData.uid}</p>
 
 
 
-                                <MyPageModifyEml/>
+                                <MyPageModifyEml setShowCart={setShowCart}/>
 
 
 
@@ -136,7 +140,7 @@ function MyPageModify({ mode, setShowProfileMode }) {
                             />
                         </button>
                         <div className="modal-tit">전화번호 수정</div>
-                        
+                        <MyPageModifyPhone setShowCart={setShowCart}/>
                     </div>
                 </div>
             )}
@@ -160,6 +164,8 @@ function MyPageModify({ mode, setShowProfileMode }) {
                             />
                         </button>
                         <div className="modal-tit">비밀번호 변경</div>
+                        <MyPageModifyPass setShowCart={setShowCart}/>
+                        
                     </div>
                 </div>
             )}

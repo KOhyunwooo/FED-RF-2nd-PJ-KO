@@ -57,6 +57,9 @@ function MyPage(props) {
         setShowProfileMode(true);
     };
 
+
+ 
+
     return (
         <>
             {/* ////////////////////상단 메뉴 부분///////////////////////// */}
@@ -83,7 +86,7 @@ function MyPage(props) {
             }
 
             {/* ********************구매내역 부분************************** */}
-            {selButton === "바스켓백" && <MyCart />}
+            {selButton === "바스켓백" && <MyCart/>}
             {selButton === "마음에 드는 제품" && <Favorite />}
             {selButton === "프로필" && (
                 <div className="profile-box-wrap">

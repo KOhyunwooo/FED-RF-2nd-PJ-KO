@@ -53,7 +53,8 @@ function MyCart({ chgNum }) {
 
     return (
         <>
-            <div className="mycart-line">
+            {localsData.length>0&&
+                <div className="mycart-line">
                 <div
                     className="mycart-txt"
                     style={{ display: localsData.length == 0 && "none" }}
@@ -61,7 +62,7 @@ function MyCart({ chgNum }) {
                     장바구니에 담긴 상품은 구매가 완료될 때까지 예약되지
                     않습니다.
                 </div>
-            </div>
+            </div>}
             <div className="mycart-box">
                 <div
                     className="noitem"
