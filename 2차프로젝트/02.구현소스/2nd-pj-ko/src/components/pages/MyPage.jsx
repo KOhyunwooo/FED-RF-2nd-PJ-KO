@@ -10,7 +10,6 @@ import { useLocation } from 'react-router-dom';
 import { IoIosArrowForward } from "react-icons/io";
 
 function MyPage(props) {
-    const loc =useLocation();
     const myCon = useContext(dCon);
     ////////////////////////////////////////////////////////////////////
     const myPageButtons = [
@@ -20,7 +19,12 @@ function MyPage(props) {
         "프로필",
         "로그아웃",
     ];
-    const [selButton, setSelButton] = useState("구매내역");
+
+
+    const loc =useLocation();
+    const isprofileTxt=loc.state?.profile||"구매내역";//AddAddressPg.jsx에서 가져온값||"기본값";, loc.state가null이거나 undefined면 "구매내역"을 isprofileTxt에 할당
+
+    const [selButton, setSelButton] = useState(isprofileTxt);
     const selectedButton = (v) => {
         if (v === "로그아웃") {
             myCon.logoutFn();

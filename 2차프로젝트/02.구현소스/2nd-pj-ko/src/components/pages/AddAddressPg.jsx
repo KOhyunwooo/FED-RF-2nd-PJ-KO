@@ -316,7 +316,7 @@ function AddAddressPg() {
       localStorage.setItem("mem-data", JSON.stringify(memData));
 
 
-      totalPrice3==0? goNav("/mypage"): goNav("/checkout",{state:{totalPrice:totalPrice3}});//totalPrice라는 이름으로totalPrice3가지고 /checkout페이지로 가기
+      totalPrice3==0? goNav("/mypage", { state: { profile: '프로필' } }): goNav("/checkout",{state:{totalPrice:totalPrice3}});//totalPrice라는 이름으로totalPrice3가지고 /checkout페이지로 가기
 
       
     } else {

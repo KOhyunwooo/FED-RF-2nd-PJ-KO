@@ -10,6 +10,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { useEffect } from "react";
 import MyPageModifyAddr from "./MyPageModifyAddr";
+import MyPageModifyEml from "./MyPageModifyEml";
 
 function MyPageModify({ mode, setShowProfileMode }) {
     //mode:MyPage.jsx에서 프롭스다운 해서 가져온 모드( "addr", "eml", "phone", "pass")
@@ -102,6 +103,16 @@ function MyPageModify({ mode, setShowProfileMode }) {
                             />
                         </button>
                         <div className="modal-tit">이메일 수정</div>
+                        <p>현재 이메일:{mySessionData.eml||mySessionData.uid}</p>
+
+
+
+                                <MyPageModifyEml/>
+
+
+
+
+
                     </div>
                 </div>
             )}
