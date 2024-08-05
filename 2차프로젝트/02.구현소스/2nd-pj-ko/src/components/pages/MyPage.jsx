@@ -5,10 +5,12 @@ import "../../css/my_page.scss";
 import MyPageModify from "../modules/MyPageModify";
 import MyCart from "../modules/MyCart";
 import Favorite from "../modules/Favorites";
+import { useLocation } from 'react-router-dom';
 
 import { IoIosArrowForward } from "react-icons/io";
 
 function MyPage(props) {
+    const loc =useLocation();
     const myCon = useContext(dCon);
     ////////////////////////////////////////////////////////////////////
     const myPageButtons = [
