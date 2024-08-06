@@ -126,7 +126,7 @@ function CookieIntro(props) {
                 <br />
                 <br />
                 <button
-                   
+                    style={{cursor:"pointer"}}
                     onClick={handleClose}
                     onMouseEnter={(e) => {
                         e.target.style.backgroundColor = "#030303";
