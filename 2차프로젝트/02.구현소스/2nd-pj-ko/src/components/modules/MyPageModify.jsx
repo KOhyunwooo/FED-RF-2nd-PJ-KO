@@ -107,7 +107,7 @@ function MyPageModify({ mode, setShowProfileMode }) {
                             />
                         </button>
                         <div className="modal-tit">이메일 수정</div>
-                        <p style={{paddingLeft:'10%',fontSize:"1.1rem"}}>현재 이메일:{mySessionData.eml||mySessionData.uid}</p>
+                        <p style={{paddingLeft:'10%',fontSize:"1.1rem"}}>현재 이메일: {mySessionData.eml||mySessionData.uid}</p>
 
 
 
@@ -140,6 +140,7 @@ function MyPageModify({ mode, setShowProfileMode }) {
                             />
                         </button>
                         <div className="modal-tit">전화번호 수정</div>
+                        <p style={{paddingLeft:'10%',fontSize:"1.1rem"}}>현재 전화번호: {mySessionData.phone}</p>
                         <MyPageModifyPhone setShowCart={setShowCart}/>
                     </div>
                 </div>

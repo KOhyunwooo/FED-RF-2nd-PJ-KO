@@ -297,6 +297,7 @@ function AddAddressPg() {
               address2: userAddress2,
               zipcode: userZipCode.current,
             };
+            alert("주소가 성공적으로 변경되었습니다.");
             // 데이터 입력해서 저장////////////////////////////////////
           } else {
           v.address.push({//v.address에 {}이런모양으로 푸씨
@@ -306,6 +307,7 @@ function AddAddressPg() {
             address2: userAddress2,
             zipcode: userZipCode.current,
           });
+          alert("주소가 성공적으로 추가되었습니다.");
         }
           // 세션데이터(minfo) 업데이트하기
           sessionStorage.setItem("minfo", JSON.stringify(v));

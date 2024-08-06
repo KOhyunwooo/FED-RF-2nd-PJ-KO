@@ -154,6 +154,7 @@ function MyPageModifyEml({ setShowCart }) {
       localStorage.setItem("mem-data", JSON.stringify(memData));
 
       setShowCart(false);
+      alert("이메일이 성공적으로 변경되었습니다.");
     } else {
       alert("Change your input!");
     }

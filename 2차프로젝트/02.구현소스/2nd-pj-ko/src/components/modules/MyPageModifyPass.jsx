@@ -1,101 +1,138 @@
 import React from "react";
 import { useState } from "react";
-// 로컬스토리지 생성 JS
-import { initData } from "../func/mem_fn";
-// 회원가입 CSS 불러오기
 import "../../css/mypagemodify-eml.scss";
 
+// 에러 메시지를 상수로 정의하여 관리
+const errMsg = {
+  CURRENT_PASSWORD_MISMATCH: "기존 비밀번호가 일치하지 않습니다.",
+  NEW_PASSWORD_INVALID: "특수문자, 문자, 숫자 형태의 5~15자리를 사용해주세요.",
+  NEW_PASSWORD_MISMATCH: "새 비밀번호가 일치하지 않습니다.",
+};
+
 function MyPageModifyPass({ setShowCart }) {
-  //setShowCart:모달창 닫기 상태변수, false로 해야 닫힘.
+  // 상태 변수 정의
+  const [currentPwd, setCurrentPwd] = useState(""); // 현재 비밀번호
+  const [newPwd, setNewPwd] = useState(""); // 새 비밀번호
+  const [confirmNewPwd, setConfirmNewPwd] = useState(""); // 새 비밀번호 확인
+  const [currentPwdError, setCurrentPwdError] = useState(false); // 현재 비밀번호 에러 상태
+  const [newPwdError, setNewPwdError] = useState(false); // 새 비밀번호 에러 상태
+  const [confirmNewPwdError, setConfirmNewPwdError] = useState(false); // 새 비밀번호 확인 에러 상태
 
-  // [ 기타 메시지 프리셋 ]
-  const msgEtc = {
-     phone: "올바른 전화번호 형식을 입력하십시오. 예)010-XXXX-XXXX",
-  }; ///// msgEtc ///////
-// [1] 입력요소 상태변수
-// 5. 휴대폰 변수
-const [phone, setPhone] = useState("");
-// [2] 에러상태관리 변수
- // 5. 휴대폰 변수
-  const [phoneError, setPhoneError] = useState(false);
-// 5. 휴대폰 유효성 검사 ///////////
-  const changephone = (e) => {
-    // 입력된 값읽기
-    let val = e.target.value.replace(/[^0-9]/g, ''); // 숫자 이외의 문자 제거
+  // 현재 비밀번호 변경 핸들러
+  const changeCurrentPwd = (e) => {
+    const val = e.target.value;
+    const currPwd = JSON.parse(sessionStorage.getItem("minfo")).pwd; // 세션에서 현재 비밀번호 가져오기
+    setCurrentPwdError(val !== currPwd); // 입력값과 세션의 비밀번호 비교
+    setCurrentPwd(val); // 상태 업데이트
+  };
 
-    // 1. 휴대폰 유효성 검사식(따옴표로 싸지 말것!)
-    const valid = /^(010|011|012|013|014|015|016|017|018|019)\d{3,4}\d{4}$/;
+  // 새 비밀번호 변경 핸들러
+  const changeNewPwd = (e) => {
+    const val = e.target.value;
+    // 비밀번호 유효성 검사 정규식 (특수문자, 문자, 숫자 포함 5~15자)
+    const validPwd = /^.*(?=^.{5,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
+    setNewPwdError(!validPwd.test(val)); // 유효성 검사 결과 설정
+    setNewPwd(val); // 상태 업데이트
+  };
 
-    // 2. 입력값 확인 : e.target -> 이벤트가 발생한 요소
-    // console.log(val);
+  // 새 비밀번호 확인 변경 핸들러
+  const changeConfirmNewPwd = (e) => {
+    const val = e.target.value;
+    setConfirmNewPwdError(val !== newPwd); // 새 비밀번호와 일치 여부 확인
+    setConfirmNewPwd(val); // 상태 업데이트
+  };
 
-    // 3. 에러에 따른 상태값 변경
-    if (valid.test(val)) setPhoneError(false);
-    else setPhoneError(true);
-
-    // 4. 기존입력값 반영하기
-    setPhone(val);
-  }; ///////// changephone 함수 //////////
-
-
-  //전체 유효성 검사 함수/////////////////////////////////////////////////////////////////////////////
+  // 전체 유효성 검사 함수
   const totalValid = () => {
-    if (!phone) setPhoneError(true);
-    if (phone && !phoneError) return true;
-    else return false;
-  }; /////////// totalValid 함수 /////////////////////////////////////////////////////////////
+    return (
+      currentPwd && newPwd && confirmNewPwd && // 모든 필드가 입력되었는지 확인
+      !currentPwdError && !newPwdError && !confirmNewPwdError // 에러가 없는지 확인
+    );
+  };
 
-  //saveModfy함수////////////////////////////////////////////////////////////////////////////////////
-  const saveModify = (e) => {
+  // 비밀번호 변경 저장 함수
+  const saveModify = () => {
     if (totalValid()) {
-      //totalValid()(전체유효성검사) true이면
-      const memData = JSON.parse(localStorage.getItem("mem-data"));
-      let currid = JSON.parse(sessionStorage.getItem("minfo")).uid;      
-      console.log(currid);
+      const memData = JSON.parse(localStorage.getItem("mem-data")); // 로컬 스토리지에서 회원 데이터 가져오기
+      const currid = JSON.parse(sessionStorage.getItem("minfo")).uid; // 세션에서 현재 사용자 ID 가져오기
+      
       memData.some((v) => {
-        if (v.uid == currid) {
-        
-            v.phone = phone; //phone v.phone에 업데이트
-       
-
-          // 세션데이터(minfo) 업데이트하기
-          sessionStorage.setItem("minfo", JSON.stringify(v));
-          return true;
+        if (v.uid === currid) {
+          if (v.pwd === currentPwd) {
+            v.pwd = newPwd; // 새 비밀번호로 업데이트
+            // 세션 스토리지 업데이트
+            sessionStorage.setItem("minfo", JSON.stringify(v));
+            // 로컬 스토리지 업데이트
+            localStorage.setItem("mem-data", JSON.stringify(memData));
+            setShowCart(false); // 모달 닫기
+            alert("비밀번호가 성공적으로 변경되었습니다.");
+          } else {
+            alert(errMsg.CURRENT_PASSWORD_MISMATCH);
+          }
+          return true; // 루프 종료
         }
       });
-      //로컬데이터(mem-data)에도 업데이트 하기
-      localStorage.setItem("mem-data", JSON.stringify(memData));
-
-      setShowCart(false);
     } else {
-      alert("Change your input!");
+      alert("입력 정보를 확인해주세요.");
     }
-  }; ////////////////////////////////////////////////////////////////////////////////////////////////
+  };
+
   return (
     <>
-      <div className="mypagemodify-box">
-        {/* 전화번호**************************************************************************************************************** */}
-        <input
-          className="loginput"
-          type="text"
-          maxLength="11"
-          placeholder=" " //placeholder에 공백값을 넣지 않으면 아이폰에서는 제대로 작동하지 않음.
-          value={phone}
-          onChange={changephone}
-        />
-        <label>이거 해야댐,조인맴버jsx 참고해야함</label>
-        {
-          //   에러일 경우 메시지 출력
-          // 조건문 && 출력요소
-          phoneError && (
+      <ul className="mypagemodify-box">
+        {/* 현재 비밀번호 입력 필드 */}
+        <li>
+          <input
+            className="loginput"
+            type="password"
+            maxLength="30"
+            placeholder=" "
+            value={currentPwd}
+            onChange={changeCurrentPwd}
+          />
+          <label>기존 비밀번호</label>
+          {currentPwdError && (
             <div className="msg">
-              <small>{msgEtc.phone}</small>
+              <small>{errMsg.CURRENT_PASSWORD_MISMATCH}</small>
             </div>
-          )
-        }
-      
-       
-      </div>
+          )}
+        </li>
+        {/* 새 비밀번호 입력 필드 */}
+        <li>
+          <input
+            className="loginput"
+            type="password"
+            maxLength="30"
+            placeholder=" "
+            value={newPwd}
+            onChange={changeNewPwd}
+          />
+          <label>새로운 비밀번호</label>
+          {newPwdError && (
+            <div className="msg">
+              <small>{errMsg.NEW_PASSWORD_INVALID}</small>
+            </div>
+          )}
+        </li>
+        {/* 새 비밀번호 확인 입력 필드 */}
+        <li>
+          <input
+            className="loginput"
+            type="password"
+            maxLength="30"
+            placeholder=" "
+            value={confirmNewPwd}
+            onChange={changeConfirmNewPwd}
+          />
+          <label>새로운 비밀번호 확인</label>
+          {confirmNewPwdError && (
+            <div className="msg">
+              <small>{errMsg.NEW_PASSWORD_MISMATCH}</small>
+            </div>
+          )}
+        </li>
+      </ul>
+      {/* 수정하기 버튼 */}
       <button className="save-modify" onClick={saveModify}>
         수정하기
       </button>

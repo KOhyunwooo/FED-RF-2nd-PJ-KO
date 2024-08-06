@@ -81,8 +81,8 @@ function CookieIntro(props) {
                       <p>비밀번호: 1111</p>
                     </div>
                 </div>
-
-                <div style={{ display: "flex", padding: "10px" ,border:"1px solid black", marginTop:"-1px"}}>
+              <br />
+                <div style={{ display: "flex", padding: "10px" ,border:"1px solid black"}}>
                     <div
                         style={{
                             fontSize: "12px",
@@ -98,11 +98,11 @@ function CookieIntro(props) {
                         <p>위시리스트: O</p>
                         <p>검색기능: O</p>
                         <p>메모이제이션(Footer): O</p>
+                        <p>프로필 편집(비밀번호,주소등 수정가능): O</p>
                     </div>
                     <div style={{ color: "grey" ,flex:1}}>
                         <p>메모이제이션(TopArea): X</p>
                         <p>메모이제이션(MainArea): X</p>
-                        <p>프로필 편집: X</p>
                         <p>DetailPg-이미지클릭시 이미지 확대: X</p>
                         <p>ProductPg-버튼 기능: X</p>
                     </div>

@@ -10,6 +10,9 @@ import { useLocation } from 'react-router-dom';
 import { IoIosArrowForward } from "react-icons/io";
 
 function MyPage(props) {
+    const [force, setForce] = useState(true);//강제 리렌더링을 위한 상태변수
+    const chgNum = () => setForce(!force);//강제 리렌더링 함수
+
     const myCon = useContext(dCon);
     ////////////////////////////////////////////////////////////////////
     const myPageButtons = [
@@ -86,7 +89,7 @@ function MyPage(props) {
             }
 
             {/* ********************구매내역 부분************************** */}
-            {selButton === "바스켓백" && <MyCart/>}
+            {selButton === "바스켓백" && <MyCart chgNum={chgNum} />}
             {selButton === "마음에 드는 제품" && <Favorite />}
             {selButton === "프로필" && (
                 <div className="profile-box-wrap">

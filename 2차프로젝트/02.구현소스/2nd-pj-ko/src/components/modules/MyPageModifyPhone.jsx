@@ -10,7 +10,7 @@ function MyPageModifyPhone({ setShowCart }) {
 
   // [ 기타 메시지 프리셋 ]
   const msgEtc = {
-     phone: "올바른 전화번호 형식을 입력하십시오. 예)010-XXXX-XXXX",
+     phone: "올바른 전화번호 형식을 입력하십시오. 예)010XXXXXXXX, '-'생략",
   }; ///// msgEtc ///////
 // [1] 입력요소 상태변수
 // 5. 휴대폰 변수
@@ -67,6 +67,7 @@ const [phone, setPhone] = useState("");
       localStorage.setItem("mem-data", JSON.stringify(memData));
 
       setShowCart(false);
+      alert("전화번호가 성공적으로 변경되었습니다.");
     } else {
       alert("Change your input!");
     }
