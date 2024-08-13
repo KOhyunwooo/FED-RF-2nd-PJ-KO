@@ -91,18 +91,16 @@ function CookieIntro(props) {
                             flex:1,
                         }}
                     >
-                        <p>로그인: O</p>
-                        <p>회원가입: O</p>
-                        <p>주소입력, 저장: O</p>
-                        <p>장바구니: O</p>
-                        <p>위시리스트: O</p>
-                        <p>검색기능: O</p>
-                        <p>메모이제이션(Footer): O</p>
-                        <p>프로필 편집(비밀번호,주소등 수정가능): O</p>
+                        <p>로그인, 회원가입 가능합니다!</p>
+                        <p>체크아웃페이지-편집에서 주소입력, 저장 가능합니다~</p>
+                        <p>장바구니, 위시리스트 기능: 有</p>
+                        <p>프로필 편집(비밀번호,주소등)수정 가능합니다~</p>
+                        <p>검색기능: 有</p>
+                        {/* <p>메모이제이션(Footer): O</p> */}
                     </div>
                     <div style={{ color: "grey" ,flex:1}}>
-                        <p>메모이제이션(TopArea): X</p>
-                        <p>메모이제이션(MainArea): X</p>
+                        {/* <p>메모이제이션(TopArea): X</p>
+                        <p>메모이제이션(MainArea): X</p> */}
                         <p>DetailPg-이미지클릭시 이미지 확대: X</p>
                         <p>ProductPg-버튼 기능: X</p>
                     </div>
