@@ -29,6 +29,17 @@
       border: 1px solid black;
       transition: 0.3s ease;
       // transform-origin: bottom;
+
+      &::-webkit-scrollbar {
+        width: 2px; /* 스크롤바의 너비 */
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #333333; /* 스크롤바 색상 */
+      border-radius: 50px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #3333334d; /* 스크롤바 트랙 배경 */
+  }
       div > {
         top: 0;
       }

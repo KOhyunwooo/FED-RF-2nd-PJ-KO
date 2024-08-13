@@ -44,7 +44,7 @@ function CookieIntro(props) {
         <>
             <div className="popup">
                 <h1>가이드</h1>
-                <p></p>
+                <b style={{color:"red", fontSize:"1.1rem"}}>※Gnb 메뉴에 KIDS, HOME, aboutZARA는 구현하지 않았습니다.</b>
                 {/* 클릭 시 PDF 파일을 여는 링크 */}
                 <p
                     onClick={openPDF}
@@ -70,13 +70,13 @@ function CookieIntro(props) {
                 >
                     <div style={{flex:1}}>
                       <p>기본 로그인 정보1</p>
-                      <p>(주소Data 有)</p>
+                      <p>(주소Data 있음)</p>
                       <p>아이디: admin</p>
                       <p>비밀번호: 1111</p>
                     </div>
                     <div style={{flex:1}}>
                       <p>기본 로그인 정보2</p>
-                      <p>(주소Data 無)</p>
+                      <p>(주소Data 없음)</p>
                       <p>아이디: ko</p>
                       <p>비밀번호: 1111</p>
                     </div>
@@ -86,23 +86,24 @@ function CookieIntro(props) {
                     <div
                         style={{
                             fontSize: "12px",
-                            fontWeight: "bold",
+                            // fontWeight: "500",
                             whiteSpace: "nowrap",
                             flex:1,
                         }}
                     >
-                        <p>로그인, 회원가입 가능합니다!</p>
-                        <p>체크아웃페이지-편집에서 주소입력, 저장 가능합니다~</p>
-                        <p>장바구니, 위시리스트 기능: 有</p>
-                        <p>프로필 편집(비밀번호,주소등)수정 가능합니다~</p>
-                        <p>검색기능: 有</p>
+                        <p><span style={{ color: 'red' ,fontWeight:"bold"}}>로그인, 회원가입</span> 가능합니다!</p>
+                        <p>체크아웃페이지-편집에서 <span style={{color:"red", fontWeight:"bold"}}>주소입력, 저장</span> 가능합니다~</p>
+                        <p><span style={{color:"red" ,fontWeight:"bold"}}>장바구니, 위시리스트</span> 기능: 有</p>
+                        <p>프로필 편집(<span style={{color:"red" ,fontWeight:"bold"}}>비밀번호,주소등 수정</span>) 가능합니다~</p>
+                        <p><span style={{color:"red" ,fontWeight:"bold"}}>검색기능</span>: 有</p>
                         {/* <p>메모이제이션(Footer): O</p> */}
                     </div>
                     <div style={{ color: "grey" ,flex:1}}>
                         {/* <p>메모이제이션(TopArea): X</p>
                         <p>메모이제이션(MainArea): X</p> */}
-                        <p>DetailPg-이미지클릭시 이미지 확대: X</p>
-                        <p>ProductPg-버튼 기능: X</p>
+                        {/* <p>DetailPg-이미지클릭시 이미지 확대: 미구현</p>
+                        <p>ProductPg-버튼 기능: 미구현</p>
+                        <p>aboutZaraPg: 미구현</p> */}
                     </div>
                 </div>
                 <label
