@@ -44,7 +44,7 @@ function CookieIntro(props) {
         <>
             <div className="popup">
                 <h1>가이드</h1>
-                <b style={{color:"red", fontSize:"1.1rem"}}>※Gnb 메뉴에 KIDS, HOME, aboutZARA는 구현하지 않았습니다.</b>
+                <b style={{color:"red", fontSize:"1.1rem"}}>※ Gnb 메뉴에 KIDS, HOME, aboutZARA는 구현하지 않았습니다.</b>
                 {/* 클릭 시 PDF 파일을 여는 링크 */}
                 <p
                     onClick={openPDF}
