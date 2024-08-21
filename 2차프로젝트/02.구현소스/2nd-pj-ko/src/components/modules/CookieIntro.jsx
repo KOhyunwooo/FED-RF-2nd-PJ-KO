@@ -43,13 +43,15 @@ function CookieIntro(props) {
   return (
     <>
       <div className="popup">
-        <h1>
-          가이드
-          <span style={{ color: "red", fontSize: "1.1rem" }}>
+         
+        <span style={{display:"flex"}}>
+          <h1 style={{whiteSpace:"nowrap",display:"flex",alignItems:"center",paddingLeft:"10px"}}>가이드</h1>
+          <span style={{ color: "red", fontSize: "1.1rem" ,display:"flex",flexDirection:"column"}}>
             {" "}
-            ※ Gnb 메뉴에 KIDS, HOME, aboutZARA는 구현하지 않았습니다.
+            <p>&nbsp;&nbsp;※ React로 개발했습니다.</p>
+            <p>&nbsp;&nbsp;※ Gnb 메뉴에 KIDS, HOME, aboutZARA는 구현하지 않았습니다.</p>
           </span>
-        </h1>
+        </span>
         {/* 클릭 시 PDF 파일을 여는 링크 */}
         <p
           onClick={openPDF}
@@ -98,7 +100,7 @@ function CookieIntro(props) {
             style={{
               fontSize: "12px",
               // fontWeight: "500",
-              whiteSpace: "nowrap",
+              // whiteSpace: "nowrap",
               flex: 1,
             }}
           >
@@ -106,14 +108,14 @@ function CookieIntro(props) {
               <span style={{ color: "red", fontWeight: "bold" }}>
                 로그인, 회원가입
               </span>{" "}
-              가능합니다!
+              가능합니다~~~!
             </p>
             <p>
               체크아웃페이지-편집에서{" "}
               <span style={{ color: "red", fontWeight: "bold" }}>
                 주소입력, 저장
               </span>{" "}
-              가능합니다~
+              가능!
             </p>
             <p>
               <span style={{ color: "red", fontWeight: "bold" }}>
@@ -126,7 +128,7 @@ function CookieIntro(props) {
               <span style={{ color: "red", fontWeight: "bold" }}>
                 비밀번호,주소등 수정
               </span>
-              ) 가능합니다~
+              ) 가능합니다!
             </p>
             <p>
               <span style={{ color: "red", fontWeight: "bold" }}>검색기능</span>
@@ -134,13 +136,13 @@ function CookieIntro(props) {
             </p>
             {/* <p>메모이제이션(Footer): O</p> */}
           </div>
-          <div style={{ color: "grey", flex: 1 }}>
+          {/* <div style={{ color: "grey", flex: 1 }}> */}
             {/* <p>메모이제이션(TopArea): X</p>
                         <p>메모이제이션(MainArea): X</p> */}
             {/* <p>DetailPg-이미지클릭시 이미지 확대: 미구현</p>
                         <p>ProductPg-버튼 기능: 미구현</p>
                         <p>aboutZaraPg: 미구현</p> */}
-          </div>
+          {/* </div> */}
         </div>
         <label
           style={{
